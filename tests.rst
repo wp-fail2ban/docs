@@ -4,5 +4,8 @@
 Unit Tests
 ==========
 
+Results
+-------
+
 .. literalinclude:: autogen/phpunit.txt
 

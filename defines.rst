@@ -9,7 +9,7 @@
 .. _WP_FAIL2BAN_AUTH_LOG:
 
 WP_FAIL2BAN_AUTH_LOG
-####################
+--------------------
 
 .. versionadded:: 2.2.0
 
@@ -24,7 +24,7 @@ By default, *WPf2b* uses **LOG_AUTH** for logging authentication success or fail
 .. _WP_FAIL2BAN_BLOCK_USER_ENUMERATION:
 
 WP_FAIL2BAN_BLOCK_USER_ENUMERATION
-##################################
+----------------------------------
 
 .. versionadded:: 2.1.0
 
@@ -41,7 +41,7 @@ Based on a suggestion from *@geeklol* and a plugin by *@ROIBOT*, *WPf2b* can now
 .. _WP_FAIL2BAN_BLOCKED_USERS:
 
 WP_FAIL2BAN_BLOCKED_USERS
-#########################
+-------------------------
 
 .. versionadded:: 2.0.0
 
@@ -70,7 +70,7 @@ If you're running PHP 7, you can now specify an array of users instead:
 .. _WP_FAIL2BAN_COMMENT_LOG:
 
 WP_FAIL2BAN_COMMENT_LOG
-#######################
+-----------------------
 
 .. versionadded:: 3.5.0
 
@@ -81,7 +81,7 @@ See :ref:`WP_FAIL2BAN_LOG_COMMENTS`.
 .. _WP_FAIL2BAN_HTTP_HOST:
 
 WP_FAIL2BAN_HTTP_HOST
-#####################
+---------------------
 
 .. versionadded:: 3.0.0
 
@@ -98,7 +98,7 @@ If you configure your web server to set an environment variable named **WP_FAIL2
 .. _WP_FAIL2BAN_LOG_COMMENTS:
 
 WP_FAIL2BAN_LOG_COMMENTS
-########################
+------------------------
 
 .. versionadded:: 3.5.0
 
@@ -116,10 +116,19 @@ By default, *WPf2b* uses **LOG_USER** for logging comments. If you'd rather it u
 
 
 
+.. _WP_FAIL2BAN_LOG_PASSWORD_REQUEST:
+
+WP_FAIL2BAN_LOG_PASSWORD_REQUEST
+--------------------------------
+
+.. versionadded:: 3.5.0
+
+
+
 .. _WP_FAIL2BAN_LOG_PINGBACKS:
 
 WP_FAIL2BAN_LOG_PINGBACKS
-#########################
+-------------------------
 
 .. versionadded:: 2.2.0
 
@@ -140,7 +149,7 @@ By default, *WPf2b* uses **LOG_USER** for logging pingbacks. If you'd rather it 
 .. _WP_FAIL2BAN_LOG_SPAM:
 
 WP_FAIL2BAN_LOG_SPAM
-####################
+--------------------
 
 .. versionadded:: 3.5.0
 
@@ -148,16 +157,16 @@ WP_FAIL2BAN_LOG_SPAM
 
 .. code-block:: php
 
-  define('WP_FAIL2BAN_LOG_SPAM', true);
+	define('WP_FAIL2BAN_LOG_SPAM', true);
 
-The comment ID and IP will be written to :ref:`WP_FAIL2BAN_AUTH_LOG` and matched by :ref:`wordpress-hard`.
+The comment ID and IP will be written to :ref:`WP_FAIL2BAN_AUTH_LOG` and matched by :ref:`wordpress-hard_conf`.
 
 
 
 .. _WP_FAIL2BAN_OPENLOG_OPTIONS:
 
 WP_FAIL2BAN_OPENLOG_OPTIONS
-###########################
+---------------------------
 
 .. versionadded:: 3.5.0
 
@@ -166,7 +175,7 @@ WP_FAIL2BAN_OPENLOG_OPTIONS
 .. _WP_FAIL2BAN_PINGBACK_LOG:
 
 WP_FAIL2BAN_PINGBACK_LOG
-########################
+------------------------
 
 .. versionadded:: 2.2.0
 
@@ -176,7 +185,7 @@ See :ref:`WP_FAIL2BAN_LOG_PINGBACKS`.
 .. _WP_FAIL2BAN_PROXIES:
 
 WP_FAIL2BAN_PROXIES
-###################
+-------------------
 
 .. versionadded:: 2.0.0
 
@@ -199,16 +208,18 @@ To set **WP_FAIL2BAN_PROXIES**, add something like the following to ``wp-config.
 .. _WP_FAIL2BAN_REMOTE_ADDR:
 
 WP_FAIL2BAN_REMOTE_ADDR
-#######################
+-----------------------
 
 .. versionadded:: 3.6.0
+
+Some themes and plugins anonymise requests
 
 
 
 .. _WP_FAIL2BAN_SYSLOG_SHORT_TAG:
 
 WP_FAIL2BAN_SYSLOG_SHORT_TAG
-############################
+----------------------------
 
 .. versionadded:: 3.0.0
 
@@ -227,7 +238,7 @@ to ``functions.php`` will make *WPf2b* use ``wp`` as the syslog tag, rather than
 .. _WP_FAIL2BAN_TRUNCATE_HOST:
 
 WP_FAIL2BAN_TRUNCATE_HOST
-#########################
+-------------------------
 
 .. versionadded:: 3.5.0
 
@@ -244,7 +255,7 @@ This does exactly what the name suggests: truncates the host name to the length 
 .. _WP_FAIL2BAN_XMLRPC_LOG:
 
 WP_FAIL2BAN_XMLRPC_LOG
-######################
+----------------------
 
 .. versionadded:: 3.6.0
 

@@ -5,14 +5,16 @@ Filters
 =======
 
 
-``wordpress-hard.conf``
-#######################
+.. _wordpress-hard_conf:
 
-.. literalinclude:: ../filters.d/wordpress-hard.conf
+``wordpress-hard.conf``
+-----------------------
+
+.. literalinclude:: autogen/wordpress-hard.conf
 
 
 ``wordpress-soft.conf``
-#######################
+-----------------------
 
-.. literalinclude:: ../filters.d/wordpress-soft.conf
+.. literalinclude:: autogen/wordpress-soft.conf
 
