@@ -10,7 +10,6 @@ WP fail2ban Manual
    :numbered:
 
    introduction
-   installation
    configuration
 
 .. toctree::

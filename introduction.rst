@@ -83,14 +83,7 @@ Blocking Users
 
 .. _mu-plugins_support:
 
-``mu-plugins`` Support
-^^^^^^^^^^^^^^^^^^^^^^
+`mu-plugins` Support
+^^^^^^^^^^^^^^^^^^^^
 
-*WPf2b* can easily be configured as a must-use plugin. One of the better ways is to install *WPf2b* as usual and then create a symlink in ``mu-plugins``:
-
-.. code-block:: sh
-
-	lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> ../plugins/wp-fail2ban/wp-fail2ban.php
-
-This has the advantage that you can update *WPf2b* as usual without having to update ``mu-plugins`` directly.  You don't need to activate *WPf2b*, but it won't hurt if you do.
-
+*WPf2b* can easily be configured as a must-use plugin. 
