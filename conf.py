@@ -150,7 +150,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'WP fail2ban', u'WP fail2ban Manual',
-     author, 'WP fail2ban', 'One line description of project.',
+     author, 'WP fail2ban', 'A WordPress plugin to write a myriad of events to syslog for integration with fail2ban.',
      'Miscellaneous'),
 ]
 
