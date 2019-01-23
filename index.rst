@@ -10,12 +10,13 @@ WP fail2ban Manual
    :numbered:
 
    introduction
+   installation
    configuration
 
 .. toctree::
    :caption: Reference
 
    defines
+   facilities
    filters
-   tests
-
+   

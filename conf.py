@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u'WP fail2ban'
-copyright = u'2018, Charles Lecklider'
+copyright = u'2018-19, Charles Lecklider'
 author = u'Charles Lecklider'
 
 # The short X.Y version

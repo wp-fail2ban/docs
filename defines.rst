@@ -27,6 +27,8 @@ WP_FAIL2BAN_BLOCK_USER_ENUMERATION
 ----------------------------------
 
 .. versionadded:: 2.1.0
+.. versionchanged:: 4.0.0
+   Now also blocks enumeration via the REST API.
 
 Brute-forcing WP requires knowing a valid username. Unfortunately, WP makes this all but trivial.
 
@@ -35,6 +37,11 @@ Based on a suggestion from *@geeklol* and a plugin by *@ROIBOT*, *WPf2b* can now
 .. code-block:: php
 
 	define('WP_FAIL2BAN_BLOCK_USER_ENUMERATION', true);
+
+Premium
+^^^^^^^
+
+Event ID: ``0x00010008``
 
 
 
@@ -65,6 +72,11 @@ If you're running PHP 7, you can now specify an array of users instead:
 
 	define('WP_FAIL2BAN_BLOCKED_USERS', ['admin', 'another', 'user']);
 
+Premium
+^^^^^^^
+
+Event ID: ``0x00010004``
+
 
 
 .. _WP_FAIL2BAN_COMMENT_LOG:
@@ -74,7 +86,13 @@ WP_FAIL2BAN_COMMENT_LOG
 
 .. versionadded:: 3.5.0
 
-See :ref:`WP_FAIL2BAN_LOG_COMMENTS`.
+By default, *WPf2b* uses **LOG_USER** for logging comments. If you'd rather it used a different facility you can change it by adding something like the following to ``wp-config.php``:
+
+.. code-block:: php
+
+	define('WP_FAIL2BAN_COMMENT_LOG', LOG_LOCAL3);
+
+.. seealso:: :ref:`WP_FAIL2BAN_LOG_COMMENTS`.
 
 
 
@@ -108,11 +126,72 @@ WP_FAIL2BAN_LOG_COMMENTS
 
 	define('WP_FAIL2BAN_LOG_COMMENTS', true);
 
-By default, *WPf2b* uses **LOG_USER** for logging comments. If you'd rather it used a different facility you can change it by adding something like the following to ``wp-config.php``:
+The comment ID and IP will be written to :ref:`WP_FAIL2BAN_COMMENT_LOG` and matched by :ref:`wordpress-extra_conf`.
+
+Premium
+^^^^^^^
+
+Event ID: ``0x00020000``
+
+Database
+""""""""
+
+`ref_id` is the Comment ID.
+
+
+
+.. _WP_FAIL2BAN_LOG_COMMENTS_EXTRA:
+
+WP_FAIL2BAN_LOG_COMMENTS_EXTRA
+------------------------------
+
+.. versionadded:: 4.0.0
+
+*WPf2b* can optionally log the following comment-related events:
+
+Not found
+   Attempted comment on a non-existent post
+
+   Event ID: ``0x00020002``
+
+Closed
+   Attempted comment on a post with closed comments
+
+   Event ID: ``0x00020004``
+
+Trash
+   Attempted comment on a post in Trash
+
+   Event ID: ``0x00020008``
+
+Draft
+   Attempted comment on a Draft post
+
+   Event ID: ``0x00020010``
+
+Password-protected
+   Attempted comment on a password-protected post
+
+   Event ID: ``0x00020020``
+
+To enable this feature OR the Event IDs; for example, to enable `Closed` and `Draft`:
 
 .. code-block:: php
 
-	define('WP_FAIL2BAN_COMMENT_LOG', LOG_LOCAL3);
+	define('WP_FAIL2BAN_LOG_COMMENTS_EXTRA', 0x00020004 | 0x00020010);
+
+
+The Post ID and IP will be written to :ref:`WP_FAIL2BAN_COMMENT_LOG` and matched by :ref:`wordpress-extra_conf`.
+
+Premium
+^^^^^^^
+
+The UI provides a set of checkboxes to enable these options.
+
+Database
+""""""""
+
+`ref_id` is the Post ID.
 
 
 
@@ -122,6 +201,19 @@ WP_FAIL2BAN_LOG_PASSWORD_REQUEST
 --------------------------------
 
 .. versionadded:: 3.5.0
+
+*WPf2b* can log password reset requests. Add the following to ``wp-config.php``:
+
+.. code-block:: php
+
+	define('WP_FAIL2BAN_LOG_PASSWORD_REQUEST', true);
+
+The username and IP will be written to :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG` and matched by :ref:`wordpress-extra_conf`.
+
+Premium
+^^^^^^^
+
+Event ID: ``0x00080001``
 
 
 
@@ -144,6 +236,11 @@ By default, *WPf2b* uses **LOG_USER** for logging pingbacks. If you'd rather it 
 
 	define('WP_FAIL2BAN_PINGBACK_LOG', LOG_LOCAL3);
 
+Premium
+^^^^^^^
+
+Event ID: ``0x00040001``
+
 
 
 .. _WP_FAIL2BAN_LOG_SPAM:
@@ -161,6 +258,11 @@ WP_FAIL2BAN_LOG_SPAM
 
 The comment ID and IP will be written to :ref:`WP_FAIL2BAN_AUTH_LOG` and matched by :ref:`wordpress-hard_conf`.
 
+Premium
+^^^^^^^
+
+Event ID: ``0x00020001``
+
 
 
 .. _WP_FAIL2BAN_OPENLOG_OPTIONS:
@@ -169,6 +271,16 @@ WP_FAIL2BAN_OPENLOG_OPTIONS
 ---------------------------
 
 .. versionadded:: 3.5.0
+
+
+
+.. _WP_FAIL2BAN_PASSWORD_REQUEST_LOG:
+
+WP_FAIL2BAN_PASSWORD_REQUEST_LOG
+--------------------------------
+
+.. versionadded:: 4.0.0
+
 
 
 
@@ -188,6 +300,8 @@ WP_FAIL2BAN_PROXIES
 -------------------
 
 .. versionadded:: 2.0.0
+.. versionchanged:: 4.0.0
+   Entries can be ignored by prefixing with **#**
 
 The idea here is to list the IP addresses of the trusted proxies that will appear as the remote IP for the request. When defined:
 
@@ -213,6 +327,16 @@ WP_FAIL2BAN_REMOTE_ADDR
 .. versionadded:: 3.6.0
 
 Some themes and plugins anonymise requests
+
+
+
+.. _WP_FAIL2BAN_SPAM_LOG:
+
+WP_FAIL2BAN_SPAM_LOG
+--------------------
+
+.. versionadded:: 4.0.0
+
 
 
 

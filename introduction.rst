@@ -14,8 +14,17 @@ As with many open source projects, `ẀP fail2ban` started as way to scratch a p
 
 Since then it's slowly but steadily accumulated features, and much to my surprise, gained a considerable number of installs (30,000+ at the time of writing) - I really had no idea so many other people would be interested!
 
-Between versions 3.5 and 3.6 there was a bit of a delay.... I switched my development environment from Windows 10 [#f1]_ to a FreeBSD workstation and a Linux laptop, life then decided to take its turn and get in the way for a bit, all while the shadow of Gutenberg loomed large over the future of WordPress. With the advent of `ClassicPress <https://classicpress.net/>`_ [#f2]_ things started to look sunnier, so I dusted off the repo, braved the horrors of ``svn``, and got 3.6 out the door as a Christmas present in December 2018.
+Between versions 3.5 and 3.6 there was a bit of a delay. I switched my development environment from Windows 10 [#f1]_ to a FreeBSD workstation and a Linux laptop, life then decided to take its turn and get in the way for a bit, all while the shadow of Gutenberg loomed large over the future of WordPress. With the advent of `ClassicPress <https://classicpress.net/>`_ [#f2]_ things started to look sunnier, so I dusted off the repo, put together some better documentation, braved the horrors of ``svn``, and got 3.6 out the door as a pseudo 7th anniversary present in November 2018.
 
+
+.. _future:
+
+Future
+------
+
+Version 4 was born from a desire to visualise the things *WPf2b* was logging; being entirely separate and distinct from the core functionality, adding this as freemium features seemed like a good plan. Time will tell.
+
+This logical separation will continue for all future versions - if you were happy with the way 3.6 worked you'll be happy with future versions too.
 
 
 .. _features:
@@ -38,7 +47,7 @@ CloudFlare and Proxy Servers
 Comments
 ^^^^^^^^
 
-*WPf2b* can log comments. See :ref:`WP_FAIL2BAN_LOG_COMMENTS`.
+*WPf2b* can log both successful comments (see :ref:`WP_FAIL2BAN_LOG_COMMENTS`), and unsuccessful comments (see :ref:`WP_FAIL2BAN_LOG_COMMENTS_EXTRA`).
 
 
 
