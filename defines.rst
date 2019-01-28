@@ -38,11 +38,6 @@ Based on a suggestion from *@geeklol* and a plugin by *@ROIBOT*, *WPf2b* can now
 
 	define('WP_FAIL2BAN_BLOCK_USER_ENUMERATION', true);
 
-Premium
-^^^^^^^
-
-Event ID: ``0x00010008``
-
 
 
 .. _WP_FAIL2BAN_BLOCKED_USERS:
@@ -71,11 +66,6 @@ If you're running PHP 7, you can now specify an array of users instead:
 .. code-block:: php
 
 	define('WP_FAIL2BAN_BLOCKED_USERS', ['admin', 'another', 'user']);
-
-Premium
-^^^^^^^
-
-Event ID: ``0x00010004``
 
 
 
@@ -128,16 +118,6 @@ WP_FAIL2BAN_LOG_COMMENTS
 
 The comment ID and IP will be written to :ref:`WP_FAIL2BAN_COMMENT_LOG` and matched by :ref:`wordpress-extra_conf`.
 
-Premium
-^^^^^^^
-
-Event ID: ``0x00020000``
-
-Database
-""""""""
-
-`ref_id` is the Comment ID.
-
 
 
 .. _WP_FAIL2BAN_LOG_COMMENTS_EXTRA:
@@ -152,27 +132,17 @@ WP_FAIL2BAN_LOG_COMMENTS_EXTRA
 Not found
    Attempted comment on a non-existent post
 
-   Event ID: ``0x00020002``
-
 Closed
    Attempted comment on a post with closed comments
-
-   Event ID: ``0x00020004``
 
 Trash
    Attempted comment on a post in Trash
 
-   Event ID: ``0x00020008``
-
 Draft
    Attempted comment on a Draft post
 
-   Event ID: ``0x00020010``
-
 Password-protected
    Attempted comment on a password-protected post
-
-   Event ID: ``0x00020020``
 
 To enable this feature OR the Event IDs; for example, to enable `Closed` and `Draft`:
 
@@ -182,16 +152,6 @@ To enable this feature OR the Event IDs; for example, to enable `Closed` and `Dr
 
 
 The Post ID and IP will be written to :ref:`WP_FAIL2BAN_COMMENT_LOG` and matched by :ref:`wordpress-extra_conf`.
-
-Premium
-^^^^^^^
-
-The UI provides a set of checkboxes to enable these options.
-
-Database
-""""""""
-
-`ref_id` is the Post ID.
 
 
 
@@ -209,11 +169,6 @@ WP_FAIL2BAN_LOG_PASSWORD_REQUEST
 	define('WP_FAIL2BAN_LOG_PASSWORD_REQUEST', true);
 
 The username and IP will be written to :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG` and matched by :ref:`wordpress-extra_conf`.
-
-Premium
-^^^^^^^
-
-Event ID: ``0x00080001``
 
 
 
@@ -236,11 +191,6 @@ By default, *WPf2b* uses **LOG_USER** for logging pingbacks. If you'd rather it 
 
 	define('WP_FAIL2BAN_PINGBACK_LOG', LOG_LOCAL3);
 
-Premium
-^^^^^^^
-
-Event ID: ``0x00040001``
-
 
 
 .. _WP_FAIL2BAN_LOG_SPAM:
@@ -257,11 +207,6 @@ WP_FAIL2BAN_LOG_SPAM
 	define('WP_FAIL2BAN_LOG_SPAM', true);
 
 The comment ID and IP will be written to :ref:`WP_FAIL2BAN_AUTH_LOG` and matched by :ref:`wordpress-hard_conf`.
-
-Premium
-^^^^^^^
-
-Event ID: ``0x00020001``
 
 
 

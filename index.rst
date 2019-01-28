@@ -19,4 +19,5 @@ WP fail2ban Manual
    defines
    facilities
    filters
-   
+   premium
+
