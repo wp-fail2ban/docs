@@ -4,10 +4,10 @@
 Premium
 =======
 
-.. _premium_event_ids:
+.. _premium_events:
 
-Event IDs
----------
+Events
+------
 
 ==================================  ==========  =====
 Event                               ``action``  ``ref_id``
