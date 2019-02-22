@@ -1,8 +1,8 @@
 .. _reference_filters:
 
-=======
-Filters
-=======
+============
+Filter Files
+============
 
 
 .. _wordpress-hard_conf:
