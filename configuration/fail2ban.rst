@@ -3,7 +3,8 @@
 fail2ban
 --------
 
-``fail2ban`` can be tricky to configure correctly; with so many flavours of Linux 
+``fail2ban`` can be tricky to configure correctly; with so many flavours of Linux it's impossible to provide anything but general guidance.
+
 
 Filters
 ^^^^^^^
