@@ -10,7 +10,7 @@ Introduction
 History
 -------
 
-As with many open source projects, `ẀP fail2ban` started as way to scratch a particular itch. I had a dedicated server that was getting some unwelcome attention from various bots, and while it was trivial to configure `fail2ban` for ``ssh`` etc, WordPress was another story. Thus `WP fail2ban` was born late November 2011.
+As with many Open Source projects, `ẀP fail2ban` started as way to scratch a particular itch. I had a dedicated server that was getting some unwelcome attention from various bots, and while it was trivial to configure `fail2ban` for ``ssh`` etc, WordPress was another story. Thus `WP fail2ban` was born late November 2011.
 
 Since then it's slowly but steadily accumulated features, and much to my surprise, gained a considerable number of installs (30,000+ at the time of writing) - I really had no idea so many other people would be interested!
 
