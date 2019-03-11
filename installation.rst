@@ -4,6 +4,12 @@
 Installation
 ============
 
+Is *WP fail2ban* Already Installed?
+-----------------------------------
+
+Plugins -> Must-use
+
+
 .. _installation_overview:
 
 Overview
@@ -19,9 +25,7 @@ The Premium version installs via Freemius.
 Database
 """"""""
 
-Activating *WPf2b* Premium creates one database table, ``wp_fail2ban_log``, and several stored procedures.
-
-Deactivating *WPf2b* Premium removes the stored procedures.
+Activating *WPf2b* Premium creates one database table, ``wp_fail2ban_log``.
 
 *WPf2b* Premium never drops the database table - it's your data.
 
