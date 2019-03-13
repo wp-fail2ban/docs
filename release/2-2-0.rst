@@ -1,0 +1,15 @@
+2.2.0
+-----
+
+* Custom authentication log is now called :ref:`WP_FAIL2BAN_AUTH_LOG`.
+* Add logging for pingbacks; see :ref:`WP_FAIL2BAN_LOG_PINGBACKS`.
+* Custom pingback log is called :ref:`WP_FAIL2BAN_PINGBACK_LOG`.
+
+Upgrade
+^^^^^^^
+
+BREAKING CHANGE:  `WP_FAIL2BAN_LOG` has been renamed to :ref:`WP_FAIL2BAN_AUTH_LOG`.
+
+Pingbacks are getting a lot of attention recently, so *WPf2b* can now log them.
+The `wordpress.conf` filter has been updated; you will need to update your `fail2ban` configuration.
+

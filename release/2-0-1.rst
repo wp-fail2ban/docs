@@ -1,0 +1,10 @@
+2.0.1
+-----
+
+* Bugfix in *experimental* :ref:`WP_FAIL2BAN_PROXIES` code.
+
+Upgrade
+^^^^^^^
+
+Bugfix in experimental code; still an experimental release.
+

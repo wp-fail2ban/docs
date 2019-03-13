@@ -16,6 +16,7 @@ WP fail2ban Manual
 .. toctree::
    :caption: Reference
 
+   release
    defines
    facilities
    filters
