@@ -1,0 +1,11 @@
+2.0.0
+-----
+
+* Add *experimental* support for X-Forwarded-For header; see :ref:`WP_FAIL2BAN_PROXIES`.
+* Add *experimental* support for regex-based login blocking; see :ref:`WP_FAIL2BAN_BLOCKED_USERS`.
+
+Upgrade
+^^^^^^^
+
+This is an experimental release. If your current version is working and you're not interested in the new features, skip this version - wait for 2.1.0. For those that do want to test this release, note that `wordpress.conf` has changed - you'll need to copy it to `fail2ban/filters.d` again.
+

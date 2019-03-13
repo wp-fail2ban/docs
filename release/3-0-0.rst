@@ -1,0 +1,13 @@
+3.0.0
+-----
+
+* Add :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG`.
+* Add :ref:`WP_FAIL2BAN_HTTP_HOST`.
+* Log XML-RPC authentication failure.
+* Add better support for MU deployment.
+
+Upgrade
+^^^^^^^
+
+BREAKING CHANGE: The `fail2ban` filters have been split into two files. You will need up update your `fail2ban` configuration.
+

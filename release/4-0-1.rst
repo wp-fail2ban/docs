@@ -1,0 +1,22 @@
+4.0.1
+-----
+
+* Add extra features via Freemius. **This is entirely optional.** *WPf2b* works as before, including new features listed here.
+* Add settings summary page.
+* Add :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG`.
+* Add :ref:`WP_FAIL2BAN_SPAM_LOG`.
+* Add :ref:`WP_FAIL2BAN_LOG_COMMENTS_EXTRA` - enable logging for attempted comments on posts which are:
+
+   * not found,
+   * closed for commenting,
+   * in the trash,
+   * drafts,
+   * password protected
+
+* Block user enumeration via REST API.
+
+Upgrade
+^^^^^^^
+
+To take advantage of the new features you will need up update your `fail2ban` filters; existing filters will continue to work as before.
+

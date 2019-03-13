@@ -1,0 +1,11 @@
+2.1.0
+-----
+
+* Add support for blocking user enumeration; see :ref:`WP_FAIL2BAN_BLOCK_USER_ENUMERATION`.
+* Add support for CIDR notation in :ref:`WP_FAIL2BAN_PROXIES`.
+
+Upgrade
+^^^^^^^
+
+The `wordpress.conf` filter has been updated; you will need to update your `fail2ban` configuration.
+

@@ -12,10 +12,12 @@ WP fail2ban Manual
    introduction
    installation
    configuration
+   usage
 
 .. toctree::
    :caption: Reference
 
+   release
    defines
    facilities
    filters

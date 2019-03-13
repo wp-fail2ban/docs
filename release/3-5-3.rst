@@ -1,0 +1,10 @@
+3.5.3
+-----
+
+* Bugfix for :ref:`wordpress-hard_conf`.
+
+Upgrade
+^^^^^^^
+
+You will need up update your `fail2ban` filters.
+

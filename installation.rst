@@ -4,10 +4,15 @@
 Installation
 ============
 
+.. _installation_already_installed:
+
 Is *WP fail2ban* Already Installed?
 -----------------------------------
 
-Plugins -> Must-use
+.. figure:: installation/preinstalled_mu-plugins.png
+   :alt: WP fail2ban pre-installed in mu-plugins
+
+*WP fail2ban* pre-installed in `mu-plugins` in a new DigitalOcean WordPress droplet.
 
 
 .. _installation_overview:

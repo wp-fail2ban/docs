@@ -1,0 +1,5 @@
+3.0.2
+-----
+
+* Prevent double logging in WP 4.5.x for XML-RPC authentication failure
+
