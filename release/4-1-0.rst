@@ -1,0 +1,16 @@
+.. _release_4-1-0:
+
+4.1.0
+-----
+
+* Add separate logging for REST authentication.
+* Add filters to :ref:`usage_event_log`.
+* Add :ref:`usage_report_events-by-country`.
+* Add Status tab.
+* Fix conflict with earlier versions pre-installed in `mu-plugins`. See :ref:`installation_already_installed`
+
+Upgrade
+^^^^^^^
+
+To take advantage of the new features you will need up update your `fail2ban` filters; existing filters will continue to work as before.
+
