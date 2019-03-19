@@ -11,5 +11,8 @@ WP_FAIL2BAN_LOG_SPAM
 
 	define('WP_FAIL2BAN_LOG_SPAM', true);
 
-The comment ID and IP will be written to :ref:`WP_FAIL2BAN_AUTH_LOG` and matched by :ref:`wordpress-hard_conf`.
+The comment ID and IP will be written to :ref:`WP_FAIL2BAN_SPAM_LOG` and matched by :ref:`wordpress-hard_conf`.
+
+.. seealso::
+   * :ref:`WP_FAIL2BAN_SPAM_LOG`
 
