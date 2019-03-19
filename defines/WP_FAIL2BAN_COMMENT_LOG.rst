@@ -11,5 +11,7 @@ By default, *WPf2b* uses **LOG_USER** for logging comments. If you'd rather it u
 
 	define('WP_FAIL2BAN_COMMENT_LOG', LOG_LOCAL3);
 
-.. seealso:: :ref:`WP_FAIL2BAN_LOG_COMMENTS`.
+.. seealso::
+   * :ref:`WP_FAIL2BAN_LOG_COMMENTS`
+   * :ref:`WP_FAIL2BAN_LOG_COMMENTS_EXTRA`
 

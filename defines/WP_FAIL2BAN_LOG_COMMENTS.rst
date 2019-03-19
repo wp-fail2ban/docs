@@ -13,3 +13,6 @@ WP_FAIL2BAN_LOG_COMMENTS
 
 The comment ID and IP will be written to :ref:`WP_FAIL2BAN_COMMENT_LOG` and matched by :ref:`wordpress-extra_conf`.
 
+.. seealso::
+   * :ref:`WP_FAIL2BAN_COMMENT_LOG`
+
