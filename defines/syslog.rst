@@ -1,10 +1,18 @@
-.. _defines_workarounds:
+.. _defines_syslog:
 
-syslog Workarounds
-------------------
+syslog
+------
 
 .. toctree::
-   WP_FAIL2BAN_SYSLOG_SHORT_TAG
-   WP_FAIL2BAN_HTTP_HOST
-   WP_FAIL2BAN_TRUNCATE_HOST
+   :caption: Connection
+
+   constants/WP_FAIL2BAN_OPENLOG_OPTIONS
+
+
+.. toctree::
+   :caption: Workarounds
+
+   constants/WP_FAIL2BAN_SYSLOG_SHORT_TAG
+   constants/WP_FAIL2BAN_HTTP_HOST
+   constants/WP_FAIL2BAN_TRUNCATE_HOST
 
