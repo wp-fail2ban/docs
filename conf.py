@@ -6,6 +6,9 @@
 # full list see the documentation:
 # http://www.sphinx-doc.org/en/master/config
 
+from sphinx.highlighting import lexers
+from pygments.lexers.web import PhpLexer
+
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -38,8 +41,7 @@ release = u''
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-]
+extensions = ['sphinx.ext.intersphinx']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -171,3 +173,19 @@ epub_title = project
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
+
+
+intersphinx_mapping = {
+    'wpf2b+cf7': (
+        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-add-on-contact-form-7/en/latest/',
+        '../../wp-fail2ban-addon-contact-form-7/docs/_build/html/objects.inv'        
+    ),
+    'wpf2b+gf': (
+        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-add-on-gravity-forms/en/latest/',
+        '../../wp-fail2ban-addon-gravity-forms/docs/_build/html/objects.inv'
+    )
+}
+
+lexers['php'] = PhpLexer(startinline=True)
+lexers['php-annotations'] = PhpLexer(startinline=True)
+

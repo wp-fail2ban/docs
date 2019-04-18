@@ -30,7 +30,10 @@ The Premium version installs via Freemius.
 Database
 """"""""
 
-Activating *WPf2b* Premium creates one database table, ``wp_fail2ban_log``.
+Activating *WPf2b* Premium creates two database tables:
 
-*WPf2b* Premium never drops the database table - it's your data.
+* ``wp_fail2ban_log``
+* ``wp_fail2ban_plugins``
+
+*WPf2b* Premium never drops the database tables - it's your data.
 

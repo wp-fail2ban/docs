@@ -2,7 +2,7 @@
 WP fail2ban Manual
 ==================
 
-`WP fail2ban <https://github.com/invisnet/wp-fail2ban>`_ is a WordPress plugin to write a myriad of events to syslog for integration with `fail2ban <https://www.fail2ban.org/>`_.
+`WP fail2ban <https://wp-fail2ban.com/>`_ is a WordPress plugin to write a myriad of events to syslog for integration with `fail2ban <https://www.fail2ban.org/>`_.
 
 .. toctree::
    :caption: Contents
@@ -13,13 +13,15 @@ WP fail2ban Manual
    installation
    configuration
    usage
+   addons
 
 .. toctree::
    :caption: Reference
+   :maxdepth: 1
 
+   developers
    release
    defines
    facilities
    filters
-   premium
-
+   
