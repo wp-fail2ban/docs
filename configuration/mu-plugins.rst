@@ -15,13 +15,17 @@ One of the better ways is to install *WPf2b* as usual and then create a symlink 
 
 .. code-block:: sh
 
-	lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> ../plugins/wp-fail2ban/wp-fail2ban.php
+    # ls -l
+    total 1
+    lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> ../plugins/wp-fail2ban/wp-fail2ban.php
 
 or for the Premium version:
 
 .. code-block:: sh
 
-	lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> ../plugins/wp-fail2ban-premium/wp-fail2ban.php
+    # ls -l
+    total 1
+    lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> ../plugins/wp-fail2ban-premium/wp-fail2ban.php
 
 This has the advantage that you can update *WPf2b* as usual without having to update ``mu-plugins`` directly.  For the free version you don't need to activate *WPf2b*, but you do for the Premium version.
 
@@ -39,7 +43,9 @@ The actual configuration itself is simple; for the **Free** version:
 
 .. code-block:: sh
 
-	lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> wp-fail2ban/wp-fail2ban.php
+    # ls -l
+    total 1
+    lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> wp-fail2ban/wp-fail2ban.php
 
 3. **Keep** *WPf2b* **up-to-date**.
 
@@ -50,7 +56,9 @@ For the **Premium** version:
 
 .. code-block:: sh
 
-	lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> wp-fail2ban-premium/wp-fail2ban.php
+    # ls -l
+    total 1
+    lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> wp-fail2ban-premium/wp-fail2ban.php
 
 3. **Keep** *WPf2b* **up-to-date**.
 
