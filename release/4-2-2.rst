@@ -1,0 +1,7 @@
+.. _release_4.2.2:
+
+4.2.2
+-----
+
+* Fix 5.3 compatibility.
+

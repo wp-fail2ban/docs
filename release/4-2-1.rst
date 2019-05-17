@@ -1,0 +1,20 @@
+.. _release_4-2-1:
+
+4.2.1
+-----
+
+* Completed support for :ref:`WP_FAIL2BAN_COMMENT_EXTRA_LOG`.
+* Add support for 3rd-party plugins; see :ref:`developers`.
+
+  * Add-on for Contact Form 7 (experimental).
+  * Add-on for Gravity Forms (experimental).
+
+* Change logging for known-user with incorrect password; previously logged as unknown user and matched by `hard` filters (due to limitations in older versions of WordPress), now logged as known user and matched by `soft`.
+* Bugfix for email-as-username - now logged correctly and matched by soft, not hard, filters.
+* Bugfix for regression in code to prevent Free/Premium conflict.
+
+Upgrade
+^^^^^^^
+
+You do not need to update your filters from 4.1.0.
+
