@@ -1,3 +1,5 @@
+.. highlight:: console
+
 .. _configuration__mu-plugins:
 
 `mu-plugins` Support
@@ -13,16 +15,18 @@ Loading Early
 
 One of the better ways is to install *WPf2b* as usual and then create a symlink in ``mu-plugins``:
 
-.. code-block:: sh
+::
 
+    # ln -s ../plugins/wp-fail2ban/wp-fail2ban.php
     # ls -l
     total 1
     lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> ../plugins/wp-fail2ban/wp-fail2ban.php
 
 or for the Premium version:
 
-.. code-block:: sh
+::
 
+    # ln -s ../plugins/wp-fail2ban-premium/wp-fail2ban.php
     # ls -l
     total 1
     lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> ../plugins/wp-fail2ban-premium/wp-fail2ban.php
@@ -41,8 +45,9 @@ The actual configuration itself is simple; for the **Free** version:
 #. Extract the **Free** version of *WPf2b* into a directory called `wp-fail2ban` within `mu-plugins`.
 #. symlink ``wp-fail2ban.php``:
 
-.. code-block:: sh
+::
 
+    # ln -s wp-fail2ban/wp-fail2ban.php
     # ls -l
     total 1
     lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> wp-fail2ban/wp-fail2ban.php
@@ -54,8 +59,9 @@ For the **Premium** version:
 #. Extract the **Premium** version of *WPf2b* into a directory called `wp-fail2ban-premium` within `mu-plugins`.
 #. symlink ``wp-fail2ban.php``:
 
-.. code-block:: sh
+::
 
+    # ln -s wp-fail2ban-premium/wp-fail2ban.php
     # ls -l
     total 1
     lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> wp-fail2ban-premium/wp-fail2ban.php
