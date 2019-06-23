@@ -5,3 +5,8 @@
 
 * Fix 5.3 compatibility.
 
+Upgrade
+^^^^^^^
+
+You do not need to update your filters from 4.1.0.
+
