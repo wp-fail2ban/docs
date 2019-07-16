@@ -1,0 +1,13 @@
+.. _release_4.2.5:
+
+4.2.5
+-----
+
+* Properly fix PHP 5.3 support; tested on CentOS 6. Does not support any UI or Premium features.
+* Fix potential issue with ``WP_FAIL2BAN_BLOCK_USER_ENUMERATION`` if calling REST API or XMLRPC from admin area.
+
+Upgrade
+^^^^^^^
+
+This is a minor release. You do not need to update your filters from 4.1.0.
+
