@@ -14,4 +14,5 @@ Now you have *WPf2b* installed and activated it's time to make it do something u
    configuration/logging
    configuration/fail2ban
    configuration/mu-plugins
+   configuration/rest-api
 

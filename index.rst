@@ -19,6 +19,7 @@ WP fail2ban Manual
    :caption: Reference
    :maxdepth: 1
 
+   rest
    developers
    release
    defines

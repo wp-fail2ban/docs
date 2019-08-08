@@ -44,6 +44,18 @@ This logical separation will continue for all future versions - if you were happ
 Features
 --------
 
+.. _3rd-party-plugins:
+
+NEW - Support for 3rd-party Plugins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Version 4.2 introduces a simple API for authors to integrate their plugins with *WPf2b*, with 2 *experimental* add-ons:
+
+  * `Contact Form 7 <https://wordpress.org/plugins/wp-fail2ban-addon-contact-form-7/>`_
+  * `Gravity Forms <https://wordpress.org/plugins/wp-fail2ban-addon-gravity-forms/>`_
+  **NB:** Requires PHP >= 5.6
+
+
 
 .. _cloudflare-and-proxy-servers:
 
