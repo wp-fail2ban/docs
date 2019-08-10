@@ -36,6 +36,11 @@ Typical Settings
    maxretry = 3
    port = http,https
 
+
+.. note::
+
+   Make sure you change ``logpath`` to the correct log for your OS. If your OS uses `systemd` you may need to install a real syslog service.
+
 3. Reload or restart `fail2ban`
 
 
