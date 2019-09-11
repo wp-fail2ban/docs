@@ -37,7 +37,7 @@ Define the Shared Secret
 
       2. The Secret **must be unique**.
 
-      3. **Do not use these example salts**.
+      3. **Do not use these example salts** [#f1]_.
 
       **You will compromise the security of your site if you fail to follow these rules**.
 
@@ -47,3 +47,9 @@ Enable the *WPf2b* REST API
    Either:
 
    1. 
+
+
+.. rubric:: Footnotes
+
+.. [#f1] You can try, but the REST API won't load if you do.
+
