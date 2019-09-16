@@ -3,7 +3,7 @@
 REST API
 --------
 
-The REST API is a Premium-only feature.
+.. rubric:: The REST API is a Premium-only feature.
 
 Ensure the PHP `hash` Extension is Enabled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -35,9 +35,11 @@ Define the Shared Secret
    .. warning::
       1. The Secret **must be random data**.
 
-      2. The Secret **must be unique**.
+      2. The Secret **must be at least 64 characters long**.
 
-      3. **Do not use these example salts** [#f1]_.
+      3. The Secret **must be unique**.
+
+      4. **Do not use these example salts** [#f1]_.
 
       **You will compromise the security of your site if you fail to follow these rules**.
 
