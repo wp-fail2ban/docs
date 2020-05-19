@@ -16,3 +16,9 @@ syslog
    constants/WP_FAIL2BAN_HTTP_HOST
    constants/WP_FAIL2BAN_TRUNCATE_HOST
 
+
+.. toctree::
+   :caption: Last Log
+
+   constants/WP_FAIL2BAN_DISABLE_LAST_LOG
+
