@@ -1,0 +1,14 @@
+.. _release_4.2.6:
+
+4.2.6
+-----
+
+* Add support for `Remote Tools <https://wp-fail2ban.com/add-ons/remote-tools/?utm_source=docs.wp-fail2ban.com&utm_medium=4.2&utm_campaign=4.2.6>`_ add-on.
+* Add support for the new ClassicPress security page.
+* Improved user enumeration blocking.
+
+Upgrade
+^^^^^^^
+
+This is a minor release. You do not need to update your filters from 4.1.0.
+

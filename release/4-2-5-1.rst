@@ -1,0 +1,12 @@
+.. _release_4.2.5.1:
+
+4.2.5.1
+-------
+
+* Fix premium activation issue with PHP < 7.0.
+
+Upgrade
+^^^^^^^
+
+This is a premium-only patch release. If you are on PHP 7.0 or later you do not need to upgrade.
+
