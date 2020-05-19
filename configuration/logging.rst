@@ -31,6 +31,8 @@ Over the years *WPf2b* has accumulated a lot of logging ability (and there're ev
 +--------------------------------------------+-------------------------------------------+
 | Blocked User Enumeration                   | :ref:`WP_FAIL2BAN_BLOCK_USER_ENUMERATION` |
 +--------------------------------------------+-------------------------------------------+
+| Blocked Username Login                     | :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN`   |
++--------------------------------------------+-------------------------------------------+
 | Comment                                    | :ref:`WP_FAIL2BAN_LOG_COMMENTS`           |
 +--------------------------------------------+-------------------------------------------+
 | Comment: Spam                              | :ref:`WP_FAIL2BAN_LOG_SPAM`               |
