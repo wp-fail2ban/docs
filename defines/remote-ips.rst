@@ -13,3 +13,8 @@ Remote IPs
 
    constants/WP_FAIL2BAN_REMOTE_ADDR
 
+.. toctree::
+   :caption: Premium
+
+   constants/WP_FAIL2BAN_EX_MAXMIND_LICENSE
+
