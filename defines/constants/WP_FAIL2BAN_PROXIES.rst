@@ -21,3 +21,12 @@ To set **WP_FAIL2BAN_PROXIES**, add something like the following to ``wp-config.
 
 *WPf2b* doesn't do anything clever with the list - beware of typos!
 
+If you're running PHP 7 you can use an array instead:
+
+.. code-block:: php
+
+  define('WP_FAIL2BAN_PROXIES', [
+      '192.168.0.42',
+      '192.168.42.0/24'
+  ]);
+
