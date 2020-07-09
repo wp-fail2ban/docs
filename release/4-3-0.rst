@@ -1,0 +1,17 @@
+.. _release_4.3.0:
+
+4.3.0
+-----
+
+* Add new dashboard widget: last 5 `syslog` messages.
+* Add full `multisite support <https://wp-fail2ban.com/features/multisite-networks/?utm_source=docs.wp-fail2ban.com&utm_medium=4.3&utm_campaign=4.3.0>`_.
+* Add `username login blocking <https://wp-fail2ban.com/features/block-username-logins/?utm_source=docs.wp-fail2ban.com&utm_medium=4.3&utm_campaign=4.3.0>`_ (force login with email).
+* Add `separate logging <https://wp-fail2ban.com/features/empty-username-logging/?utm_source=docs.wp-fail2ban.com&utm_medium=4.3&utm_campaign=4.3.0>`_ for login attempts with an empty username.
+* Improve `user enumeration blocking <https://wp-fail2ban.com/features/block-user-enumeration/?utm_source=docs.wp-fail2ban.com&utm_medium=4.3&utm_campaign=4.3.0>`_ compatibility with the WordPress block editor (Gutenberg).
+* Bump the minimum PHP version to 5.6.
+
+Upgrade
+^^^^^^^
+
+To take advantage of the new features you will need up update your `fail2ban` filters; existing filters will continue to work as before. **Premium users:** Please backup your database before upgrading.
+
