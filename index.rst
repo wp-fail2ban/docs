@@ -10,6 +10,7 @@ WP fail2ban Manual
    :numbered:
 
    introduction
+   features
    installation
    configuration
    usage
