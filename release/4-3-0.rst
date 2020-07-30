@@ -35,6 +35,18 @@ Patches
 * Fix incorrect total for Event Log.
 * Fix database renumber for Pingbacks.
 
+4.3.0.4
+^^^^^^^
+
+* Fix plugin event registration.
+* Add colour to "Last 5 Messages" dashboard widget.
+
+4.3.0.5
+^^^^^^^
+
+* Fix empty username detection for multisite.
+* Fix harmless warning when activating new multisite install.
+* Fix esoteric edge-case where `wp-load.php` is loaded via a script run from the CLI in a directory with a `functions.php` file.
 
 Upgrade
 -------
