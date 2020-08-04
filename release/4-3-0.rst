@@ -48,6 +48,11 @@ Patches
 * Fix harmless warning when activating new multisite install.
 * Fix esoteric edge-case where `wp-load.php` is loaded via a script run from the CLI in a directory with a `functions.php` file.
 
+4.3.0.6
+^^^^^^^
+
+* Fix Forbidden error on Posts page for roles below Editor when user enum blocking enabled. [WordPress only]
+
 Upgrade
 -------
 
