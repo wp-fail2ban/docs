@@ -53,8 +53,28 @@ Patches
 
 * Fix Forbidden error on Posts page for roles below Editor when user enum blocking enabled. [WordPress only]
 
+4.3.0.7
+^^^^^^^
+
+* Finish refactoring to allow inclusion of constants in `wp-config.php` (h/t @iCounsellor).
+
+.. rubric:: Premium Only
+
+* Fix MaxMind database update.
+
 Upgrade
 -------
 
-To take advantage of the new features you will need up update your `fail2ban` filters; existing filters will continue to work as before. **Premium users:** Please backup your database before upgrading.
+To take advantage of the new features you will need up update your `fail2ban` filters; existing filters will continue to work as before.
+
+.. rubric:: Premium Users
+
+Please backup your database before upgrading.
+
+4.3.0.7
+^^^^^^^
+
+.. rubric:: Premium Users
+
+Please update your MaxMind database.
 
