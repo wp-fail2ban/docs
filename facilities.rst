@@ -4,7 +4,7 @@
 Facilities
 ==========
 
-While the full list of facilities is reproduced here for completeness, using anything but **LOG_AUTH**, **LOG_AUTHPRIV**, and/or **LOG_LOCAL0**\ ..\ **7** is unlikely to have the desired results.
+While the full list of facilities is reproduced here for completeness, using anything but **LOG_AUTH**, **LOG_AUTHPRIV**, and/or **LOG_LOCAL0**\ ..\ **7** is unlikely to have the desired results. **LOG_USER** can be used for Notices, but Info messages are generally not saved.
 
 
 +---------------------+---------------------------------------------------------+
@@ -69,7 +69,7 @@ Logfiles
 +-----------+--------+-----------------------+-----------------------+-----------------------+
 | OS        | Level  | LOG_AUTH              | LOG_AUTHPRIV          | LOG_USER              |
 +===========+========+=======================+=======================+=======================+
-| CentOS 7  |        |                       | ``/var/log/secure``   |                       |
+| CentOS 7  |        | *(not used)*          | ``/var/log/secure``   |                       |
 +-----------+--------+-----------------------+-----------------------+-----------------------+
 | FeeBSD    | INFO   | ``/var/log/auth/log`` | ``/var/log/auth/log`` | -                     |
 +           +--------+-----------------------+-----------------------+-----------------------+
