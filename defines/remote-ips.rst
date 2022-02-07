@@ -13,8 +13,17 @@ Remote IPs
 
    constants/WP_FAIL2BAN_REMOTE_ADDR
 
+Premium
+^^^^^^^
+
 .. toctree::
-   :caption: Premium
+   :caption: IP Geolocation
 
    constants/WP_FAIL2BAN_EX_MAXMIND_LICENSE
+
+.. toctree::
+   :caption: XML-RPC
+   
+   constants/WP_FAIL2BAN_EX_XMLRPC_JETPACK
+   constants/WP_FAIL2BAN_EX_XMLRPC_TRUSTED_IPS
 
