@@ -4,6 +4,10 @@ Logging
 -------
 
 .. toctree::
+
+   constants/WP_FAIL2BAN_USE_AUTHPRIV
+
+.. toctree::
    :caption: Enable Logging
 
    constants/WP_FAIL2BAN_LOG_COMMENTS

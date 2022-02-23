@@ -13,4 +13,4 @@ To enable logging plugin "Auth" class messages, add the following to ``wp-config
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_AUTH_LOG`
-
+   * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
