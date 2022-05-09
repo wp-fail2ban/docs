@@ -62,9 +62,9 @@ While the full list of facilities is reproduced here for completeness, using any
 
 .. _syslog_logfiles:
 
-========
-Logfiles
-========
+=================
+Logfile Reference
+=================
 
 +-----------+--------+-----------------------+-----------------------+-----------------------+
 | OS        | Level  | LOG_AUTH              | LOG_AUTHPRIV          | LOG_USER              |
@@ -77,4 +77,61 @@ Logfiles
 +-----------+--------+-----------------------+-----------------------+-----------------------+
 | Ubuntu 18 | (all)  | ``/var/log/auth.log`` | ``/var/log/auth.log`` | ``/var/log/syslog``   |
 +-----------+--------+-----------------------+-----------------------+-----------------------+
+
+
+==================
+Default Facilities
+==================
+
++----------------------------------+----------+
+| Define                           | Facility |
++==================================+==========+
+| WP_FAIL2BAN_AUTH_LOG             | LOG_AUTH |
++----------------------------------+----------+
+| WP_FAIL2BAN_COMMENT_EXTRA_LOG    | LOG_AUTH |
++----------------------------------+----------+
+| WP_FAIL2BAN_COMMENT_LOG          | LOG_USER |
++----------------------------------+----------+
+| WP_FAIL2BAN_PASSWORD_REQUEST_LOG | LOG_USER |
++----------------------------------+----------+
+| WP_FAIL2BAN_PINGBACK_ERROR_LOG   | LOG_AUTH |
++----------------------------------+----------+
+| WP_FAIL2BAN_PINGBACK_LOG         | LOG_USER |
++----------------------------------+----------+
+| WP_FAIL2BAN_PLUGIN_AUTH_LOG      | LOG_AUTH |
++----------------------------------+----------+
+| WP_FAIL2BAN_PLUGIN_COMMENT_LOG   | LOG_USER |
++----------------------------------+----------+
+| WP_FAIL2BAN_PLUGIN_OTHER_LOG     | LOG_USER |
++----------------------------------+----------+
+| WP_FAIL2BAN_PLUGIN_PASSWORD_LOG  | LOG_USER |
++----------------------------------+----------+
+| WP_FAIL2BAN_PLUGIN_REST_LOG      | LOG_USER |
++----------------------------------+----------+
+| WP_FAIL2BAN_PLUGIN_SPAM_LOG      | LOG_AUTH |
++----------------------------------+----------+
+| WP_FAIL2BAN_PLUGIN_XMLRPC_LOG    | LOG_USER |
++----------------------------------+----------+
+| WP_FAIL2BAN_SPAM_LOG             | LOG_AUTH |
++----------------------------------+----------+
+| WP_FAIL2BAN_XMLRPC_LOG           | LOG_USER |
++----------------------------------+----------+
+
+Premium
+^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
