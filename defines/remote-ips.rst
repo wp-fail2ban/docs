@@ -17,6 +17,11 @@ Premium
 ^^^^^^^
 
 .. toctree::
+   :caption: Proxies
+
+   constants/WP_FAIL2BAN_EX_PROXY_CLOUDFLARE
+
+.. toctree::
    :caption: IP Geolocation
 
    constants/WP_FAIL2BAN_EX_MAXMIND_LICENSE
