@@ -39,6 +39,19 @@ To enable this feature OR the event constants; for example, to enable `Closed` a
 
 	define('WP_FAIL2BAN_LOG_COMMENTS_EXTRA', WPF2B_EVENT_COMMENT_CLOSED | WPF2B_EVENT_COMMENT_DRAFT);
 
+You **must** also load the constants *before* trying to use them. In `wp-config.php` add:
+
+.. code-block:: php
+
+  include __DIR__.'/wp-content/plugins/wp-fail2ban/lib/constants.php';
+
+or for the Premium version:
+
+.. code-block:: php
+
+  include __DIR__.'/wp-content/plugins/wp-fail2ban-premium/lib/constants.php';
+
+If you have non-standard paths, e.g. plugins in a different place, you'll need to adjust the `include` path to suit.
 
 The Post ID and IP will be written to :ref:`WP_FAIL2BAN_COMMENT_LOG` and matched by :ref:`wordpress-extra_conf`.
 

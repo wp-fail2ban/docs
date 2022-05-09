@@ -1,7 +1,7 @@
 .. _release_4.3.0:
 
 4.3.0
------
+=====
 
 * Add new dashboard widget: last 5 `syslog` messages.
 * Add full `multisite support <https://wp-fail2ban.com/features/multisite-networks/?utm_source=docs.wp-fail2ban.com&utm_medium=4.3&utm_campaign=4.3.0>`_.
@@ -10,8 +10,71 @@
 * Improve `user enumeration blocking <https://wp-fail2ban.com/features/block-user-enumeration/?utm_source=docs.wp-fail2ban.com&utm_medium=4.3&utm_campaign=4.3.0>`_ compatibility with the WordPress block editor (Gutenberg).
 * Bump the minimum PHP version to 5.6.
 
-Upgrade
+Patches
+-------
+
+4.3.0.1
 ^^^^^^^
 
-To take advantage of the new features you will need up update your `fail2ban` filters; existing filters will continue to work as before. **Premium users:** Please backup your database before upgrading.
+.. rubric:: Premium Only
+
+* Fix issue when `WP_FAIL2BAN_BLOCK_USERNAME_LOGIN` enabled and `WP_FAIL2BAN_BLOCKED_USERS` not configured.
+
+4.3.0.2
+^^^^^^^
+
+.. rubric:: Premium Only
+
+* Fix issue where some events weren't logged.
+
+4.3.0.3
+^^^^^^^
+
+.. rubric:: Premium Only
+
+* Fix incorrect total for Event Log.
+* Fix database renumber for Pingbacks.
+
+4.3.0.4
+^^^^^^^
+
+* Fix plugin event registration.
+* Add colour to "Last 5 Messages" dashboard widget.
+
+4.3.0.5
+^^^^^^^
+
+* Fix empty username detection for multisite.
+* Fix harmless warning when activating new multisite install.
+* Fix esoteric edge-case where `wp-load.php` is loaded via a script run from the CLI in a directory with a `functions.php` file.
+
+4.3.0.6
+^^^^^^^
+
+* Fix Forbidden error on Posts page for roles below Editor when user enum blocking enabled. [WordPress only]
+
+4.3.0.7
+^^^^^^^
+
+* Finish refactoring to allow inclusion of constants in `wp-config.php` (h/t @iCounsellor).
+
+.. rubric:: Premium Only
+
+* Fix MaxMind database update.
+
+Upgrade
+-------
+
+To take advantage of the new features you will need up update your `fail2ban` filters; existing filters will continue to work as before.
+
+.. rubric:: Premium Users
+
+Please backup your database before upgrading.
+
+4.3.0.7
+^^^^^^^
+
+.. rubric:: Premium Users
+
+Please update your MaxMind database.
 

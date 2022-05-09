@@ -11,3 +11,5 @@ Default: LOG_AUTH
 
     define('WP_FAIL2BAN_COMMENT_EXTRA_LOG', LOG_LOCAL5);
 
+.. seealso::
+   * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
