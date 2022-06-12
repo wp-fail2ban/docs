@@ -15,3 +15,5 @@ Based on a suggestion from *@geeklol* and a plugin by *@ROIBOT*, *WPf2b* can now
 
 	define('WP_FAIL2BAN_BLOCK_USER_ENUMERATION', true);
 
+.. seealso::
+   * :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN`
