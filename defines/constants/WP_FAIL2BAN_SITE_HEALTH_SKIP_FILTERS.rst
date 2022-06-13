@@ -15,3 +15,5 @@ In ``wp-config.php``:
 
 	define('WP_FAIL2BAN_SITE_HEALTH_SKIP_FILTERS', true);
 
+.. warning::
+  **It is your responsibility to ensure your filters are kept current.**
