@@ -54,6 +54,8 @@ Other things are relatively benign, like a failed login. You can't let people tr
 For the avoidance of doubt: you should be using *both* filters.
 
 
+.. _configuration__fail2ban__custom-filters:
+
 Custom Filters
 ^^^^^^^^^^^^^^
 
@@ -68,6 +70,8 @@ Version 4 introduced a number of new logging options which didn't fit cleanly in
 
 For example, if your site doesn't use WordPress comments at all, you could add the rules matching attempted comments to the `hard-custom` filter. Again, there is no "one size fits all" for these rules.
 
+
+.. _configuration__fail2ban__updating:
 
 Updating
 ^^^^^^^^
