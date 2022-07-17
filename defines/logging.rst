@@ -15,7 +15,6 @@ Logging
    constants/WP_FAIL2BAN_LOG_SPAM
    constants/WP_FAIL2BAN_LOG_PINGBACKS
    constants/WP_FAIL2BAN_LOG_PASSWORD_REQUEST
-   constants/WP_FAIL2BAN_LOG_DISABLE_LAST
 
 .. toctree::
    :caption: Facility
