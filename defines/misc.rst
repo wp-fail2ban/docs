@@ -1,7 +1,7 @@
 .. _misc:
 
-Miscelaneous
-------------
+Miscellaneous
+-------------
 
 .. toctree::
 
