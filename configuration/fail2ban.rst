@@ -18,9 +18,9 @@ Typical Settings
 """"""""""""""""
 
 #. Copy `wordpress-hard.conf` and `wordpress-soft.conf` to your `fail2ban/filters.d` directory
-#. Edit `jail.local` to include something like:
+#. Create a new file in `jail.d` called `wordpress.conf`:
 
-.. code-block:: sh
+.. code-block:: ini
 
    [wordpress-hard]
    enabled = true
@@ -39,7 +39,7 @@ Typical Settings
 
 .. note::
 
-   Make sure you change ``logpath`` to the correct log for your OS. If your OS uses `systemd` you may need to install a real syslog service.
+   Make sure you change ``logpath`` to the correct log for your OS. If your OS uses `systemd` it may be simpler and/or easier to install a real syslog service first.
 
 3. Reload or restart `fail2ban`
 
