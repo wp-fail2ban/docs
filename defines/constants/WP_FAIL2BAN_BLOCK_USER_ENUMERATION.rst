@@ -7,13 +7,22 @@ WP_FAIL2BAN_BLOCK_USER_ENUMERATION
 .. versionchanged:: 4.0.0
    Now also blocks enumeration via the REST API.
 
-Brute-forcing WP requires knowing a valid username. Unfortunately, WP makes this all but trivial.
+Brute-forcing WordPress requires a valid username. Unfortunately, WordPress makes usernames trivial to find.
 
-Based on a suggestion from *@geeklol* and a plugin by *@ROIBOT*, *WPf2b* can now block user enumeration attempts. Just add the following to ``wp-config.php``:
+*WPf2b* can block the most common method of username discovery: user enumeration. Add the following to ``wp-config.php``:
 
 .. code-block:: php
 
 	define('WP_FAIL2BAN_BLOCK_USER_ENUMERATION', true);
 
+.. include:: use-wp-config.rst
+
+.. warning::
+   If your theme has Author profile pages (e.g. TwentyTwenty) you will need to block username logins instead.
+
 .. seealso::
    * :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN`
+
+.. rubric:: History
+
+Based on a suggestion from *@geeklol* and a plugin by *@ROIBOT*.
