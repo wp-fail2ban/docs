@@ -7,5 +7,5 @@ All
    :hidden:
    :glob:
 
-   constants/*
+   constants/WP_FAIL2BAN_*
 
