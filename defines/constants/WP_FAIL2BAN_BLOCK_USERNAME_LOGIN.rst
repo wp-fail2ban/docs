@@ -7,7 +7,7 @@ WP_FAIL2BAN_BLOCK_USERNAME_LOGIN
 
 WordPress makes it trivial to discover valid usernames, and sometimes it is not possible to block user enumeration to prevent this.
 
-A better and complimentary solution is to prevent logins with usernames, instead forcing the use of the user's registered email address.
+A better and complementary solution is to prevent logins with usernames, instead forcing the use of the user's registered email address.
 
 To do this, add the following to ``wp-config.php``:
 
