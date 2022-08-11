@@ -1,9 +1,14 @@
 .. _WP_FAIL2BAN_BLOCK_USERNAME_LOGIN:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_BLOCK_USERNAME_LOGIN
 --------------------------------
 
 .. versionadded:: 4.3.0
+
+----
 
 WordPress makes it trivial to discover valid usernames, and sometimes it is not possible to block user enumeration to prevent this.
 
@@ -14,6 +19,8 @@ To do this, add the following to ``wp-config.php``:
 .. code-block:: php
 
    define('WP_FAIL2BAN_BLOCK_USERNAME_LOGIN', true);
+
+**Default:** ``false``
 
 .. include:: use-wp-config.rst
 
