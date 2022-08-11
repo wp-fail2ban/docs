@@ -5,7 +5,9 @@ WP_FAIL2BAN_LOG_SPAM
 
 .. versionadded:: 3.5.0
 
-*WPf2b* can now log spam comments. To enable this feature, add the following to ``wp-config.php``:
+----
+
+*WPf2b* can log comments marked as spam. To enable this feature, add the following to ``wp-config.php``:
 
 .. code-block:: php
 
