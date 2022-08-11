@@ -1,9 +1,14 @@
 .. _WP_FAIL2BAN_DISABLE_LAST_LOG:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_DISABLE_LAST_LOG
 ----------------------------
 
 .. versionadded:: 4.3.0
+
+----
 
 *WPf2b* v4.3.0 introduced a new dashboard widget to display the last 5 ``syslog`` messages.
 
