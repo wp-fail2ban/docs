@@ -4,12 +4,16 @@
 Events
 ======
 
-Events may belong to more than one class.
+.. note::
+
+   Events may belong to more than one class.
 
 .. _events_AUTH:
 
 AUTH Events
 -----------
+
+Authentication events. Broadly, anything to do with users.
 
 .. toctree::
 
@@ -29,13 +33,15 @@ AUTH Events
 BLOCK Events
 ------------
 
+Things that have been actively prevented.
+
 .. toctree::
+
+   events/block/WPF2B_EVENT_BLOCK_COUNTRY
 
    events/auth/WPF2B_EVENT_AUTH_BLOCK_USER
    events/auth/WPF2B_EVENT_AUTH_BLOCK_USER_ENUM
    events/auth/WPF2B_EVENT_AUTH_BLOCK_USERNAME_LOGIN
-
-   events/block/WPF2B_EVENT_BLOCK_COUNTRY
 
    events/xmlrpc/WPF2B_EVENT_XMLRPC_BLOCKED
 
@@ -43,6 +49,8 @@ BLOCK Events
 
 COMMENT Events
 --------------
+
+Anything to do with comments.
 
 .. toctree::
 
@@ -60,6 +68,8 @@ COMMENT Events
 OTHER Events
 ------------
 
+Whatever doesn't fit better into another Class.
+
 .. toctree::
 
    events/other/WPF2B_EVENT_OTHER_UNKNOWN_PROXY
@@ -69,6 +79,8 @@ OTHER Events
 PASSWORD Events
 ---------------
 
+Password-related events.
+
 .. toctree::
 
    events/password/WPF2B_EVENT_PASSWORD_REQUEST
@@ -77,6 +89,8 @@ PASSWORD Events
 
 REST Events
 -----------
+
+REST API events.
 
 .. toctree::
 
@@ -88,6 +102,8 @@ REST Events
 SPAM Events
 -----------
 
+Anything that can be classified as spam, not just comments.
+
 .. toctree::
 
    events/comment/WPF2B_EVENT_COMMENT_SPAM
@@ -96,6 +112,8 @@ SPAM Events
 
 XMLRPC Events
 -------------
+
+XML-RPC events, including Pingbacks.
 
 .. toctree::
 

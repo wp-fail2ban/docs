@@ -24,5 +24,6 @@ WP fail2ban Manual
    release
    defines
    facilities
+   events
    filters
    
