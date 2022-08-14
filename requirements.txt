@@ -1,1 +1,1 @@
-sphinx_copybutton
+sphinx-copybutton
