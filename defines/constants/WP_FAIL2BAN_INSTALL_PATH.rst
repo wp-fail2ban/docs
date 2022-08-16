@@ -1,9 +1,14 @@
 .. _WP_FAIL2BAN_INSTALL_PATH:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_INSTALL_PATH
 ------------------------
 
 .. versionadded:: 5.0.0
+
+----
 
 The path to the ``fail2ban`` install.
 

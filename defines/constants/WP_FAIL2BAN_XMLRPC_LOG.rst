@@ -1,9 +1,14 @@
 .. _WP_FAIL2BAN_XMLRPC_LOG:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_XMLRPC_LOG
 ----------------------
 
 .. versionadded:: 3.6.0
+
+----
 
 This is for debugging and future development.
 

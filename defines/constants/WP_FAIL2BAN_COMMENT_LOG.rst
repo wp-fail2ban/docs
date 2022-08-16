@@ -6,19 +6,22 @@
 WP_FAIL2BAN_COMMENT_LOG
 -----------------------
 
+.. rubric:: Facility for :ref:`Comment class <events_COMMENT>` events.
+.. include:: default-log_user.rst
+
 .. versionadded:: 3.5.0
 
 ----
 
-By default, *WPf2b* uses **LOG_USER** for logging comments. If you'd rather it used a different facility you can change it by adding something like the following to ``wp-config.php``:
-
 .. code-block:: php
+   :caption: Example: Using LOG_LOCAL3
 
-	define('WP_FAIL2BAN_COMMENT_LOG', LOG_LOCAL3);
-
-**Default:** ``LOG_USER``
+   /**
+    * Facility for Comment events.
+    */
+   define('WP_FAIL2BAN_COMMENT_LOG', LOG_LOCAL3);
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_LOG_COMMENTS`
    * :ref:`WP_FAIL2BAN_LOG_COMMENTS_EXTRA`
-
+   * :ref:`facilities`

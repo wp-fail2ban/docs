@@ -6,20 +6,23 @@
 WP_FAIL2BAN_AUTH_LOG
 --------------------
 
+.. rubric:: Facility for :ref:`Auth class <events_AUTH>` events.
+.. include:: default-log_auth.rst
+
 .. versionadded:: 2.2.0
 .. versionchanged:: 4.4.0
    Uses :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
 
 ----
 
-By default, *WPf2b* uses **LOG_AUTH** for logging authentication success or failure. If you'd like to use a different log add the following to ``wp-config.php``:
-
 .. code-block:: php
+   :caption: Example: Using LOG_LOCAL5
 
-	define('WP_FAIL2BAN_AUTH_LOG', LOG_LOCAL5);
-
-Be sure to change the Facility to the one you're using.
+   /**
+    * Facility for Auth class events.
+    */
+   define('WP_FAIL2BAN_AUTH_LOG', LOG_LOCAL5);
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
-
+   * :ref:`events_AUTH`

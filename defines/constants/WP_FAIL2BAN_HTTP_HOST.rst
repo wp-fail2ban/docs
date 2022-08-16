@@ -1,9 +1,14 @@
 .. _WP_FAIL2BAN_HTTP_HOST:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_HTTP_HOST
 ---------------------
 
 .. versionadded:: 3.0.0
+
+----
 
 This is for some flavours of Linux where :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG` isn't enough.
 

@@ -1,5 +1,8 @@
 .. _WP_FAIL2BAN_PROXIES:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_PROXIES
 -------------------
 
@@ -7,7 +10,8 @@ WP_FAIL2BAN_PROXIES
 .. versionchanged:: 4.0.0
    Entries can be ignored by prefixing with **#**
 .. versionchanged:: 5.0.0
-   Entries can include IPv6 addresses.
+   Entries can include IPv6 addresses. 
+   Added "Unknown Proxy in X-Forwarded-For" message.
 
 ----
 

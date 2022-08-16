@@ -1,5 +1,8 @@
 .. _WP_FAIL2BAN_OPENLOG_OPTIONS:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_OPENLOG_OPTIONS
 ---------------------------
 

@@ -6,19 +6,23 @@
 WP_FAIL2BAN_LOG_PINGBACKS
 -------------------------
 
+.. rubric:: Log pingbacks.
+.. include:: default-disabled.rst
+
 .. versionadded:: 2.2.0
 
-*WPf2b* can log pingbacks. To enable this feature, add the following to ``wp-config.php``:
+----
 
 .. code-block:: php
 
-	define('WP_FAIL2BAN_LOG_PINGBACKS', true);
-
-**Default:** ``false``
-
-.. seealso::
-	* :ref:`WP_FAIL2BAN_PINGBACK_LOG`
+   /**
+    * Log pingbacks.
+    */
+   define('WP_FAIL2BAN_LOG_PINGBACKS', true);
 
 .. rubric:: History
 
 Based on a suggestion from *@maghe*.
+
+.. seealso::
+	* :ref:`WP_FAIL2BAN_PINGBACK_LOG`

@@ -6,6 +6,9 @@
 WP_FAIL2BAN_DISABLE_LAST_LOG
 ----------------------------
 
+.. rubric:: Disable logging last event messages.
+.. include:: default-false.rst
+
 .. versionadded:: 4.3.0
 
 ----
@@ -16,5 +19,8 @@ These messages are stored in the options table; for most sites this won't be an 
 
 .. code-block:: php
 
+   /**
+    * Disable logging last event messages.
+    */
    define('WP_FAIL2BAN_DISABLE_LAST_LOG', true);
 

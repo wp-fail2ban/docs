@@ -6,6 +6,8 @@
 WP_FAIL2BAN_BLOCKED_USERS
 -------------------------
 
+.. rubric:: Block login for specified usernames.
+
 .. versionadded:: 2.0.0
 
 ----
@@ -14,11 +16,15 @@ The bots that try to brute-force WordPress logins aren't that clever (no doubt t
 
 *WPf2b* allows you to specify a regex that will shortcut the login process if the requested username matches.
 
-For example, putting the following in ``wp-config.php``:
+For example,
 
 .. code-block:: php
+   :caption: Example: regex
 
-	define('WP_FAIL2BAN_BLOCKED_USERS', '^admin$');
+   /**
+    * Block logic
+    */
+   define('WP_FAIL2BAN_BLOCKED_USERS', '^admin$');
 
 will block any attempt to log in as **admin** before most of the core WordPress code is run. Unless you go crazy with it, a regex is usually cheaper than a call to the database, so this should help keep things running during an attack.
 
@@ -27,8 +33,12 @@ will block any attempt to log in as **admin** before most of the core WordPress 
 If you're running PHP 7 or later you can specify an array of users instead:
 
 .. code-block:: php
+   :caption: Example: Array of usernames
 
-	define('WP_FAIL2BAN_BLOCKED_USERS', ['admin', 'another', 'user']);
+   /**
+    * Block login
+    */
+   define('WP_FAIL2BAN_BLOCKED_USERS', ['admin', 'another', 'user']);
 
 .. rubric:: History
 

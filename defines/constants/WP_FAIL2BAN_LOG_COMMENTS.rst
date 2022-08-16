@@ -6,19 +6,21 @@
 WP_FAIL2BAN_LOG_COMMENTS
 ------------------------
 
+.. rubric:: Log submitted comments.
+.. include:: default-disabled.rst
+
 .. versionadded:: 3.5.0
 
 ----
 
-*WP fail2ban* can log when a comment is submitted. To enable this feature, add the following to ``wp-config.php``:
-
 .. code-block:: php
 
-	define('WP_FAIL2BAN_LOG_COMMENTS', true);
+   /**
+    * Log submitted comments.
+    */
+   define('WP_FAIL2BAN_LOG_COMMENTS', true);
 
 The comment ID and IP will be written to :ref:`WP_FAIL2BAN_COMMENT_LOG` and matched by :ref:`wordpress-extra_conf`.
-
-**Default:** Disabled.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_COMMENT_LOG`

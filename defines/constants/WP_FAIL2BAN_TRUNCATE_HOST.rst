@@ -1,9 +1,14 @@
 .. _WP_FAIL2BAN_TRUNCATE_HOST:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_TRUNCATE_HOST
 -------------------------
 
 .. versionadded:: 3.5.0
+
+----
 
 If you've set :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG` and defining :ref:`WP_FAIL2BAN_HTTP_HOST` for each virtual host isn't appropriate, you can set **WP_FAIL2BAN_TRUNCATE_HOST** to whatever value you need to make `syslog` happy:
 
