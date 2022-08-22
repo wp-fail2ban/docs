@@ -177,15 +177,15 @@ epub_exclude_files = ['search.html']
 
 intersphinx_mapping = {
     'wpf2b+bl': (
-        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-addon-blocklist/en/latest/',
+        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-blocklist/en/latest/objects.inv',
         '../../addon/blocklist/sphinx/source/_build/html/objects.inv'        
     ),
     'wpf2b+cf7': (
-        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-addon-contact-form-7/en/latest/',
+        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-addon-contact-form-7/en/latest/objects.inv',
         '../../addon/contact-form-7/sphinx/source/_build/html/objects.inv'        
     ),
     'wpf2b+gf': (
-        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-addon-gravity-forms/en/latest/',
+        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-addon-gravity-forms/en/latest/objects.inv',
         '../../addon/gravity-forms/sphinx/source/_build/html/objects.inv'
     )
 }
