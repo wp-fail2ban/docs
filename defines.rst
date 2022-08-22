@@ -14,4 +14,5 @@
    defines/remote-ips
    defines/plugin
    defines/misc
-
+   defines/development
+   defines/reserved

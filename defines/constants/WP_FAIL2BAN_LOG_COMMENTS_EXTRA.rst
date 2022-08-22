@@ -1,9 +1,16 @@
 .. _WP_FAIL2BAN_LOG_COMMENTS_EXTRA:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_LOG_COMMENTS_EXTRA
 ------------------------------
 
+.. rubric:: Log extra comment events.
+
 .. versionadded:: 4.0.0
+
+----
 
 *WPf2b* can optionally log the following comment-related events:
 
@@ -33,11 +40,15 @@ Password-protected
    .. rubric:: WPF2B_EVENT_COMMENT_PASSWORD
 
 
-To enable this feature OR the event constants; for example, to enable `Closed` and `Draft`:
+To enable this feature OR the event constants.
 
 .. code-block:: php
+   :caption: Example: enable `Closed` and `Draft`
 
-	define('WP_FAIL2BAN_LOG_COMMENTS_EXTRA', WPF2B_EVENT_COMMENT_CLOSED | WPF2B_EVENT_COMMENT_DRAFT);
+   /**
+    * Log comments on 'Closed' and 'Draft' posts
+    */
+   define('WP_FAIL2BAN_LOG_COMMENTS_EXTRA', WPF2B_EVENT_COMMENT_CLOSED | WPF2B_EVENT_COMMENT_DRAFT);
 
 You **must** also load the constants *before* trying to use them. In `wp-config.php` add:
 

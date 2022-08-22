@@ -1,16 +1,24 @@
 .. _WP_FAIL2BAN_PLUGIN_LOG_PASSWORD:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_PLUGIN_LOG_PASSWORD
 -------------------------------
 
+.. rubric:: Enable logging plugin :ref:`"Password" class <events_PASSWORD>` events.
+.. include:: default-disabled.rst
+
 .. versionadded:: 4.2.0
 
-To enable logging plugin "Password" class messages, add the following to ``wp-config.php``:
+----
 
 .. code-block:: php
 
-	define('WP_FAIL2BAN_PLUGIN_LOG_PASSWORD', true);
+   /**
+    * Enable logging plugin "Password" class events.
+    */
+   define('WP_FAIL2BAN_PLUGIN_LOG_PASSWORD', true);
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_PASSWORD_LOG`
-
