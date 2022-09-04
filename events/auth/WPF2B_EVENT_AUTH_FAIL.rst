@@ -4,3 +4,17 @@ WPF2B_EVENT_AUTH_FAIL
 ---------------------
 
 .. rubric:: Authentication failed.
+
++----------+----------+--------------------------------------------------------------+
+| syslog   | Facility | LOG_AUTH or LOG_AUTHPRIV                                     |
+|          +----------+--------------------------------------------------------------+
+|          | Level    | NOTICE                                                       |
++----------+----------+--------------------------------------------------------------+
+| fail2ban | Filter   | :ref:`wordpress-soft_conf`                                   |
+|          +----------+--------------------------------------------------------------+
+|          | Rules    | | ``Authentication failure for .* from <HOST>``              |
+|          |          | | ``Authentication attempt for unknown user .* from <HOST>`` |
++----------+----------+--------------------------------------------------------------+
+
+   .. seealso::
+      :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
