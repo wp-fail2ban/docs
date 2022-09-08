@@ -17,5 +17,7 @@ WPF2B_EVENT_XMLRPC_BLOCKED
 |          | Rule     | ``XML-RPC request blocked from <HOST>`` |
 +----------+----------+-----------------------------------------+
 
+.. versionadded:: 4.3.0
+
 .. seealso::
    :ref:`WP_FAIL2BAN_EX_XMLRPC_BLOCKED`

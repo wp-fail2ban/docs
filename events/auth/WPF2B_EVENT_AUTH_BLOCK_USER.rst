@@ -15,6 +15,8 @@ WPF2B_EVENT_AUTH_BLOCK_USER
 |          | Rule     | ``Blocked authentication attempt for .* from <HOST>`` |
 +----------+----------+-------------------------------------------------------+
 
+.. versionadded:: 4.3.0
+
 .. seealso::
-   :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
-   :ref:`WP_FAIL2BAN_BLOCKED_USERS`
+   | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+   | :ref:`WP_FAIL2BAN_BLOCKED_USERS`

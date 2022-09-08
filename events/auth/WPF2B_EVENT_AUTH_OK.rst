@@ -15,5 +15,7 @@ WPF2B_EVENT_AUTH_OK
 |          | Rule     | ``Accepted password for .* from <HOST>`` |
 +----------+----------+------------------------------------------+
 
+.. versionadded:: 4.0.0
+
 .. seealso::
    :ref:`WP_FAIL2BAN_USE_AUTHPRIV`

@@ -17,5 +17,7 @@ WPF2B_EVENT_BLOCK_COUNTRY
 |          | Rule     | ``Blocked access from country '..' from <HOST>`` |
 +----------+----------+--------------------------------------------------+
 
+.. versionadded:: 4.3.0
+
 .. seealso::
    :ref:`WP_FAIL2BAN_USE_AUTHPRIV`

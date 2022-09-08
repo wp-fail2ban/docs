@@ -15,6 +15,8 @@ WPF2B_EVENT_AUTH_BLOCK_USERNAME_LOGIN
 |          | Rule     | ``Blocked username authentication attempt for .* from <HOST>`` |
 +----------+----------+----------------------------------------------------------------+
 
+.. versionadded:: 4.3.0
+
 .. seealso::
-   :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
-   :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN`
+   | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+   | :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN`

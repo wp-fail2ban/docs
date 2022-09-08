@@ -15,6 +15,8 @@ WPF2B_EVENT_AUTH_BLOCK_USER_ENUM
 |          | Rule     | ``Blocked user enumeration attempt from <HOST>`` |
 +----------+----------+--------------------------------------------------+
 
+.. versionadded:: 4.3.0
+
 .. seealso::
-   :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
-   :ref:`WP_FAIL2BAN_BLOCK_USER_ENUMERATION`
+   | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+   | :ref:`WP_FAIL2BAN_BLOCK_USER_ENUMERATION`

@@ -16,5 +16,7 @@ WPF2B_EVENT_AUTH_FAIL
 |          |          | | ``Authentication attempt for unknown user .* from <HOST>`` |
 +----------+----------+--------------------------------------------------------------+
 
-   .. seealso::
-      :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+.. versionadded:: 4.0.0
+
+.. seealso::
+   :ref:`WP_FAIL2BAN_USE_AUTHPRIV`

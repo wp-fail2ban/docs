@@ -15,5 +15,7 @@ WPF2B_EVENT_AUTH_EMPTY_USER
 |          | Rule     | ``Empty username from <HOST>`` |
 +----------+----------+--------------------------------+
 
+.. versionadded:: 4.3.0
+
 .. seealso::
    :ref:`WP_FAIL2BAN_USE_AUTHPRIV`

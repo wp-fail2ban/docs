@@ -15,5 +15,7 @@ WPF2B_EVENT_OTHER_UNKNOWN_PROXY
 |          | Rule     | ``Untrusted X-Forwarded-For header from <HOST>`` |
 +----------+----------+--------------------------------------------------+
 
+.. versionadded:: 5.0.0
+
 .. seealso::
    :ref:`WP_FAIL2BAN_USE_AUTHPRIV`

@@ -14,3 +14,5 @@ WPF2B_EVENT_XMLRPC_PINGBACK_ERROR
 |          +----------+---------------------------------------------+
 |          | Rule     | ``Pingback error .* generated from <HOST>`` |
 +----------+----------+---------------------------------------------+
+
+.. versionadded:: 4.0.0
