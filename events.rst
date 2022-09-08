@@ -56,6 +56,7 @@ Anything to do with comments.
 
    events/comment/WPF2B_EVENT_COMMENT
    events/comment/WPF2B_EVENT_COMMENT_SPAM
+   events/comment/WPF2B_EVENT_COMMENT_SPAM_AKISMET
 
    events/comment/WPF2B_EVENT_COMMENT_NOT_FOUND
    events/comment/WPF2B_EVENT_COMMENT_CLOSED
@@ -107,6 +108,7 @@ Anything that can be classified as spam, not just comments.
 .. toctree::
 
    events/comment/WPF2B_EVENT_COMMENT_SPAM
+   events/comment/WPF2B_EVENT_COMMENT_SPAM_AKISMET
 
 .. _events_XMLRPC:
 
