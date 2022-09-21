@@ -17,7 +17,7 @@ Example
        'priority'    => LOG_NOTICE,
        'event_class' => 'Password',
        'event_id'    => 0x001F,
-       'message'     => 'My message with ___VAR1___ and ___VAR2___',
+       'message'     => 'Message with ___VAR1___ and ___VAR2___',
        'vars'        => [
            'VAR1' => '\d+',
            'VAR2' => '*.'
@@ -63,13 +63,15 @@ do_action
          Class of Event. This is one of:
 
             Auth
-               Authentication-related Events. Note that Blocking Events will have their own class in the future.
+               Authentication-related Events.
+            Block
+               Blocking Events.
             Comment
                Comment-related Events.
             XMLRPC
                XML-RPC-related Events.
             Password
-               Password-releated Events.
+               Password-related Events.
             REST
                REST API-related Events.
             Spam

@@ -26,13 +26,13 @@ wp_fail2ban_register_plugin
   WPf2b action.
 
 `my-plugin-slug`
-  The plugin slug to register. Must be < 256 chars.
+  Plugin slug. This must be the actual plugin slug. Maximum length is 200 which should be more than enough.
 
 `My Plugin Name`
-  The display name of the plugin being registered. Must be < 256 chars.
+  Plugin display name. This should be an unescaped string - HTML is allowed.
 
 Exceptions
 """"""""""
 
 LengthException
-   Either the ``slug`` or ``name`` is too long.
+   Either the ``slug`` or ``name`` is too long; the ``message`` will say which.
