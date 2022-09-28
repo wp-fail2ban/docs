@@ -1,4 +1,4 @@
-.. _developers_example:
+.. _developers_api_example:
 
 Example
 -------
