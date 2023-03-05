@@ -14,6 +14,7 @@ WP fail2ban Manual
    installation
    configuration
    usage
+   maintenance
    addons
 
 .. toctree::
