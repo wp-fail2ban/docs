@@ -177,15 +177,15 @@ epub_exclude_files = ['search.html']
 
 intersphinx_mapping = {
     'wpf2b+bl': (
-        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-addon-blocklist/en/latest/',
+        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-blocklist/en/latest',
         '../../addon/blocklist/sphinx/source/_build/html/objects.inv'        
     ),
     'wpf2b+cf7': (
-        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-addon-contact-form-7/en/latest/',
+        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-addon-contact-form-7/en/latest',
         '../../addon/contact-form-7/sphinx/source/_build/html/objects.inv'        
     ),
     'wpf2b+gf': (
-        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-addon-gravity-forms/en/latest/',
+        'https://docs.wp-fail2ban.com/projects/wp-fail2ban-addon-gravity-forms/en/latest',
         '../../addon/gravity-forms/sphinx/source/_build/html/objects.inv'
     )
 }
@@ -194,5 +194,6 @@ lexers['php'] = PhpLexer(startinline=True)
 lexers['php-annotations'] = PhpLexer(startinline=True)
 
 extensions = [
-    'sphinx_copybutton'
+    'sphinx_copybutton',
+    'sphinxcontrib.phpdomain'
 ]

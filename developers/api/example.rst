@@ -1,4 +1,4 @@
-.. _developers_example:
+.. _developers_api_example:
 
 Example
 -------
@@ -13,7 +13,11 @@ Example
    {
        // Register the plugin
        try {
-           do_action('wp_fail2ban_register_plugin', 'my-plugin-slug', 'My Plugin Name');
+           do_action(
+               'wp_fail2ban_register_plugin',
+               'my-plugin-slug',
+               'My Plugin Name'
+           );
        } catch(\LengthException $e) {
            // slug or name too long
        } catch(\RuntimeException $e) {
@@ -27,21 +31,28 @@ Example
            'priority'    => LOG_NOTICE,
            'event_class' => 'Password',
            'event_id'    => 0x001F,
-           'message'     => 'My message with ___VAR1___ and ___VAR2___',
+           'message'     => 'Message with ___VAR1___ and ___VAR2___',
            'vars'        => [
                'VAR1' => '\d+',
                'VAR2' => '*.'
            ]
        ];
        try {
-           do_action('wp_fail2ban_register_message', 'my-plugin-slug', $args);
+           do_action(
+               'wp_fail2ban_register_message',
+               'my-plugin-slug',
+               $args
+           );
        } catch(\InvalidArgumentException $e) {
            // Missing entry or invalid type
        } catch(\UnexpectedValueException $e) {
            // Invalid value
        }
    }
-   add_action('wp_fail2ban_register', __NAMESPACE__.'\myplugin_wpf2b_register');
+   add_action(
+       'wp_fail2ban_register',
+       __NAMESPACE__.'\myplugin_wpf2b_register'
+   );
 
    /**
     *
@@ -52,6 +63,11 @@ Example
            'VAR1' => 12345,
            'VAR2' => 'xyz'
        ];
-       do_action('my-plugin-slug', 'my-plugin-msg-slug-1', $vars);
+       do_action(
+           'wp_fail2ban_log_message',
+           'my-plugin-slug',
+           'my-plugin-msg-slug-1',
+           $vars
+       );
    }
 

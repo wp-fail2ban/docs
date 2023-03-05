@@ -10,7 +10,7 @@ Events
 
 .. _events_AUTH:
 
-AUTH Events
+Auth Events
 -----------
 
 Authentication events. Broadly, anything to do with users.
@@ -30,7 +30,7 @@ Authentication events. Broadly, anything to do with users.
 
 .. _events_BLOCK:
 
-BLOCK Events
+Block Events
 ------------
 
 Things that have been actively prevented.
@@ -47,7 +47,7 @@ Things that have been actively prevented.
 
 .. _events_COMMENT:
 
-COMMENT Events
+Comment Events
 --------------
 
 Anything to do with comments.
@@ -56,6 +56,7 @@ Anything to do with comments.
 
    events/comment/WPF2B_EVENT_COMMENT
    events/comment/WPF2B_EVENT_COMMENT_SPAM
+   events/comment/WPF2B_EVENT_COMMENT_SPAM_AKISMET
 
    events/comment/WPF2B_EVENT_COMMENT_NOT_FOUND
    events/comment/WPF2B_EVENT_COMMENT_CLOSED
@@ -65,7 +66,7 @@ Anything to do with comments.
 
 .. _events_OTHER:
 
-OTHER Events
+Other Events
 ------------
 
 Whatever doesn't fit better into another Class.
@@ -76,7 +77,7 @@ Whatever doesn't fit better into another Class.
 
 .. _events_PASSWORD:
 
-PASSWORD Events
+Password Events
 ---------------
 
 Password-related events.
@@ -99,7 +100,7 @@ REST API events.
 
 .. _events_SPAM:
 
-SPAM Events
+Spam Events
 -----------
 
 Anything that can be classified as spam, not just comments.
@@ -107,11 +108,12 @@ Anything that can be classified as spam, not just comments.
 .. toctree::
 
    events/comment/WPF2B_EVENT_COMMENT_SPAM
+   events/comment/WPF2B_EVENT_COMMENT_SPAM_AKISMET
 
 .. _events_XMLRPC:
 
-XMLRPC Events
--------------
+XML-RPC Events
+--------------
 
 XML-RPC events, including Pingbacks.
 

@@ -1,4 +1,4 @@
-.. _overview:
+.. _developers_api_overview:
 
 Overview
 --------
@@ -7,9 +7,9 @@ The basic steps are:
 
 .. toctree::
 
-   api/register-plugin
-   api/register-message
-   api/log-message
+   register-plugin
+   register-message
+   log-message
 
 Design
 """"""
