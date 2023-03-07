@@ -76,8 +76,10 @@ For example, if your site doesn't use WordPress comments at all, you could add t
 Updating
 ^^^^^^^^
 
-Whether you use the standard filter files or a highly-customed set of your own, **it is critical they are kept up to date**. There is always an entry in the "Updating" notes when the filter files need to be updated.
+Whether you use the standard filter files or a highly-customised set of your own, **it is critical they are kept up to date**. There is always an entry in the "Updating" notes when the filter files need to be updated.
 
 Obsolete filters may cause users to be blocked incorrectly, or attackers not to be detected.
 
 *WPf2b* **cannot** update them for you.
+
+See :ref:`maintenance__updating_filters`.
