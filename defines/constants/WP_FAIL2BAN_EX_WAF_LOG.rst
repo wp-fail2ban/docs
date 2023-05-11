@@ -5,7 +5,7 @@ WP_FAIL2BAN_EX_WAF_LOG
 
 .. rubric:: Facility for :ref:`WAF class <events_WAF>` events.
 .. include:: default-log_user.rst
-.. rubric:: Premium Only
+.. include:: premium-only.rst
 
 .. versionadded:: 5.1.0
 

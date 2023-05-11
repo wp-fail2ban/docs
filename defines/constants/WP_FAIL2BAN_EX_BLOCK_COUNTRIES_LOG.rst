@@ -5,7 +5,7 @@ WP_FAIL2BAN_EX_BLOCK_COUNTRIES_LOG
 
 .. rubric:: Facility for :ref:`blocked country event <WPF2B_EVENT_BLOCK_COUNTRY>`
 .. include:: default-log_user.rst
-.. rubric:: Premium Only
+.. include:: premium-only.rst
 
 .. versionadded:: 4.3.2.0
 

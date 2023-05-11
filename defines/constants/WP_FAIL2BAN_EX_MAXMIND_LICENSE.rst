@@ -3,7 +3,7 @@
 WP_FAIL2BAN_EX_MAXMIND_LICENSE
 ------------------------------
 
-.. rubric:: Premium Only
+.. include:: premium-only.rst
 
 .. versionadded:: 4.3.0
 

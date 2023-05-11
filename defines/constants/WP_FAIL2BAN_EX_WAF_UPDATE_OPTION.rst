@@ -8,7 +8,7 @@ WP_FAIL2BAN_EX_WAF_UPDATE_OPTION
 
 .. rubric:: Check that current user may update core WordPress options.
 .. include:: default-disabled.rst
-.. rubric:: Premium Only
+.. include:: premium-only.rst
   
 .. versionadded:: 5.1.0
 

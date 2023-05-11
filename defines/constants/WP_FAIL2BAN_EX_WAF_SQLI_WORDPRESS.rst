@@ -8,7 +8,7 @@ WP_FAIL2BAN_EX_WAF_SQLI_WORDPRESS
 
 .. rubric:: Check WordPress core queries for SQLi.
 .. include:: default-disabled.rst
-.. rubric:: Premium Only
+.. include:: premium-only.rst
   
 .. versionadded:: 5.1.0
 

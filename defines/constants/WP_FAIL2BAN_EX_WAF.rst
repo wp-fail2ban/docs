@@ -8,7 +8,7 @@ WP_FAIL2BAN_EX_WAF
 
 .. rubric:: Control the state of the WAF.
 .. include:: default-disabled.rst
-.. rubric:: Premium Only
+.. include:: premium-only.rst
   
 .. versionadded:: 5.1.0
 

@@ -3,7 +3,8 @@
 WP_FAIL2BAN_EX_LOG_URL
 ----------------------
 
-.. rubric:: Premium Only
+.. include:: default-disabled.rst
+.. include:: premium-only.rst
 
 .. versionadded:: 4.3.0
 
