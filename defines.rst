@@ -13,6 +13,7 @@
    defines/block
    defines/remote-ips
    defines/plugin
+   defines/site-health
    defines/misc
    defines/development
    defines/reserved
