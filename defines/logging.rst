@@ -43,6 +43,7 @@ Premium
 
    constants/WP_FAIL2BAN_EX_BLOCK_COUNTRIES_LOG
    constants/WP_FAIL2BAN_EX_XMLRPC_LOG
+   constants/WP_FAIL2BAN_EX_WAF_LOG
 
 Deprecated
 ^^^^^^^^^^

@@ -123,3 +123,15 @@ XML-RPC events, including Pingbacks.
    events/xmlrpc/WPF2B_EVENT_XMLRPC_PINGBACK
    events/xmlrpc/WPF2B_EVENT_XMLRPC_PINGBACK_BOGUS
    events/xmlrpc/WPF2B_EVENT_XMLRPC_PINGBACK_ERROR
+
+.. _events_WAF:
+
+WAF Events
+----------
+
+Web Application Firewall (WAF) events.
+
+.. toctree::
+
+   events/waf/WPF2B_EVENT_WAF_SQLI
+   events/waf/WPF2B_EVENT_WAF_UPDATE_OPTION
