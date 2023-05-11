@@ -29,7 +29,7 @@ From v5.0.1 to v5.0.x
 From v5.0.x to v5.1.0
   You **may** need to update the filters to enable **new** features; existing configurations will continue to work as before.
 
-From v5.1.x to v6.0.0
+From v5.x.y to v6.0.0
   You **may** need to update the filters for **existing** features to work.
 
 How to Update
