@@ -1,4 +1,4 @@
-.. _defines_report-ips:
+.. _defines_remote-ips:
 
 Remote IPs
 ----------
