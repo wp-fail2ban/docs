@@ -4,6 +4,34 @@
 Features
 ========
 
+v5.1
+  * WAF
+
+v5.0
+  * Site heath checks
+
+  Premium
+    * Akismet support
+    * Event hooks
+
+v4.4.0
+  * Add :ref:`WP_FAIL2BAN_USE_AUTHPRIV`.
+  * Add :ref:`WP_FAIL2BAN_FREE_ONLY`.
+  * Add :ref:`WP_FAIL2BAN_PLUGIN_LOG_OTHER`.
+
+  Premium
+    * Add support for Pingbacks while blocking XML‑RPC.
+
+v4.3.2
+  * Back-port new :ref:`Block event class <events_BLOCK>`.
+
+  Premium
+    * Add cron event to update trusted Cloudflare IP ranges weekly.
+    * Add cron event to update trusted Jetpack IP ranges weekly.
+    * Add cron event to update MaxMind database weekly.
+    * Add support for blocking by Country.
+    * Add XML‑RPC blocking; allow trusted IPs and Jetpack.
+
 .. _multisite-support:
 
 NEW - Multisite Support
@@ -39,13 +67,6 @@ NEW - syslog Dashboard Widget
 Ever wondered what's being logged? The new dashboard widget shows the last 5 messages; the Premium version keeps a full history to help you analyse and prevent attacks.
 
 
-
-.. _remote-tools:
-
-Remote Tools Add-on
-~~~~~~~~~~~~~~~~~~~
-
-The Remote Tools add-on provides extra features without adding bloat to the core plugin. For more details see the `add-on page <https://wp-fail2ban.com/add-ons/remote-tools/?utm_source=docs.wp-fail2ban.com&utm_medium=4.3&utm_campaign=4.3.0>`_.
 
 
 
