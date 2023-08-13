@@ -18,7 +18,7 @@ Keeping your ``fail2ban`` filters up-to-date is critical for the correct operati
 When to Update
 **************
 
-Knowing when to update your filters has changed since 4.4.x. The release notes, as always, still say whether updating is necessary, but now that *WPf2b* strictly follows SemVer it's trivial to determine when an update is needed. In addition, the WordPress Site Health tool now checks if the filters are up-to-date.
+Knowing when to update your filters has changed since 4.4.x. The release notes, as always, still say whether updating is necessary, but now that *WPf2b* uses `Semantic Versioning <https://semver.org/>`_ (SemVer) it's trivial to determine when an update is needed. In addition, the WordPress Site Health tool now checks if the filters are up-to-date.
 
 SemVer
 ======
