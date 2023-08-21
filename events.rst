@@ -135,3 +135,4 @@ Web Application Firewall (WAF) events.
 
    events/waf/WPF2B_EVENT_WAF_SQLI
    events/waf/WPF2B_EVENT_WAF_UPDATE_OPTION
+   events/waf/WPF2B_EVENT_WAF_WP_DELETE_USER
