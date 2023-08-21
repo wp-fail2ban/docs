@@ -11,7 +11,7 @@ WPF2B_EVENT_WAF_UPDATE_OPTION
 +----------+----------+----------------------------------------------------------------------------------+
 |          | Level    | WARNING if enabled, NOTICE if logging only                                       |
 +----------+----------+----------------------------------------------------------------------------------+
-| fail2ban | Filter   | :ref:`wordpress-hard_conf`                                                       |
+| fail2ban | Filter   | :ref:`wordpress-wpf2b-waf_conf`                                                  |
 +----------+----------+----------------------------------------------------------------------------------+
 |          | Rule     | ``WAF: update_option(<option_name>)="<option_value>" from <HOST>``               |
 |          |          |                                                                                  |
