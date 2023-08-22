@@ -15,7 +15,22 @@ WP_FAIL2BAN_SITE_HEALTH_SKIP_SUGGEST
 
 Disables various suggestions in the Site Health tool.
 
+.. list-table::
+   :widths: 1, 9
+   :header-rows: 1
 
+   * - Key
+     - Value
+     
+   * - addon
+     - .. parsed-literal::
+
+          [ <*slug*> => <*boolean*>, ... ]
+
+       Slugs
+         * wpf2b-addon-blocklist
+         * wp-fail2ban-addon-contact-form-7
+         * wp-fail2ban-addon-gravity-forms
 
 .. code-block:: php
    :caption: Example: Do not suggest add-on for Gravity Forms
