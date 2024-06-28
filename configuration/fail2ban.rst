@@ -1,5 +1,7 @@
 .. _configuration__fail2ban:
 
+.. include:: <isonum.txt>
+
 fail2ban
 --------
 
@@ -14,8 +16,16 @@ The filter files included are intended only as a starting point for those who wa
 There is no "one size fits all" configuration possible for `fail2ban` - what may be a soft failure for one site should be treated as a hard failure for another, and vice versa. Careful thought should be given to what is appropriate for your environment.
 
 
-Typical Settings
-""""""""""""""""
+syslog vs. journald
+^^^^^^^^^^^^^^^^^^^
+
+While *WPf2b* supports both, **I strongly recommend avoiding journald** if at all possible. If your Linux distro has decided to stop using a real syslog (e.g. Debian 12) you should consider switching distros.
+
+However, I understand that most people will just use whatever comes with their favourite distro and not worry about journald; thus, v5.3 brings :ref:`basic support <WP_FAIL2BAN_SYSLOG_TAG_HOST>` for journald and v6.0 will provide even more.
+
+
+Typical Settings (syslog)
+"""""""""""""""""""""""""
 
 #. Copy `wordpress-hard.conf` and `wordpress-soft.conf` to your `fail2ban/filters.d` directory
 #. Create a new file in `jail.d` called `wordpress.conf`:
@@ -39,10 +49,56 @@ Typical Settings
 
 .. note::
 
-   Make sure you change ``logpath`` to the correct log for your OS. If your OS uses `systemd` it may be simpler and/or easier to install a real syslog service first.
+   Make sure you change ``logpath`` to the correct log for your OS.
 
 3. Reload or restart `fail2ban`
 
+
+Typical Settings (journald)
+"""""""""""""""""""""""""""
+
+
+
+#. Edit the `wp-config.php` file for your WordPress install:
+
+.. code-block:: php
+
+   // Make sure we're not using the short ("wp") tag
+   define('WP_FAIL2BAN_SYSLOG_SHORT_TAG', false);
+
+   // Don't include the HTTP host in the tag
+   define('WP_FAIL2BAN_SYSLOG_TAG_HOST', false);
+
+   /* That's all, stop editing! Happy blogging. */
+
+
+#. Copy `wordpress-hard.conf` and `wordpress-soft.conf` to your `fail2ban/filters.d` directory
+#. Create a new file in `jail.d` called `wordpress.conf`:
+
+.. code-block:: ini
+
+   [wordpress-hard]
+   enabled = true
+   filter = wordpress-hard
+   backend = systemd
+   journalmatch = SYSLOG_IDENTIFIER=wordpress
+   maxretry = 1
+   port = http,https
+
+   [wordpress-soft]
+   enabled = true
+   filter = wordpress-soft
+   backend = systemd
+   journalmatch = SYSLOG_IDENTIFIER=wordpress
+   maxretry = 3
+   port = http,https
+
+
+3. Reload or restart `fail2ban`
+
+
+Filters
+^^^^^^^
 
 `wordpress-hard.conf` and `wordpress-soft.conf`
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -57,7 +113,7 @@ For the avoidance of doubt: you should be using *both* filters.
 .. _configuration__fail2ban__custom-filters:
 
 Custom Filters
-^^^^^^^^^^^^^^
+""""""""""""""
 
 You should never modify the standard `wordpress-hard.conf` and `wordpress-soft.conf` files. Instead, copy them to, for example, `wordpress-hard-custom.conf` and `wordpress-soft-custom.conf`, and edit those.
 
