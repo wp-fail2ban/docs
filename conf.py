@@ -193,7 +193,7 @@ intersphinx_mapping = {
 lexers['php'] = PhpLexer(startinline=True)
 lexers['php-annotations'] = PhpLexer(startinline=True)
 
-#extensions = [
-#    'sphinx_copybutton',
-#    'sphinx-contrib.phpdomain'
-#]
+extensions = [
+    'sphinx_copybutton',
+    'sphinxcontrib.phpdomain'
+]
