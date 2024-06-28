@@ -15,6 +15,7 @@ syslog
    constants/WP_FAIL2BAN_SYSLOG_SHORT_TAG
    constants/WP_FAIL2BAN_HTTP_HOST
    constants/WP_FAIL2BAN_TRUNCATE_HOST
+   constants/WP_FAIL2BAN_SYSLOG_TAG_HOST
 
 
 .. toctree::
