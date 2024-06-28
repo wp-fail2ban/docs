@@ -195,5 +195,5 @@ lexers['php-annotations'] = PhpLexer(startinline=True)
 
 extensions = [
 #    'sphinx_copybutton',
-    'sphinxcontrib.phpdomain'
+    'sphinx-contrib.phpdomain'
 ]
