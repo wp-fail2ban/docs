@@ -22,7 +22,6 @@ WP fail2ban Manual
    :maxdepth: 1
 
    developers
-   release
    defines
    facilities
    events
