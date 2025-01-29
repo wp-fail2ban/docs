@@ -51,5 +51,5 @@ The project continues to evolve with security as its primary focus. The separati
 The multi-release strategy allows the project to serve different user needs - from those requiring WordPress.org compatibility to those seeking the most advanced security features.
 
 .. note::
-   For enhanced security features and signed releases, users are encouraged to choose either the Canonical version from GitHub or the Premium version.
+   For enhanced security features and signed releases, users are encouraged to choose either the Canonical flavour from GitHub or the Premium flavour.
 
