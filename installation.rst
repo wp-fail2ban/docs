@@ -20,7 +20,7 @@ This decision is a response to increasing security concerns regarding the WordPr
 Canonical Flavour (GitHub)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The latest stable version, updated with new features and security patches, is hosted on `GitHub <https://github.com/wp-fail2ban/wp-fail2ban>`_. This is the **recommended flavour**.
+The latest stable version, updated with new features and security patches, is hosted on `GitHub <https://github.com/wp-fail2ban/wp-fail2ban>`__. This is the **recommended flavour**.
 
 WordPress.org Flavour (LTS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,7 +40,7 @@ ZIP file from GitHub
 
 This is the simplest method, and the best option if you already have the LTS flavour installed:
 
-  - Download the latest release directly from `GitHub <https://github.com/wp-fail2ban/wp-fail2ban/releases>`_.
+  - Download the latest release directly from `GitHub releases <https://github.com/wp-fail2ban/wp-fail2ban/releases>`__.
   - Optionally (but recommended), verify the signature of the zip file.
   - Upload the zip file to your WordPress installation.
 
