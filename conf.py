@@ -23,7 +23,7 @@ from pygments.lexers.web import PhpLexer
 # -- Project information -----------------------------------------------------
 
 project = u'WP fail2ban'
-copyright = u'2018-24, Charles Lecklider'
+copyright = u'2018-2025, Charles Lecklider'
 author = u'Charles Lecklider'
 
 # The short X.Y version
