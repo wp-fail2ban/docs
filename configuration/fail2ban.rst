@@ -1,6 +1,6 @@
-.. _configuration__fail2ban:
-
 .. include:: <isonum.txt>
+
+.. _configuration__fail2ban:
 
 fail2ban
 --------
