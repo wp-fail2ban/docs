@@ -6,24 +6,24 @@
 WP_FAIL2BAN_SITE_HEALTH_SKIP_FILTERS
 ------------------------------------
 
-.. rubric:: Ignore filter files during Health Check.
+.. rubric:: Skip filter file checks in Site Health.
+.. include:: default-disabled.rst
+
 .. versionadded:: 5.0.0
 
-.. include:: default-disabled.rst
 ----
 
-*WPf2b* uses the WordPress Site Heath tool to check for :ref:`obsolete<configuration__fail2ban__updating>` and :ref:`modified<configuration__fail2ban__custom-filters>` filter files.
+Disables the Site Health tool's checks of fail2ban filter files. This setting is required if PHP is running in a chroot environment where it cannot access the fail2ban configuration files.
 
-However, this test will not work with many server configurations, e.g. if PHP is using ``chroot``. In that case you should disable these checks to give you cleaner output from the Site Health tool (they're otherwise harmless).
-
-In ``wp-config.php``:
+It can also be useful if you maintain your own filter files and don't want warnings about differences from the standard files.
 
 .. code-block:: php
+   :caption: Example: Skip filter checks
 
-   /*
-    * Ignore filter files during Health Check.
+   /**
+    * Skip filter file checks
     */
    define('WP_FAIL2BAN_SITE_HEALTH_SKIP_FILTERS', true);
 
 .. warning::
-  **It is your responsibility to ensure your filters are kept current.**
+   It is your responsibility to ensure your filters are kept current.

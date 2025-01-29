@@ -13,7 +13,10 @@ WP_FAIL2BAN_PLUGIN_LOG_PASSWORD
 
 ----
 
+Enables logging of password-related events from plugins.
+
 .. code-block:: php
+   :caption: Example: Enable plugin password logging
 
    /**
     * Enable logging plugin "Password" class events.

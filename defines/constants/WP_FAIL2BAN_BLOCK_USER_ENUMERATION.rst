@@ -15,7 +15,10 @@ WP_FAIL2BAN_BLOCK_USER_ENUMERATION
 
 ----
 
+Blocks attempts to enumerate users via author archives and the REST API.
+
 .. code-block:: php
+   :caption: Example: Block user enumeration
 
    /**
     * Block user enumeration.

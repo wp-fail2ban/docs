@@ -23,14 +23,14 @@ By default *WPf2b* includes the virtual host in the syslog tag so that the targe
 
 .. code-block:: php
 
-    /*
-     * Use plain "wordpress" tag.
-     */
-    define('WP_FAIL2BAN_SYSLOG_SHORT_TAG', false);
-    define('WP_FAIL2BAN_SYSLOG_TAG_HOST', false);
+   /*
+    * Use plain "wordpress" tag.
+    */
+   define('WP_FAIL2BAN_SYSLOG_SHORT_TAG', false);
+   define('WP_FAIL2BAN_SYSLOG_TAG_HOST', false);
 
 .. seealso::
-  * :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG`
+   * :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG`
 
 Then in your ``jail.conf`` you can do something like this:
 

@@ -6,14 +6,15 @@
 WP_FAIL2BAN_SITE_HEALTH_SKIP_SUGGEST
 ------------------------------------
 
-.. rubric:: Skip suggestions during Health Check.
-.. versionadded:: 5.2.1
-
+.. rubric:: Skip add-on suggestions in Site Health.
 .. include:: default-disabled.rst
 .. include:: type-assoc-array.rst
+
+.. versionadded:: 5.2.1
+
 ----
 
-Disables various suggestions in the Site Health tool.
+Controls which add-on suggestions appear in the Site Health tool.
 
 .. list-table::
    :widths: 1, 9
@@ -27,7 +28,7 @@ Disables various suggestions in the Site Health tool.
 
           [ <*slug*> => <*boolean*>, ... ]
 
-       Slugs
+       Available slugs:
          * wpf2b-addon-blocklist
          * wp-fail2ban-addon-contact-form-7
          * wp-fail2ban-addon-gravity-forms

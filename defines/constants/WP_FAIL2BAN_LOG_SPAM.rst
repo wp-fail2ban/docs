@@ -13,15 +13,16 @@ WP_FAIL2BAN_LOG_SPAM
 
 ----
 
+Enables logging of comments that are marked as spam. When enabled, the comment ID and IP address will be written to the syslog facility specified by :ref:`WP_FAIL2BAN_SPAM_LOG`.
+
 .. code-block:: php
+   :caption: Example: Enable spam logging
 
    /**
     * Log spam comments.
     */
    define('WP_FAIL2BAN_LOG_SPAM', true);
 
-The comment ID and IP will be written to :ref:`WP_FAIL2BAN_SPAM_LOG` and matched by :ref:`wordpress-hard_conf`.
-
 .. seealso::
    * :ref:`WP_FAIL2BAN_SPAM_LOG`
-
+   * :ref:`wordpress-hard_conf`

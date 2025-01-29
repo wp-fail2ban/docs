@@ -13,6 +13,8 @@ WP_FAIL2BAN_PLUGIN_REST_LOG
 
 ----
 
+Specifies the syslog facility to use when logging REST API events from plugins.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL3
 

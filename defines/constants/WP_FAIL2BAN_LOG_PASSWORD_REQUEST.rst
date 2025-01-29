@@ -13,11 +13,16 @@ WP_FAIL2BAN_LOG_PASSWORD_REQUEST
 
 ----
 
+Enables logging of password reset requests. When enabled, the username and IP address will be written to the syslog facility specified by :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG`.
+
 .. code-block:: php
+   :caption: Example: Enable password reset request logging
 
-	/**
-	 * Log password reset requests.
-	 */
-	define('WP_FAIL2BAN_LOG_PASSWORD_REQUEST', true);
+   /**
+    * Log password reset requests.
+    */
+   define('WP_FAIL2BAN_LOG_PASSWORD_REQUEST', true);
 
-The username and IP will be written to :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG` and matched by :ref:`wordpress-extra_conf`.
+.. seealso::
+   * :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG`
+   * :ref:`wordpress-extra_conf`

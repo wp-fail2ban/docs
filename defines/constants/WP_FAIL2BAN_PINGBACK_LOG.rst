@@ -13,6 +13,8 @@ WP_FAIL2BAN_PINGBACK_LOG
 
 ----
 
+Specifies the syslog facility to use when logging XML-RPC pingback events.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL3
 

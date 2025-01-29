@@ -13,7 +13,7 @@ WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS
 
 ----
 
-*WPf2b* can optionally log the following comment-related events:
+Enables logging of failed comment attempts. When enabled, the following events will be logged to the syslog facility specified by :ref:`WP_FAIL2BAN_COMMENT_ATTEMPT_LOG`:
 
 +------------------------+---------------------------------------------------+
 | **Not found**          | Attempted comment on a non-existent post.         |
@@ -28,13 +28,13 @@ WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS
 +------------------------+---------------------------------------------------+
 
 .. code-block:: php
+   :caption: Example: Enable logging of comment attempts
 
    /**
     * Log attempted comments.
     */
    define('WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS', true);
 
-The comment ID and IP will be written to :ref:`WP_FAIL2BAN_COMMENT_ATTEMPT_LOG` and matched by :ref:`wordpress-soft_conf`.
-
 .. seealso::
    * :ref:`WP_FAIL2BAN_COMMENT_ATTEMPT_LOG`
+   * :ref:`wordpress-soft_conf`

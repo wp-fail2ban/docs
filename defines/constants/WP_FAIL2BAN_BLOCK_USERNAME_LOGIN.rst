@@ -13,7 +13,10 @@ WP_FAIL2BAN_BLOCK_USERNAME_LOGIN
 
 ----
 
+Forces users to log in using their email address instead of their username. This provides an alternative to blocking user enumeration when using themes with author profile pages.
+
 .. code-block:: php
+   :caption: Example: Force email login
 
    /**
     * Force login with email address/prevent login with username.

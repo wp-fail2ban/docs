@@ -13,7 +13,10 @@ WP_FAIL2BAN_PLUGIN_LOG_XMLRPC
 
 ----
 
+Enables logging of XML-RPC events from plugins.
+
 .. code-block:: php
+   :caption: Example: Enable plugin XML-RPC logging
 
    /**
     * Enable logging plugin "XML-RPC" class events.

@@ -15,10 +15,12 @@ WP_FAIL2BAN_SPAM_LOG
 
 ----
 
+Specifies the syslog facility to use when logging spam-related events.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL4
 
-   /*
+   /**
     * Facility for Spam class events.
     */
    define('WP_FAIL2BAN_SPAM_LOG', LOG_LOCAL4);

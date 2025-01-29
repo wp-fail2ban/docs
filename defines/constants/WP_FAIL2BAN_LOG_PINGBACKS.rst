@@ -13,7 +13,10 @@ WP_FAIL2BAN_LOG_PINGBACKS
 
 ----
 
+Enables logging of XML-RPC pingback requests. When enabled, pingback events will be written to the syslog facility specified by :ref:`WP_FAIL2BAN_PINGBACK_LOG`.
+
 .. code-block:: php
+   :caption: Example: Enable pingback logging
 
    /**
     * Log pingbacks.
@@ -25,4 +28,4 @@ WP_FAIL2BAN_LOG_PINGBACKS
 Based on a suggestion from *@maghe*.
 
 .. seealso::
-	* :ref:`WP_FAIL2BAN_PINGBACK_LOG`
+   * :ref:`WP_FAIL2BAN_PINGBACK_LOG`

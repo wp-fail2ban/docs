@@ -13,13 +13,15 @@ WP_FAIL2BAN_COMMENT_ATTEMPT_LOG
 
 ----
 
+Specifies the syslog facility to use when logging failed comment attempts.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL5
 
-    /**
-     * Facility for attempted comment events.
-     */
-    define('WP_FAIL2BAN_COMMENT_ATTEMPT_LOG', LOG_LOCAL5);
+   /**
+    * Facility for attempted comment events.
+    */
+   define('WP_FAIL2BAN_COMMENT_ATTEMPT_LOG', LOG_LOCAL5);
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS`

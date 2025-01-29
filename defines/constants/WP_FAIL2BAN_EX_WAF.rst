@@ -6,29 +6,35 @@
 WP_FAIL2BAN_EX_WAF
 ------------------
 
-.. rubric:: Control the state of the WAF.
+.. rubric:: Enable Web Application Firewall.
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
-  
+
 .. versionadded:: 5.1.0
 
 ----
 
-The state can be one of:
+Enables the Web Application Firewall (WAF) functionality. The WAF can operate in three modes:
 
-on
-  Enabled; blocks detected threats.
-
-off
-  Disabled.
-
-logging
-  Detects and logs threats.
++----------+--------------------------------------------------+
+| Mode     | Description                                      |
++==========+==================================================+
+| on       | Full protection: blocks and logs threats         |
++----------+--------------------------------------------------+
+| logging  | Detection only: logs threats but does not block  |
++----------+--------------------------------------------------+
+| off      | Disabled: no detection or blocking               |
++----------+--------------------------------------------------+
 
 .. code-block:: php
-   :caption: Example: Enabling logging only
+   :caption: Example: Enable WAF in logging mode
 
    /**
-    * WAF state.
+    * Enable WAF in logging mode
     */
    define('WP_FAIL2BAN_EX_WAF', 'logging');
+
+.. seealso::
+   * :ref:`WP_FAIL2BAN_EX_WAF_LOG`
+   * :ref:`WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS`
+   * :ref:`WP_FAIL2BAN_EX_WAF_SQLI_WORDPRESS`

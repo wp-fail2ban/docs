@@ -13,7 +13,10 @@ WP_FAIL2BAN_PLUGIN_LOG_SPAM
 
 ----
 
+Enables logging of spam-related events from plugins.
+
 .. code-block:: php
+   :caption: Example: Enable plugin spam logging
 
    /**
     * Enable logging plugin "Spam" class events.

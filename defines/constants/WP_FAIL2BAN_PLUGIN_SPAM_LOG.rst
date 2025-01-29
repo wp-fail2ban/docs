@@ -15,6 +15,8 @@ WP_FAIL2BAN_PLUGIN_SPAM_LOG
 
 ----
 
+Specifies the syslog facility to use when logging spam-related events from plugins.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL5
 
@@ -25,5 +27,6 @@ WP_FAIL2BAN_PLUGIN_SPAM_LOG
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_LOG_SPAM`
+   * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
    * :ref:`facilities`
 

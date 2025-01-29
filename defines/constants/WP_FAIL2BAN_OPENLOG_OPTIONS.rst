@@ -6,12 +6,22 @@
 WP_FAIL2BAN_OPENLOG_OPTIONS
 ---------------------------
 
+.. rubric:: Configure syslog options.
+.. include:: default-disabled.rst
+
 .. versionadded:: 3.5.0
 
 ----
 
-This allows you to change the advanced syslog connection parameters.
+Allows configuration of PHP's openlog options. These control how messages are written to the system log.
 
-If you know you need this you'll know the options you need and what they do. If you don't, you won't.
+.. code-block:: php
+   :caption: Example: Set syslog options
 
-If in doubt, leave this setting alone.
+   /**
+    * Set openlog options
+    */
+   define('WP_FAIL2BAN_OPENLOG_OPTIONS', LOG_NDELAY|LOG_PID);
+
+.. warning::
+   If in doubt, leave this setting alone.

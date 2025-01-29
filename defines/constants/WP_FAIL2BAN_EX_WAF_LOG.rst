@@ -1,5 +1,8 @@
 .. _WP_FAIL2BAN_EX_WAF_LOG:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_EX_WAF_LOG
 ----------------------
 
@@ -11,6 +14,8 @@ WP_FAIL2BAN_EX_WAF_LOG
 
 ----
 
+Specifies the syslog facility to use when logging Web Application Firewall events.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL5
 
@@ -18,3 +23,7 @@ WP_FAIL2BAN_EX_WAF_LOG
     * Facility for WAF events.
     */
    define('WP_FAIL2BAN_EX_WAF_LOG', LOG_LOCAL5);
+
+.. seealso::
+   * :ref:`events_WAF`
+   * :ref:`facilities`

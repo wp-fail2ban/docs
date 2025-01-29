@@ -13,7 +13,10 @@ WP_FAIL2BAN_PLUGIN_LOG_REST
 
 ----
 
+Enables logging of REST API events from plugins.
+
 .. code-block:: php
+   :caption: Example: Enable plugin REST logging
 
    /**
     * Enable logging plugin "REST" class events.

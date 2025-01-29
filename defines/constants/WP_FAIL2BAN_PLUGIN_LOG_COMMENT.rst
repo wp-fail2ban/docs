@@ -13,7 +13,10 @@ WP_FAIL2BAN_PLUGIN_LOG_COMMENT
 
 ----
 
+Enables logging of comment events from plugins.
+
 .. code-block:: php
+   :caption: Example: Enable plugin comment logging
 
    /**
     * Enable logging plugin "Comment" class events.

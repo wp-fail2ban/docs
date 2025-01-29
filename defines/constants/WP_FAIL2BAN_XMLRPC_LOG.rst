@@ -6,15 +6,28 @@
 WP_FAIL2BAN_XMLRPC_LOG
 ----------------------
 
+.. rubric:: Log XML-RPC messages to file.
+.. include:: default-disabled.rst
+
 .. versionadded:: 3.6.0
+.. warning::
+   This is an advanced feature not available in the wordpress.org flavour.
 
 ----
 
-This is for debugging and future development.
-
-Attackers are doing weird things with XML-RPC, so this logs the raw post data to the file specified:
+For debugging and development purposes. Logs the complete raw XML-RPC message to the specified file, which is useful for analyzing unusual XML-RPC attacks.
 
 .. code-block:: php
+   :caption: Example: Log XML-RPC messages
 
-	define('WP_FAIL2BAN_XMLRPC_LOG', '/var/log/xml-rpc.log');
+   /**
+    * Log XML-RPC messages to file
+    */
+   define('WP_FAIL2BAN_XMLRPC_LOG', '/var/log/xml-rpc.log');
+
+.. warning::
+   This can generate large log files. Use with caution.
+
+.. seealso::
+   * :ref:`facilities`
 

@@ -13,7 +13,10 @@ WP_FAIL2BAN_PLUGIN_LOG_AUTH
 
 ----
 
+Enables logging of authentication events from plugins.
+
 .. code-block:: php
+   :caption: Example: Enable plugin auth logging
 
    /**
     * Enable logging plugin "Auth" class events.

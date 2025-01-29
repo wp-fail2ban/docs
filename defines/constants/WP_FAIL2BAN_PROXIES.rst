@@ -6,34 +6,37 @@
 WP_FAIL2BAN_PROXIES
 -------------------
 
+.. rubric:: Define trusted proxy servers.
+.. include:: default-disabled.rst
+
 .. versionadded:: 2.0.0
 .. versionchanged:: 4.0.0
    Entries can be ignored by prefixing with **#**
 .. versionchanged:: 5.0.0
-   Entries can include IPv6 addresses. 
+   Added IPv6 support.
    Added "Unknown Proxy in X-Forwarded-For" message.
 
 ----
 
-A list of IP addresses for the trusted proxies that will appear as the remote IP for a request. When defined:
+Specifies a list of trusted proxy servers. When defined:
 
-* If the remote address appears in the **WP_FAIL2BAN_PROXIES** list, *WPf2b* will use the IP address from the `X-Forwarded-For` header
-* If the remote address does not appear in the **WP_FAIL2BAN_PROXIES** list and there is an `X-Forwarded-For` header, *WPf2b* will return a 403 error
-* If there's no `X-Forwarded-For` header, *WPf2b* will behave as if **WP_FAIL2BAN_PROXIES** isn't defined
-
-To set **WP_FAIL2BAN_PROXIES**, add something like the following to ``wp-config.php``:
+* If the remote address appears in the list, WPf2b will use the IP address from the X-Forwarded-For header
+* If the remote address is not in the list and there is an X-Forwarded-For header, WPf2b will return a 403 error
+* If there's no X-Forwarded-For header, WPf2b will behave as if WP_FAIL2BAN_PROXIES isn't defined
 
 .. code-block:: php
+   :caption: Example: Define trusted proxies
 
-  define('WP_FAIL2BAN_PROXIES', [
-      '192.168.0.42',
-      '192.168.42.0/24'
-  ]);
+   /**
+    * Define trusted proxy servers
+    */
+   define('WP_FAIL2BAN_PROXIES', [
+       '192.168.0.42',
+       '192.168.42.0/24'
+   ]);
 
-Premium
-^^^^^^^
-
-The list is processed and cached for performance. Updating the list from the UI will automatically clear the cache, but you must do so manually if you are using a ``define()``.
+.. note::
+   In the Premium version, the list is processed and cached for performance. If you update the list via the UI, the cache is automatically cleared. If you update using define(), you must clear the cache manually.
 
 .. seealso::
-  * :ref:`clearing_the_cache`
+   * :ref:`clearing_the_cache`

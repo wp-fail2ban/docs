@@ -13,7 +13,10 @@ WP_FAIL2BAN_PLUGIN_LOG_OTHER
 
 ----
 
+Enables logging of miscellaneous events from plugins.
+
 .. code-block:: php
+   :caption: Example: Enable plugin other logging
 
    /**
     * Enable logging plugin "Other" class events.

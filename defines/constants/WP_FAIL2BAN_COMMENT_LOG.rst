@@ -13,6 +13,8 @@ WP_FAIL2BAN_COMMENT_LOG
 
 ----
 
+Specifies the syslog facility to use when logging comment events.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL3
 

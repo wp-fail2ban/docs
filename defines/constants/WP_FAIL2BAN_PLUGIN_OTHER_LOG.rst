@@ -13,6 +13,8 @@ WP_FAIL2BAN_PLUGIN_OTHER_LOG
 
 ----
 
+Specifies the syslog facility to use when logging miscellaneous events from plugins.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL3
 

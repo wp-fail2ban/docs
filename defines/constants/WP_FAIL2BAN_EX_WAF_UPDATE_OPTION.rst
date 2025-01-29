@@ -6,7 +6,7 @@
 WP_FAIL2BAN_EX_WAF_UPDATE_OPTION
 --------------------------------
 
-.. rubric:: Check that current user may update core WordPress options.
+.. rubric:: Enable capability checking for option updates.
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
   
@@ -14,12 +14,15 @@ WP_FAIL2BAN_EX_WAF_UPDATE_OPTION
 
 ----
 
-When a plugin tries to update a core WordPress option, check the current user has ``update_options`` or ``update_network_options`` capabilities.
+Enables capability checking when WordPress core options are updated. When enabled, verifies that the current user has the appropriate capabilities (update_options or update_network_options) before allowing changes to core options.
 
 .. code-block:: php
-   :caption: Example: Enabling caps checking for update_option() on core WordPress options.
+   :caption: Example: Enable option update capability checking
 
    /**
-    * WAF: check caps for update_option().
+    * Enable capability checking for option updates
     */
    define('WP_FAIL2BAN_EX_WAF_UPDATE_OPTION', true);
+
+.. seealso::
+   * :ref:`WP_FAIL2BAN_EX_WAF`

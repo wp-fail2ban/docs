@@ -6,28 +6,29 @@
 WP_FAIL2BAN_USE_AUTHPRIV
 ------------------------
 
-.. rubric:: Use AUTHPRIV by default.
+.. rubric:: Use LOG_AUTHPRIV instead of LOG_AUTH.
 .. include:: default-disabled.rst
 
 .. versionadded:: 4.4.0
 
 ----
 
-By default, *WPf2b* uses **LOG_AUTH** for logging various events. However, some systems use **LOG_AUTHPRIV** instead, but there's no good run-time way to tell. If your system uses **LOG_AUTHPRIV** you should add the following to ``wp-config.php``:
+Specifies whether to use LOG_AUTHPRIV instead of LOG_AUTH as the default syslog facility for authentication events. Some systems use LOG_AUTHPRIV by default, but this cannot be reliably detected at runtime.
 
 .. code-block:: php
+   :caption: Example: Use LOG_AUTHPRIV
 
    /**
-    * Use AUTHPRIV
+    * Use LOG_AUTHPRIV instead of LOG_AUTH
     */
    define('WP_FAIL2BAN_USE_AUTHPRIV', true);
 
 .. note::
-
-   This only changes the **default** use of **LOG_AUTH** - it doesn't override individual settings.
+   This only affects the default facility - it does not override facilities specified by other constants.
 
 .. include:: must-use-wp-config.rst
 
 .. seealso::
+   * :ref:`WP_FAIL2BAN_AUTH_LOG`
    * :ref:`syslog_logfiles`
 

@@ -6,7 +6,7 @@
 WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS
 -------------------------------
 
-.. rubric:: Check plugin queries for SQLi.
+.. rubric:: Enable SQL injection detection for plugins.
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
@@ -14,11 +14,16 @@ WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS
 
 ----
 
+Enables SQL injection detection for database queries made by plugins.
 
 .. code-block:: php
-   :caption: Example: Enabling SQLi detection for plugins
+   :caption: Example: Enable plugin SQLi detection
 
    /**
-    * WAF: check plugin queries for SQLi.
+    * Enable SQL injection detection for plugins
     */
    define('WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS', true);
+
+.. seealso::
+   * :ref:`WP_FAIL2BAN_EX_WAF`
+   * :ref:`WP_FAIL2BAN_EX_WAF_SQLI_WORDPRESS`

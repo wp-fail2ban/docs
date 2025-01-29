@@ -15,6 +15,8 @@ WP_FAIL2BAN_AUTH_LOG
 
 ----
 
+Specifies the syslog facility to use when logging authentication events.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL5
 

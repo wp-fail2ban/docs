@@ -1,5 +1,8 @@
 .. _WP_FAIL2BAN_EX_XMLRPC_LOG:
 
+.. role:: php(code)
+  :language: php
+
 WP_FAIL2BAN_EX_XMLRPC_LOG
 -------------------------
 
@@ -11,10 +14,16 @@ WP_FAIL2BAN_EX_XMLRPC_LOG
 
 ----
 
+Specifies the syslog facility to use when logging XML-RPC events.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL7
 
    /**
     * Facility for XML-RPC events.
     */
-   define('WP_FAIL2BAN_EX_WAF_LOG', LOG_LOCAL7);
+   define('WP_FAIL2BAN_EX_XMLRPC_LOG', LOG_LOCAL7);
+
+.. seealso::
+   * :ref:`events_XMLRPC`
+   * :ref:`facilities`

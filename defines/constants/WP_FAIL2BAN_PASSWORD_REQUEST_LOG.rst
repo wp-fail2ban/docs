@@ -13,12 +13,14 @@ WP_FAIL2BAN_PASSWORD_REQUEST_LOG
 
 ----
 
+Specifies the syslog facility to use when logging password reset request events.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL3
 
-    /**
-     * Facility for logging password reset events.
-     */
+   /**
+    * Facility for logging password reset events.
+    */
    define('WP_FAIL2BAN_PASSWORD_REQUEST_LOG', LOG_LOCAL3);
 
 .. seealso::

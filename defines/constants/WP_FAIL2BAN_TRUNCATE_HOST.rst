@@ -6,15 +6,24 @@
 WP_FAIL2BAN_TRUNCATE_HOST
 -------------------------
 
+.. rubric:: Truncate hostname in syslog tag.
+.. include:: default-disabled.rst
+
 .. versionadded:: 3.5.0
 
 ----
 
-If you've set :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG` and defining :ref:`WP_FAIL2BAN_HTTP_HOST` for each virtual host isn't appropriate, you can set **WP_FAIL2BAN_TRUNCATE_HOST** to whatever value you need to make `syslog` happy:
+Some Linux distributions have a hard limit on the length of the syslog tag. This setting truncates the hostname to help stay within those limits.
 
 .. code-block:: php
+   :caption: Example: Truncate hostname
 
-	define('WP_FAIL2BAN_TRUNCATE_HOST', 8);
+   /**
+    * Truncate hostname in syslog tag
+    */
+   define('WP_FAIL2BAN_TRUNCATE_HOST', 8);
 
-This does exactly what the name suggests: truncates the host name to the length you specify. As a result there's no guarantee that what's left will be enough to identify the site.
+.. seealso::
+   * :ref:`WP_FAIL2BAN_HTTP_HOST`
+   * :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG`
 

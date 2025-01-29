@@ -16,13 +16,15 @@ WP_FAIL2BAN_COMMENT_EXTRA_LOG
 
 ----
 
+Specifies the syslog facility to use when logging extra comment events.
+
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL5
 
-    /**
-     * Facility for extra comment events.
-     */
-    define('WP_FAIL2BAN_COMMENT_EXTRA_LOG', LOG_LOCAL5);
+   /**
+    * Facility for extra comment events.
+    */
+   define('WP_FAIL2BAN_COMMENT_EXTRA_LOG', LOG_LOCAL5);
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS`

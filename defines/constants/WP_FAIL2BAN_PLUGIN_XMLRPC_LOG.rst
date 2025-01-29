@@ -13,13 +13,15 @@ WP_FAIL2BAN_PLUGIN_XMLRPC_LOG
 
 ----
 
+Specifies the syslog facility to use when logging XML-RPC events from plugins.
+
 .. code-block:: php
-   :caption: Example: Using LOG_LOCAL5
+   :caption: Example: Using LOG_LOCAL3
 
    /**
-    * Facility for XML-RPC class events.
+    * Facility for XML-RPC class plugin events.
     */
-   define('WP_FAIL2BAN_PLUGIN_XMLRPC_LOG', LOG_LOCAL5);
+   define('WP_FAIL2BAN_PLUGIN_XMLRPC_LOG', LOG_LOCAL3);
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_LOG_XMLRPC`

@@ -6,15 +6,23 @@
 WP_FAIL2BAN_HTTP_HOST
 ---------------------
 
+.. rubric:: Override HTTP host detection.
+.. include:: default-disabled.rst
+
 .. versionadded:: 3.0.0
 
 ----
 
-This is for some flavours of Linux where :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG` isn't enough.
+Forces WPf2b to use a specific hostname instead of the detected HTTP host. This can be useful in multisite configurations or when the detected host doesn't match the expected value.
 
-If you configure your web server to set an environment variable named **WP_FAIL2BAN_SYSLOG_SHORT_TAG** on a per-virtual host basis, *WPf2b* will use that in the syslog tag. This allows you to configure a unique tag per site in a way that makes sense for your configuration, rather than some arbitrary truncation or hashing within the plugin.
+.. code-block:: php
+   :caption: Example: Set specific hostname
+
+   /**
+    * Override HTTP host detection
+    */
+   define('WP_FAIL2BAN_HTTP_HOST', 'example.com');
 
 .. note::
-
-   This feature has not been tested as extensively as others. While I'm confident it works, FreeBSD doesn't have this problem so this feature will always be second-tier.
+   This affects logging only; it does not change WordPress's behavior.
 

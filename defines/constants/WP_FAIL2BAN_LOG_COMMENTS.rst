@@ -13,15 +13,17 @@ WP_FAIL2BAN_LOG_COMMENTS
 
 ----
 
+Enables logging of all submitted comments. When enabled, the comment ID and IP address will be written to the syslog facility specified by :ref:`WP_FAIL2BAN_COMMENT_LOG`.
+
 .. code-block:: php
+   :caption: Example: Enable comment logging
 
    /**
     * Log submitted comments.
     */
    define('WP_FAIL2BAN_LOG_COMMENTS', true);
 
-The comment ID and IP will be written to :ref:`WP_FAIL2BAN_COMMENT_LOG` and matched by :ref:`wordpress-extra_conf`.
-
 .. seealso::
    * :ref:`WP_FAIL2BAN_COMMENT_LOG`
+   * :ref:`wordpress-extra_conf`
 
