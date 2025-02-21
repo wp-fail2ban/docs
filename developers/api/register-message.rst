@@ -37,7 +37,7 @@ Register Message
 
    :param int $args['event_id']: Event ID - 16 bits you may do with as you please.
    :param string $args['message']: Message with substitutions. Note that " from *<IP>*" is appended.
-   :param string[] $args['vars']: An array of substitutions mapped to regular expressions.
+   :param array<string, string> $args['vars']: An array of substitutions mapped to regular expressions.
 
          When logging a message the substitutions are checked and substituted if present. The regex will be used to generate a matching rule for `fail2ban`.
 
