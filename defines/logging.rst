@@ -32,6 +32,7 @@ Premium
 .. toctree::
    :caption: Enable Logging
 
+   constants/WP_FAIL2BAN_EX_LOG_PTR
    constants/WP_FAIL2BAN_EX_LOG_URL
    constants/WP_FAIL2BAN_EX_LOG_REFERER
    constants/WP_FAIL2BAN_EX_LOG_USER_AGENT

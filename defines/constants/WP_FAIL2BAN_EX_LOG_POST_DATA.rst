@@ -26,5 +26,6 @@ Enables logging of POST request data for blocked requests.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_LOG_HEADERS`
+   * :ref:`WP_FAIL2BAN_EX_LOG_PTR`
    * :ref:`WP_FAIL2BAN_EX_LOG_URL`
 
