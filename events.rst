@@ -64,6 +64,17 @@ Anything to do with comments.
    events/comment/WPF2B_EVENT_COMMENT_DRAFT
    events/comment/WPF2B_EVENT_COMMENT_PASSWORD
 
+.. _events_HONEYPOT:
+
+Honeypot Events
+---------------
+
+Honeypot events.
+
+.. toctree::
+
+   events/honeypot/WPF2B_EVENT_HONEYPOT_TRAP_ROBOTSTXT
+
 .. _events_OTHER:
 
 Other Events
