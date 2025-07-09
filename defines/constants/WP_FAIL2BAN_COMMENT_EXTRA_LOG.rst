@@ -7,26 +7,9 @@ WP_FAIL2BAN_COMMENT_EXTRA_LOG
 -----------------------------
 
 .. rubric:: Facility for extra comment events.
-.. include:: default-log_auth.rst
 
 .. versionadded:: 4.0.5
 .. versionchanged:: 4.4.0
    Uses :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
 .. deprecated:: 5.0.0
-
-----
-
-Specifies the syslog facility to use when logging extra comment events.
-
-.. code-block:: php
-   :caption: Example: Using LOG_LOCAL5
-
-   /**
-    * Facility for extra comment events.
-    */
-   define('WP_FAIL2BAN_COMMENT_EXTRA_LOG', LOG_LOCAL5);
-
-.. seealso::
-   * :ref:`WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS`
-   * :ref:`WP_FAIL2BAN_LOG_COMMENTS_EXTRA`
-   * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+.. versionremoved:: 6.0.0
