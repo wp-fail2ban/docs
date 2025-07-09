@@ -7,7 +7,7 @@ WP_FAIL2BAN_EX_HONEYPOT_LOG
 ----------------------------
 
 .. rubric:: Facility for :ref:`Honeypot class <events_HONEYPOT>` events.
-.. include:: default-disabled.rst
+.. include:: default-log_auth.rst
 .. include:: premium-only.rst
 
 .. versionadded:: 6.0.0
