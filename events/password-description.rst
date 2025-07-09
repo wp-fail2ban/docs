@@ -1,0 +1,1 @@
+The password used for the authentication attempt.

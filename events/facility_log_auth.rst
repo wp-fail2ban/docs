@@ -1,0 +1,1 @@
+:ref:`LOG_AUTH <LOG_AUTH>` or :ref:`LOG_AUTHPRIV <LOG_AUTHPRIV>`

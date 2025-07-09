@@ -1,0 +1,1 @@
+:ref:`WP_FAIL2BAN_SPAM_LOG`

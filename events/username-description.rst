@@ -1,0 +1,1 @@
+User object if the user is known or ``null``.
