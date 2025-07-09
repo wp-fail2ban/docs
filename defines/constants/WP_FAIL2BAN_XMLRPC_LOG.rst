@@ -15,7 +15,7 @@ WP_FAIL2BAN_XMLRPC_LOG
 
 ----
 
-For debugging and development purposes. Logs the complete raw XML-RPC message to the specified file, which is useful for analyzing unusual XML-RPC attacks.
+For debugging and development purposes. Logs the complete raw XML-RPC message to the specified file, which is useful for analysing unusual XML-RPC attacks.
 
 .. code-block:: php
    :caption: Example: Log XML-RPC messages
