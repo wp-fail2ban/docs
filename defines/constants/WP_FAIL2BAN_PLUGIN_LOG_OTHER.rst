@@ -9,7 +9,7 @@ WP_FAIL2BAN_PLUGIN_LOG_OTHER
 .. rubric:: Enable logging plugin :ref:`"Other" class <events_OTHER>` events.
 .. include:: default-disabled.rst
 
-.. versionadded:: 4.2.0
+.. versionadded:: 4.4.0
 
 ----
 
