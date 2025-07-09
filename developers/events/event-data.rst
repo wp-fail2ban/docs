@@ -6,6 +6,12 @@
 EventData Class
 ---------------
 
+.. versionadded:: 5.1.0
+
+.. versionchanged:: 6.0.0
+   New namespace.
+   Added :php:attr:`waf_data`, :php:meth:`getWafData()`.
+
 .. code-block:: php
 
    final class EventData implements \ArrayAccess, \Iterator, \Countable
@@ -28,6 +34,7 @@ EventData Class
        ?string $user_agent;
        ?string $post;
        ?string $headers;
+       ?array  $waf_data;
 
        /**
         * Getters
@@ -47,73 +54,78 @@ EventData Class
        function getUserAgent(): ?string;
        function getPostData(): ?string;
        function getHttpHeaders(): ?string;
+       function getWafData(): ?array;
    }
 
-.. php:namespace:: org\lecklider\charles\wordpress\wp_fail2ban\premium
+.. php:namespace:: WP_fail2ban\Plugin\premium\lib
 
 .. php:class:: final EventData
 
    *WPf2b* Event data.
 
-   .. php:attr:: $blog_id: int
+   .. php:attr:: blog_id: int
          
       Database field: ``blog_id``
 
-   .. php:attr:: $event: int
+   .. php:attr:: event: int
 
       Database field: ``event``
 
-   .. php:attr:: $ipv6: string
+   .. php:attr:: ipv6: string
 
       Database field: ``ipv6``
 
-   .. php:attr:: $username: ?string
+   .. php:attr:: username: ?string
 
       Database field: ``username``
 
-   .. php:attr:: $password: ?string
+   .. php:attr:: password: ?string
 
       Database field: ``password``
 
-   .. php:attr:: $ref_id: ?int
+   .. php:attr:: ref_id: ?int
 
       Database field: ``ref_id``
 
-   .. php:attr:: $iso: ?string
+   .. php:attr:: iso: ?string
 
       Database field: ``iso``
 
-   .. php:attr:: $plugin: ?int
+   .. php:attr:: plugin: ?int
 
       Database field: ``plugin``
 
-   .. php:attr:: $request_method: ?string
+   .. php:attr:: request_method: ?string
 
       Database field: ``request_method``
 
-   .. php:attr:: $url: ?string
+   .. php:attr:: url: ?string
 
       Database field: ``url``
 
-   .. php:attr:: $content_type: ?string
+   .. php:attr:: content_type: ?string
 
       Database field: ``content_type``
 
-   .. php:attr:: $referer: ?string
+   .. php:attr:: referer: ?string
 
       Database field: ``referer``
 
-   .. php:attr:: $user_agent: ?string
+   .. php:attr:: user_agent: ?string
 
       Database field: ``user_agent``
 
-   .. php:attr:: $post: ?string
+   .. php:attr:: post: ?string
 
       Database field: ``post``
 
-   .. php:attr:: $headers: ?string
+   .. php:attr:: headers: ?string
 
       Database field: ``headers``
+
+   .. php:attr:: waf_data: ?array
+
+      Database field: ``waf_data``
 
    .. php:method:: public getBlogId(): int
 
@@ -222,3 +234,9 @@ EventData Class
       Get the HTTP headers for the Event. See :ref:`WP_FAIL2BAN_EX_LOG_HEADERS`.
 
       :returns: The HTTP headers as a string, or ``null`` if header logging is not enabled.
+
+   .. php:method:: public getWafData(): ?array
+
+      Get the WAF or Honeypot data for the Event.
+
+      :returns: The WAF or Honeypot data as an array, or ``null`` if it is not a WAF or Honeypot event.
