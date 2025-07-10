@@ -25,4 +25,3 @@ Enables logging of password reset requests. When enabled, the username and IP ad
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG`
-   * :ref:`wordpress-extra_conf`

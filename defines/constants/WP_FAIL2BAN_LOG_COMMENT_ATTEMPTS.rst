@@ -37,4 +37,3 @@ Enables logging of failed comment attempts. When enabled, the following events w
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_COMMENT_ATTEMPT_LOG`
-   * :ref:`wordpress-soft_conf`

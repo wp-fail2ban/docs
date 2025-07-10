@@ -25,4 +25,3 @@ Enables logging of comments that are marked as spam. When enabled, the comment I
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_SPAM_LOG`
-   * :ref:`wordpress-hard_conf`

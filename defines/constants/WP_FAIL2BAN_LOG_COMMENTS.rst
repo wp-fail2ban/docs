@@ -25,5 +25,4 @@ Enables logging of all submitted comments. When enabled, the comment ID and IP a
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_COMMENT_LOG`
-   * :ref:`wordpress-extra_conf`
 
