@@ -17,7 +17,6 @@ WP_FAIL2BAN_SITE_HEALTH_SKIP_SUGGEST
 Controls which add-on suggestions appear in the Site Health tool.
 
 .. list-table::
-   :widths: 1, 9
    :header-rows: 1
 
    * - Key
