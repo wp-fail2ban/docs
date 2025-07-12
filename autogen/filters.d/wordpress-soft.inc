@@ -40,4 +40,4 @@ wordpress-soft.conf
    #
    # Author: Charles Lecklider
    # Version: 6.0.0-beta1
-   # Release Date: 2025-07-08
+   # Release Date: 2025-07-12
