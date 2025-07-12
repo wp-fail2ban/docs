@@ -47,8 +47,8 @@ Premium
    constants/WP_FAIL2BAN_EX_WAF_LOG
    constants/WP_FAIL2BAN_EX_HONEYPOT_LOG
 
-Deprecated
-^^^^^^^^^^
+Removed in v6.0
+^^^^^^^^^^^^^^^
 
 .. toctree::
    :caption: Enable Logging
