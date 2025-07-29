@@ -6,10 +6,8 @@
 WP_FAIL2BAN_COMMENT_EXTRA_LOG
 -----------------------------
 
-.. rubric:: Facility for extra comment events.
-
-.. versionadded:: 4.0.5
-.. versionchanged:: 4.4.0
-   Uses :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+.. versionremoved:: 6.0.0 Use :ref:`WP_FAIL2BAN_COMMENT_ATTEMPT_LOG` instead.
 .. deprecated:: 5.0.0
-.. versionremoved:: 6.0.0
+.. versionchanged:: 4.4.0
+   Uses :ref:`WP_FAIL2BAN_USE_AUTHPRIV`.
+.. versionadded:: 4.0.5
