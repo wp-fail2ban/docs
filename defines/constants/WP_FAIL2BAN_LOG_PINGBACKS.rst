@@ -9,8 +9,6 @@ WP_FAIL2BAN_LOG_PINGBACKS
 .. rubric:: Log pingbacks.
 .. include:: default-disabled.rst
 
-.. versionadded:: 2.2.0
-
 ----
 
 Enables logging of XML-RPC pingback requests. When enabled, pingback events will be written to the syslog facility specified by :ref:`WP_FAIL2BAN_PINGBACK_LOG`.
@@ -23,9 +21,9 @@ Enables logging of XML-RPC pingback requests. When enabled, pingback events will
     */
    define('WP_FAIL2BAN_LOG_PINGBACKS', true);
 
-.. rubric:: History
-
-Based on a suggestion from *@maghe*.
-
 .. seealso::
    * :ref:`WP_FAIL2BAN_PINGBACK_LOG`
+
+.. rubric:: History
+.. versionadded:: 2.2.0
+   Based on a suggestion from *@maghe*.

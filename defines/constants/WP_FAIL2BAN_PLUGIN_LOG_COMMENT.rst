@@ -9,8 +9,6 @@ WP_FAIL2BAN_PLUGIN_LOG_COMMENT
 .. rubric:: Enable logging plugin :ref:`"Comment" class <events_COMMENT>` events.
 .. include:: default-disabled.rst
 
-.. versionadded:: 4.2.0
-
 ----
 
 Enables logging of comment events from plugins.
@@ -25,3 +23,6 @@ Enables logging of comment events from plugins.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_COMMENT_LOG`
+
+.. rubric:: History
+.. versionadded:: 4.2.0

@@ -9,8 +9,6 @@ WP_FAIL2BAN_USE_AUTHPRIV
 .. rubric:: Use LOG_AUTHPRIV instead of LOG_AUTH.
 .. include:: default-disabled.rst
 
-.. versionadded:: 4.4.0
-
 ----
 
 Specifies whether to use LOG_AUTHPRIV instead of LOG_AUTH as the default syslog facility for authentication events. Some systems use LOG_AUTHPRIV by default, but this cannot be reliably detected at runtime.
@@ -32,3 +30,5 @@ Specifies whether to use LOG_AUTHPRIV instead of LOG_AUTH as the default syslog 
    * :ref:`WP_FAIL2BAN_AUTH_LOG`
    * :ref:`syslog_logfiles`
 
+.. rubric:: History
+.. versionadded:: 4.4.0

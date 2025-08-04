@@ -9,8 +9,6 @@ WP_FAIL2BAN_PLUGIN_REST_LOG
 .. rubric:: Facility for "REST" class plugin events.
 .. include:: default-log_user.rst
 
-.. versionadded:: 4.2.0
-
 ----
 
 Specifies the syslog facility to use when logging REST API events from plugins.
@@ -26,3 +24,6 @@ Specifies the syslog facility to use when logging REST API events from plugins.
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_LOG_REST`
    * :ref:`facilities`
+
+.. rubric:: History
+.. versionadded:: 4.2.0

@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_BLOCK_COUNTRIES_LOG
 .. include:: default-log_user.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 4.3.2.0
-
 ----
 
 Specifies the syslog facility to use when logging country blocking events.
@@ -27,3 +25,6 @@ Specifies the syslog facility to use when logging country blocking events.
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES`
    * :ref:`facilities`
+
+.. rubric:: History
+.. versionadded:: 4.3.2.0

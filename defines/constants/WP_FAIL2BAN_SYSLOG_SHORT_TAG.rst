@@ -9,8 +9,6 @@ WP_FAIL2BAN_SYSLOG_SHORT_TAG
 .. rubric:: Use short syslog tag.
 .. include:: default-disabled.rst
 
-.. versionadded:: 3.0.0
-
 ----
 
 Forces WPf2b to use a shorter syslog tag. This is useful on systems where the standard tag length causes issues, particularly with some Linux distributions.
@@ -25,3 +23,6 @@ Forces WPf2b to use a shorter syslog tag. This is useful on systems where the st
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_HTTP_HOST`
+
+.. rubric:: History
+.. versionadded:: 3.0.0

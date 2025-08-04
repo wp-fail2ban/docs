@@ -9,8 +9,6 @@ WP_FAIL2BAN_BLOCK_USERNAME_LOGIN
 .. rubric:: Force login with email address/prevent login with username.
 .. include:: default-disabled.rst
 
-.. versionadded:: 4.3.0
-
 ----
 
 Forces users to log in using their email address instead of their username. This provides an alternative to blocking user enumeration when using themes with author profile pages.
@@ -27,3 +25,6 @@ Forces users to log in using their email address instead of their username. This
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_BLOCK_USER_ENUMERATION`
+
+.. rubric:: History
+.. versionadded:: 4.3.0

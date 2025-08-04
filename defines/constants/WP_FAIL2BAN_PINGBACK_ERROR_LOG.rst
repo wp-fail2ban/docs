@@ -9,9 +9,6 @@ WP_FAIL2BAN_PINGBACK_ERROR_LOG
 .. rubric:: Facility for logging pingback errors.
 .. include:: default-log_user.rst
 
-.. versionadded:: 4.0.5
-   Reserved for future use.
-
 ----
 
 Specifies the syslog facility to use when logging pingback error events.
@@ -27,3 +24,6 @@ Specifies the syslog facility to use when logging pingback error events.
 .. note::
    This constant is reserved for future use.
 
+.. rubric:: History
+.. versionadded:: 4.0.5
+   Reserved for future use.

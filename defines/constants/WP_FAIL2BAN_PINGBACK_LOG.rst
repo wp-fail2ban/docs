@@ -9,8 +9,6 @@ WP_FAIL2BAN_PINGBACK_LOG
 .. rubric:: Facility for logging pingbacks.
 .. include:: default-log_user.rst
 
-.. versionadded:: 2.2.0
-
 ----
 
 Specifies the syslog facility to use when logging XML-RPC pingback events.
@@ -26,3 +24,6 @@ Specifies the syslog facility to use when logging XML-RPC pingback events.
 .. seealso::
    * :ref:`WP_FAIL2BAN_LOG_PINGBACKS`
    * :ref:`facilities`
+
+.. rubric:: History
+.. versionadded:: 2.2.0

@@ -9,8 +9,6 @@ WP_FAIL2BAN_LOG_SPAM
 .. rubric:: Log comments marked as spam.
 .. include:: default-disabled.rst
 
-.. versionadded:: 3.5.0
-
 ----
 
 Enables logging of comments that are marked as spam. When enabled, the comment ID and IP address will be written to the syslog facility specified by :ref:`WP_FAIL2BAN_SPAM_LOG`.
@@ -25,3 +23,6 @@ Enables logging of comments that are marked as spam. When enabled, the comment I
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_SPAM_LOG`
+
+.. rubric:: History
+.. versionadded:: 3.5.0

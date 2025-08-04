@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_XMLRPC_JETPACK
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 4.3.2.0
-
 ----
 
 Allows XML-RPC requests from Jetpack servers even when :ref:`WP_FAIL2BAN_EX_XMLRPC_BLOCKED` is enabled.
@@ -28,3 +26,5 @@ Allows XML-RPC requests from Jetpack servers even when :ref:`WP_FAIL2BAN_EX_XMLR
    * :ref:`WP_FAIL2BAN_EX_XMLRPC_BLOCKED`
    * :ref:`WP_FAIL2BAN_EX_XMLRPC_TRUSTED_IPS`
 
+.. rubric:: History
+.. versionadded:: 4.3.2.0

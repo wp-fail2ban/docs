@@ -9,8 +9,6 @@ WP_FAIL2BAN_COMMENT_LOG
 .. rubric:: Facility for :ref:`Comment class <events_COMMENT>` events.
 .. include:: default-log_user.rst
 
-.. versionadded:: 3.5.0
-
 ----
 
 Specifies the syslog facility to use when logging comment events.
@@ -27,3 +25,6 @@ Specifies the syslog facility to use when logging comment events.
    * :ref:`WP_FAIL2BAN_LOG_COMMENTS`
    * :ref:`WP_FAIL2BAN_LOG_COMMENTS_EXTRA`
    * :ref:`facilities`
+
+.. rubric:: History
+.. versionadded:: 3.5.0

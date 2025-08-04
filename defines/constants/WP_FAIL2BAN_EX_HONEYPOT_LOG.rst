@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_HONEYPOT_LOG
 .. include:: default-log_auth.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 6.0.0
-
 ----
 
 Specifies the syslog facility to use when logging Honeypot events.
@@ -27,3 +25,6 @@ Specifies the syslog facility to use when logging Honeypot events.
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_HONEYPOT`
    * :ref:`facilities`
+
+.. rubric:: History
+.. versionadded:: 6.0.0

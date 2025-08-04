@@ -9,8 +9,6 @@ WP_FAIL2BAN_EX_MAXMIND_LICENSE
 .. rubric:: MaxMind GeoIP2 license key.
 .. include:: premium-only.rst
 
-.. versionadded:: 4.3.0
-
 ----
 
 Your MaxMind GeoIP2 license key for country blocking functionality.
@@ -26,3 +24,5 @@ Your MaxMind GeoIP2 license key for country blocking functionality.
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES`
 
+.. rubric:: History
+.. versionadded:: 4.3.0

@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_WAF
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 5.1.0
-
 ----
 
 Enables the Web Application Firewall (WAF) functionality. The WAF can operate in three modes:
@@ -38,3 +36,6 @@ Enables the Web Application Firewall (WAF) functionality. The WAF can operate in
    * :ref:`WP_FAIL2BAN_EX_WAF_LOG`
    * :ref:`WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS`
    * :ref:`WP_FAIL2BAN_EX_WAF_SQLI_WORDPRESS`
+
+.. rubric:: History
+.. versionadded:: 5.1.0

@@ -9,8 +9,6 @@ WP_FAIL2BAN_PLUGIN_XMLRPC_LOG
 .. rubric:: Facility for "XML-RPC" class plugin events.
 .. include:: default-log_user.rst
 
-.. versionadded:: 4.2.0
-
 ----
 
 Specifies the syslog facility to use when logging XML-RPC events from plugins.
@@ -26,3 +24,6 @@ Specifies the syslog facility to use when logging XML-RPC events from plugins.
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_LOG_XMLRPC`
    * :ref:`facilities`
+
+.. rubric:: History
+.. versionadded:: 4.2.0

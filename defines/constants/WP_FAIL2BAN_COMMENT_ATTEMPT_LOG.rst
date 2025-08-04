@@ -9,8 +9,6 @@ WP_FAIL2BAN_COMMENT_ATTEMPT_LOG
 .. rubric:: Facility for attempted comment events.
 .. include:: default-log_auth.rst
 
-.. versionadded:: 5.0.0
-
 ----
 
 Specifies the syslog facility to use when logging failed comment attempts.
@@ -26,3 +24,6 @@ Specifies the syslog facility to use when logging failed comment attempts.
 .. seealso::
    * :ref:`WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS`
    * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+
+.. rubric:: History
+.. versionadded:: 5.0.0

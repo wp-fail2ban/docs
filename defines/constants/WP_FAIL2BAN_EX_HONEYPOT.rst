@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_HONEYPOT
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 6.0.0
-
 ----
 
 Enables the honeypot functionality.
@@ -24,3 +22,6 @@ Enables the honeypot functionality.
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT`
    * :ref:`WP_FAIL2BAN_EX_HONEYPOT_LOG`
+
+.. rubric:: History
+.. versionadded:: 6.0.0

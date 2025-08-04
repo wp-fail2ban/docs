@@ -10,11 +10,6 @@ WP_FAIL2BAN_EX_WAF_LOG
 .. include:: default-log_auth.rst
 .. include:: premium-only.rst
 
-.. versionchanged:: 6.0.0
-   Changed default facility to :ref:`LOG_AUTH <facilities>`.
-
-.. versionadded:: 5.1.0
-
 ----
 
 Specifies the syslog facility to use when logging Web Application Firewall events.
@@ -30,3 +25,8 @@ Specifies the syslog facility to use when logging Web Application Firewall event
 .. seealso::
    * :ref:`events_WAF`
    * :ref:`facilities`
+
+.. rubric:: History
+.. versionchanged:: 6.0.0
+   Changed default facility to :ref:`LOG_AUTH <facilities>`.
+.. versionadded:: 5.1.0

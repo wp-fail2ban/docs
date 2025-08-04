@@ -9,8 +9,6 @@ WP_FAIL2BAN_LOG_COMMENTS
 .. rubric:: Log submitted comments.
 .. include:: default-disabled.rst
 
-.. versionadded:: 3.5.0
-
 ----
 
 Enables logging of all submitted comments. When enabled, the comment ID and IP address will be written to the syslog facility specified by :ref:`WP_FAIL2BAN_COMMENT_LOG`.
@@ -26,3 +24,5 @@ Enables logging of all submitted comments. When enabled, the comment ID and IP a
 .. seealso::
    * :ref:`WP_FAIL2BAN_COMMENT_LOG`
 
+.. rubric:: History
+.. versionadded:: 3.5.0

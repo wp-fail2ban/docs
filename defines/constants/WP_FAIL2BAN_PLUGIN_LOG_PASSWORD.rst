@@ -9,8 +9,6 @@ WP_FAIL2BAN_PLUGIN_LOG_PASSWORD
 .. rubric:: Enable logging plugin :ref:`"Password" class <events_PASSWORD>` events.
 .. include:: default-disabled.rst
 
-.. versionadded:: 4.2.0
-
 ----
 
 Enables logging of password-related events from plugins.
@@ -25,3 +23,6 @@ Enables logging of password-related events from plugins.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_PASSWORD_LOG`
+
+.. rubric:: History
+.. versionadded:: 4.2.0

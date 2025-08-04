@@ -9,7 +9,7 @@ WP_FAIL2BAN_USING_JOURNALD
 .. rubric:: Configure journald installation detection.
 .. include:: default-disabled.rst
 
-.. versionadded:: 6.0.0
+----
 
 Controls how WPf2b detects if journald is being used.
 
@@ -33,3 +33,7 @@ You can also explicitly disable journald detection:
    :caption: Example: Disable journald detection
 
    define('WP_FAIL2BAN_USING_JOURNALD', false);
+
+.. rubric:: History
+.. versionadded:: 6.0.0
+   Placeholder - not implemented yet.

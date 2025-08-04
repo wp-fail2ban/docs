@@ -12,8 +12,6 @@ WP_FAIL2BAN_EX_PROXY_CLOUDFLARE_IPS
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 4.4.0
-
 ----
 
 List of trusted Cloudflare IP addresses. Useful for environments with restricted outbound connectivity.
@@ -54,3 +52,6 @@ List of trusted Cloudflare IP addresses. Useful for environments with restricted
 
 .. seealso::
    :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE`
+
+.. rubric:: History
+.. versionadded:: 4.4.0

@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_PROXY_CLOUDFLARE
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 4.3.2.0
-
 ----
 
 Enables support for sites using Cloudflare as a proxy. When enabled, WPf2b will use the IP address from the X-Forwarded-For header.
@@ -27,3 +25,5 @@ Enables support for sites using Cloudflare as a proxy. When enabled, WPf2b will 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PROXIES`
 
+.. rubric:: History
+.. versionadded:: 4.3.2.0

@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_WAF_SQLI_WORDPRESS
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 5.1.0
-
 ----
 
 Enables SQL injection detection for database queries made by WordPress core. This is a testing feature and should not be enabled in production without good reason.
@@ -30,3 +28,6 @@ Enables SQL injection detection for database queries made by WordPress core. Thi
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_WAF`
    * :ref:`WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS`
+
+.. rubric:: History
+.. versionadded:: 5.1.0

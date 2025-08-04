@@ -9,10 +9,6 @@ WP_FAIL2BAN_BLOCK_USER_ENUMERATION
 .. rubric:: Block user enumeration.
 .. include:: default-disabled.rst
 
-.. versionadded:: 2.1.0
-.. versionchanged:: 4.0.0
-   Now also blocks enumeration via the REST API.
-
 ----
 
 Blocks attempts to enumerate users via author archives and the REST API.
@@ -36,3 +32,8 @@ Based on a suggestion from *@geeklol* and a plugin by *@ROIBOT*.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN`
+
+.. rubric:: History
+.. versionchanged:: 4.0.0
+   Now also blocks enumeration via the REST API.
+.. versionadded:: 2.1.0

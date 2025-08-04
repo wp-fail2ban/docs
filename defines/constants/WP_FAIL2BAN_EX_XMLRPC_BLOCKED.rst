@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_XMLRPC_BLOCKED
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 4.3.2.0
-
 ----
 
 Blocks all XML-RPC requests except those from trusted IPs (see :ref:`WP_FAIL2BAN_EX_XMLRPC_TRUSTED_IPS`).
@@ -28,3 +26,5 @@ Blocks all XML-RPC requests except those from trusted IPs (see :ref:`WP_FAIL2BAN
    * :ref:`WP_FAIL2BAN_EX_XMLRPC_TRUSTED_IPS`
    * :ref:`WP_FAIL2BAN_EX_XMLRPC_JETPACK`
 
+.. rubric:: History
+.. versionadded:: 4.3.2.0

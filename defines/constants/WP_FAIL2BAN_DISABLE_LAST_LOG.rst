@@ -9,8 +9,6 @@ WP_FAIL2BAN_DISABLE_LAST_LOG
 .. rubric:: Disable logging of last events.
 .. include:: default-false.rst
 
-.. versionadded:: 4.3.0
-
 ----
 
 By default, WPf2b stores the last 5 syslog messages in the options table for display in the dashboard widget. This can be disabled if you have performance concerns about frequent options table updates.
@@ -26,3 +24,5 @@ By default, WPf2b stores the last 5 syslog messages in the options table for dis
 .. note::
    This only affects the dashboard widget display. All events will still be sent to syslog.
 
+.. rubric:: History
+.. versionadded:: 4.3.0

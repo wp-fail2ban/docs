@@ -9,8 +9,6 @@ WP_FAIL2BAN_USING_COMPOSER
 .. rubric:: Configure Composer installation detection.
 .. include:: default-false.rst
 
-.. versionadded:: 5.4.0
-
 ----
 
 Controls how WPf2b detects if it was installed via Composer. By default, WPf2b searches for composer.json in standard locations:
@@ -48,3 +46,6 @@ You can either specify a path to composer.json or explicitly enable Composer mod
 
 .. note::
    Specifying the path to composer.json is preferred as it provides more information about your installation.
+
+.. rubric:: History
+.. versionadded:: 5.4.0

@@ -9,8 +9,6 @@ WP_FAIL2BAN_PASSWORD_REQUEST_LOG
 .. rubric:: Facility for logging password reset events.
 .. include:: default-log_user.rst
 
-.. versionadded:: 4.0.0
-
 ----
 
 Specifies the syslog facility to use when logging password reset request events.
@@ -25,3 +23,6 @@ Specifies the syslog facility to use when logging password reset request events.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_LOG_PASSWORD_REQUEST`
+
+.. rubric:: History
+.. versionadded:: 4.0.0

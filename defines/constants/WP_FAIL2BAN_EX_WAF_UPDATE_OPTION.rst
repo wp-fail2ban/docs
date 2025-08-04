@@ -9,8 +9,6 @@ WP_FAIL2BAN_EX_WAF_UPDATE_OPTION
 .. rubric:: Enable capability checking for option updates.
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
-  
-.. versionadded:: 5.1.0
 
 ----
 
@@ -26,3 +24,6 @@ Enables capability checking when WordPress core options are updated. When enable
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_WAF`
+
+.. rubric:: History
+.. versionadded:: 5.1.0

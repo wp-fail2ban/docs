@@ -9,13 +9,6 @@ WP_FAIL2BAN_PROXIES
 .. rubric:: Define trusted proxy servers.
 .. include:: default-disabled.rst
 
-.. versionadded:: 2.0.0
-.. versionchanged:: 4.0.0
-   Entries can be ignored by prefixing with **#**
-.. versionchanged:: 5.0.0
-   Added IPv6 support.
-   Added "Unknown Proxy in X-Forwarded-For" message.
-
 ----
 
 Specifies a list of trusted proxy servers. When defined:
@@ -40,3 +33,11 @@ Specifies a list of trusted proxy servers. When defined:
 
 .. seealso::
    * :ref:`clearing_the_cache`
+
+.. rubric:: History
+.. versionchanged:: 5.0.0
+   Added IPv6 support.
+   Added "Unknown Proxy in X-Forwarded-For" message.
+.. versionchanged:: 4.0.0
+   Entries can be ignored by prefixing with **#**
+.. versionadded:: 2.0.0

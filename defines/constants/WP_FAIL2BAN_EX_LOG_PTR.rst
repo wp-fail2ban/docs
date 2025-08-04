@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_LOG_PTR
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 5.1.0
-
 ----
 
 Enables logging of PTR record for blocked requests.
@@ -28,3 +26,6 @@ Enables logging of PTR record for blocked requests.
    * :ref:`WP_FAIL2BAN_EX_LOG_HEADERS`
    * :ref:`WP_FAIL2BAN_EX_LOG_POST_DATA`
    * :ref:`WP_FAIL2BAN_EX_LOG_URL`
+
+.. rubric:: History
+.. versionadded:: 5.1.0

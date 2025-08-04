@@ -9,8 +9,6 @@ WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS
 .. rubric:: Log attempted comments.
 .. include:: default-disabled.rst
 
-.. versionadded:: 5.0.0
-
 ----
 
 Enables logging of failed comment attempts. When enabled, the following events will be logged to the syslog facility specified by :ref:`WP_FAIL2BAN_COMMENT_ATTEMPT_LOG`:
@@ -37,3 +35,6 @@ Enables logging of failed comment attempts. When enabled, the following events w
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_COMMENT_ATTEMPT_LOG`
+
+.. rubric:: History
+.. versionadded:: 5.0.0

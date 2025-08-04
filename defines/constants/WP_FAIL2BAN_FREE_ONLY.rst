@@ -9,8 +9,6 @@ WP_FAIL2BAN_FREE_ONLY
 .. rubric:: Disable premium notifications.
 .. include:: default-false.rst
 
-.. versionadded:: 4.4.0
-
 ----
 
 Prevents the Freemius library from displaying admin notices and other notifications about premium features.
@@ -23,3 +21,5 @@ Prevents the Freemius library from displaying admin notices and other notificati
     */
    define('WP_FAIL2BAN_FREE_ONLY', true);
 
+.. rubric:: History
+.. versionadded:: 4.4.0

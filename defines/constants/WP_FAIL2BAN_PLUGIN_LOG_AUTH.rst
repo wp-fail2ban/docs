@@ -9,8 +9,6 @@ WP_FAIL2BAN_PLUGIN_LOG_AUTH
 .. rubric:: Enable logging plugin :ref:`"Auth" class <events_AUTH>` events.
 .. include:: default-disabled.rst
 
-.. versionadded:: 4.2.0
-
 ----
 
 Enables logging of authentication events from plugins.
@@ -26,3 +24,6 @@ Enables logging of authentication events from plugins.
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_AUTH_LOG`
    * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+
+.. rubric:: History
+.. versionadded:: 4.2.0

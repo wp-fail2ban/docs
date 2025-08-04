@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_LOG_POST_DATA
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 4.3.0
-
 ----
 
 Enables logging of POST request data for blocked requests.
@@ -29,3 +27,5 @@ Enables logging of POST request data for blocked requests.
    * :ref:`WP_FAIL2BAN_EX_LOG_PTR`
    * :ref:`WP_FAIL2BAN_EX_LOG_URL`
 
+.. rubric:: History
+.. versionadded:: 4.3.0

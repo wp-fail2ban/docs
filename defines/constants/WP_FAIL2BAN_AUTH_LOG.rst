@@ -9,10 +9,6 @@ WP_FAIL2BAN_AUTH_LOG
 .. rubric:: Facility for :ref:`Auth class <events_AUTH>` events.
 .. include:: default-log_auth.rst
 
-.. versionadded:: 2.2.0
-.. versionchanged:: 4.4.0
-   Uses :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
-
 ----
 
 Specifies the syslog facility to use when logging authentication events.
@@ -28,3 +24,8 @@ Specifies the syslog facility to use when logging authentication events.
 .. seealso::
    * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
    * :ref:`events_AUTH`
+
+.. rubric:: History
+.. versionchanged:: 4.4.0
+   Uses :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+.. versionadded:: 2.2.0

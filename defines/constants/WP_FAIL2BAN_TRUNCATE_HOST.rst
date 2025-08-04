@@ -9,8 +9,6 @@ WP_FAIL2BAN_TRUNCATE_HOST
 .. rubric:: Truncate hostname in syslog tag.
 .. include:: default-disabled.rst
 
-.. versionadded:: 3.5.0
-
 ----
 
 Some Linux distributions have a hard limit on the length of the syslog tag. This setting truncates the hostname to help stay within those limits.
@@ -27,3 +25,5 @@ Some Linux distributions have a hard limit on the length of the syslog tag. This
    * :ref:`WP_FAIL2BAN_HTTP_HOST`
    * :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG`
 
+.. rubric:: History
+.. versionadded:: 3.5.0

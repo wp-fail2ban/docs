@@ -9,8 +9,6 @@ WP_FAIL2BAN_PLUGIN_PASSWORD_LOG
 .. rubric:: Facility for "Password" class plugin events.
 .. include:: default-log_user.rst
 
-.. versionadded:: 4.2.0
-
 ----
 
 Specifies the syslog facility to use when logging password-related events from plugins.
@@ -26,3 +24,6 @@ Specifies the syslog facility to use when logging password-related events from p
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_LOG_PASSWORD`
    * :ref:`facilities`
+
+.. rubric:: History
+.. versionadded:: 4.2.0

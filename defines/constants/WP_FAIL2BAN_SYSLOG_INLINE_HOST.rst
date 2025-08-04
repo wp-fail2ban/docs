@@ -9,8 +9,6 @@ WP_FAIL2BAN_SYSLOG_INLINE_HOST
 .. rubric:: Log hostname in message body.
 .. include:: default-false.rst
 
-.. versionadded:: 6.0.0
-  
 ----
 
 .. admonition:: systemd
@@ -32,5 +30,7 @@ instead of:
    Jul  7 12:34:56 bistromath wordpress(fqdn.example.com)[4242]: Blocked authentication attempt for Agrajag from 192.0.42.1
 
 .. seealso::
-   | :ref:``
    | :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG`
+
+.. rubric:: History
+.. versionadded:: 6.0.0

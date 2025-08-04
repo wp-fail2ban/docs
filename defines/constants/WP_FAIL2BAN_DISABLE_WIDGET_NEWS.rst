@@ -9,7 +9,7 @@ WP_FAIL2BAN_DISABLE_WIDGET_NEWS
 .. rubric:: Disable the news widget.
 .. include:: default-false.rst
 
-.. versionadded:: 6.0.0
+----
 
 Controls whether the News Widget is displayed.
 
@@ -25,7 +25,8 @@ When enabled:
 
    define('WP_FAIL2BAN_DISABLE_WIDGET_NEWS', true);
 
+.. rubric:: History
+.. versionadded:: 6.0.0
 
 .. rubric:: Footnotes
-
 .. [#f1] For users who have opted in to Freemius.

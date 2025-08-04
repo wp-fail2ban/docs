@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_BLOCK_COUNTRIES
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 4.3.2.0
-
 ----
 
 Blocks requests from specified countries using MaxMind's GeoIP2 database. Requires a MaxMind license key (see :ref:`WP_FAIL2BAN_EX_MAXMIND_LICENSE`).
@@ -35,3 +33,5 @@ Blocks requests from specified countries using MaxMind's GeoIP2 database. Requir
    * :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES_LOG`
    * :ref:`WP_FAIL2BAN_EX_MAXMIND_LICENSE`
 
+.. rubric:: History
+.. versionadded:: 4.3.2.0

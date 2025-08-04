@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_LOG_USER_AGENT
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 4.3.0
-
 ----
 
 Enables logging of the HTTP User-Agent header for blocked requests.
@@ -28,3 +26,5 @@ Enables logging of the HTTP User-Agent header for blocked requests.
    * :ref:`WP_FAIL2BAN_EX_LOG_HEADERS`
    * :ref:`WP_FAIL2BAN_EX_LOG_REFERER`
 
+.. rubric:: History
+.. versionadded:: 4.3.0

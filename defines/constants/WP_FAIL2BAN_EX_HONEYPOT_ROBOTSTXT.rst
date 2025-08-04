@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 6.0.0
-
 ----
 
 Adds honeypot entries to the ``robots.txt`` file.
@@ -25,3 +23,6 @@ Adds honeypot entries to the ``robots.txt`` file.
    * :ref:`WP_FAIL2BAN_EX_HONEYPOT`
    * :ref:`WP_FAIL2BAN_EX_HONEYPOT_LOG`
    * :ref:`WPF2B_EVENT_HONEYPOT_TRAP_ROBOTSTXT`
+
+.. rubric:: History
+.. versionadded:: 6.0.0

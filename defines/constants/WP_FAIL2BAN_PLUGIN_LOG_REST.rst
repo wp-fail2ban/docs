@@ -9,8 +9,6 @@ WP_FAIL2BAN_PLUGIN_LOG_REST
 .. rubric:: Enable logging plugin :ref:`"REST" class <events_REST>` events.
 .. include:: default-disabled.rst
 
-.. versionadded:: 4.2.0
-
 ----
 
 Enables logging of REST API events from plugins.
@@ -25,3 +23,6 @@ Enables logging of REST API events from plugins.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_REST_LOG`
+
+.. rubric:: History
+.. versionadded:: 4.2.0

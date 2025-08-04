@@ -9,8 +9,6 @@ WP_FAIL2BAN_PLUGIN_LOG_XMLRPC
 .. rubric:: Enable logging plugin :ref:`"XML-RPC" class <events_XMLRPC>` events.
 .. include:: default-disabled.rst
 
-.. versionadded:: 4.2.0
-
 ----
 
 Enables logging of XML-RPC events from plugins.
@@ -25,3 +23,6 @@ Enables logging of XML-RPC events from plugins.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_XMLRPC_LOG`
+
+.. rubric:: History
+.. versionadded:: 4.2.0

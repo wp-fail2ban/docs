@@ -9,8 +9,6 @@ WP_FAIL2BAN_INSTALL_PATH
 .. rubric:: Override fail2ban installation path.
 .. include:: default-disabled.rst
 
-.. versionadded:: 5.0.0
-
 ----
 
 The path to the ``fail2ban`` installation. The Site Health tool looks in the following locations:
@@ -28,3 +26,5 @@ If your ``fail2ban`` installation is elsewhere, you can specify the path:
     */
    define('WP_FAIL2BAN_INSTALL_PATH', '/var/fail2ban');
 
+.. rubric:: History
+.. versionadded:: 5.0.0

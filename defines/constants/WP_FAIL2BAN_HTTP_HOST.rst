@@ -9,8 +9,6 @@ WP_FAIL2BAN_HTTP_HOST
 .. rubric:: Override HTTP host detection.
 .. include:: default-disabled.rst
 
-.. versionadded:: 3.0.0
-
 ----
 
 Forces WPf2b to use a specific hostname instead of the detected HTTP host. This can be useful in multisite configurations or when the detected host doesn't match the expected value.
@@ -26,3 +24,5 @@ Forces WPf2b to use a specific hostname instead of the detected HTTP host. This 
 .. note::
    This affects logging only; it does not change WordPress's behavior.
 
+.. rubric:: History
+.. versionadded:: 3.0.0

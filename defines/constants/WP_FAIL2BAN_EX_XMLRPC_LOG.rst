@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_XMLRPC_LOG
 .. include:: default-log_user.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 4.3.2.0
-
 ----
 
 Specifies the syslog facility to use when logging XML-RPC events.
@@ -27,3 +25,6 @@ Specifies the syslog facility to use when logging XML-RPC events.
 .. seealso::
    * :ref:`events_XMLRPC`
    * :ref:`facilities`
+
+.. rubric:: History
+.. versionadded:: 4.3.2.0

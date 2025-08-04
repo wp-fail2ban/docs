@@ -9,8 +9,6 @@ WP_FAIL2BAN_PLUGIN_LOG_HONEYPOT
 .. rubric:: Enable logging plugin :ref:`"Honeypot" class <events_HONEYPOT>` events.
 .. include:: default-disabled.rst
 
-.. versionadded:: 6.0.0
-
 ----
 
 Enables logging of Honeypot events from plugins.
@@ -25,3 +23,6 @@ Enables logging of Honeypot events from plugins.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_HONEYPOT_LOG`
+
+.. rubric:: History
+.. versionadded:: 6.0.0

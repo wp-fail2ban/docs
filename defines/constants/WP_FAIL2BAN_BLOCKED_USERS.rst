@@ -9,8 +9,6 @@ WP_FAIL2BAN_BLOCKED_USERS
 .. rubric:: Block login for specified usernames.
 .. include:: default-disabled.rst
 
-.. versionadded:: 2.0.0
-
 ----
 
 Blocks login attempts for specified usernames using either a regular expression or an array of usernames. This helps prevent brute-force attacks by blocking common username targets before WordPress processes the login request.
@@ -36,5 +34,5 @@ For PHP 7 or later, you can use an array of usernames:
    define('WP_FAIL2BAN_BLOCKED_USERS', ['admin', 'administrator', 'webmaster']);
 
 .. rubric:: History
-
-Based on a suggestion from *@jmadea*.
+.. versionadded:: 2.0.0
+   Based on a suggestion from *@jmadea*.

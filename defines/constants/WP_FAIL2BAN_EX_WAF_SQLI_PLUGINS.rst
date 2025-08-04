@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 5.1.0
-
 ----
 
 Enables SQL injection detection for database queries made by plugins.
@@ -27,3 +25,6 @@ Enables SQL injection detection for database queries made by plugins.
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_WAF`
    * :ref:`WP_FAIL2BAN_EX_WAF_SQLI_WORDPRESS`
+
+.. rubric:: History
+.. versionadded:: 5.1.0

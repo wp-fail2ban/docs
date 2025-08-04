@@ -10,8 +10,6 @@ WP_FAIL2BAN_EX_LOG_REFERER
 .. include:: default-disabled.rst
 .. include:: premium-only.rst
 
-.. versionadded:: 4.3.0
-
 ----
 
 Enables logging of the HTTP referer header for blocked requests. [#]_
@@ -28,5 +26,8 @@ Enables logging of the HTTP referer header for blocked requests. [#]_
    * :ref:`WP_FAIL2BAN_EX_LOG_HEADERS`
    * :ref:`WP_FAIL2BAN_EX_LOG_USER_AGENT`
 
-.. [#] The misspelling of "referer" is intentional and matches the HTTP specification where it was originally misspelled.
+.. rubric:: History
+.. versionadded:: 4.3.0
 
+.. rubric:: Footnotes
+.. [#] The misspelling of "referer" is intentional and matches the HTTP specification where it was originally misspelled.

@@ -9,8 +9,6 @@ WP_FAIL2BAN_PLUGIN_LOG_SPAM
 .. rubric:: Enable logging plugin :ref:`"Spam" class <events_SPAM>` events.
 .. include:: default-disabled.rst
 
-.. versionadded:: 4.2.0
-
 ----
 
 Enables logging of spam-related events from plugins.
@@ -25,3 +23,6 @@ Enables logging of spam-related events from plugins.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_SPAM_LOG`
+
+.. rubric:: History
+.. versionadded:: 4.2.0
