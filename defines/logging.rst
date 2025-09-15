@@ -5,7 +5,8 @@ Logging
 
 .. toctree::
 
-   constants/WP_FAIL2BAN_USE_AUTHPRIV
+   constants/WP_FAIL2BAN_USE_LOG_AUTH
+   constants/WP_FAIL2BAN_USE_LOG_USER
 
 .. toctree::
    :caption: Enable Logging
@@ -51,11 +52,7 @@ Removed in v6.0
 ^^^^^^^^^^^^^^^
 
 .. toctree::
-   :caption: Enable Logging
 
+   constants/WP_FAIL2BAN_USE_AUTHPRIV
    constants/WP_FAIL2BAN_LOG_COMMENTS_EXTRA
-
-.. toctree::
-   :caption: Facility
-
    constants/WP_FAIL2BAN_COMMENT_EXTRA_LOG
