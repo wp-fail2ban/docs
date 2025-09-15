@@ -17,6 +17,7 @@ Premium
    :caption: Countries
 
    constants/WP_FAIL2BAN_EX_BLOCK_COUNTRIES
+   constants/WP_FAIL2BAN_EX_BLOCK_COUNTRIES_451
 
 .. toctree::
    :caption: XML-RPC
