@@ -19,7 +19,6 @@ wordpress-wpf2b-waf.conf
    [Definition]
 
    _daemon = (?:wordpress|wp)
-   __daemon_re = [\[\(]?<_daemon>(?:\(<F-SITE>\S+</F-SITE>\))?[\]\)]?:?
    _tail = (?: on <F-SITE_INLINE>\S+(?:/\S+)?</F-SITE_INLINE>)? from <ADDR>
 
    prefregex = ^%(__prefix_line)sWAF\[blocked\] <F-CONTENT>.*</F-CONTENT>$
@@ -37,5 +36,5 @@ wordpress-wpf2b-waf.conf
    # https://wp-fail2ban.com/
    #
    # Author: Charles Lecklider
-   # Version: 6.0.0-beta1
-   # Release Date: 2025-07-12
+   # Version: 6.0.1
+   # Build Date: 2025-10-25T21:26:38+00:00
