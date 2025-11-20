@@ -84,6 +84,8 @@ Whatever doesn't fit better into another Class.
 
 .. toctree::
 
+   events/other/WPF2B_EVENT_OTHER_TRACKBACK
+   events/other/WPF2B_EVENT_OTHER_TRACKBACK_ERROR
    events/other/WPF2B_EVENT_OTHER_UNKNOWN_PROXY
 
 .. _events_PASSWORD:
