@@ -22,7 +22,6 @@ Specifies the syslog facility to use when logging Honeypot events.
    define('WP_FAIL2BAN_PLUGIN_HONEYPOT_LOG', LOG_LOCAL3);
 
 .. seealso::
-   * :ref:`WP_FAIL2BAN_PLUGIN_LOG_HONEYPOT`
    * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
    * :ref:`facilities`
 
