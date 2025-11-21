@@ -26,9 +26,6 @@ Blocks attempts to enumerate users via author archives and the REST API.
 .. warning::
    If your theme has Author profile pages (e.g. TwentyTwenty) you will need to :ref:`block username logins <WP_FAIL2BAN_BLOCK_USERNAME_LOGIN>` instead.
 
-.. rubric:: History
-
-Based on a suggestion from *@geeklol* and a plugin by *@ROIBOT*.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN`
@@ -37,3 +34,4 @@ Based on a suggestion from *@geeklol* and a plugin by *@ROIBOT*.
 .. versionchanged:: 4.0.0
    Now also blocks enumeration via the REST API.
 .. versionadded:: 2.1.0
+   Based on a suggestion from *@geeklol* and a plugin by *@ROIBOT*.
