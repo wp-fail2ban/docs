@@ -7,7 +7,7 @@ WP_FAIL2BAN_INSTALL_PATH
 ------------------------
 
 .. rubric:: Override fail2ban installation path.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

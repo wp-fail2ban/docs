@@ -7,7 +7,7 @@ WP_FAIL2BAN_SYSLOG_INLINE_HOST
 ------------------------------
 
 .. rubric:: Log hostname in message body.
-.. include:: default-false.rst
+.. include:: default-false.rst.inc
 
 ----
 

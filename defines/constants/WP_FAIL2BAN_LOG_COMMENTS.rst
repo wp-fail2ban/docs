@@ -7,7 +7,7 @@ WP_FAIL2BAN_LOG_COMMENTS
 ------------------------
 
 .. rubric:: Log submitted comments.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

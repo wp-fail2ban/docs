@@ -7,7 +7,7 @@ WP_FAIL2BAN_EX_MAXMIND_LICENSE
 ------------------------------
 
 .. rubric:: MaxMind GeoIP2 license key.
-.. include:: premium-only.rst
+.. include:: premium-only.rst.inc
 
 ----
 

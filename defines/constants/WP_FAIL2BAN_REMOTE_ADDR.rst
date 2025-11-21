@@ -7,7 +7,7 @@ WP_FAIL2BAN_REMOTE_ADDR
 -----------------------
 
 .. rubric:: IP address to use for anonymised requests.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 
@@ -21,7 +21,7 @@ Some themes and plugins anonymise requests by clearing the remote IP address. Th
     */
    define('WP_FAIL2BAN_REMOTE_ADDR', '172.16.123.123');
 
-.. include:: must-use-wp-config.rst
+.. include:: must-use-wp-config.rst.inc
 
 .. rubric:: History
 .. versionchanged::5.0.0

@@ -7,7 +7,7 @@ WP_FAIL2BAN_LOG_SPAM
 --------------------
 
 .. rubric:: Log comments marked as spam.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

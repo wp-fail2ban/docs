@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_BLOCK_COUNTRIES_LOG
 ----------------------------------
 
 .. rubric:: Facility for country blocking events.
-.. include:: default-log_user.rst
-.. include:: premium-only.rst
+.. include:: default-log_user.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

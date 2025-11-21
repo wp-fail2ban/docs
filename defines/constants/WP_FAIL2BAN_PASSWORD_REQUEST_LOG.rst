@@ -7,7 +7,7 @@ WP_FAIL2BAN_PASSWORD_REQUEST_LOG
 --------------------------------
 
 .. rubric:: Facility for logging password reset events.
-.. include:: default-log_user.rst
+.. include:: default-log_user.rst.inc
 
 ----
 

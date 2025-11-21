@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_LOG_PTR
 ----------------------
 
 .. rubric:: Enable logging of PTR record.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

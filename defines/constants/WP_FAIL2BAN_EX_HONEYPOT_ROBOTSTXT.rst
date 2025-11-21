@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT
 ---------------------------------
 
 .. rubric:: Enable honeypot for robots.txt.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

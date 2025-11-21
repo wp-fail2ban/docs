@@ -7,7 +7,7 @@ WP_FAIL2BAN_BLOCKED_USERS
 -------------------------
 
 .. rubric:: Block login for specified usernames.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

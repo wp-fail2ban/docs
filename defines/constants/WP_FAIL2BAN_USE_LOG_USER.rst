@@ -9,7 +9,7 @@ WP_FAIL2BAN_USE_LOG_USER
 .. rubric:: Use the LOG_USER facility.
 .. productionlist::
    WP_FAIL2BAN_USE_LOG_USER: `true` | `false` | `LOG_LOCAL0`..`LOG_LOCAL7`
-.. include:: default-false.rst
+.. include:: default-false.rst.inc
 
 ----
 

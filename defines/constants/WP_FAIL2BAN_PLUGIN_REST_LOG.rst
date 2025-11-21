@@ -7,7 +7,7 @@ WP_FAIL2BAN_PLUGIN_REST_LOG
 ---------------------------
 
 .. rubric:: Facility for "REST" class plugin events.
-.. include:: default-log_user.rst
+.. include:: default-log_user.rst.inc
 
 ----
 

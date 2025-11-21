@@ -7,8 +7,8 @@ WP_FAIL2BAN_PLUGIN_WAF_LOG
 ---------------------------
 
 .. rubric:: Facility for "WAF" class plugin events.
-.. include:: default-log_auth.rst
-.. include:: premium-only.rst
+.. include:: default-log_auth.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

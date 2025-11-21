@@ -7,7 +7,7 @@ WP_FAIL2BAN_OPENLOG_OPTIONS
 ---------------------------
 
 .. rubric:: Configure syslog options.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

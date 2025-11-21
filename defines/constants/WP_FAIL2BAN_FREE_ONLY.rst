@@ -7,7 +7,7 @@ WP_FAIL2BAN_FREE_ONLY
 ---------------------
 
 .. rubric:: Disable premium notifications.
-.. include:: default-false.rst
+.. include:: default-false.rst.inc
 
 ----
 

@@ -7,7 +7,7 @@ WP_FAIL2BAN_LOG_PASSWORD_REQUEST
 --------------------------------
 
 .. rubric:: Log password reset requests.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

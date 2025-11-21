@@ -7,7 +7,7 @@ WP_FAIL2BAN_USING_COMPOSER
 --------------------------
 
 .. rubric:: Configure Composer installation detection.
-.. include:: default-false.rst
+.. include:: default-false.rst.inc
 
 ----
 

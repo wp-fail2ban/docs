@@ -7,7 +7,7 @@ WP_FAIL2BAN_PROXIES
 -------------------
 
 .. rubric:: Define trusted proxy servers.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

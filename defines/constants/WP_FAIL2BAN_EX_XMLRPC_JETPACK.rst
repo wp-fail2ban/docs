@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_XMLRPC_JETPACK
 -----------------------------
 
 .. rubric:: Allow Jetpack XML-RPC requests.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

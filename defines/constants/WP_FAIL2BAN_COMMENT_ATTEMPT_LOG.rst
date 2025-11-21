@@ -7,7 +7,7 @@ WP_FAIL2BAN_COMMENT_ATTEMPT_LOG
 -------------------------------
 
 .. rubric:: Facility for attempted comment events.
-.. include:: default-log_auth.rst
+.. include:: default-log_auth.rst.inc
 
 ----
 

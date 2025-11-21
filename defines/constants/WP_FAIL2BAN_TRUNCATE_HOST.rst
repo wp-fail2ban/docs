@@ -7,7 +7,7 @@ WP_FAIL2BAN_TRUNCATE_HOST
 -------------------------
 
 .. rubric:: Truncate hostname in syslog tag.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

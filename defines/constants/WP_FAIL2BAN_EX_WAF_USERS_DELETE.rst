@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_WAF_USERS_DELETE
 -------------------------------
 
 .. rubric:: Enable capability checking for deleting users.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

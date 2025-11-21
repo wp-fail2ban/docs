@@ -7,7 +7,7 @@ WP_FAIL2BAN_UI_ADVANCED_SETTINGS
 --------------------------------
 
 .. rubric:: Show/hide advanced settings in the UI.
-.. include:: default-not-set.rst
+.. include:: default-not-set.rst.inc
 
 ----
 
@@ -22,7 +22,7 @@ WP_FAIL2BAN_UI_ADVANCED_SETTINGS
     */
    define('WP_FAIL2BAN_UI_ADVANCED_SETTINGS', false);
 
-.. include:: must-use-wp-config.rst
+.. include:: must-use-wp-config.rst.inc
 
 .. rubric:: History
 .. versionadded:: 6.0.0

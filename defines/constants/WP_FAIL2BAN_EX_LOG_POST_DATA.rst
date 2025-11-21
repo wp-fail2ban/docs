@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_LOG_POST_DATA
 ----------------------------
 
 .. rubric:: Enable logging of POST data.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

@@ -7,7 +7,7 @@ WP_FAIL2BAN_AUTH_LOG
 --------------------
 
 .. rubric:: Facility for :ref:`Auth class <events_AUTH>` events.
-.. include:: default-log_auth.rst
+.. include:: default-log_auth.rst.inc
 
 ----
 

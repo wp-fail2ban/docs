@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_LOG_HEADERS
 --------------------------
 
 .. rubric:: Enable logging of HTTP headers.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

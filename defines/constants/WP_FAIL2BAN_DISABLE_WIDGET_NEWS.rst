@@ -7,7 +7,7 @@ WP_FAIL2BAN_DISABLE_WIDGET_NEWS
 -------------------------------
 
 .. rubric:: Disable the news widget.
-.. include:: default-false.rst
+.. include:: default-false.rst.inc
 
 ----
 

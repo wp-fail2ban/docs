@@ -7,7 +7,7 @@ WP_FAIL2BAN_SYSLOG_SHORT_TAG
 ----------------------------
 
 .. rubric:: Use short syslog tag.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

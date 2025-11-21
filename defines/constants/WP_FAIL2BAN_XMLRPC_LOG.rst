@@ -7,7 +7,7 @@ WP_FAIL2BAN_XMLRPC_LOG
 ----------------------
 
 .. rubric:: Log XML-RPC messages to file.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 .. warning::
    This is an advanced feature not available in the wordpress.org flavour.

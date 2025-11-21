@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_BLOCK_COUNTRIES
 ------------------------------
 
 .. rubric:: Block requests from specified countries.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

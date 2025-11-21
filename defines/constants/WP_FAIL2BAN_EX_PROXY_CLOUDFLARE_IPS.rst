@@ -9,8 +9,8 @@ WP_FAIL2BAN_EX_PROXY_CLOUDFLARE_IPS
 -----------------------------------
 
 .. rubric:: Trusted Cloudflare IP addresses.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

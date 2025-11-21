@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_LOG_URL
 ----------------------
 
 .. rubric:: Enable logging of request URL.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

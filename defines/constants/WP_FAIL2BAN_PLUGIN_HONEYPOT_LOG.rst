@@ -7,7 +7,7 @@ WP_FAIL2BAN_PLUGIN_HONEYPOT_LOG
 --------------------------------
 
 .. rubric:: Facility for honeypot events.
-.. include:: default-log_auth.rst
+.. include:: default-log_auth.rst.inc
 
 ----
 

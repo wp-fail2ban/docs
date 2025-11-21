@@ -7,7 +7,7 @@ WP_FAIL2BAN_PLUGIN_OTHER_LOG
 ----------------------------
 
 .. rubric:: Facility for "Other" class plugin events.
-.. include:: default-log_user.rst
+.. include:: default-log_user.rst.inc
 
 ----
 

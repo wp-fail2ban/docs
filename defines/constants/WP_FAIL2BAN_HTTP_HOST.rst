@@ -7,7 +7,7 @@ WP_FAIL2BAN_HTTP_HOST
 ---------------------
 
 .. rubric:: Override HTTP host detection.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

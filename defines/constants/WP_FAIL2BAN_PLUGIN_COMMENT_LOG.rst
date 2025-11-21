@@ -7,7 +7,7 @@ WP_FAIL2BAN_PLUGIN_COMMENT_LOG
 ------------------------------
 
 .. rubric:: Facility for "Comment" class plugin events.
-.. include:: default-log_user.rst
+.. include:: default-log_user.rst.inc
 
 ----
 

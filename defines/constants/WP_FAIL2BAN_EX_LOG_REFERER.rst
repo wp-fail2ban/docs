@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_LOG_REFERER
 --------------------------
 
 .. rubric:: Enable logging of HTTP referer.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

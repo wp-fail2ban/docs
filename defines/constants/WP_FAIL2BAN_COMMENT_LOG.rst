@@ -7,7 +7,7 @@ WP_FAIL2BAN_COMMENT_LOG
 -----------------------
 
 .. rubric:: Facility for :ref:`Comment class <events_COMMENT>` events.
-.. include:: default-log_user.rst
+.. include:: default-log_user.rst.inc
 
 ----
 

@@ -7,7 +7,7 @@ WP_FAIL2BAN_BLOCK_USERNAME_LOGIN
 --------------------------------
 
 .. rubric:: Force login with email address/prevent login with username.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 
@@ -21,7 +21,7 @@ Forces users to log in using their email address instead of their username. This
     */
    define('WP_FAIL2BAN_BLOCK_USERNAME_LOGIN', true);
 
-.. include:: use-wp-config.rst
+.. include:: use-wp-config.rst.inc
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_BLOCK_USER_ENUMERATION`

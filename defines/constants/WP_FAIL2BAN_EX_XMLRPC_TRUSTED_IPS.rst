@@ -7,7 +7,7 @@ WP_FAIL2BAN_EX_XMLRPC_TRUSTED_IPS
 ---------------------------------
 
 .. rubric:: List of trusted IPs for XML-RPC requests.
-.. include:: premium-only.rst
+.. include:: premium-only.rst.inc
 
 ----
 

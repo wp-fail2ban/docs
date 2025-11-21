@@ -7,7 +7,7 @@ WP_FAIL2BAN_PINGBACK_LOG
 ------------------------
 
 .. rubric:: Facility for logging pingbacks.
-.. include:: default-log_user.rst
+.. include:: default-log_user.rst.inc
 
 ----
 

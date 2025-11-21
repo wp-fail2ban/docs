@@ -9,7 +9,7 @@ WP_FAIL2BAN_USE_LOG_AUTH
 .. rubric:: Use LOG_AUTH instead of LOG_AUTHPRIV.
 .. productionlist::
    WP_FAIL2BAN_USE_LOG_AUTH: `true` | `false` | `LOG_LOCAL0`..`LOG_LOCAL7`
-.. include:: default-false.rst
+.. include:: default-false.rst.inc
 
 ----
 
@@ -36,7 +36,7 @@ You can also map this to a different facility:
 .. note::
    This only affects the default facility - it does not override facilities specified by other constants.
 
-.. include:: must-use-wp-config.rst
+.. include:: must-use-wp-config.rst.inc
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_AUTH_LOG`

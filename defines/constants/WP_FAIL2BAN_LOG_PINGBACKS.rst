@@ -7,7 +7,7 @@ WP_FAIL2BAN_LOG_PINGBACKS
 -------------------------
 
 .. rubric:: Log pingbacks.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

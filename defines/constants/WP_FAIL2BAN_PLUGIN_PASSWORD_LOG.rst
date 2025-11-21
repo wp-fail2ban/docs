@@ -7,7 +7,7 @@ WP_FAIL2BAN_PLUGIN_PASSWORD_LOG
 -------------------------------
 
 .. rubric:: Facility for "Password" class plugin events.
-.. include:: default-log_user.rst
+.. include:: default-log_user.rst.inc
 
 ----
 

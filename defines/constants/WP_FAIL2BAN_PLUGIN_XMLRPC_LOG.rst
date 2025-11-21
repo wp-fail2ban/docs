@@ -7,7 +7,7 @@ WP_FAIL2BAN_PLUGIN_XMLRPC_LOG
 -----------------------------
 
 .. rubric:: Facility for "XML-RPC" class plugin events.
-.. include:: default-log_user.rst
+.. include:: default-log_user.rst.inc
 
 ----
 

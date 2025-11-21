@@ -7,7 +7,7 @@ WP_FAIL2BAN_USING_JOURNALD
 --------------------------
 
 .. rubric:: Configure journald installation detection.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 

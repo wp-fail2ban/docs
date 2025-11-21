@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS
 -------------------------------
 
 .. rubric:: Enable SQL injection detection for plugins.
-.. include:: default-disabled.rst
-.. include:: premium-only.rst
+.. include:: default-disabled.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

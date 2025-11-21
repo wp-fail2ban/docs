@@ -7,8 +7,8 @@ WP_FAIL2BAN_EX_XMLRPC_LOG
 -------------------------
 
 .. rubric:: Facility for :ref:`XML-RPC class <events_XMLRPC>` events.
-.. include:: default-log_user.rst
-.. include:: premium-only.rst
+.. include:: default-log_user.rst.inc
+.. include:: premium-only.rst.inc
 
 ----
 

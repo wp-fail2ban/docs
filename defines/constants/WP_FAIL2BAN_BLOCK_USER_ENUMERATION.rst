@@ -7,7 +7,7 @@ WP_FAIL2BAN_BLOCK_USER_ENUMERATION
 ----------------------------------
 
 .. rubric:: Block user enumeration.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 
@@ -21,7 +21,7 @@ Blocks attempts to enumerate users via author archives and the REST API.
     */
    define('WP_FAIL2BAN_BLOCK_USER_ENUMERATION', true);
 
-.. include:: use-wp-config.rst
+.. include:: use-wp-config.rst.inc
 
 .. warning::
    If your theme has Author profile pages (e.g. TwentyTwenty) you will need to :ref:`block username logins <WP_FAIL2BAN_BLOCK_USERNAME_LOGIN>` instead.

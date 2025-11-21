@@ -7,7 +7,7 @@ WP_FAIL2BAN_DISABLE_LAST_LOG
 ----------------------------
 
 .. rubric:: Disable logging of last events.
-.. include:: default-false.rst
+.. include:: default-false.rst.inc
 
 ----
 

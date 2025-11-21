@@ -7,7 +7,7 @@ WP_FAIL2BAN_SPAM_LOG
 --------------------
 
 .. rubric:: Facility for :ref:`Spam class <events_SPAM>` events.
-.. include:: default-log_auth.rst
+.. include:: default-log_auth.rst.inc
 
 ----
 

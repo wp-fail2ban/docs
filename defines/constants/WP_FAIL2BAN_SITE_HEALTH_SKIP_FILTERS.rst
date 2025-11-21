@@ -7,7 +7,7 @@ WP_FAIL2BAN_SITE_HEALTH_SKIP_FILTERS
 ------------------------------------
 
 .. rubric:: Skip filter file checks in Site Health.
-.. include:: default-disabled.rst
+.. include:: default-disabled.rst.inc
 
 ----
 
