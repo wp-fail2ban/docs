@@ -1,2 +1,2 @@
 .. rubric:: Default:
-    ``LOG_AUTH`` or ``LOG_AUTHPRIV``
+    ``LOG_AUTHPRIV`` or ``LOG_AUTH``
