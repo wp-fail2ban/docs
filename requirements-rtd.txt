@@ -1,0 +1,28 @@
+# Reconstructed from the 2019-03-13 Read the Docs build log.
+alabaster==0.7.12
+babel==2.6.0
+certifi==2019.3.9
+chardet==3.0.4
+commonmark==0.5.4
+docutils==0.13.1
+idna==2.8
+imagesize==1.1.0
+jinja2==2.10
+mock==1.0.1
+pygments==2.2.0
+pyparsing==2.3.1
+pytz==2018.9
+readthedocs-sphinx-ext==0.5.17
+recommonmark==0.4.0
+requests==2.21.0
+six==1.12.0
+snowballstemmer==1.2.1
+sphinx==1.7.9
+sphinx-rtd-theme==0.4.3
+sphinxcontrib-websupport==1.1.0
+typing==3.6.6
+urllib3==1.24.1
+
+# Pillow 2.6.1 was installed by the historical RTD baseline but is not used
+# by this Sphinx configuration.  Its source distribution cannot compile on
+# the current Python 2.7 host, so it is intentionally omitted.
