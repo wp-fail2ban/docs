@@ -1,0 +1,28 @@
+# Reconstructed from the 2022-06-13 Read the Docs build log.
+# Sphinx 1.8 requires docutils < 0.18; the historical resolver selected
+# 0.18.1 despite that constraint, so use the compatible final 0.17 release.
+alabaster==0.7.12
+babel==2.9.1
+certifi==2021.10.8
+chardet==4.0.0
+commonmark==0.8.1
+docutils==0.17.1
+future==0.18.2
+idna==2.10
+imagesize==1.3.0
+jinja2==2.11.3
+mock==1.0.1
+pillow==5.4.1
+pygments==2.5.2
+pyparsing==2.4.7
+pytz==2022.1
+readthedocs-sphinx-ext==2.1.8
+recommonmark==0.5.0
+requests==2.27.1
+six==1.16.0
+snowballstemmer==2.2.0
+sphinx==1.8.6
+sphinx-rtd-theme==0.4.3
+sphinxcontrib-websupport==1.1.2
+typing==3.10.0.0
+urllib3==1.26.9
