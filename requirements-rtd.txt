@@ -1,0 +1,26 @@
+# Reconstructed from the 2021-05-19 Read the Docs build log.
+alabaster==0.7.12
+babel==2.9.1
+certifi==2020.12.5
+chardet==4.0.0
+commonmark==0.8.1
+docutils==0.17.1
+future==0.18.2
+idna==2.10
+imagesize==1.2.0
+jinja2==2.11.3
+mock==1.0.1
+pillow==5.4.1
+pygments==2.5.2
+pyparsing==2.4.7
+pytz==2021.1
+readthedocs-sphinx-ext==2.1.4
+recommonmark==0.5.0
+requests==2.25.1
+six==1.16.0
+snowballstemmer==2.1.0
+sphinx==1.8.5
+sphinx-rtd-theme==0.4.3
+sphinxcontrib-websupport==1.1.2
+typing==3.10.0.0
+urllib3==1.26.4
