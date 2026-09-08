@@ -6,7 +6,7 @@
 WP_FAIL2BAN_SPAM_LOG
 --------------------
 
-.. rubric:: Facility for :ref:`Spam class <events_SPAM>` events.
+.. rubric:: Facility for :ref:`Spam <feature-spam>` events.
 .. include:: default-log_auth.rst.inc
 
 ----
@@ -23,7 +23,7 @@ Specifies the syslog facility to use when logging spam-related events.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
-   * :ref:`events_SPAM`
+   * :ref:`feature-spam`
 
 .. rubric:: History
 .. versionchanged:: 4.4.0

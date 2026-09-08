@@ -5,6 +5,8 @@ WPF2B_EVENT_COMMENT_SPAM
 
 .. rubric:: Comment marked as spam.
 
+Premium listener: ``WPF2B_EVENT_COMMENT_SPAM``.
+
 +------------+-----------+-----------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_spam_log.rst                     |
 |            +-----------+-----------------------------------------------------------+

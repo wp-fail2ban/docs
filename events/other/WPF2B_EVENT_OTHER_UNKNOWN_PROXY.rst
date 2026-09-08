@@ -5,6 +5,8 @@ WPF2B_EVENT_OTHER_UNKNOWN_PROXY
 
 .. rubric:: Attempted access via an untrusted proxy.
 
+Premium listener: ``WPF2B_EVENT_OTHER_UNKNOWN_PROXY``.
+
 +-----------+-----------+---------------------------------------------------------------------------+
 | syslog    | Facility  | .. include:: ../facility_log_auth.rst                                     |
 |           +-----------+---------------------------------------------------------------------------+

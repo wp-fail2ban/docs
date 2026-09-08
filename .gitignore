@@ -1,3 +1,5 @@
 *.v*
 _build/
+autogen/
 venv/
+docs.mk

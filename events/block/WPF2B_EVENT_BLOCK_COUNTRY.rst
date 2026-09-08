@@ -6,19 +6,30 @@ WPF2B_EVENT_BLOCK_COUNTRY
 .. rubric:: Attempted access from a blocked Country.
 .. rubric:: *Premium only*
 
-+------------+-----------+---------------------------------------------------------------------------+
-| syslog     | Facility  | .. include:: ../facility_log_auth.rst                                     |
-|            +-----------+---------------------------------------------------------------------------+
-|            | Level     | .. include:: ../level_notice.rst                                          |
-|            +-----------+---------------------------------------------------------------------------+
-|            | Example   | ``Blocked access from country 'FR' on fqdn.example.com from 192.0.42.1``  |
-+------------+-----------+---------------------------------------------------------------------------+
-| fail2ban   | Filter    | :ref:`filters-wordpress-hard`                                             |
-|            +-----------+---------------------------------------------------------------------------+
-|            | Rule      | ``Blocked access from country '<F-ISO_CODE>..</F-ISO_CODE>'<_tail>``      |
-+------------+-----------+-------------+-------------------------------------------------------------+
-| EventData  | country   | ``string``  | ISO 3166-1 alpha-2 code [#f1]_                              |
-+------------+-----------+-------------+-------------------------------------------------------------+
+Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY``.
+
+.. list-table::
+   :stub-columns: 1
+   :widths: 12 18 70
+
+   * - syslog
+     - Facility
+     - .. include:: ../facility_log_auth.rst
+   * -
+     - Level
+     - .. include:: ../level_notice.rst
+   * -
+     - Example
+     - ``Blocked access 403 from country 'FR' on fqdn.example.com from 192.0.42.1``
+   * - fail2ban
+     - Filter
+     - :ref:`filters-wordpress-hard`
+   * -
+     - Rule
+     - ``Blocked access <F-HTTP_STATUS>\d\d\d</F-HTTP_STATUS> from country '<F-ISO_CODE>..</F-ISO_CODE>'<_tail>``
+   * - EventData
+     - country
+     - ISO 3166-1 alpha-2 code [#f1]_
 
 .. seealso::
    | :ref:`fail2ban_filters_tags`

@@ -6,7 +6,7 @@ Register Message
 .. php:function:: do_action(string $action, string $slug, array $args): void
    :noindex:
 
-   :param string $action: Must be ``wp_fail2ban_register_message``.
+   :param string $action: Must be ``wp_fail2ban_register_message`` (single message) or ``wp_fail2ban_register_messages`` (array of messages).
    :param string $slug: The plugin slug used in :ref:`developers_api_register-plugin`.
    :param string $args['slug']: The message slug.
    :param string $args['fail']: Recommended action.

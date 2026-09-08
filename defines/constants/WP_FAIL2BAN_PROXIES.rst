@@ -32,7 +32,7 @@ Specifies a list of trusted proxy servers. When defined:
    In the Premium version, the list is processed and cached for performance. If you update the list via the UI, the cache is automatically cleared. If you update using define(), you must clear the cache manually.
 
 .. seealso::
-   * :ref:`clearing_the_cache`
+   * :ref:`operating_scheduled`
 
 .. rubric:: History
 .. versionchanged:: 5.0.0

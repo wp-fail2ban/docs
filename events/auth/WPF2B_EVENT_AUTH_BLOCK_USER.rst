@@ -5,6 +5,8 @@ WPF2B_EVENT_AUTH_BLOCK_USER
 
 .. rubric:: Blocked username.
 
+Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USER``.
+
 +------------+-----------+--------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_log_auth.rst                                                |
 |            +-----------+--------------------------------------------------------------------------------------+

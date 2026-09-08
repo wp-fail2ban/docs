@@ -5,6 +5,8 @@ WPF2B_EVENT_AUTH_EMPTY_USER
 
 .. rubric:: Empty Username.
 
+Premium listener: ``WPF2B_EVENT_AUTH_EMPTY_USER``.
+
 +-----------+-----------+-------------------------------------------------------------------------------------+
 | syslog    | Facility  | .. include:: ../facility_log_auth.rst                                               |
 |           +-----------+-------------------------------------------------------------------------------------+

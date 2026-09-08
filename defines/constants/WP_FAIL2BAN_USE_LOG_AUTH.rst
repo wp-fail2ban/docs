@@ -40,7 +40,7 @@ You can also map this to a different facility:
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_AUTH_LOG`
-   * :ref:`syslog_logfiles`
+   * :ref:`facilities`
 
 .. rubric:: History
 .. versionadded:: 6.0.0 Introduced to replace :ref:`WP_FAIL2BAN_USE_AUTHPRIV`

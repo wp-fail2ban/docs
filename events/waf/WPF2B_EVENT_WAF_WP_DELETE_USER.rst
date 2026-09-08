@@ -6,6 +6,8 @@ WPF2B_EVENT_WAF_WP_DELETE_USER
 .. rubric:: Attempt to delete a user.
 .. rubric:: *Premium only*
 
+Premium listener: ``WPF2B_EVENT_WAF_WP_DELETE_USER``.
+
 +-----------+-----------+------------------------------------------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_EX_WAF_LOG`                                                                  |
 |           +-----------+------------------------------------------------------------------------------------------------+

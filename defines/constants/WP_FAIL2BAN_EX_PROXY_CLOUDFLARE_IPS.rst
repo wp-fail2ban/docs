@@ -1,5 +1,3 @@
-.. include:: ../../global.rst
-
 .. _WP_FAIL2BAN_EX_PROXY_CLOUDFLARE_IPS:
 
 .. role:: php(code)

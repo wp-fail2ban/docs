@@ -6,6 +6,8 @@ WPF2B_EVENT_XMLRPC_BLOCKED
 .. rubric:: Blocked RPC-XML request.
 .. rubric:: *Premium only*
 
+Premium listener: ``WPF2B_EVENT_XMLRPC_BLOCKED``.
+
 +-----------+-----------+------------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_EX_XMLRPC_LOG`                                 |
 |           +-----------+------------------------------------------------------------------+

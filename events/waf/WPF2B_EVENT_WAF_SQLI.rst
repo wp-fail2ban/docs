@@ -6,6 +6,8 @@ WPF2B_EVENT_WAF_SQLI
 .. rubric:: SQLi detected.
 .. rubric:: *Premium only*
 
+Premium listener: ``WPF2B_EVENT_WAF_SQLI``.
+
 +-----------+-----------+-----------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_EX_WAF_LOG`                             |
 |           +-----------+-----------------------------------------------------------+

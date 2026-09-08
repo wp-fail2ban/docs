@@ -5,6 +5,8 @@ WPF2B_EVENT_COMMENT
 
 .. rubric:: Comment submitted.
 
+Premium listener: ``WPF2B_EVENT_COMMENT``.
+
 +------------+-----------+------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_comment_log.rst             |
 |            +-----------+------------------------------------------------------+

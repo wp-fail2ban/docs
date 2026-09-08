@@ -6,6 +6,8 @@ WPF2B_EVENT_COMMENT_SPAM_AKISMET
 .. rubric:: Comment marked as spam.
 .. rubric:: *Premium only*
 
+Premium listener: ``WPF2B_EVENT_COMMENT_SPAM_AKISMET``.
+
 +-----------+-----------+-------------------------------------------------------------------------+
 | syslog    | Facility  | .. include:: ../facility_spam_log.rst                                   |
 |           +-----------+-------------------------------------------------------------------------+

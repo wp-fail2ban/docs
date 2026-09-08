@@ -6,6 +6,8 @@ WPF2B_EVENT_WAF_UPDATE_OPTION
 .. rubric:: Unauthorised call to ``update_option()`` detected.
 .. rubric:: *Premium only*
 
+Premium listener: ``WPF2B_EVENT_WAF_UPDATE_OPTION``.
+
 +-----------+-----------+-------------------------------------------------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_EX_WAF_LOG`                                                                         |
 |           +-----------+-------------------------------------------------------------------------------------------------------+

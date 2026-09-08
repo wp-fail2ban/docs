@@ -6,6 +6,8 @@ Facilities
 
 While the full list of facilities is reproduced here for completeness, using anything but **LOG_AUTH**, **LOG_AUTHPRIV**, and/or **LOG_LOCAL0**\ ..\ **7** is unlikely to have the desired results. **LOG_USER** can be used for Notices, but Info messages are generally not saved.
 
+Where a given OS writes those facilities is environment-versioned; see Life With WPf2b.
+
 
 +---------------------+---------------------------------------------------------+
 | Facility            | Description                                             |
@@ -58,25 +60,6 @@ While the full list of facilities is reproduced here for completeness, using any
 |                     |                                                         |
 | LOG_UUCP            |                                                         |
 +---------------------+---------------------------------------------------------+
-
-
-.. _syslog_logfiles:
-
-=================
-Logfile Reference
-=================
-
-+-----------+--------+-----------------------+-----------------------+-----------------------+
-| OS        | Level  | LOG_AUTH              | LOG_AUTHPRIV          | LOG_USER              |
-+===========+========+=======================+=======================+=======================+
-| CentOS 7  |        | *(not used)*          | ``/var/log/secure``   |                       |
-+-----------+--------+-----------------------+-----------------------+-----------------------+
-| FreeBSD   | INFO   | ``/var/log/auth/log`` | ``/var/log/auth/log`` | -                     |
-+           +--------+-----------------------+-----------------------+-----------------------+
-|           | NOTICE | ``/var/log/auth/log`` | ``/var/log/auth/log`` | ``/var/log/messages`` |
-+-----------+--------+-----------------------+-----------------------+-----------------------+
-| Ubuntu 18 | (all)  | ``/var/log/auth.log`` | ``/var/log/auth.log`` | ``/var/log/syslog``   |
-+-----------+--------+-----------------------+-----------------------+-----------------------+
 
 
 ==================

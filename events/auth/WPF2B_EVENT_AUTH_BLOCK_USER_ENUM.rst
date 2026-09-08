@@ -5,6 +5,8 @@ WPF2B_EVENT_AUTH_BLOCK_USER_ENUM
 
 .. rubric:: Blocked user enumeration.
 
+Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USER_ENUM``.
+
 +-----------+-----------+---------------------------------------------------------------------------+
 | syslog    | Facility  | .. include:: ../facility_log_auth.rst                                     |
 |           +-----------+---------------------------------------------------------------------------+

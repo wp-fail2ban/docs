@@ -6,6 +6,8 @@ WPF2B_EVENT_XMLRPC_PINGBACK_BOGUS
 .. rubric:: Bogus Pingback.
 .. rubric:: *Premium only*
 
+Premium listener: ``WPF2B_EVENT_XMLRPC_PINGBACK_BOGUS``.
+
 +-----------+-----------+---------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_PINGBACK_LOG`                         |
 |           +-----------+---------------------------------------------------------+

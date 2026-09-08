@@ -23,13 +23,17 @@ from pygments.lexers.web import PhpLexer
 # -- Project information -----------------------------------------------------
 
 project = u'WP fail2ban'
-copyright = u'2018-2025, Charles Lecklider'
+copyright = u'2018-2026, Charles Lecklider'
 author = u'Charles Lecklider'
 
-# The short X.Y version
-version = u''
-# The full version, including alpha/beta/rc tags
-release = u''
+import json
+import os
+
+_pkg = json.load(open(os.path.join(os.path.dirname(__file__), '..', 'package.json')))
+version = _pkg.get('version', '')
+release = _pkg.get('version', '')
+if _pkg.get('version_label'):
+    release = '%s (%s)' % (version, _pkg['version_label'])
 
 
 # -- General configuration ---------------------------------------------------
@@ -41,7 +45,6 @@ release = u''
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.intersphinx']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -65,7 +68,16 @@ master_doc = 'index'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = [u'_build', 'Thumbs.db', '.DS_Store', 'venv']
+exclude_patterns = [
+    u'_build',
+    'Thumbs.db',
+    '.DS_Store',
+    'venv',
+    'addons.rst',
+    'autogen',
+    'autogen/**',
+    'global.rst',
+]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -193,7 +205,10 @@ intersphinx_mapping = {
 lexers['php'] = PhpLexer(startinline=True)
 lexers['php-annotations'] = PhpLexer(startinline=True)
 
+rst_prolog = open(os.path.join(os.path.dirname(__file__), 'global.rst')).read()
+
 extensions = [
+    'sphinx.ext.intersphinx',
     'sphinx_copybutton',
     'sphinxcontrib.phpdomain'
 ]

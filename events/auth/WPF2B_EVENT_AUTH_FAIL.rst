@@ -1,11 +1,11 @@
-.. include:: ../../global.rst
-
 .. _WPF2B_EVENT_AUTH_FAIL:
 
 WPF2B_EVENT_AUTH_FAIL
 ---------------------
 
 .. rubric:: Authentication failed.
+
+Premium listener: ``WPF2B_EVENT_AUTH_FAIL``.
 
 +------------+-----------+-------------------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_log_auth.rst                                                           |

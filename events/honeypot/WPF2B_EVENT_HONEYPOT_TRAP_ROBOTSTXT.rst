@@ -6,6 +6,8 @@ WPF2B_EVENT_HONEYPOT_TRAP_ROBOTSTXT
 .. rubric:: Attempted access to fake ``robots.txt`` entry.
 .. rubric:: *Premium only*
 
+Premium listener: ``WPF2B_EVENT_HONEYPOT_TRAP_ROBOTSTXT``.
+
 +------------+-----------+----------------------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_honeypot_log.rst                                                          |
 |            +-----------+----------------------------------------------------------------------------------------------------+
