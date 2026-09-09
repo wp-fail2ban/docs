@@ -3,9 +3,9 @@
 Remote IPs and proxies
 ======================
 
-Everything that decides **which IP** |WPf2b| logs and bans. Ignore-list is here because it keys off that resolved IP — but a match skips the **entire** Free+Premium chain, not merely logging.
+|WPf2b| normally uses the TCP peer as the client address. Trusted-proxy and Cloudflare settings allow it to recover the visitor address from a proxy header. The resolved address is written to syslog and is the address fail2ban bans.
 
-Jetpack is documented once, here (managed IPs + cron). XML-RPC blocking *uses* the list; see :ref:`feature-xmlrpc`. MaxMind / geolocation method are **not** here; they belong to :ref:`feature-country-blocking`.
+The Premium ignore list bypasses all logging and blocking for selected resolved addresses. Jetpack integration maintains a trusted source list for XML-RPC requests. Country lookup and blocking are described under :ref:`feature-country-blocking`.
 
 .. toctree::
    :maxdepth: 1

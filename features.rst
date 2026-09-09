@@ -4,9 +4,7 @@
 Features
 ========
 
-A **feature** is a function-shaped bundle: the enable/facility constants, the events it emits, the filters that match them, and the edition that ships it. Features are the join layer between QuickStart cards (and, later, policy) and the atomic constant/event pages.
-
-They are not the 6.3 admin tabs.
+WP fail2ban logs WordPress activity, blocks selected requests before WordPress completes them, resolves visitor addresses behind trusted proxies, and supplies fail2ban filters for the resulting messages. Choose an area below for its behaviour and configuration.
 
 .. toctree::
    :maxdepth: 2

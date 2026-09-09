@@ -5,11 +5,11 @@ Honeypot
 
 **Edition:** Premium. Experimental.
 
-Advertises fake paths in ``robots.txt`` and treats requests to them as hostile. The canned set is the honeypot feature only: enable the trap, optionally the robots.txt entries, and the honeypot facility.
+Selecting the card sets :ref:`WP_FAIL2BAN_EX_HONEYPOT` and :ref:`WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT` to ``true``. |WPf2b| adds trap paths to ``robots.txt`` and treats requests to those paths as hard failures.
 
-This is not a substitute for WAF or country blocking. It catches scanners that honour ``robots.txt`` Disallow lines. Expect noise if you already have those paths for real.
+The card does not change the honeypot logging facility. It catches scanners that use ``robots.txt`` Disallow entries as a list of targets; ensure the configured paths do not serve real content.
 
-In 6.3 Advanced settings the honeypot controls are on the Block tab.
+If either setting is fixed to a conflicting value in ``wp-config.php``, the card cannot apply the complete configuration and Site Health reports the conflict. The equivalent individual controls are on the Block tab in Advanced settings.
 
 .. include:: ../../autogen/join/card-honeypot.rst
 

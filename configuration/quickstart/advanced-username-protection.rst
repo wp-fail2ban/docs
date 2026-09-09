@@ -5,13 +5,13 @@ Advanced username protection
 
 **Edition:** Free.
 
-This card is the 6.3 login hardening bundle: stop ``?author=`` / REST user probes, and refuse logins that use the username instead of the email address. Together they make it much harder to confirm that ``admin`` exists and then stuff passwords against it.
+This card blocks ``?author=`` and REST user probes, and refuses logins that use a username instead of an email address. Together these controls make it harder to discover a login name and then use it for password attacks.
 
-They are separate features because you may want enumeration blocking without email-only login (or the reverse). The card turns both on because that is the usual intent. **Blocked users** is not enabled by the card; it is the related list of usernames that are never allowed to log in (regex or array). Configure it if you still have an ``admin`` account you cannot rename.
+Selecting the card sets :ref:`WP_FAIL2BAN_BLOCK_USER_ENUMERATION` and :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN` to ``true``. All users must then sign in with their account email address. User-enumeration probes are logged as hard failures; blocked username logins are soft failures.
 
-If :ref:`WP_FAIL2BAN_BLOCK_USER_ENUMERATION` or :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN` is already defined in ``wp-config.php``, QuickStart cannot change that feature. Site Health flags the failure.
+**Blocked users** is a separate list of usernames that may never log in. The card does not change :ref:`WP_FAIL2BAN_BLOCKED_USERS`; configure it separately for names such as ``admin`` or ``administrator``.
 
-In 6.3 Advanced settings these controls sit on the Block tab.
+If either setting is fixed to a conflicting value in ``wp-config.php``, the card cannot apply the complete configuration and Site Health reports the conflict. The equivalent individual controls are on the Block tab in Advanced settings.
 
 .. include:: ../../autogen/join/card-advanced-username-protection.rst
 

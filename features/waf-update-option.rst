@@ -3,6 +3,7 @@
 Option protection
 =================
 
-Logs (and optionally blocks) ``update_option`` calls that look like an attacker planting a backdoor option. The constant’s value selects enabled vs logging-only vs off; see the constant page.
+Checks updates to WordPress core options and records attempts made without the required capability. ``all`` protects every listed option, ``theme`` also permits recognised image-size changes during theme setup, and ``disabled`` turns the check off. The global WAF mode determines whether a detected attempt is logged or blocked.
 
 .. include:: ../autogen/join/feature-waf-update-option.rst
+   :end-before: Source

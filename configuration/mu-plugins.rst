@@ -5,10 +5,10 @@
 `mu-plugins` Support
 --------------------
 
-There are two main reasons for using `mu-plugins`:
+There are two main reasons for using ``mu-plugins``:
 
-#. You need to load *WPf2b* before other security plugins [#f1]_,
-#. You don't trust the site administrators.
+#. Load |WPf2b| before another security plugin.
+#. Prevent site administrators from disabling it.
 
 Loading Early
 ^^^^^^^^^^^^^
@@ -38,7 +38,7 @@ Forcing Usage
 
 The main objective here is to stop people fiddling with things, so there are necessarily some restrictions on configuring *WPf2b*.
 
-*WPf2b* must be configured in ``wp-config.php`` - you can't use the Premium config UI; not only does it make no sense, it won't work [#f2]_.
+Configure |WPf2b| in ``wp-config.php`` when it is forced as an MU-plugin. The settings UI does not apply configuration in this deployment mode.
 
 The actual configuration itself is simple; for the **Free** version:
 
@@ -71,11 +71,4 @@ For the **Premium** version:
 Keeping *WPf2b* up-to-date
 """"""""""""""""""""""""""
 
-It's that last step that catches out most people - WordPress doesn't check ``mu-plugins`` for updates, so by configuring *WPf2b* in this way **you are taking responsibility** for keeping *WPf2b* up-to-date. I do my best, but I cannot guarantee there will never be a critical problem with *WPf2b* - you and you alone are responsible for checking for updates and installing them.
-
-
-.. rubric:: Footnotes
-
-.. [#f1] For example, WordFence, which assumes it's the only one.
-.. [#f2] It may look like it works now, but in a future release it will be blocked.
-
+WordPress does not check plugins installed directly under ``mu-plugins`` for updates. Monitor the selected distribution channel and install |WPf2b| updates manually.

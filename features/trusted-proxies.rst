@@ -3,6 +3,7 @@
 Trusted proxies
 ===============
 
-:ref:`WP_FAIL2BAN_PROXIES` is the Free list of reverse-proxy addresses |WPf2b| may take ``X-Forwarded-For`` from. Cloudflare has its own feature because the list is large and rotated.
+:ref:`WP_FAIL2BAN_PROXIES` lists reverse-proxy addresses from which |WPf2b| may accept ``X-Forwarded-For``. Premium Cloudflare integration maintains Cloudflare's changing proxy list automatically.
 
 .. include:: ../autogen/join/feature-trusted-proxies.rst
+   :end-before: Source

@@ -10,5 +10,3 @@ Upgrade the plugin with the same channel you used to install it (GitHub self-upd
 3. Confirm a known event still hits syslog.
 
 Premium never drops ``wp_fail2ban_log``. Constants removed in 6.0 (:ref:`WP_FAIL2BAN_LOG_COMMENTS_EXTRA` and friends) still trigger Site Health if they linger in ``wp-config.php``.
-
-Environment work (new systemd unit, new Cloudflare plan, new panel) is not an upgrade of this plugin — use Life With WPf2b.

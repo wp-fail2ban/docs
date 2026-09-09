@@ -3,8 +3,9 @@
 Event store
 ===========
 
-Premium database log of events. Extra columns (PTR, URL, referer, user-agent, POST, headers) are opt-in because they are large. The lookup-table batch size controls the hourly back-fill job.
+Premium records events in its database for the Dashboard and reports. PTR, URL, referer, user-agent, POST data, and headers are optional because they increase storage volume. The lookup-table batch size controls the hourly back-fill job.
 
-Schema dumps are not part of this manual. Operate the store via :ref:`operating_event_storage`; read it via :ref:`developers_events_event-data`.
+See :ref:`operating_event_storage` for maintenance and :ref:`developers_events_event-data` for the supported event data available to integrations.
 
 .. include:: ../autogen/join/feature-event-store.rst
+   :end-before: Source

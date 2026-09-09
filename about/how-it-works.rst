@@ -11,6 +11,6 @@ The chain is always:
 4. **fail2ban** matches that line with a shipped filter.
 5. fail2ban updates the **firewall**.
 
-|WPf2b| owns steps 2–3 and ships the filter text for step 4. You own the jail, the log path or journal match, and the ban action. Verifying the chain means: the plugin is loaded, syslog shows a known message, and fail2ban’s filter counts that message. Installation checklists and OS jail snippets live in Life With WPf2b; this manual states what a healthy 6.3 install must emit.
+|WPf2b| performs steps 2–3 and supplies the filters for step 4. A fail2ban jail combines one of those filters with a log source, retry threshold, and ban action. See :ref:`configuration__fail2ban` for a working configuration and :ref:`installation_verifying` for the complete verification path.
 
 Settings come from ``define()`` in ``wp-config.php`` and, in Premium, from the settings UI. A defined constant always wins. See :ref:`configuration_how_settings_are_resolved`.

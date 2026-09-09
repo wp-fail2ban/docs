@@ -3,9 +3,9 @@
 WAF
 ===
 
-Premium, experimental. Three checks sharing :ref:`WP_FAIL2BAN_EX_WAF` and the WAF facility. Events match ``wordpress-wpf2b-waf.conf``, not the WordPress hard/soft filters.
+Premium, experimental. The WAF can inspect plugin and WordPress request paths for SQL injection, protect selected option updates, and require the appropriate capability for user deletion. The checks share :ref:`WP_FAIL2BAN_EX_WAF` and the WAF facility. Blocked events match ``wordpress-wpf2b-waf.conf``.
 
-The Web Application Firewall card enables all three.
+The :ref:`quickstart_web_application_firewall` card enables a predefined combination of all three checks.
 
 .. toctree::
    :maxdepth: 1

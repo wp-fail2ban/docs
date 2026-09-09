@@ -5,13 +5,13 @@ Journald support
 
 **Edition:** Free. Experimental.
 
-The card may disable itself when journald is not detected. When it is available, enabling the card opts into the journald-friendly syslog layout: hostname in the message body (:ref:`WP_FAIL2BAN_SYSLOG_INLINE_HOST`) rather than in the syslog identifier.
+Selecting the card sets :ref:`WP_FAIL2BAN_SYSLOG_INLINE_HOST` to ``true``. The site name is then written in the message body instead of being appended to the syslog identifier, leaving the identifier as ``wordpress`` for the filters' journal match.
 
-That is a logging-shape change, not a jail. You still need fail2ban to read the journal; those recipes are in Life With WPf2b. This page only records what the plugin will emit.
+The card does not configure fail2ban. Enable the systemd backend in the WordPress jails as shown in :ref:`configuration__fail2ban`.
 
-If the card is greyed out, |WPf2b| did not detect journald. You can still set :ref:`WP_FAIL2BAN_USING_JOURNALD` yourself.
+The card is disabled when systemd or journald is unavailable, or when journald support is disabled in configuration. If journald is present but not detected, :ref:`WP_FAIL2BAN_USING_JOURNALD` can override detection.
 
-In 6.3 the matching toggles are syslog workarounds in Advanced settings.
+If :ref:`WP_FAIL2BAN_SYSLOG_INLINE_HOST` is fixed to a conflicting value in ``wp-config.php``, the card cannot apply it and Site Health reports the conflict. The equivalent individual controls are on the Syslog tab in Advanced settings.
 
 .. include:: ../../autogen/join/card-journald-support.rst
 

@@ -17,11 +17,11 @@ Enables the Web Application Firewall (WAF) functionality. The WAF can operate in
 +----------+--------------------------------------------------+
 | Mode     | Description                                      |
 +==========+==================================================+
-| on       | Full protection: blocks and logs threats         |
+| enabled  | Full protection: blocks and logs threats         |
 +----------+--------------------------------------------------+
 | logging  | Detection only: logs threats but does not block  |
 +----------+--------------------------------------------------+
-| off      | Disabled: no detection or blocking               |
+| disabled | Disabled: no detection or blocking               |
 +----------+--------------------------------------------------+
 
 .. code-block:: php

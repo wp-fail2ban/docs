@@ -3,10 +3,11 @@
 Pingbacks
 =========
 
-``pingback.ping`` lives in ``src/feature/XmlRpc.php``, so this feature sits under XML-RPC, not Comments. Success is soft; pingback errors (except code 48, already registered) are hard.
+Pingbacks arrive through the XML-RPC ``pingback.ping`` method. Successful pingbacks are soft failures; pingback errors are hard failures, except error code 48, which means the pingback is already registered.
 
-:ref:`WP_FAIL2BAN_LOG_PINGBACKS` enables the informational success log. Blocking XML-RPC while keeping pingbacks is :ref:`WP_FAIL2BAN_EX_XMLRPC_ALLOW_PINGBACKS` on the XML-RPC feature.
+:ref:`WP_FAIL2BAN_LOG_PINGBACKS` enables the informational success log. :ref:`WP_FAIL2BAN_EX_XMLRPC_ALLOW_PINGBACKS` keeps pingbacks available when other XML-RPC methods are blocked.
 
 Trackbacks: :ref:`feature-trackbacks`.
 
 .. include:: ../autogen/join/feature-pingbacks.rst
+   :end-before: Source

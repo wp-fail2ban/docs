@@ -4,7 +4,7 @@
 Release information
 ===================
 
-This manual is a release artefact. Version and label are taken from ``package.json``.
+Release context and history for WP fail2ban 6.3.
 
 .. toctree::
    :maxdepth: 1

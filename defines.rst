@@ -4,9 +4,9 @@
 `define()` Constants
 ====================
 
-One page per constant. Labels are ``_WP_FAIL2BAN_*``. Grouped by **feature**, not by the 6.3 admin tabs. A–Z is the same pages in name order.
+Configuration constants set exact behaviour from ``wp-config.php`` and override values selected in the UI. Browse them by feature or by name.
 
-Obsolete extras remain, marked deprecated, under :ref:`defines_reserved` / the removed names in the A–Z glob.
+Deprecated and reserved constants are listed under :ref:`defines_reserved`.
 
 .. toctree::
    :maxdepth: 2

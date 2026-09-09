@@ -3,11 +3,9 @@
 QuickStart
 ==========
 
-QuickStart is the 6.3 simple UI. It is not a stopgap for a future policy model: 6.4 adds policy **beside** QuickStart, not instead of it.
+QuickStart applies predefined configurations for common security goals. Each card describes the settings it changes and the resulting logging or blocking behaviour.
 
-Each card turns on a canned set of features. The card page explains why that set belongs together and what happens if a constant is already defined. Site Health reports QuickStart failures when a card cannot apply because a ``define()`` is in the way.
-
-There is no Rate Limiting card in 6.3 (the stub is disabled and experimental). Do not treat it as shipped.
+Constants in ``wp-config.php`` take precedence. A card whose requested value conflicts with a defined constant cannot apply that part of its configuration; Site Health reports the conflict. Enable **Use advanced settings** when you need to configure individual controls instead.
 
 .. toctree::
    :maxdepth: 1

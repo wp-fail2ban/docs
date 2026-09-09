@@ -26,7 +26,7 @@ Allowed values:
 
    define('WP_FAIL2BAN_EX_GEOLOCATION', 'cloudflare-only');
 
-This is not a Remote IPs / proxy setting. It belongs with country blocking; the Event store records the resulting ISO code.
+Country blocking and the Premium event store use the resulting ISO code.
 
 .. seealso::
    * :ref:`feature-country-blocking`

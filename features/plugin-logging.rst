@@ -8,3 +8,4 @@ Facilities used when a third-party plugin logs through the Developer API. Each e
 The old ``WP_FAIL2BAN_PLUGIN_LOG_*`` names were removed in 6.0; Site Health still warns if they are defined.
 
 .. include:: ../autogen/join/feature-plugin-logging.rst
+   :end-before: Source

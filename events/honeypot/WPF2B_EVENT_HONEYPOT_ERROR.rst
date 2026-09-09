@@ -14,7 +14,7 @@ Premium listener: ``WPF2B_EVENT_HONEYPOT_ERROR``.
 |          | Level     | NOTICE                                         |
 +----------+-----------+------------------------------------------------+
 
-Internal failure while the honeypot feature is running. There is no dedicated fail2ban rule; treat it as a diagnostic event, not an attack signature.
+A failure occurred while the honeypot was processing a request. There is no dedicated fail2ban rule; treat it as a diagnostic event, not an attack signature.
 
 .. seealso::
    | :ref:`WPF2B_EVENT_HONEYPOT_TRAP_ROBOTSTXT`

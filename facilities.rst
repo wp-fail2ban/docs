@@ -6,7 +6,7 @@ Facilities
 
 While the full list of facilities is reproduced here for completeness, using anything but **LOG_AUTH**, **LOG_AUTHPRIV**, and/or **LOG_LOCAL0**\ ..\ **7** is unlikely to have the desired results. **LOG_USER** can be used for Notices, but Info messages are generally not saved.
 
-Where a given OS writes those facilities is environment-versioned; see Life With WPf2b.
+The syslog daemon determines which file receives each facility. Ensure the fail2ban jail reads the same destination; see :ref:`configuration__fail2ban`.
 
 
 +---------------------+---------------------------------------------------------+

@@ -3,7 +3,7 @@
 Authentication
 ==============
 
-Login logging is always on. The other authentication features are optional hardening: named usernames, email-only login, and password-reset logging. User enumeration is listed separately because it is its own code path, but the Username Protection card groups it with email-only login.
+Login logging is always on. Optional controls can reject named usernames, require email-address login, block user-enumeration requests, and log password-reset activity. The Username Protection card enables email-only login and user-enumeration blocking together.
 
 .. toctree::
    :maxdepth: 1

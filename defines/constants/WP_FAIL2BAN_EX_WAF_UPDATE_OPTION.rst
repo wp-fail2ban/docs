@@ -12,15 +12,24 @@ WP_FAIL2BAN_EX_WAF_UPDATE_OPTION
 
 ----
 
-Enables capability checking when WordPress core options are updated. When enabled, verifies that the current user has the appropriate capabilities (update_options or update_network_options) before allowing changes to core options.
+Checks updates to WordPress core options. Users need ``manage_options``, or ``manage_network_options`` on multisite, to change a protected option.
+
+``all``
+   Protect all listed core options.
+
+``theme``
+   Protect the same options, but allow recognised image-size changes during ``after_theme_setup``.
+
+``disabled``
+   Do not check option updates.
 
 .. code-block:: php
-   :caption: Example: Enable option update capability checking
+   :caption: Example: Protect options while allowing theme setup
 
    /**
-    * Enable capability checking for option updates
+    * Protect core options while allowing recognised theme setup changes.
     */
-   define('WP_FAIL2BAN_EX_WAF_UPDATE_OPTION', true);
+   define('WP_FAIL2BAN_EX_WAF_UPDATE_OPTION', 'theme');
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_WAF`

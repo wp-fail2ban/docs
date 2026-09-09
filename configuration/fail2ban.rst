@@ -3,32 +3,43 @@
 .. _configuration__fail2ban:
 
 fail2ban
---------
+========
 
-``fail2ban`` can be tricky to configure correctly; with so many flavours of Linux it's impossible to provide anything but general guidance.
+A fail2ban jail combines four things:
 
+* a **filter** that recognises |WPf2b| messages;
+* a **log source**, either a syslog file or the systemd journal;
+* thresholds such as ``maxretry``, ``findtime``, and ``bantime``;
+* an **action** that adds and removes firewall rules.
 
-Standard Filters
-^^^^^^^^^^^^^^^^
+|WPf2b| supplies the filters. The jail selects a filter and log source; fail2ban's ``[DEFAULT]`` settings supply the ban action unless the jail overrides it.
 
-The filter files included are intended only as a starting point for those who want *WPf2b* to work "out of the box".
+Install the filters
+-------------------
 
-There is no "one size fits all" configuration possible for `fail2ban` - what may be a soft failure for one site should be treated as a hard failure for another, and vice versa. Careful thought should be given to what is appropriate for your environment.
+The plugin's ``filters.d`` directory contains these filters:
 
+``wordpress-hard.conf``
+   Events that normally justify an immediate ban, such as blocked user enumeration, blocked XML-RPC requests, and untrusted proxy headers.
 
-syslog vs. journald
-^^^^^^^^^^^^^^^^^^^
+``wordpress-soft.conf``
+   Events that should normally require repeated failures, including failed logins and rejected comment attempts.
 
-While *WPf2b* supports both, **I strongly recommend avoiding journald** if at all possible. If your Linux distro has decided to stop using a real syslog (e.g. Debian 12) you should consider switching distros.
+``wordpress-extra.conf``
+   Optional informational events, such as successful comment submissions and password-reset requests. Use these only when they should contribute to a custom jail.
 
-However, I understand that most people will just use whatever comes with their favourite distro and not worry about journald; thus, v5.3 brings :ref:`basic support <WP_FAIL2BAN_SYSLOG_TAG_HOST>` for journald and v6.0 will provide even more.
+``wordpress-good.conf``
+   Successful authentication events. This is useful for analysis and custom rules, not for a standard banning jail.
 
+``wordpress-wpf2b-waf.conf``
+   Premium WAF blocks. Install and enable a jail for this filter when the WAF is enabled.
 
-Typical Settings (syslog)
-"""""""""""""""""""""""""
+Copy the required ``.conf`` files into fail2ban's ``filter.d`` directory, normally ``/etc/fail2ban/filter.d`` or ``/usr/local/etc/fail2ban/filter.d``. Keep the files in the plugin directory unchanged so plugin upgrades can replace them cleanly.
 
-#. Copy `wordpress-hard.conf` and `wordpress-soft.conf` to your `fail2ban/filters.d` directory
-#. Create a new file in `jail.d` called `wordpress.conf`:
+Configure syslog jails
+----------------------
+
+For file-based syslog, create ``wordpress.conf`` under fail2ban's ``jail.d`` directory. Replace ``/var/log/auth.log`` with the file that receives the facility selected by :ref:`WP_FAIL2BAN_AUTH_LOG`.
 
 .. code-block:: ini
 
@@ -36,44 +47,26 @@ Typical Settings (syslog)
    enabled = true
    filter = wordpress-hard
    logpath = /var/log/auth.log
-   maxretry = 1
    port = http,https
+   maxretry = 1
+   findtime = 10m
+   bantime = 1h
 
    [wordpress-soft]
    enabled = true
    filter = wordpress-soft
    logpath = /var/log/auth.log
-   maxretry = 3
    port = http,https
+   maxretry = 3
+   findtime = 10m
+   bantime = 1h
 
+The hard jail bans on one match. The soft jail allows three matches within ten minutes. Adjust the thresholds and ban duration to suit the site's traffic and authentication patterns.
 
-.. note::
+Configure journald jails
+------------------------
 
-   Make sure you change ``logpath`` to the correct log for your OS.
-
-3. Reload or restart `fail2ban`
-
-
-Typical Settings (journald)
-"""""""""""""""""""""""""""
-
-
-
-#. Edit the `wp-config.php` file for your WordPress install:
-
-.. code-block:: php
-
-   // Make sure we're not using the short ("wp") tag
-   define('WP_FAIL2BAN_SYSLOG_SHORT_TAG', false);
-
-   // Don't include the HTTP host in the tag
-   define('WP_FAIL2BAN_SYSLOG_TAG_HOST', false);
-
-   /* That's all, stop editing! Happy blogging. */
-
-
-#. Copy `wordpress-hard.conf` and `wordpress-soft.conf` to your `fail2ban/filters.d` directory
-#. Create a new file in `jail.d` called `wordpress.conf`:
+The shipped filters contain ``journalmatch = SYSLOG_IDENTIFIER=wordpress``. With the systemd backend, omit ``logpath``; fail2ban reads matching journal entries directly.
 
 .. code-block:: ini
 
@@ -81,61 +74,54 @@ Typical Settings (journald)
    enabled = true
    filter = wordpress-hard
    backend = systemd
-   journalmatch = SYSLOG_IDENTIFIER=wordpress
-   maxretry = 1
    port = http,https
+   maxretry = 1
+   findtime = 10m
+   bantime = 1h
 
    [wordpress-soft]
    enabled = true
    filter = wordpress-soft
    backend = systemd
-   journalmatch = SYSLOG_IDENTIFIER=wordpress
-   maxretry = 3
    port = http,https
+   maxretry = 3
+   findtime = 10m
+   bantime = 1h
 
+Keep the default ``wordpress`` syslog identifier. If :ref:`WP_FAIL2BAN_SYSLOG_SHORT_TAG` changes it to ``wp``, set ``journalmatch = SYSLOG_IDENTIFIER=wp`` in each jail. The :ref:`quickstart_journald_support` card keeps the identifier unchanged and moves the site name into the message body.
 
-3. Reload or restart `fail2ban`
+Ban actions
+-----------
 
+The example jails inherit fail2ban's default action. Confirm that the selected ``banaction`` supports the host firewall and that the action honours ``port = http,https``. Override ``action`` or ``banaction`` in ``jail.local`` or the jail only when the host requires a different firewall integration.
 
-Filters
-^^^^^^^
+Validate the complete path
+--------------------------
 
-`wordpress-hard.conf` and `wordpress-soft.conf`
-"""""""""""""""""""""""""""""""""""""""""""""""
+Test fail2ban's configuration before reloading it::
 
-There are some things that are almost always malicious, e.g. blocked users and pingbacks with errors. `wordpress-hard.conf` is designed to catch these so that you can ban the IP immediately.
+   fail2ban-client -t
+   fail2ban-client reload
 
-Other things are relatively benign, like a failed login. You can't let people try forever, but banning the IP immediately would be wrong too. `wordpress-soft.conf` is designed to catch these so that you can set a higher retry limit before banning the IP.
+Make a failed WordPress login from an address you can safely test. Confirm that the message reached the selected syslog file or the journal, then test it directly against the soft filter.
 
-For the avoidance of doubt: you should be using *both* filters.
+For a syslog file::
 
+   fail2ban-regex /path/to/wordpress.log /etc/fail2ban/filter.d/wordpress-soft.conf
 
-.. _configuration__fail2ban__custom-filters:
+For journald::
 
-Custom Filters
-""""""""""""""
+   fail2ban-regex systemd-journal /etc/fail2ban/filter.d/wordpress-soft.conf
 
-You should never modify the standard `wordpress-hard.conf` and `wordpress-soft.conf` files. Instead, copy them to, for example, `wordpress-hard-custom.conf` and `wordpress-soft-custom.conf`, and edit those.
+Finally, inspect the live jail::
 
-It is very rare that individual filter rules are modified, but new rules are common; there is always an entry in the "Updating" notes when there is any change to the rules. **It is your responsibility to ensure the rules in your custom filters are kept current.**
+   fail2ban-client status wordpress-soft
 
-`wordpress-extra.conf`
-""""""""""""""""""""""
+The filter match count should increase when the failed-login message is received. If the log contains the message but the count does not increase, the jail is reading the wrong source, using the wrong backend, or loading a different filter file. See :ref:`installation_verifying` and :ref:`operating_site_health`.
 
-Version 4 introduced a number of new logging options which didn't fit cleanly into either of the `hard` or `soft` filters - they're `extra`.
+Custom filters and updates
+--------------------------
 
-For example, if your site doesn't use WordPress comments at all, you could add the rules matching attempted comments to the `hard-custom` filter. Again, there is no "one size fits all" for these rules.
+Do not edit the filters inside the plugin. Put local fail2ban overrides in ``filter.d/*.local`` or give a substantially customised filter a different name. Custom rules must be reviewed whenever the shipped filters change.
 
-
-.. _configuration__fail2ban__updating:
-
-Updating
-^^^^^^^^
-
-Whether you use the standard filter files or a highly-customised set of your own, **it is critical they are kept up to date**. There is always an entry in the "Updating" notes when the filter files need to be updated.
-
-Obsolete filters may cause users to be blocked incorrectly, or attackers not to be detected.
-
-*WPf2b* **cannot** update them for you.
-
-See :ref:`maintenance__updating_filters`.
+Copy updated filters into fail2ban's ``filter.d`` directory when the release notes require it, validate the configuration, and reload the jails. See :ref:`operating_filters`.

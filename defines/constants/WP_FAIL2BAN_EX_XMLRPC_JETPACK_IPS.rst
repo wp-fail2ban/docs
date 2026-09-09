@@ -17,7 +17,7 @@ Explicit list of Jetpack XML-RPC source addresses. |WPf2b| maintains this list o
 .. important::
    Defining this constant is a locked-down escape hatch: |WPf2b| **will not update the list** automatically. Keep it current yourself.
 
-This is not a separate XML-RPC feature. Canonical home is Remote IPs (managed IP lists); the XML-RPC blocker consults the list.
+The XML-RPC blocker consults this list when Jetpack access is enabled.
 
 .. seealso::
    * :ref:`feature-jetpack`

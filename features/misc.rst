@@ -3,6 +3,7 @@
 Miscellaneous
 =============
 
-Edition/distribution flags and UI chrome that do not belong to a function-shaped feature: Composer detection, Free-only mode, Advanced settings visibility, Dashboard news widget.
+These controls identify Composer installation, suppress Premium prompts in the Free edition, select the settings interface, and hide the Dashboard news widget.
 
 .. include:: ../autogen/join/feature-misc.rst
+   :end-before: Source

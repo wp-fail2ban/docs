@@ -3,10 +3,11 @@
 Password reset
 ==============
 
-Logs successful ``retrieve_password`` requests (extra filter) and failed ``lostpassword_post`` attempts (soft). Off by default. Enable it if password-reset is an enumeration or flood path on your site.
+Logs successful password-reset requests with the extra filter and failed requests with the soft filter. It is off by default; enable it when password reset is an enumeration or flooding path on the site.
 
-The event formerly documented as ``PASSWORD_REQUEST`` is ``PASSWORD_REQUEST_OK``; the old page label remains as an alias.
+Successful requests emit ``WPF2B_EVENT_PASSWORD_REQUEST_OK``. Failed requests emit ``WPF2B_EVENT_PASSWORD_REQUEST_FAIL``.
 
-In 6.3 this is on the Logging tab.
+The individual control is on the Logging tab in Advanced settings.
 
 .. include:: ../autogen/join/feature-password-reset.rst
+   :end-before: Source

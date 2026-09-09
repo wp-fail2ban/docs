@@ -5,13 +5,13 @@ Cloudflare integration
 
 **Edition:** Premium.
 
-Enables Cloudflare as a trusted proxy and keeps the Cloudflare IP list updated. Without this (or an equivalent :ref:`WP_FAIL2BAN_PROXIES` entry), |WPf2b| would log Cloudflare edge addresses instead of visitors.
+Selecting the card sets :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE` to ``true``. |WPf2b| then treats requests from the maintained Cloudflare address list as proxied requests and logs the visitor address supplied by Cloudflare. Without Cloudflare integration or an equivalent :ref:`WP_FAIL2BAN_PROXIES` entry, the logged address is the Cloudflare edge address rather than the visitor.
 
-The card turns on the feature, not the escape-hatch list :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE_IPS`. Only define that list if outbound updates are impossible; you then own freshness.
+The card does not set :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE_IPS`. Define that static list only when automatic updates are unavailable, and keep it current yourself.
 
 Ignore-list IPs are a different control: they skip **all** of |WPf2b|, not merely Cloudflare restoration.
 
-In 6.3 this sits on the Remote IPs tab.
+If the setting is fixed to a conflicting value in ``wp-config.php``, the card cannot apply it and Site Health reports the conflict. The equivalent individual control is on the Remote IPs tab in Advanced settings.
 
 .. include:: ../../autogen/join/card-cloudflare-integration.rst
 

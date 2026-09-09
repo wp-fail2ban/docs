@@ -9,6 +9,4 @@ Syslog and journald
 
 **Workarounds** for broken syslogd: short tag, force ``HTTP_HOST``, truncate the host, tag-host. Use them only when the daemon cannot cope with the default identifier.
 
-Facility defaults differ between Free and Premium; see :ref:`facilities`. Do not copy OS logfile path tables from older manuals — they go stale. Life With WPf2b has current paths.
-
-Jail ``journalmatch`` examples also live in Life With WPf2b.
+Facility defaults differ between Free and Premium; see :ref:`facilities`. The selected syslog daemon determines which file receives each facility. For complete file-based and journald jail examples, see :ref:`configuration__fail2ban`.

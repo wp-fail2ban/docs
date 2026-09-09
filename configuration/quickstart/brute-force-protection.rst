@@ -3,13 +3,13 @@
 Brute-force protection
 ======================
 
-**Edition:** Free. Informational; the card is locked on.
+**Edition:** Free. The card is informational and locked on.
 
-Login logging is the default |WPf2b| always provides. You do not switch this card off. It exists so QuickStart can show what you already have: successful and failed authentications, including empty usernames, REST, and XML-RPC, written to the auth facility.
+|WPf2b| always logs successful and failed authentication, including empty usernames and authentication through REST or XML-RPC, to the auth facility. The card does not change a setting and cannot be switched off.
 
-There is nothing extra to enable. Empty-username attempts and unknown-user XML-RPC/REST probes are already classified for fail2ban (soft vs hard). Blocked usernames, email-only login, and user enumeration are **not** part of this card — they live on :ref:`quickstart_advanced_username_protection`.
+Failed logins and empty usernames match ``wordpress-soft.conf``. Authentication attempts for unknown REST or XML-RPC users match ``wordpress-hard.conf``. A working fail2ban jail is required to turn those matches into bans; see :ref:`configuration__fail2ban`.
 
-In 6.3 Advanced settings the same logging sits on the Logging tab as authentication.
+Blocked usernames, email-only login, and user enumeration are configured by :ref:`quickstart_advanced_username_protection`. The authentication facility is on the Logging tab in Advanced settings.
 
 .. include:: ../../autogen/join/card-brute-force-protection.rst
 

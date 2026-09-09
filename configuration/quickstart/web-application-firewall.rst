@@ -5,11 +5,16 @@ Web Application Firewall
 
 **Edition:** Premium. Experimental.
 
-Turns on the three shipped WAF checks together: SQLi on plugin/WordPress paths, ``update_option`` tampering, and ``wp_delete_user`` capability checks. They share :ref:`WP_FAIL2BAN_EX_WAF` and the WAF facility; the extra constants exist so you can disable one check without abandoning the others.
+Selecting the card applies this configuration:
 
-The card is the canned “protect the PHP surface” set. It does not include country blocking or the honeypot. Events go to ``wordpress-wpf2b-waf.conf``, not the hard/soft WordPress filters.
+* :ref:`WP_FAIL2BAN_EX_WAF` is set to ``enabled``;
+* :ref:`WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS` is set to ``true``;
+* :ref:`WP_FAIL2BAN_EX_WAF_UPDATE_OPTION` is set to ``theme``;
+* :ref:`WP_FAIL2BAN_EX_WAF_USERS_DELETE` is set to ``true``.
 
-In 6.3 the WAF controls are on the Block tab.
+This enables SQL-injection checks on plugin paths, protects core option updates while allowing recognised theme setup changes, and requires the ``delete_users`` capability for user deletion. SQL-injection checks on WordPress paths remain at the :ref:`WP_FAIL2BAN_EX_WAF_SQLI_WORDPRESS` default. Country blocking and the honeypot are unaffected.
+
+Blocked events match ``wordpress-wpf2b-waf.conf``; configure a jail for that filter to ban their source addresses. If any requested setting is fixed to a conflicting value in ``wp-config.php``, the card cannot apply the complete configuration and Site Health reports the conflict. The equivalent individual controls are on the Block tab in Advanced settings.
 
 .. include:: ../../autogen/join/card-web-application-firewall.rst
 

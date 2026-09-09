@@ -8,8 +8,6 @@ WPF2B_EVENT_PASSWORD_REQUEST_OK
 
 Premium listener: ``WPF2B_EVENT_PASSWORD_REQUEST_OK``.
 
-The filename ``WPF2B_EVENT_PASSWORD_REQUEST`` is kept for stable links; the event constant is ``PASSWORD_REQUEST_OK``.
-
 +------------+-----------+----------------------------------------------------------------------------------+
 | syslog     | Facility  | :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG`                                          |
 |            +-----------+----------------------------------------------------------------------------------+

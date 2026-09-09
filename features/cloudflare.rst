@@ -3,8 +3,9 @@
 Cloudflare integration
 ======================
 
-Premium. Treat Cloudflare as a trusted proxy and refresh the official IP list on a schedule. :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE_IPS` is an escape hatch that **stops** automatic updates; keep that list current yourself.
+Premium. Treats Cloudflare as a trusted proxy and refreshes the official IP list on a schedule. Defining :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE_IPS` stops automatic updates; keep a static list current yourself.
 
-The Cloudflare QuickStart card enables this feature.
+The :ref:`quickstart_cloudflare_integration` card enables Cloudflare integration.
 
 .. include:: ../autogen/join/feature-cloudflare.rst
+   :end-before: Source
