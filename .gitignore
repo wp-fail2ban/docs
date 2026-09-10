@@ -2,4 +2,5 @@
 _build/
 autogen/
 venv/
+work/
 docs.mk

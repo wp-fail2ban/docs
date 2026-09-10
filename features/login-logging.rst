@@ -3,27 +3,38 @@
 Login logging
 =============
 
-|WPf2b| always records authentication handled by WordPress. There is no switch
-for this core evidence. Each syslog message contains the authentication outcome,
-the submitted username where one is available, and the :ref:`resolved client
-address <feature-remote-ips>`.
+|WPf2b| always records failed authentication handled by WordPress. Successful
+form logins are recorded by default and can be turned off with
+:ref:`WP_FAIL2BAN_LOG_AUTH_SUCCESS`. Successful REST and XML-RPC authentications
+are off by default and have their own controls. Each syslog message contains the
+authentication outcome, the submitted username where one is available, and the
+:ref:`resolved client address <feature-remote-ips>`.
 
 Authentication outcomes
 -----------------------
 
-Successful authentication produces an ``Accepted password`` message at Info
-level. The shipped :ref:`filters-wordpress-good` filter recognises it. REST and
-XML-RPC successes use the same syslog message as other logins.
+Successful form authentication produces an ``Accepted password`` message at Info
+level when :ref:`WP_FAIL2BAN_LOG_AUTH_SUCCESS` is enabled (the default). The
+shipped :ref:`filters-wordpress-good` filter recognises it.
+
+Successful REST and XML-RPC authentication can be logged separately when
+:ref:`WP_FAIL2BAN_LOG_AUTH_REST_SUCCESS` or
+:ref:`WP_FAIL2BAN_LOG_AUTH_XMLRPC_SUCCESS` is enabled. Both default to off
+because API clients commonly authenticate on every request, which can produce
+many more success records than interactive login. The messages
+``REST authentication success for …`` and ``XML-RPC authentication success for …``
+also match :ref:`filters-wordpress-good`. Application Password authentications
+on those interfaces are included.
 
 Failed authentication produces a Notice-level message. The message distinguishes
 an existing account from an unknown username. Ordinary failures match
 :ref:`filters-wordpress-soft`. REST and XML-RPC messages carry a ``REST`` or
 ``XML-RPC`` prefix; a failure for an existing account is soft, while an attempt
-for an unknown account matches :ref:`filters-wordpress-hard`. A login-form POST
-whose ``log`` field contains an empty username produces a distinct empty-username
-record. The ordinary case is a Notice-level soft failure. If an expired
-authentication cookie was also presented, the record instead notes that fact at
-Info level and does not match the shipped soft filter.
+for an unknown account matches :ref:`filters-wordpress-hard`. A login form submitted with an empty username
+produces a distinct empty-username record. The ordinary case is a Notice-level
+soft failure. If an expired authentication cookie was also presented, the
+record instead notes that fact at Info level and does not match the shipped
+soft filter.
 
 These classifications make the events available to different fail2ban filters;
 they do not impose a ban by themselves. A jail determines how many matches cause
@@ -34,10 +45,8 @@ Syslog and Premium event data
 -----------------------------
 
 The syslog messages do not contain submitted passwords. Premium additionally
-stores a structured row for each authentication event and uses distinct
-:ref:`REST <WPF2B_EVENT_REST_AUTH_FAIL>` and
-:ref:`XML-RPC <WPF2B_EVENT_XMLRPC_AUTH_FAIL>` event names even where the syslog
-wording is shared.
+stores a structured row for each authentication event. REST and XML-RPC use
+distinct event names for both success and failure.
 
 For failed authentication, including REST and XML-RPC failures, Premium stores
 the submitted password in plain text in EventData. The distinct empty-username
@@ -68,9 +77,9 @@ affect retention: in particular, a destination which discards Info messages
 loses the successful-authentication evidence while Notice-level failures may
 remain.
 
-The :ref:`quickstart_brute_force_protection` card summarises this always-on
-behaviour. The authentication facility is configured on the Logging tab in
-Advanced settings.
+The :ref:`quickstart_brute_force_protection` card summarises this behaviour.
+The authentication facility and success-logging checkboxes are configured on
+the Logging tab in Advanced settings.
 
 .. include:: ../autogen/join/feature-login-logging.rst
    :end-before: Source
