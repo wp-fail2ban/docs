@@ -18,7 +18,7 @@ Recorded for a successful form login when :ref:`WP_FAIL2BAN_LOG_AUTH_SUCCESS` is
 +------------+-----------+-------------------------------------------------------------------------------+
 | fail2ban   | Filter    | :ref:`filters-wordpress-good`                                                 |
 |            +-----------+-------------------------------------------------------------------------------+
-|            | Rule      | ``Accepted password for <F-ALT_USER>.*</F-ALT_USER><_tail>``                  |
+|            | Rule      | ``Accepted password(?: \(repeat\))? for <F-ALT_USER>.*</F-ALT_USER><_tail>``  |
 +------------+-----------+-----------------------------------+-------------------------------------------+
 | EventData  | username  | .. include:: ../username-type.rst | .. include:: ../username-description.rst  |
 +------------+-----------+-----------------------------------+-------------------------------------------+

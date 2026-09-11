@@ -27,7 +27,7 @@ Emitted from ``wp_login_failed`` when the request is XML-RPC. Unknown-user attem
      - :ref:`filters-wordpress-hard` (unknown user) / :ref:`filters-wordpress-soft` (known user)
    * -
      - Rule
-     - ``(?:REST|XML-RPC) authentication (?:attempt for unknown user|failure for) <F-ALT_USER>.*</F-ALT_USER>``
+     - ``(?:REST|XML-RPC) authentication (?:attempt(?: \(repeat\))? for unknown user|failure(?: \(repeat\))? for) <F-ALT_USER>.*</F-ALT_USER>``
    * - EventData
      - username
      - .. include:: ../username-description.rst

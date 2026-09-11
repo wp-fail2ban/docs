@@ -24,7 +24,8 @@ because API clients commonly authenticate on every request, which can produce
 many more success records than interactive login. The messages
 ``REST authentication success for …`` and ``XML-RPC authentication success for …``
 also match :ref:`filters-wordpress-good`. Application Password authentications
-on those interfaces are included.
+on those interfaces are included. A second authentication in the same request,
+success or failure, is recorded with ``(repeat)`` in that event's message class.
 
 Failed authentication produces a Notice-level message. The message distinguishes
 an existing account from an unknown username. Ordinary failures match
