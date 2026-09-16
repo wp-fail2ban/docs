@@ -23,6 +23,12 @@ The first forwarded value must be a valid IPv4 or IPv6 address. An invalid value
 from a trusted proxy cannot be resolved; |WPf2b| writes an error to the PHP error
 log and ends the request with an internal-server-error response.
 
+In Free, that trusted-proxy path runs when the client address is resolved.
+Without :ref:`WP_FAIL2BAN_CHECK_PROXIES`, resolution typically happens only when
+logging or storing an address. With it enabled, Free resolves — and therefore
+checks proxies — on every request. Premium always resolves the client address
+early in the request, so the Free setting has no effect there.
+
 Trust boundary
 --------------
 
