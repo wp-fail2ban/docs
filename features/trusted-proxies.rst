@@ -33,10 +33,12 @@ data from a peer that does not reliably replace requester-supplied headers would
 allow the requester to choose that identity.
 
 The resolved address is subsequently attached to syslog messages and Premium
-events. It is also used by address-dependent features such as the Premium ignore
-list and geolocation, and is the address extracted by fail2ban for a ban. An
-incorrectly attributed address therefore changes both the evidence recorded and
-the address on which later decisions operate.
+events. It is also stored as the comment author IP when comments, pingbacks, or
+trackbacks are saved, so spam marking and the WordPress comments UI see the same
+address as syslog and fail2ban. It is used by address-dependent features such as
+the Premium ignore list and geolocation, and is the address extracted by fail2ban
+for a ban. An incorrectly attributed address therefore changes both the evidence
+recorded and the address on which later decisions operate.
 
 :ref:`WP_FAIL2BAN_REMOTE_ADDR` is a fixed override for anonymised requests. When
 it is defined, its value takes precedence and the trusted-proxy/header path is
