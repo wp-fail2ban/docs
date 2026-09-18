@@ -3,9 +3,11 @@
 WPF2B_EVENT_COMMENT
 -------------------
 
-.. rubric:: Comment submitted.
+.. rubric:: Comment stored.
 
 Premium listener: ``WPF2B_EVENT_COMMENT``.
+
+Ordinary comments only (not pingbacks or trackbacks). Logged once when WordPress stores the comment, for any approval status. Later approval does not emit a second event.
 
 +------------+-----------+------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_comment_log.rst             |

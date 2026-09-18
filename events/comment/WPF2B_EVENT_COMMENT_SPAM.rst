@@ -7,6 +7,8 @@ WPF2B_EVENT_COMMENT_SPAM
 
 Premium listener: ``WPF2B_EVENT_COMMENT_SPAM``.
 
+The address is the comment author's stored IP. When a moderator marks an existing comment as spam, that stored address is used rather than the moderator's request address.
+
 +------------+-----------+-----------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_spam_log.rst                     |
 |            +-----------+-----------------------------------------------------------+
