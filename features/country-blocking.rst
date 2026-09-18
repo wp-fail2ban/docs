@@ -11,6 +11,8 @@ The Cloudflare methods require :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE`. The count
 
 When a country cannot be resolved, :ref:`WP_FAIL2BAN_EX_GEOLOCATION_FAIL` controls the outcome. With fail closed enabled, the request is denied with HTTP 403 once a country list is in use. With fail closed disabled (the default), a configured country list does not apply to that request. Geolocation set to ``disabled``, or empty country lists, leave unresolved requests allowed.
 
+Each denial increments counters held in a site option and shown on the Country Blocks dashboard widget when a country list is configured. The counters summarise denials for the site; they are not a fail2ban jail and do not themselves ban an address. Collection can be stopped with :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES_DISABLE_STATS`.
+
 Country lists are on the Block tab in Advanced settings. The MaxMind licence, geolocation method, and fail-closed control are on the Remote IPs tab.
 
 .. include:: ../autogen/join/feature-country-blocking.rst
