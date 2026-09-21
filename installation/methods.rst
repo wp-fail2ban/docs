@@ -3,31 +3,12 @@
 Installation methods
 ====================
 
-Canonical (GitHub)
-------------------
+For the 6.3 Canonical release, upload its signed archive from `GitHub releases <https://github.com/wp-fail2ban/wp-fail2ban/releases>`_ in WordPress, or install it with Composer using ``composer require wp-fail2ban/wp-fail2ban``. The Canonical distribution includes a self-updater; a Composer or Git Updater installation follows its own update channel.
 
-* Download the signed zip from `GitHub releases <https://github.com/wp-fail2ban/wp-fail2ban/releases>`_ and upload it in WordPress.
-* Composer: ``composer require wp-fail2ban/wp-fail2ban``
-* WP-CLI with `Git Updater <https://git-updater.com/git-updater/>`_: ``wp plugin install-git wp-fail2ban``
+Premium is available through Freemius or the Premium Composer channel described in the Members area. Activate it in WordPress so its four InnoDB tables and reporting view are created. The event history remains in the database after deactivation; see :ref:`operating_event_storage`.
 
-The Canonical flavour includes a self-updater. Git Updater or Composer, if present, take precedence.
+The WordPress Plugin Directory installs the LTS distribution described in :ref:`about_editions`. Check its version before using this 6.3 manual for the installed plugin.
 
-WordPress.org (LTS)
--------------------
+Every distribution includes fail2ban filter source files in the plugin's ``filters.d`` directory. A privileged host administrator copies the required files into fail2ban's ``filter.d`` directory and configures jails for the host log or journal that receives |WPf2b| messages. See :ref:`configuration__fail2ban`.
 
-Install from the Plugin Directory as usual.
-
-Premium
--------
-
-Download from Freemius or install via Composer (see the Members page). Activating Premium creates ``wp_fail2ban_log`` and ``wp_fail2ban_plugins``. |WPf2b| never drops those tables.
-
-Installed files
----------------
-
-Every distribution includes the fail2ban filters in its ``filters.d`` directory. Copy the filters you use into fail2ban's ``filter.d`` directory and configure jails to consume the same syslog file or journal that receives |WPf2b| messages. See :ref:`configuration__fail2ban`.
-
-Must-use
---------
-
-To load before other security plugins, or to stop site admins disabling it, install as an MU-plugin. See :ref:`configuration__mu-plugins`.
+To load |WPf2b| before ordinary plugins or prevent normal plugin deactivation, see :ref:`configuration__mu-plugins`. Once the plugin and host integration are installed, follow :ref:`installation_verifying`.

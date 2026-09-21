@@ -3,16 +3,15 @@
 Operating WP fail2ban
 =====================
 
-These pages cover logging, syslog and journald, Site Health, scheduled jobs, the Premium event store, filter compatibility, and upgrades.
+Use the host log and fail2ban jail to observe the protection path, and use the WordPress views for the additional context they provide. These pages explain how to read activity, maintain host integration and Premium history, and check the system after a change.
 
 .. toctree::
    :maxdepth: 1
 
    operating/logging
    operating/syslog
-   operating/site-health
-   operating/scheduled
    operating/event-storage
    operating/filters
+   operating/scheduled
+   operating/site-health
    operating/upgrading
-   configuration/site-health-tool

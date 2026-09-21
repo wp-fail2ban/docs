@@ -3,13 +3,12 @@
 Verifying the installation
 ==========================
 
-1. The plugin is active (or loaded as MU-plugin).
-2. A failed login produces a syslog line such as ``Authentication failure for … from …``.
-3. That line is in the facility you configured (:ref:`WP_FAIL2BAN_AUTH_LOG`, typically ``LOG_AUTH`` / ``LOG_AUTHPRIV``).
-4. fail2ban has the matching shipped filter (``wordpress-soft.conf`` for that example) and a jail that reads the same stream.
-5. ``fail2ban-client status wordpress-soft`` shows the jail and its failure count increases when the line is received.
-6. Site Health is clean, or the failures are ones you understand. See :ref:`operating_site_health`.
+Verify the path from a WordPress request to the host firewall. Use a client address you can safely test and avoid locking yourself out. A failed form login with a non-blank username and password is a useful soft-filter example; repeat it enough times to meet the test jail's threshold.
 
-If the message is logged but the jail does not count it, confirm the jail's ``logpath`` or ``backend`` and test the message with ``fail2ban-regex``. See :ref:`configuration__fail2ban`.
+1. Confirm that |WPf2b| is loaded, then make the test request. Its Dashboard Last 5 messages view can help show recent local logging activity, but the host log is the next checkpoint.
+2. Find the corresponding human-readable message in the actual syslog file or journal. If it is absent, check the host logging service and facility routing described in :ref:`operating_logging`.
+3. Confirm that the intended jail reads that source and its installed filter matches the message. ``fail2ban-regex`` can test the selected filter against the host log or journal; :ref:`configuration__fail2ban` shows examples.
+4. Check that the live jail counts the matching requests, then exercise its threshold. ``fail2ban-client status wordpress-soft`` can show the count and banned addresses for the example jail.
+5. Confirm that the configured ban action changes the intended firewall state. Check the host's firewall using its administrative tools, and confirm that the test ban expires or is removed as expected. If necessary, use ``fail2ban-client`` to clear the test ban.
 
-On Premium, the Dashboard last-messages widget is a convenience view of recent syslog writes, not a substitute for the journal.
+Site Health can expose some setup mistakes when PHP is allowed to inspect the host, but its results cover only the checks that ran. See :ref:`operating_site_health`. The host log, live jail, and firewall checks establish whether the complete integration works.

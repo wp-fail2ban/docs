@@ -4,7 +4,7 @@
 Installation
 ============
 
-Install like any other WordPress plugin, then confirm the syslog → fail2ban chain. Choose a flavour first; see :ref:`about_editions`.
+Choose the :ref:`about_editions` distribution that matches the release you intend to run. Install |WPf2b| in WordPress, then have a host administrator install its fail2ban filters and configure a jail that reads the messages the host records. Finally, test through to the firewall action.
 
 .. toctree::
    :maxdepth: 1

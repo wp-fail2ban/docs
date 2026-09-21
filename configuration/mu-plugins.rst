@@ -1,74 +1,14 @@
-.. highlight:: console
-
 .. _configuration__mu-plugins:
 
-`mu-plugins` Support
---------------------
+Must-use loading
+================
 
-There are two main reasons for using ``mu-plugins``:
+A must-use (MU) installation loads |WPf2b| before ordinary plugins and prevents a site administrator from deactivating it through the usual Plugins screen. Choose it when that load order or availability matters. It changes how the plugin is loaded, not the meaning of its settings: Premium saved settings still apply, and a defined constant overrides only its corresponding setting.
 
-#. Load |WPf2b| before another security plugin.
-#. Prevent site administrators from disabling it.
+Install the selected distribution in a directory under ``wp-content/mu-plugins`` and put a top-level loader or symlink to its ``wp-fail2ban.php`` in ``mu-plugins``. WordPress only loads top-level PHP files there automatically. For example, from inside ``mu-plugins``::
 
-Loading Early
-^^^^^^^^^^^^^
+   ln -s ../plugins/wp-fail2ban/wp-fail2ban.php wp-fail2ban.php
 
-One of the better ways is to install *WPf2b* as usual and then create a symlink in ``mu-plugins``:
+Use the matching Premium directory for Premium. If the plugin remains in the ordinary plugins directory, its normal update channel can still replace its files. Premium also needs its normal activation for database setup. Check that the MU loader and ordinary plugin entry do not create an unintended duplicate load.
 
-::
-
-    # ln -s ../plugins/wp-fail2ban/wp-fail2ban.php
-    # ls -l
-    total 1
-    lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> ../plugins/wp-fail2ban/wp-fail2ban.php
-
-or for the Premium version:
-
-::
-
-    # ln -s ../plugins/wp-fail2ban-premium/wp-fail2ban.php
-    # ls -l
-    total 1
-    lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> ../plugins/wp-fail2ban-premium/wp-fail2ban.php
-
-This has the advantage that you can update *WPf2b* as usual without having to update ``mu-plugins`` directly.  For the free version you don't need to activate *WPf2b*, but you do for the Premium version.
-
-Forcing Usage
-^^^^^^^^^^^^^
-
-The main objective here is to stop people fiddling with things, so there are necessarily some restrictions on configuring *WPf2b*.
-
-Configure |WPf2b| in ``wp-config.php`` when it is forced as an MU-plugin. The settings UI does not apply configuration in this deployment mode.
-
-The actual configuration itself is simple; for the **Free** version:
-
-#. Extract the **Free** version of *WPf2b* into a directory called `wp-fail2ban` within `mu-plugins`.
-#. symlink ``wp-fail2ban.php``:
-
-::
-
-    # ln -s wp-fail2ban/wp-fail2ban.php
-    # ls -l
-    total 1
-    lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> wp-fail2ban/wp-fail2ban.php
-
-3. **Keep** *WPf2b* **up-to-date**.
-
-For the **Premium** version:
-
-#. Extract the **Premium** version of *WPf2b* into a directory called `wp-fail2ban-premium` within `mu-plugins`.
-#. symlink ``wp-fail2ban.php``:
-
-::
-
-    # ln -s wp-fail2ban-premium/wp-fail2ban.php
-    # ls -l
-    total 1
-    lrwxr-xr-x  1  www  www  38  4 Nov 16:24 wp-fail2ban.php -> wp-fail2ban-premium/wp-fail2ban.php
-
-3. **Keep** *WPf2b* **up-to-date**.
-
-Keeping *WPf2b* up-to-date
-""""""""""""""""""""""""""
-
-WordPress does not check plugins installed directly under ``mu-plugins`` for updates. Monitor the selected distribution channel and install |WPf2b| updates manually.
+When files are installed directly under ``mu-plugins``, WordPress does not offer the usual plugin update checks for them. Monitor the selected distribution channel and update those files deliberately. A host administrator can remove the top-level loader or symlink to stop MU loading; an independently active ordinary plugin entry can still load |WPf2b|. Verify the plugin and host integration after changing the loader; see :ref:`installation_verifying`.

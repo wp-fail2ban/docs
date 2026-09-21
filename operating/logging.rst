@@ -1,12 +1,14 @@
 .. _operating_logging:
 
-Logging and events
-==================
+Logging and observing activity
+==============================
 
-Every security-relevant decision |WPf2b| makes becomes a syslog line and, on Premium, a row in the event store. Each occurrence has an event name such as ``AUTH_FAIL`` or ``XMLRPC_BLOCKED``; fail2ban matches the corresponding syslog message. :ref:`events` lists both.
+|WPf2b| uses syslog because the host already has a logging system that administrators can inspect and fail2ban can read. When |WPf2b| records selected WordPress activity, it writes a human-readable message to syslog. The host routes that message into a log file or the systemd journal. The same message can explain an occurrence to a person and provide a stable form for a fail2ban filter to recognise.
 
-Core login logging is always on. Other classes are opt-in via QuickStart or Advanced settings.
+Syslog facilities let the host separate broad classes of messages. A simple installation can route all relevant |WPf2b| facilities to the same log source. On a busier host, an administrator may direct classes to different files or streams. The host's log rotation or journal retention settings provide the ordinary way to manage how long those records remain. In either case, the jail must read the source where its class actually arrives. Changing a facility or host routing without updating the corresponding jail can leave visible messages that the jail never sees. See :ref:`facilities` for exact facility values and :ref:`operating_syslog` for identifier and journal details.
 
-The Dashboard last-five-messages widget shows recent syslog writes and can be disabled with :ref:`WP_FAIL2BAN_DISABLE_LAST_LOG`. Premium's event log and reports use the database event store. The hourly lookup job that enriches stored events is described in :ref:`operating_scheduled`.
+Filters recognise particular |WPf2b| message forms. A jail couples a filter to its log source, counts matching activity under its policy, and invokes a ban action when its conditions are met. The host firewall is changed by that action. An administrator can inspect or clear a jail's bans with ``fail2ban-client`` and check the resulting firewall state with the host's firewall tools. The syslog priority attached to a message is a logging priority, not a ban threshold; the selected filter and jail policy decide how it is used. See :ref:`configuration__fail2ban` for example jails.
 
-Full event catalogue: :ref:`events`.
+WordPress offers two other views for different jobs. **Last 5 messages** is a small Dashboard convenience view of recent local |WPf2b| logging activity. It is bounded and can omit or overwrite entries during concurrent traffic; it is not the host log. The view can be disabled with :ref:`WP_FAIL2BAN_DISABLE_LAST_LOG` if it is not useful on the site. **Premium event history** retains structured records for looking back, investigation, Dashboard views, and reports. It is not a fail2ban input. See :ref:`operating_event_storage` for its storage and retention behaviour.
+
+When an expected ban does not occur, follow the path in order. First trigger known |WPf2b| behaviour and identify its expected message. Find that message in the actual host log or journal; if absent, inspect syslog service health and facility routing. Then check that the intended jail reads that source, that its installed filter matches the line, and that the jail counts it. Finally, exercise the threshold and inspect the configured ban action and firewall state. :ref:`installation_verifying` gives a complete test sequence. A Last 5 entry or Premium event can help identify activity, but the host-side checks show where enforcement stopped.
