@@ -16,7 +16,7 @@ Premium listener: ``WPF2B_EVENT_AUTH_EMPTY_USER``.
 +-----------+-----------+-------------------------------------------------------------------------------------+
 | fail2ban  | Filter    | :ref:`filters-wordpress-soft`                                                       |
 |           +-----------+-------------------------------------------------------------------------------------+
-|           | Rule      | ``Authentication attempt with empty username<_tail>``                               |
+|           | Rule      | ``Authentication attempt with empty (?:username|password)<_tail>``                  |
 +-----------+-----------+-------------------------------------------------------------------------------------+
 
 .. seealso::
