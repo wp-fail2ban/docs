@@ -5,11 +5,11 @@ Honeypot
 
 **Edition:** Premium. Experimental.
 
-Selecting the card sets :ref:`WP_FAIL2BAN_EX_HONEYPOT` and :ref:`WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT` to ``true``. |WPf2b| adds trap paths to ``robots.txt`` and treats requests to those paths as hard failures.
+Selecting the card enables a trap-path matcher and publication of those paths as ``Disallow`` entries in WordPress's ``robots.txt`` on a public site. Requests to a trap path are treated as hard failures. On a site marked non-public, the matcher can still act even though WordPress does not publish the bait lines.
 
-The card does not change the honeypot logging facility. It catches scanners that use ``robots.txt`` Disallow entries as a list of targets; ensure the configured paths do not serve real content.
+Selecting the card applies :ref:`WP_FAIL2BAN_EX_HONEYPOT` and :ref:`WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT` as ``true`` in one bundle. Its trap paths must not serve real content. The individual controls are on the Honeypot tab in Advanced settings.
 
-If either setting is fixed to a conflicting value in ``wp-config.php``, the card cannot apply the complete configuration and Site Health reports the conflict. The equivalent individual controls are on the Block tab in Advanced settings.
+.. include:: card-settings.rst.inc
 
 .. include:: ../../autogen/join/card-honeypot.rst
 

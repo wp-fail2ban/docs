@@ -5,22 +5,13 @@ Brute-force protection
 
 **Edition:** Free. The card is informational and locked on.
 
-|WPf2b| always records failed authentication handled by WordPress, including
-empty usernames and REST or XML-RPC failures, to the authentication facility.
-Successful form logins are recorded by default. Successful REST and XML-RPC
-authentications are not recorded unless those controls are enabled, because API
-clients commonly authenticate on every request.
+|WPf2b| supplies fail2ban evidence for ordinary credential rejections from the normal login form and XML-RPC, failed REST Application Password authentication, and normal-form submissions with a blank username or password.
 
-The card does not change a setting and cannot be switched off.
+Successful form logins are recorded by default. Successful REST and XML-RPC authentications are off by default because API clients may authenticate on every request, generating many success records.
 
-Failed logins and empty usernames match ``wordpress-soft.conf``. Authentication
-attempts for unknown REST or XML-RPC users match ``wordpress-hard.conf``. A
-working fail2ban jail is required to turn those matches into bans; see
-:ref:`configuration__fail2ban`.
+The card changes no setting. Ordinary failed logins and empty-credential records can match ``wordpress-soft.conf``; unknown REST or XML-RPC users can match ``wordpress-hard.conf``. A configured fail2ban jail is needed to count matches and act on them; see :ref:`configuration__fail2ban`.
 
-Blocked usernames, email-only login, and user enumeration are configured by
-:ref:`quickstart_advanced_username_protection`. The authentication facility and
-success-logging controls are on the Logging tab in Advanced settings.
+Username and enumeration controls are available through :ref:`quickstart_advanced_username_protection`.
 
 .. include:: ../../autogen/join/card-brute-force-protection.rst
 

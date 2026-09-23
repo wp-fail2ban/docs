@@ -5,11 +5,11 @@ Spam protection
 
 **Edition:** Free.
 
-Selecting the card sets :ref:`WP_FAIL2BAN_LOG_SPAM` to ``true``. |WPf2b| logs comments that WordPress, a moderator, or a spam-detection plugin has classified as spam; Premium also records comments discarded by Akismet. These events match ``wordpress-hard.conf``.
+Selecting the card enables logging for comments already classified as spam by WordPress, a moderator, or a spam-detection plugin; Premium also records comments discarded by Akismet. |WPf2b| does not classify spam itself. The resulting hard-filter evidence can help a fail2ban jail identify repeated submissions, but a log entry alone does not impose a ban.
 
-|WPf2b| does not classify spam itself. The card is useful when repeated comment, pingback, trackback, review, or similar submissions should cause the source address to be banned. It does not enable logging of accepted comments.
+Selecting the card applies :ref:`WP_FAIL2BAN_LOG_SPAM` as ``true``. The Logging tab shows the individual control; use the constant for an individual change in Free.
 
-If the setting is fixed to a conflicting value in ``wp-config.php``, the card cannot apply it and Site Health reports the conflict. The equivalent individual control is on the Logging tab in Advanced settings.
+.. include:: card-settings.rst.inc
 
 .. include:: ../../autogen/join/card-spam-protection.rst
 

@@ -5,13 +5,11 @@ Cloudflare integration
 
 **Edition:** Premium.
 
-Selecting the card sets :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE` to ``true``. |WPf2b| then treats requests from the maintained Cloudflare address list as proxied requests and logs the visitor address supplied by Cloudflare. Without Cloudflare integration or an equivalent :ref:`WP_FAIL2BAN_PROXIES` entry, the logged address is the Cloudflare edge address rather than the visitor.
+Selecting the card enables Cloudflare integration. When a request comes through a recognised Cloudflare edge, |WPf2b| can use the visitor address from ``X-Forwarded-For``. Without that recognition, a request may be attributed to the edge or, when another non-empty trust list is active, rejected as an unknown proxy. A later fail2ban ban on an attributed edge can make traffic fail intermittently across Cloudflare's address pool. Trusting the forwarded address depends on the immediate peer being a recognised Cloudflare address; see :ref:`feature-trusted-proxies` and :ref:`feature-remote-addr`.
 
-The card does not set :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE_IPS`. Define that static list only when automatic updates are unavailable, and keep it current yourself.
+Selecting the card applies :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE` as ``true``. Its individual control is on the Remote IPs tab in Advanced settings.
 
-Ignore-list IPs are a different control: they skip **all** of |WPf2b|, not merely Cloudflare restoration.
-
-If the setting is fixed to a conflicting value in ``wp-config.php``, the card cannot apply it and Site Health reports the conflict. The equivalent individual control is on the Remote IPs tab in Advanced settings.
+.. include:: card-settings.rst.inc
 
 .. include:: ../../autogen/join/card-cloudflare-integration.rst
 

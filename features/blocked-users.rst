@@ -3,11 +3,9 @@
 Blocked users
 =============
 
-Refuse login for a regex or a list of usernames **before** WordPress authenticates. Matching is case-insensitive. Typical use is locking ``admin`` / ``administrator`` after you have renamed the account.
+Sites may have retired, reserved, or otherwise prohibited account identifiers that must never authenticate. The blocked-users control closes that route even if a valid password is supplied, and produces rejection evidence for the attempted name. It refuses authentication for specified identifiers before WordPress checks the password. The list accepts usernames or a case-insensitive regular expression; an empty or unset value blocks nobody by name. A broad regular expression can cover several identifiers, so legitimate attempts using any matching identifier are also refused.
 
-The Username Protection card does not change this list. An empty or unset value means nobody is blocked by name.
-
-The individual control is on the Block tab in Advanced settings.
+This is separate from email-only login and enumeration protection. :ref:`quickstart_advanced_username_protection` does not change the blocked-users list. The individual control appears on the Block tab in Advanced settings; Free displays it as read-only.
 
 .. include:: ../autogen/join/feature-blocked-users.rst
    :end-before: Source

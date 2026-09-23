@@ -4,7 +4,7 @@
 Features
 ========
 
-WP fail2ban logs WordPress activity, blocks selected requests before WordPress completes them, resolves visitor addresses behind trusted proxies, and supplies fail2ban filters for the resulting messages. Choose an area below for its behaviour and configuration.
+WP fail2ban records WordPress activity so operators can recognise repeated abuse, directly rejects selected requests, and supplies fail2ban filters for the messages it emits. These are separate outcomes: a logged event does not itself mean that fail2ban has banned an address. The Feature pages explain each capability, its boundaries, and the controls that affect it.
 
 .. toctree::
    :maxdepth: 2

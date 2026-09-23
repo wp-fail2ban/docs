@@ -3,9 +3,11 @@
 Remote IPs and proxies
 ======================
 
-|WPf2b| normally uses the TCP peer as the client address. Trusted-proxy and Cloudflare settings allow it to recover the visitor address from a proxy header. The resolved address is written to syslog and is the address fail2ban bans.
+When a proxy sits in front of WordPress, the web server can see the intermediary's address instead of the visitor's. Accurate remote-IP configuration keeps evidence and address-based decisions attached to the visitor, so a later ban targets the source that produced the activity. If the resolved address identifies a shared proxy instead, the ban can affect unrelated traffic.
 
-The Premium ignore list bypasses all logging and blocking for selected resolved addresses. Jetpack integration maintains a trusted source list for XML-RPC requests. Country lookup and blocking are described under :ref:`feature-country-blocking`.
+|WPf2b| normally starts with the TCP peer. Trusted-proxy and Cloudflare settings can recover the visitor address from ``X-Forwarded-For`` when the immediate peer is trusted. The resolved address is written to syslog and is the address a fail2ban jail may use for a ban. See :ref:`feature-remote-addr` for the observable failure patterns and :ref:`feature-trusted-proxies` for the trust boundary.
+
+The Premium Ignore List suppresses core WP fail2ban logging, blocking, WAF checks, and event storage for selected resolved addresses. Actions registered by third-party integrations through WP fail2ban can still run. Jetpack integration maintains a source list for XML-RPC requests. Country lookup and blocking are described under :ref:`feature-country-blocking`.
 
 .. toctree::
    :maxdepth: 1

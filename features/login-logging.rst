@@ -3,84 +3,30 @@
 Login logging
 =============
 
-|WPf2b| always records failed authentication handled by WordPress. Successful
-form logins are recorded by default and can be turned off with
-:ref:`WP_FAIL2BAN_LOG_AUTH_SUCCESS`. Successful REST and XML-RPC authentications
-are off by default and have their own controls. Each syslog message contains the
-authentication outcome, the submitted username where one is available, and the
-:ref:`resolved client address <feature-remote-ips>`.
+A failed password for a real account can indicate targeted guessing or use of leaked credentials, while an unknown identifier can indicate probing for accounts to target. A successful-login record can help establish whether access was gained. Login logging keeps those outcomes distinct so an operator or jail can recognise the relevant pattern. Its records cover ordinary credential rejections from the normal login form and XML-RPC, failed REST Application Password authentication, and normal-form submissions with a blank username or password. Each syslog message identifies the outcome, the submitted identifier when available, and the :ref:`resolved client address <feature-remote-ips>`.
 
 Authentication outcomes
 -----------------------
 
-Successful form authentication produces an ``Accepted password`` message at Info
-level when :ref:`WP_FAIL2BAN_LOG_AUTH_SUCCESS` is enabled (the default). The
-shipped :ref:`filters-wordpress-good` filter recognises it.
+Successful form authentication produces an ``Accepted password`` Info message when :ref:`WP_FAIL2BAN_LOG_AUTH_SUCCESS` is enabled, as it is by default. It can match :ref:`filters-wordpress-good`. REST and XML-RPC successes have separate controls, :ref:`WP_FAIL2BAN_LOG_AUTH_REST_SUCCESS` and :ref:`WP_FAIL2BAN_LOG_AUTH_XMLRPC_SUCCESS`, both off by default. API clients may authenticate on every request, so enabling either can produce many more success records than form logins. Application Password authentication is included on those interfaces.
 
-Successful REST and XML-RPC authentication can be logged separately when
-:ref:`WP_FAIL2BAN_LOG_AUTH_REST_SUCCESS` or
-:ref:`WP_FAIL2BAN_LOG_AUTH_XMLRPC_SUCCESS` is enabled. Both default to off
-because API clients commonly authenticate on every request, which can produce
-many more success records than interactive login. The messages
-``REST authentication success for …`` and ``XML-RPC authentication success for …``
-also match :ref:`filters-wordpress-good`. Application Password authentications
-on those interfaces are included. A second authentication in the same request,
-success or failure, is recorded with ``(repeat)`` in that event's message class.
+Failure messages distinguish an existing account from an unknown identifier. Ordinary credential failures can match :ref:`filters-wordpress-soft`; unknown REST and XML-RPC users can match :ref:`filters-wordpress-hard`. A blank username or blank password on the normal login form produces a separate soft record; if both are blank, the empty-username outcome is used. If an expired authentication cookie accompanies either outcome, the resulting Info message does not match the shipped soft filter. REST and XML-RPC messages identify their interface; repeated authentication within a request is marked ``(repeat)``.
 
-Failed authentication produces a Notice-level message. The message distinguishes
-an existing account from an unknown username. Ordinary failures match
-:ref:`filters-wordpress-soft`. REST and XML-RPC messages carry a ``REST`` or
-``XML-RPC`` prefix; a failure for an existing account is soft, while an attempt
-for an unknown account matches :ref:`filters-wordpress-hard`. A login form submitted with an empty username
-produces a distinct empty-username record. The ordinary case is a Notice-level
-soft failure. If an expired authentication cookie was also presented, the
-record instead notes that fact at Info level and does not match the shipped
-soft filter.
-
-These classifications make the events available to different fail2ban filters;
-they do not impose a ban by themselves. A jail determines how many matches cause
-a ban and reads the client address from the syslog message. See
-:ref:`configuration__fail2ban` for that relationship.
+The filters make these records available to fail2ban. A jail must read the messages, count matching failures, and execute a ban action before the firewall can change. See :ref:`configuration__fail2ban`.
 
 Syslog and Premium event data
 -----------------------------
 
-The syslog messages do not contain submitted passwords. Premium additionally
-stores a structured row for each authentication event. REST and XML-RPC use
-distinct event names for both success and failure.
+Syslog authentication messages do not contain submitted passwords. Premium event data can retain the submitted password in plain text for ordinary credential rejections, blank-username submissions, blocked-user rejections, and email-only rejections. This includes REST and XML-RPC credential failures. Empty-password rows store the submitted identifier but do not retain a password value. Successful-authentication rows do not store the submitted password field. Raw request-body capture, when enabled, can retain another copy.
 
-For failed authentication, including REST and XML-RPC failures, Premium stores
-the submitted password in plain text in EventData. The distinct empty-username
-event also contains the submitted password. Successful-authentication rows do
-not contain it. Authentication controls that reject a blocked user or a
-username-based login have their own events and also store the password supplied
-to that attempt.
-
-The event database, its backups, and integrations which receive EventData can
-therefore expose submitted authentication secrets. Enabling
-:ref:`WP_FAIL2BAN_EX_LOG_POST_DATA` may retain another copy within the raw request
-body. This database storage is separate from syslog and is not protected by the
-syslog facility.
+The event database and its backups therefore contain sensitive authentication evidence independently of syslog. See :ref:`operating_event_storage` for retention and storage consequences.
 
 Facility and retained evidence
 ------------------------------
 
-Authentication syslog messages use :ref:`WP_FAIL2BAN_AUTH_LOG`, which defaults
-to ``LOG_AUTHPRIV``. This facility is conventionally routed with restricted
-access because authentication records are sensitive; the restriction limits
-ordinary readership but does not make the records non-sensitive. See
-:ref:`facilities` for facility selection and defaults.
+Authentication messages use :ref:`WP_FAIL2BAN_AUTH_LOG`, which defaults to ``LOG_AUTHPRIV``. Changing the facility changes where syslog routes the messages, who can normally read them, and which source the jail must follow; it does not move Premium database events. A destination that discards Info messages may retain failures while losing success evidence. See :ref:`facilities`.
 
-Changing the facility changes where syslog writes the messages, which processes
-can normally read them, and which log source the fail2ban jail must follow. It
-does not move or remove Premium's database events. Facility routing can also
-affect retention: in particular, a destination which discards Info messages
-loses the successful-authentication evidence while Notice-level failures may
-remain.
-
-The :ref:`quickstart_brute_force_protection` card summarises this behaviour.
-The authentication facility and success-logging checkboxes are configured on
-the Logging tab in Advanced settings.
+The :ref:`quickstart_brute_force_protection` card summarises the default behaviour. The authentication facility and success controls appear on the Logging tab in Advanced settings; Free displays its individual controls as read-only.
 
 .. include:: ../autogen/join/feature-login-logging.rst
    :end-before: Source

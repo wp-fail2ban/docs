@@ -3,11 +3,9 @@
 Honeypot
 ========
 
-Premium, experimental. Injects Disallow paths into ``robots.txt`` and treats requests to those paths as hostile (hard). The path list is filterable (``wp_fail2ban_honeypot_robots_txt_trap_paths``).
+Premium, experimental. Automated scanners often request predictable paths that have no legitimate purpose on a site. The honeypot turns requests for selected trap paths into hard evidence, giving a fail2ban jail a strong signal on which to act. If a configured trap also serves legitimate content, ordinary visitors requesting it generate the same hard evidence and can be banned by a jail that acts on those messages. The trap path list can be customised.
 
-``HONEYPOT_ERROR`` reports a problem while processing the honeypot and is not an attack signature.
-
-The :ref:`quickstart_honeypot` card enables the trap and its ``robots.txt`` entries. The individual controls are on the Block tab in Advanced settings.
+:ref:`WP_FAIL2BAN_EX_HONEYPOT` enables the feature as a whole. :ref:`WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT` activates the built-in trap-path matcher and asks WordPress to publish the same paths as ``Disallow`` entries. Both controls must be enabled for those paths to produce evidence. WordPress publishes the entries only on a site marked public; on a non-public site, the matcher remains active without published bait lines. The :ref:`quickstart_honeypot` card enables both controls. Individual controls are on the Premium Honeypot tab in Advanced settings.
 
 .. include:: ../autogen/join/feature-honeypot.rst
    :end-before: Source

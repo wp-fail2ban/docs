@@ -5,16 +5,15 @@ Web Application Firewall
 
 **Edition:** Premium. Experimental.
 
-Selecting the card applies this configuration:
+Selecting the card enables the WAF, SQL injection inspection for plugin SQL about to execute, option protection, and the capability check for user deletion.
 
-* :ref:`WP_FAIL2BAN_EX_WAF` is set to ``enabled``;
-* :ref:`WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS` is set to ``true``;
-* :ref:`WP_FAIL2BAN_EX_WAF_UPDATE_OPTION` is set to ``theme``;
-* :ref:`WP_FAIL2BAN_EX_WAF_USERS_DELETE` is set to ``true``.
+The bundle applies :ref:`WP_FAIL2BAN_EX_WAF` as ``enabled``, :ref:`WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS` and :ref:`WP_FAIL2BAN_EX_WAF_USERS_DELETE` as ``true``, and :ref:`WP_FAIL2BAN_EX_WAF_UPDATE_OPTION` as ``theme``. An existing ``all`` option-protection policy already satisfies the bundle and remains ``all``. That difference matters because ``theme`` permits recognised theme setup changes and ``all`` does not.
 
-This enables SQL-injection checks on plugin paths, protects core option updates while allowing recognised theme setup changes, and requires the ``delete_users`` capability for user deletion. SQL-injection checks on WordPress paths remain at the :ref:`WP_FAIL2BAN_EX_WAF_SQLI_WORDPRESS` default. Country blocking and the honeypot are unaffected.
+The WAF can retain request bodies, headers, SQL, and option values in Premium events even when general extra-field controls are off. Those values can be sensitive and increase database storage. See :ref:`feature-waf` and :ref:`operating_event_storage`.
 
-Blocked events match ``wordpress-wpf2b-waf.conf``; configure a jail for that filter to ban their source addresses. If any requested setting is fixed to a conflicting value in ``wp-config.php``, the card cannot apply the complete configuration and Site Health reports the conflict. The equivalent individual controls are on the Block tab in Advanced settings.
+Blocked WAF messages can match ``wordpress-wpf2b-waf.conf``; a jail must be configured to act on them. The individual controls are on the WAF tab in Advanced settings.
+
+.. include:: card-settings.rst.inc
 
 .. include:: ../../autogen/join/card-web-application-firewall.rst
 
