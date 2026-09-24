@@ -14,7 +14,7 @@ Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY``.
 
    * - syslog
      - Facility
-     - .. include:: ../facility_log_auth.rst
+     - :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES_LOG`
    * -
      - Level
      - .. include:: ../level_notice.rst
@@ -33,7 +33,7 @@ Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY``.
 
 .. seealso::
    | :ref:`fail2ban_filters_tags`
-   | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+   | :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES_LOG`
 
 .. rubric:: History
 .. versionchanged:: 6.0.0

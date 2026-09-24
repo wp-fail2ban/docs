@@ -11,7 +11,7 @@ WP_FAIL2BAN_LOG_AUTH_XMLRPC_SUCCESS
 
 ----
 
-Controls whether successful XML-RPC authentications are written to the syslog facility specified by :ref:`WP_FAIL2BAN_AUTH_LOG`. The message is ``XML-RPC authentication success for …`` at Info level. It matches :ref:`filters-wordpress-good`. Recording it does not cause a ban.
+Controls whether successful XML-RPC authentications are written to the syslog facility specified by :ref:`WP_FAIL2BAN_AUTH_LOG`. The message is ``XML-RPC authentication success for …`` at Info level. It matches :ref:`filters-wordpress-good`.
 
 Disabled by default because XML-RPC clients commonly authenticate on every request, which can produce large numbers of success records.
 

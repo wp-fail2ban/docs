@@ -12,7 +12,10 @@ WP_FAIL2BAN_EX_LOG_PTR
 
 ----
 
-Enables logging of PTR record for blocked requests.
+When enabled, Premium performs a reverse-DNS lookup synchronously while each
+event is created and stores the result when available. The hourly lookup-table
+job does not fill PTR values later. Enabling this setting therefore adds DNS
+work to event-producing requests.
 
 .. code-block:: php
    :caption: Example: Enable PTR record logging
@@ -23,6 +26,7 @@ Enables logging of PTR record for blocked requests.
    define('WP_FAIL2BAN_EX_LOG_PTR', true);
 
 .. seealso::
+   * :ref:`operating_event_storage`
    * :ref:`WP_FAIL2BAN_EX_LOG_HEADERS`
    * :ref:`WP_FAIL2BAN_EX_LOG_POST_DATA`
    * :ref:`WP_FAIL2BAN_EX_LOG_URL`

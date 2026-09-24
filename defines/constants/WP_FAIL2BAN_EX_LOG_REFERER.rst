@@ -12,7 +12,9 @@ WP_FAIL2BAN_EX_LOG_REFERER
 
 ----
 
-Enables logging of the HTTP referer header for blocked requests. [#]_
+When enabled, Premium stores the HTTP Referer for every event when the server
+supplies it. Success-class and WAF-class events select this field independently
+of the setting. [#]_
 
 .. code-block:: php
    :caption: Example: Enable referer logging
@@ -23,6 +25,7 @@ Enables logging of the HTTP referer header for blocked requests. [#]_
    define('WP_FAIL2BAN_EX_LOG_REFERER', true);
 
 .. seealso::
+   * :ref:`operating_event_storage`
    * :ref:`WP_FAIL2BAN_EX_LOG_HEADERS`
    * :ref:`WP_FAIL2BAN_EX_LOG_USER_AGENT`
 

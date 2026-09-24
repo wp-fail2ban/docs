@@ -7,25 +7,24 @@ WP_FAIL2BAN_USING_JOURNALD
 --------------------------
 
 .. rubric:: Configure journald installation detection.
-.. include:: default-disabled.rst.inc
+.. include:: default-not-set.rst.inc
 
 ----
 
-Controls how WPf2b detects if journald is being used.
+Overrides whether |WPf2b| considers journald active. When the constant is not
+set, |WPf2b| automatically checks the local systemd and journal-syslog state.
+Boolean ``true`` forces the detected state to active; boolean ``false`` disables
+it.
 
-By default, WPf2b will try to connect to the journald socket and check if it's running. However, if you are using a different socket or have a custom setup, you can specify the socket path here.
+A string value also forces the state to active, but its contents are not opened
+or used as a local or remote destination. This constant does not select a
+transport: |WPf2b| continues to write through PHP's ordinary
+``openlog()``/``syslog()`` functions.
 
 .. code-block:: php
-   :caption: Example: Set path to journald socket
+   :caption: Example: Force journald detection active
 
-   define('WP_FAIL2BAN_USING_JOURNALD', 'unix:///path/to/journal.socket');
-
-or for a remote socket:
-
-.. code-block:: php
-   :caption: Example: Set remote journald socket
-
-   define('WP_FAIL2BAN_USING_JOURNALD', 'tcp://192.168.1.100:19531');
+   define('WP_FAIL2BAN_USING_JOURNALD', true);
 
 You can also explicitly disable journald detection:
 
@@ -36,4 +35,3 @@ You can also explicitly disable journald detection:
 
 .. rubric:: History
 .. versionadded:: 6.0.0
-   Placeholder - not implemented yet.

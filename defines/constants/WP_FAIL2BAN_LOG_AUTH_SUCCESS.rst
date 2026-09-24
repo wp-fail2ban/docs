@@ -11,7 +11,7 @@ WP_FAIL2BAN_LOG_AUTH_SUCCESS
 
 ----
 
-Controls whether successful form logins are written to the syslog facility specified by :ref:`WP_FAIL2BAN_AUTH_LOG`. The message is ``Accepted password for …`` at Info level. It matches :ref:`filters-wordpress-good`. Recording it does not cause a ban.
+Controls whether successful form logins are written to the syslog facility specified by :ref:`WP_FAIL2BAN_AUTH_LOG`. The message is ``Accepted password for …`` at Info level. It matches :ref:`filters-wordpress-good`.
 
 REST and XML-RPC successes are independent controls: :ref:`WP_FAIL2BAN_LOG_AUTH_REST_SUCCESS` and :ref:`WP_FAIL2BAN_LOG_AUTH_XMLRPC_SUCCESS`.
 

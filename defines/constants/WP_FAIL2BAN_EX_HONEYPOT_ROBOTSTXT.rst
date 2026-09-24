@@ -12,7 +12,10 @@ WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT
 
 ----
 
-Adds honeypot entries to the ``robots.txt`` file.
+When :ref:`WP_FAIL2BAN_EX_HONEYPOT` is also enabled, adds one ``Disallow`` line
+per configured trap path to WordPress's virtual ``robots.txt`` output. WordPress
+publishes those lines only when the site is public. The request matcher remains
+active on a non-public site even though the bait lines are absent.
 
 .. code-block:: php
    :caption: Example: Enable honeypot for robots.txt

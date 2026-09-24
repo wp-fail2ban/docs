@@ -12,7 +12,10 @@ WP_FAIL2BAN_EX_IGNORE_IPS
 
 ----
 
-Specifies a list of IPs to ignore. Matching is against the **resolved client IP**. A match short-circuits the **entire** Free and Premium chain: ``Init`` returns false, so nothing is logged, blocked, or stored for that request.
+Specifies addresses or networks to ignore. Matching uses the resolved client
+address. A match suppresses core Free and Premium feature logging, blocking,
+event storage, and WAF checks for the request. Third-party integrations using
+the public plugin-message API are outside this core guarantee and can still run.
 
 .. code-block:: php
    :caption: Example: Ignore specific IPs

@@ -4,7 +4,16 @@
 Facilities
 ==========
 
-While the full list of facilities is reproduced here for completeness, using anything but **LOG_AUTH**, **LOG_AUTHPRIV**, and/or **LOG_LOCAL0**\ ..\ **7** is unlikely to have the desired results. **LOG_USER** can be used for Notices, but Info messages are generally not saved.
+The shipped Unix default is normally **LOG_AUTHPRIV** for both the
+authentication and user facility families. :ref:`WP_FAIL2BAN_USE_LOG_AUTH` can
+select **LOG_AUTH** or a local facility for the authentication family;
+:ref:`WP_FAIL2BAN_USE_LOG_USER` can make the user family use **LOG_USER** or a
+local facility instead. Individual channel constants can also select a
+supported local facility.
+
+The syslog daemon's own rules determine whether a priority is retained for a
+facility. In particular, some ordinary configurations do not retain Info
+messages sent to **LOG_USER**.
 
 The syslog daemon determines which file receives each facility. Ensure the fail2ban jail reads the same destination; see :ref:`configuration__fail2ban`.
 
@@ -75,3 +84,6 @@ Premium
 ^^^^^^^
 
 .. include:: autogen/premium/default_facilities.rst
+
+The Premium table lists Premium additions. Premium also inherits every Free
+channel above.

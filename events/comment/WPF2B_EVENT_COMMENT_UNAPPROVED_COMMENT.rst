@@ -28,7 +28,7 @@ Premium listener: ``WPF2B_EVENT_COMMENT_UNAPPROVED_COMMENT``.
      - ``Comment attempt on <F-POST_STATUS>unapproved comment</F-POST_STATUS> <F-COMMENT_ID>\d+</F-COMMENT_ID> on post <F-POST_ID>\d+</F-POST_ID>``
    * - EventData
      - ref_id
-     - Parent comment ID
+     - Post ID. The parent comment ID is in ``waf_data.comment_parent``.
 
 .. seealso::
    | :ref:`fail2ban_filters_tags`

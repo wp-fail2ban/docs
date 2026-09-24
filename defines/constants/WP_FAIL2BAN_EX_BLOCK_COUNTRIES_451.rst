@@ -12,15 +12,17 @@ WP_FAIL2BAN_EX_BLOCK_COUNTRIES_451
 
 ----
 
-Blocks requests from specified countries with a 451 "Unavailable For Legal Reasons" status code.
+Returns HTTP 451 "Unavailable For Legal Reasons" for requests whose resolved
+country appears in this list.
 
-Some politicians think their laws apply to the whole world, not just their own country. Rather than deal with demands to comply with laws you've never heard of and had no part in making, *WP fail2ban* can block requests from specified countries with a 451 "Unavailable For Legal Reasons" status code.
+Do not put the same country in this list and
+:ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES`. If an overlap exists despite that
+recommendation, the HTTP 403 list takes precedence, so the 403 event and
+response are used.
 
 The message is deliberately neutral:
 
    The administrator of this site has blocked access from your country.
-
-Future versions will allow you to specify a custom message.
 
 .. code-block:: php
    :caption: Example: Block requests from specific countries
@@ -29,8 +31,8 @@ Future versions will allow you to specify a custom message.
     * Block requests from specified countries
     */
    define('WP_FAIL2BAN_EX_BLOCK_COUNTRIES_451', [
-       'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', // EU (DSA)
-       'GB'  // United Kingdom (OSA)
+       'FR',
+       'GB'
    ]);
 
 .. note::
@@ -38,6 +40,7 @@ Future versions will allow you to specify a custom message.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES_LOG`
+   * :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES`
 
 .. rubric:: History
 .. versionadded:: 6.0.0

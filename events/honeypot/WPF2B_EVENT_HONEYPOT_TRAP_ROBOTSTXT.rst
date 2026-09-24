@@ -13,7 +13,7 @@ Premium listener: ``WPF2B_EVENT_HONEYPOT_TRAP_ROBOTSTXT``.
 |            +-----------+----------------------------------------------------------------------------------------------------+
 |            | Level     | .. include:: ../level_notice.rst                                                                   |
 |            +-----------+----------------------------------------------------------------------------------------------------+
-|            | Example   | ``Attempted access to honeypot (robots.txt: "/phpinfo.php") on fqdn.example.com from 192.0.42.1``  |
+|            | Example   | ``Attempted access to honeypot (robots.txt: /phpinfo.php) on fqdn.example.com from 192.0.42.1``    |
 +------------+-----------+----------------------------------------------------------------------------------------------------+
 | fail2ban   | Filter    | :ref:`filters-wordpress-hard`                                                                      |
 |            +-----------+----------------------------------------------------------------------------------------------------+

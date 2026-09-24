@@ -28,5 +28,5 @@ Specifies the syslog facility to use when logging Web Application Firewall event
 
 .. rubric:: History
 .. versionchanged:: 6.0.0
-   Changed default facility to :ref:`LOG_AUTH <facilities>`.
+   Changed to the authentication-family default.
 .. versionadded:: 5.1.0

@@ -30,11 +30,12 @@ Example
            'fail'        => 'hard',
            'priority'    => LOG_NOTICE,
            'event_class' => 'Password',
+           'event_desc'  => 'Rejected password operation',
            'event_id'    => 0x001F,
            'message'     => 'Message with ___VAR1___ and ___VAR2___',
            'vars'        => [
                'VAR1' => '\d+',
-               'VAR2' => '*.'
+               'VAR2' => '.*'
            ]
        ];
        try {
@@ -54,6 +55,9 @@ Example
        __NAMESPACE__.'\myplugin_wpf2b_register'
    );
 
+   // Ship a fail2ban filter for this message with the integration. Registration
+   // does not generate one and does not validate substitutions at log time.
+
    /**
     *
     */
@@ -70,4 +74,3 @@ Example
            $vars
        );
    }
-

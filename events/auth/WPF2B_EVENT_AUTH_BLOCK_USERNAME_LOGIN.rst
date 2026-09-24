@@ -19,6 +19,8 @@ Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USERNAME_LOGIN``.
 |            | Rule      | ``Blocked username authentication attempt for <F-ALT_USER>.*</F-ALT_USER><_tail>``           |
 +------------+-----------+-----------------------------------+----------------------------------------------------------+
 | EventData  | username  | .. include:: ../username-type.rst | .. include:: ../username-description.rst                 |
+|            +-----------+-----------------------------------+----------------------------------------------------------+
+|            | password  | .. include:: ../password-type.rst | .. include:: ../password-description.rst                 |
 +------------+-----------+-----------------------------------+----------------------------------------------------------+
 
 .. seealso::

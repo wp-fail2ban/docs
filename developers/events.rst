@@ -5,15 +5,25 @@ Event actions
 
 .. versionadded:: 5.0.0
 
-On Premium, after an event is stored, |WPf2b| runs::
+On Premium, a reached core event dispatches::
 
    do_action('WPF2B_EVENT_'.$name, $event_data);
 
-``$name`` is the event constant name (``AUTH_FAIL``, ``PASSWORD_REQUEST_OK``, …). Third-party messages use ``WPF2B_PLUGIN_EVENT_`` plus the registered message name.
+``$name`` is the documented core event name (``AUTH_FAIL``,
+``PASSWORD_REQUEST_OK``, …). The action reports the occurrence. It is not a
+persistence notification: the main event row or its separate detail may still
+fail to be stored.
+
+For a registered plugin message, show the **Event Name** column on the Premium
+**Plugins** tab (hidden by default) and use the exact action identifier shown.
+Pass that value unchanged as the first argument to ``add_action()``. The
+identifier is opaque and must not be predicted from registration values.
 
 ``$event_data`` is :ref:`developers_events_event-data`.
 
-Listen with ``add_action('WPF2B_EVENT_AUTH_FAIL', 'my_handler')``. Core/Free still writes syslog without this hook.
+Listen with ``add_action('WPF2B_EVENT_AUTH_FAIL', 'my_handler')``. Core/Free
+also logs the event to syslog. See :ref:`operating_event_storage` for the
+persistence boundary.
 
 .. code-block:: php
 

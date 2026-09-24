@@ -12,11 +12,20 @@ WP_FAIL2BAN_EX_BLOCK_COUNTRIES_DISABLE_STATS
 
 ----
 
-By default, each country-block denial increments counters stored in a site option. Those counts appear on the Country Blocks dashboard widget when a country list is configured.
+By default, each country-block denial updates lightweight counters stored in a
+site option. On multisite it also updates a separate network-wide aggregate.
+These updates are best-effort: concurrent requests can overwrite increments,
+so the counts are operational summaries rather than an exact audit record.
 
-Defining this constant as ``true`` stops collection. Denials still return the usual HTTP status, write to syslog, and record a Premium event; only the counters are skipped. The counts are not a fail2ban jail and do not themselves ban an address.
+Defining this constant as ``true`` stops collection. Denials still return the
+usual HTTP status, write the usual syslog message, and record the Premium event;
+only the counters are skipped.
 
-The widget is not registered when both country lists are empty.
+The site dashboard reads site counters; the network dashboard reads the network
+aggregate. The widget is not registered when both country lists are empty, and
+its Premium plan requirement is Bronze or higher on single-site and Silver or
+higher on multisite. Its known-country 403 bucket excludes unresolved-country
+fail-closed responses, which have their own unknown-country bucket.
 
 .. code-block:: php
    :caption: Example: Disable country-block counters

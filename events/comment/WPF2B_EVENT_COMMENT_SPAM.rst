@@ -8,6 +8,8 @@ WPF2B_EVENT_COMMENT_SPAM
 Premium listener: ``WPF2B_EVENT_COMMENT_SPAM``.
 
 The address is the comment author's stored IP. When a moderator marks an existing comment as spam, that stored address is used rather than the moderator's request address.
+The message records the actual WordPress comment type in its
+``F-COMMENT_TYPE`` capture; ``comment`` is one possible value.
 
 +------------+-----------+-----------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_spam_log.rst                     |
@@ -18,7 +20,7 @@ The address is the comment author's stored IP. When a moderator marks an existin
 +------------+-----------+-----------------------------------------------------------+
 | fail2ban   | Filter    | :ref:`filters-wordpress-hard`                             |
 |            +-----------+-----------------------------------------------------------+
-|            | Rule      | ``Spam comment <F-COMMENT_ID>\d+</F-COMMENT_ID><_tail>``  |
+|            | Rule      | .. include:: comment-spam-rule.rst.inc                    |
 +------------+-----------+-----------------------------------+-----------------------+
 | EventData  | ref_id    | .. include:: ../ref_id-type.rst   | Comment ID            |
 +------------+-----------+-----------------------------------+-----------------------+
@@ -28,5 +30,5 @@ The address is the comment author's stored IP. When a moderator marks an existin
 
 .. rubric:: History
 .. versionchanged:: 6.0.0
-   Added ``F-COMMENT_ID`` tag.
+   Added ``F-COMMENT_TYPE`` and ``F-COMMENT_ID`` tags.
 .. versionadded:: 4.0.0

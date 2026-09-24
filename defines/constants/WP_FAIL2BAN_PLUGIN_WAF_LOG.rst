@@ -7,8 +7,7 @@ WP_FAIL2BAN_PLUGIN_WAF_LOG
 ---------------------------
 
 .. rubric:: Facility for "WAF" class plugin events.
-.. include:: default-log_auth.rst.inc
-.. include:: premium-only.rst.inc
+.. include:: default-log_user.rst.inc
 
 ----
 
@@ -24,8 +23,8 @@ Specifies the syslog facility to use when logging WAF events from plugins.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_LOG_WAF`
+   * :ref:`WP_FAIL2BAN_USE_LOG_USER`
+   * :ref:`facilities`
 
 .. rubric:: History
-.. versionchanged:: 6.0.0
-   Changed default facility to :ref:`LOG_AUTH <facilities>`.
 .. versionadded:: 5.1.0

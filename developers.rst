@@ -10,8 +10,13 @@ Plugins can log through these public interfaces:
 * ``wp_fail2ban_register_plugin``
 * ``wp_fail2ban_register_message`` / ``wp_fail2ban_register_messages``
 * ``wp_fail2ban_log_message``
-* ``WPF2B_EVENT_*`` and ``WPF2B_PLUGIN_EVENT_*`` actions (Premium), argument :ref:`developers_events_event-data`
-* ``WPF2B_EVENT_*`` / ``WPF2B_PLUGIN_EVENT_*`` constants for event ids
+* documented ``WPF2B_EVENT_*`` actions and opaque plugin event actions
+  (Premium), with :ref:`developers_events_event-data`
+* ``WPF2B_EVENT_*`` constants for core event IDs
+
+Plugin event actions are not PHP event-ID constants. Obtain the exact action
+identifier from the **Event Name** column on the Premium **Plugins** tab; the
+column is hidden by default.
 
 .. toctree::
    :maxdepth: 1

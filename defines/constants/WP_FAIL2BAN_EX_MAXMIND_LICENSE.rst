@@ -11,7 +11,10 @@ WP_FAIL2BAN_EX_MAXMIND_LICENSE
 
 ----
 
-Your MaxMind GeoIP2 license key for country blocking functionality.
+Supplies the MaxMind licence key used to download and refresh the local
+GeoLite2-Country database. MaxMind-based country resolution reads that local
+database during requests. Cloudflare-only country resolution does not require
+this key.
 
 .. code-block:: php
    :caption: Example: Setting MaxMind license key
@@ -23,6 +26,7 @@ Your MaxMind GeoIP2 license key for country blocking functionality.
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES`
+   * :ref:`WP_FAIL2BAN_EX_GEOLOCATION`
 
 .. rubric:: History
 .. versionadded:: 4.3.0

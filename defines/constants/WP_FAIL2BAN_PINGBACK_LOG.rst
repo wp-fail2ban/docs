@@ -6,18 +6,20 @@
 WP_FAIL2BAN_PINGBACK_LOG
 ------------------------
 
-.. rubric:: Facility for logging pingbacks.
+.. rubric:: Facility for logging pingbacks and trackbacks.
 .. include:: default-log_user.rst.inc
 
 ----
 
-Specifies the syslog facility to use when logging XML-RPC pingback events.
+Specifies the syslog facility for ordinary XML-RPC pingback events and
+WordPress trackback success/failure events. The multicall pingback-limit message
+uses :ref:`WP_FAIL2BAN_AUTH_LOG` instead.
 
 .. code-block:: php
    :caption: Example: Using LOG_LOCAL3
 
    /**
-    * Facility for logging pingbacks.
+    * Facility for logging pingbacks and trackbacks.
     */
    define('WP_FAIL2BAN_PINGBACK_LOG', LOG_LOCAL3);
 

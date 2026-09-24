@@ -11,7 +11,16 @@ WP_FAIL2BAN_LOG_PASSWORD_REQUEST
 
 ----
 
-Enables logging of password reset requests. When enabled, the username and IP address will be written to the syslog facility specified by :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG`.
+Enables password-reset request evidence. When enabled, an accepted request for
+a recognised account produces :ref:`WPF2B_EVENT_PASSWORD_REQUEST`; a rejected
+request produces :ref:`WPF2B_EVENT_PASSWORD_REQUEST_FAIL`. Both use
+:ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG`.
+
+The accepted event means WordPress recognised the account and accepted the
+request far enough to provide the security signal. It does not prove that a
+reset key was stored, mail was sent or delivered, or the password was changed.
+The rejected event can contain a submitted username that does not identify an
+account. Defining the setting as ``false`` suppresses both outcomes.
 
 .. code-block:: php
    :caption: Example: Enable password reset request logging
@@ -23,6 +32,7 @@ Enables logging of password reset requests. When enabled, the username and IP ad
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG`
+   * :ref:`feature-password-reset`
 
 .. rubric:: History
 .. versionadded:: 3.5.0

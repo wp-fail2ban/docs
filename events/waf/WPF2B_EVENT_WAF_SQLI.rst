@@ -11,14 +11,18 @@ Premium listener: ``WPF2B_EVENT_WAF_SQLI``.
 +-----------+-----------+-----------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_EX_WAF_LOG`                             |
 |           +-----------+-----------------------------------------------------------+
-|           | Level     | WARNING if enabled, NOTICE if logging only                |
+|           | Level     | WARNING                                                   |
 |           +-----------+-----------------------------------------------------------+
-|           | Example   | ``WAF blocked SQLi on fqdn.example.com from 192.0.42.1``  |
+|           | Example   | ``WAF[blocked] SQLi ...``                                 |
 +-----------+-----------+-----------------------------------------------------------+
 | fail2ban  | Filter    | :ref:`filters-wordpress-wpf2b-waf`                        |
 |           +-----------+-----------------------------------------------------------+
 |           | Rule      | ``SQLi<_tail>``                                           |
 +-----------+-----------+-----------------------------------------------------------+
+
+.. include:: waf-event-common.rst.inc
+
+EventData detail contains the full SQL.
 
 .. seealso::
    | :ref:`fail2ban_filters_tags`

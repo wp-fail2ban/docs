@@ -12,7 +12,11 @@ WP_FAIL2BAN_EX_HONEYPOT
 
 ----
 
-Enables the honeypot functionality.
+Enables matching of configured honeypot request paths. Publishing the built-in
+trap paths in virtual ``robots.txt`` also requires
+:ref:`WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT` and WordPress's public-site setting.
+On a non-public site the matcher can remain active while the bait lines are not
+published.
 
 .. code-block:: php
    :caption: Example: Enable honeypot

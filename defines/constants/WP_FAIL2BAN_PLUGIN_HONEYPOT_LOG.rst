@@ -7,7 +7,7 @@ WP_FAIL2BAN_PLUGIN_HONEYPOT_LOG
 --------------------------------
 
 .. rubric:: Facility for honeypot events.
-.. include:: default-log_auth.rst.inc
+.. include:: default-log_user.rst.inc
 
 ----
 
@@ -22,7 +22,7 @@ Specifies the syslog facility to use when logging Honeypot events.
    define('WP_FAIL2BAN_PLUGIN_HONEYPOT_LOG', LOG_LOCAL3);
 
 .. seealso::
-   * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+   * :ref:`WP_FAIL2BAN_USE_LOG_USER`
    * :ref:`facilities`
 
 .. rubric:: History

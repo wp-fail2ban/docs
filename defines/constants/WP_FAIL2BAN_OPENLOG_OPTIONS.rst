@@ -7,11 +7,12 @@ WP_FAIL2BAN_OPENLOG_OPTIONS
 ---------------------------
 
 .. rubric:: Configure syslog options.
-.. include:: default-disabled.rst.inc
+.. rubric:: Default: ``LOG_PID | LOG_NDELAY``
 
 ----
 
-Allows configuration of PHP's openlog options. These control how messages are written to the system log.
+Sets the option mask passed to PHP's ``openlog()``. The shipped default includes
+the process ID and opens the connection immediately.
 
 .. code-block:: php
    :caption: Example: Set syslog options

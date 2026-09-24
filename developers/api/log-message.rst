@@ -13,6 +13,12 @@ Log Message
 
    :throw \InvalidArgumentException: Plugin or message not registered.
 
+Substitutions are literal. The caller must supply correct values; |WPf2b| does
+not validate them against the regular-expression metadata recorded during
+registration. |WPf2b| logs the resulting message to the configured syslog
+facility and, on Premium, records the corresponding plugin event. The
+integration must provide its own fail2ban filter.
+
 
 Example
 """""""

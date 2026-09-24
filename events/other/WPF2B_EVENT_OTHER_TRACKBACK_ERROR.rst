@@ -8,10 +8,14 @@ WPF2B_EVENT_OTHER_TRACKBACK_ERROR
 
 Premium listener: ``WPF2B_EVENT_OTHER_TRACKBACK_ERROR``.
 
+Recorded when :ref:`WP_FAIL2BAN_LOG_PINGBACKS` is enabled and a trackback
+request reaches WordPress's pre-processing path but does not reach successful
+insertion before shutdown.
+
 +-----------+-----------+---------------------------------------------------------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_PINGBACK_LOG`                                                                               |
 |           +-----------+---------------------------------------------------------------------------------------------------------------+
-|           | Level     | INFO                                                                                                          |
+|           | Level     | NOTICE                                                                                                        |
 |           +-----------+---------------------------------------------------------------------------------------------------------------+
 |           | Example   | ``Trackback failed for post 123 by "https://trackback.example/foo/bar" on fqdn.example.com from 192.0.42.1``  |
 +-----------+-----------+---------------------------------------------------------------------------------------------------------------+
@@ -36,6 +40,7 @@ Premium listener: ``WPF2B_EVENT_OTHER_TRACKBACK_ERROR``.
 
 .. seealso::
    | :ref:`fail2ban_filters_tags`
+   | :ref:`WP_FAIL2BAN_LOG_PINGBACKS`
 
 .. rubric:: History
 .. versionadded:: 6.0.0

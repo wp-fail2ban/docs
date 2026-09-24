@@ -12,7 +12,15 @@ WP_FAIL2BAN_EX_BLOCK_COUNTRIES
 
 ----
 
-Blocks requests from specified countries using MaxMind's GeoIP2 database. Requires a MaxMind license key (see :ref:`WP_FAIL2BAN_EX_MAXMIND_LICENSE`).
+Returns HTTP 403 for requests whose resolved country appears in this list.
+Country resolution follows :ref:`WP_FAIL2BAN_EX_GEOLOCATION`: it can use the
+local MaxMind database, a trusted Cloudflare country header, or the configured
+combination. A MaxMind licence is therefore not required for a working
+Cloudflare-only policy.
+
+Do not put the same country in this list and
+:ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES_451`. If an overlap exists, this HTTP 403
+list takes precedence.
 
 .. code-block:: php
    :caption: Example: Block requests from specific countries
@@ -31,6 +39,7 @@ Blocks requests from specified countries using MaxMind's GeoIP2 database. Requir
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES_LOG`
+   * :ref:`WP_FAIL2BAN_EX_GEOLOCATION`
    * :ref:`WP_FAIL2BAN_EX_MAXMIND_LICENSE`
 
 .. rubric:: History

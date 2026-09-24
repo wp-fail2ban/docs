@@ -23,8 +23,14 @@ Recorded when the normal login form is submitted with a nonblank identifier and 
 | EventData  | username  | .. include:: ../username-type.rst | .. include:: ../username-description.rst        |
 +------------+-----------+-----------------------------------+-------------------------------------------------+
 
+The EventData ``password`` field is ``null``. If an expired authentication
+cookie was observed earlier in the request, the syslog message includes
+``(cookie expired)`` and uses Info rather than Notice. That variant does not
+match the shipped soft filter, although Premium still records the event.
+
 .. seealso::
    | :ref:`WPF2B_EVENT_AUTH_EMPTY_USER`
+   | :ref:`operating_event_storage`
    | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
 
 .. rubric:: History

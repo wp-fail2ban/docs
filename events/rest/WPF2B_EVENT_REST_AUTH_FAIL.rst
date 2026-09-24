@@ -7,7 +7,9 @@ WPF2B_EVENT_REST_AUTH_FAIL
 
 Premium listener: ``WPF2B_EVENT_REST_AUTH_FAIL``.
 
-Emitted from ``wp_login_failed`` when ``REST_REQUEST`` is defined. Unknown-user attempts are a hard failure; known-user failures are soft.
+Emitted for reached REST authentication failures, including failed Application
+Password authentication. Unknown-user attempts are a hard failure; known-user
+failures are soft.
 
 .. list-table::
    :stub-columns: 1
@@ -31,6 +33,9 @@ Emitted from ``wp_login_failed`` when ``REST_REQUEST`` is defined. Unknown-user 
    * - EventData
      - username
      - .. include:: ../username-description.rst
+   * -
+     - password
+     - Submitted password.
 
 .. seealso::
    | :ref:`fail2ban_filters_tags`

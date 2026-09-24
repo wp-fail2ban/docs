@@ -6,18 +6,26 @@
 WP_FAIL2BAN_LOG_PINGBACKS
 -------------------------
 
-.. rubric:: Log pingbacks.
+.. rubric:: Log pingbacks and trackbacks.
 .. include:: default-disabled.rst.inc
 
 ----
 
-Enables logging of XML-RPC pingback requests. When enabled, pingback events will be written to the syslog facility specified by :ref:`WP_FAIL2BAN_PINGBACK_LOG`.
+Enables ordinary XML-RPC pingback and WordPress trackback evidence. Both use
+:ref:`WP_FAIL2BAN_PINGBACK_LOG`. Trackback success and failure listeners are
+disabled with this setting, as are ordinary pingback success/error records.
+
+The one-pingback-per-XML-RPC-request limit is independent of this setting. On a
+second ``pingback.ping`` call, |WPf2b| returns a per-call fault and records
+:ref:`WPF2B_EVENT_XMLRPC_PINGBACK_MULTI` once for the request. The message text
+and shipped-filter match differ according to whether ordinary pingback logging
+is enabled.
 
 .. code-block:: php
    :caption: Example: Enable pingback logging
 
    /**
-    * Log pingbacks.
+    * Log pingbacks and trackbacks.
     */
    define('WP_FAIL2BAN_LOG_PINGBACKS', true);
 

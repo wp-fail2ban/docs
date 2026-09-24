@@ -31,6 +31,9 @@ Emitted from ``wp_login_failed`` when the request is XML-RPC. Unknown-user attem
    * - EventData
      - username
      - .. include:: ../username-description.rst
+   * -
+     - password
+     - Submitted password.
 
 .. seealso::
    | :ref:`fail2ban_filters_tags`

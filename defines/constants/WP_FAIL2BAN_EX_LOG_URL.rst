@@ -12,7 +12,11 @@ WP_FAIL2BAN_EX_LOG_URL
 
 ----
 
-Enables logging of the full request URL for blocked requests.
+When enabled, Premium stores the request method and ``REQUEST_URI`` for every
+event when those values are available. ``REQUEST_URI`` is a request target, not
+an absolute URL assembled from scheme and host, and it can include a query
+string. Success-class and WAF-class events select these fields independently of
+this setting.
 
 .. code-block:: php
    :caption: Example: Enable URL logging
@@ -23,6 +27,7 @@ Enables logging of the full request URL for blocked requests.
    define('WP_FAIL2BAN_EX_LOG_URL', true);
 
 .. seealso::
+   * :ref:`operating_event_storage`
    * :ref:`WP_FAIL2BAN_EX_LOG_HEADERS`
    * :ref:`WP_FAIL2BAN_EX_LOG_PTR`
    * :ref:`WP_FAIL2BAN_EX_LOG_POST_DATA`

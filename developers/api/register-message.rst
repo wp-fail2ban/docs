@@ -3,47 +3,68 @@
 Register Message
 ^^^^^^^^^^^^^^^^
 
-.. php:function:: do_action(string $action, string $slug, array $args): void
-   :noindex:
+Register one message with::
 
-   :param string $action: Must be ``wp_fail2ban_register_message`` (single message) or ``wp_fail2ban_register_messages`` (array of messages).
-   :param string $slug: The plugin slug used in :ref:`developers_api_register-plugin`.
-   :param string $args['slug']: The message slug.
-   :param string $args['fail']: Recommended action.
-   :param int $args['priority']: *syslog* priority to use. Only the following priorities are supported:
+   do_action('wp_fail2ban_register_message', $plugin_slug, $message);
 
-            * LOG_CRIT
-            * LOG_ERR
-            * LOG_WARNING
-            * LOG_NOTICE
-            * LOG_INFO
-            * LOG_DEBUG
-   :param string $args['event_class']: Class of Event. This is one of:
+Register several messages with::
 
-            Auth
-               Authentication-related Events.
-            Block
-               Blocking Events.
-            Comment
-               Comment-related Events.
-            XMLRPC
-               XML-RPC-related Events.
-            Password
-               Password-related Events.
-            REST
-               REST API-related Events.
-            Spam
-               Spam-related Events. 
+   do_action('wp_fail2ban_register_messages', $plugin_slug, $messages);
 
-   :param int $args['event_id']: Event ID - 16 bits you may do with as you please.
-   :param string $args['message']: Message with substitutions. Note that " from *<IP>*" is appended.
-   :param array<string, string> $args['vars']: An array of substitutions mapped to regular expressions.
+``$message`` is one message array. ``$messages`` is a list of message arrays;
+each element has the same shape as ``$message``. The plugin must already have
+been registered with :ref:`developers_api_register-plugin`.
 
-         When logging a message the substitutions are checked and substituted if present. The regex will be used to generate a matching rule for `fail2ban`.
+Message shape
+"""""""""""""
 
-   :throw \InvalidArgumentException: Missing entry or invalid type. The ``message`` will give details.
-   :throw \UnexpectedValueException: Invalid value. The ``message`` will say which.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 16 64
 
+   * - Key
+     - Type
+     - Meaning
+   * - ``slug``
+     - ``string``
+     - Message slug, used again when logging the message.
+   * - ``fail``
+     - ``string``
+     - Registration metadata. The accepted values are ``hard``, ``soft``, and
+       ``extra``.
+   * - ``priority``
+     - ``int``
+     - Syslog priority: ``LOG_CRIT``, ``LOG_ERR``, ``LOG_WARNING``,
+       ``LOG_NOTICE``, ``LOG_INFO``, or ``LOG_DEBUG``.
+   * - ``event_class``
+     - ``string``
+     - One of ``Auth``, ``Block``, ``Comment``, ``XMLRPC``, ``Password``,
+       ``REST``, ``Spam``, ``Other``, ``WAF``, or ``Honeypot``. Matching is
+       case-insensitive.
+   * - ``event_desc``
+     - ``string``
+     - Optional description recorded with the registration.
+   * - ``event_id``
+     - ``int``
+     - Integration-defined 16-bit event ID.
+   * - ``message``
+     - ``string``
+     - Message template. `` from <IP>`` is appended by |WPf2b|.
+   * - ``vars``
+     - ``array<string, string>``
+     - Placeholder names mapped to regular-expression metadata.
+
+At log time, |WPf2b| literally replaces supplied ``___NAME___`` placeholders
+and logs the resulting message to the configured syslog facility. On Premium,
+it also records the corresponding plugin event. |WPf2b| does not validate
+supplied values against ``vars`` regular expressions, and the ``fail`` and
+``vars`` values do not generate an integration-specific fail2ban rule. The
+integration is responsible for supplying and maintaining that rule and for
+passing correct substitutions.
+
+The actions can throw ``InvalidArgumentException`` for an unregistered plugin,
+a missing entry, or an invalid type, and ``UnexpectedValueException`` for an
+invalid accepted value.
 
 .. _developers_api_register-message_example:
 
@@ -53,22 +74,28 @@ Example
 .. code-block:: php
    :linenos:
 
-   $args = [
+   $message = [
        'slug'        => 'my-plugin-msg-slug-1',
        'fail'        => 'hard',
        'priority'    => LOG_NOTICE,
        'event_class' => 'Password',
+       'event_desc'  => 'Rejected password operation',
        'event_id'    => 0x001F,
        'message'     => 'Message with ___VAR1___ and ___VAR2___',
        'vars'        => [
-           'VAR1' => '\d+',
-           'VAR2' => '*.'
-       ]
+           'VAR1' => '\\d+',
+           'VAR2' => '.*',
+       ],
    ];
+
    try {
-       do_action('wp_fail2ban_register_message', 'my-plugin-slug', $args);
-   } catch(\InvalidArgumentException $e) {
-       // Missing entry or invalid type
-   } catch(\UnexpectedValueException $e) {
-       // Invalid value
+       do_action(
+           'wp_fail2ban_register_message',
+           'my-plugin-slug',
+           $message
+       );
+   } catch (\InvalidArgumentException $e) {
+       // Missing entry, invalid type, or plugin not registered.
+   } catch (\UnexpectedValueException $e) {
+       // Invalid accepted value.
    }

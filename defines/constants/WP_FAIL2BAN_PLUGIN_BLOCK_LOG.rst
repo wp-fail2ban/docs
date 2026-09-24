@@ -7,7 +7,7 @@ WP_FAIL2BAN_PLUGIN_BLOCK_LOG
 ----------------------------
 
 .. rubric:: Facility for "Block" class plugin events.
-.. include:: default-log_auth.rst.inc
+.. include:: default-log_user.rst.inc
 
 ----
 
@@ -23,7 +23,7 @@ Specifies the syslog facility to use when logging block-related events from plug
 
 .. seealso::
    * :ref:`WP_FAIL2BAN_PLUGIN_LOG_BLOCK`
-   * :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+   * :ref:`WP_FAIL2BAN_USE_LOG_USER`
    * :ref:`facilities`
 
 .. rubric:: History

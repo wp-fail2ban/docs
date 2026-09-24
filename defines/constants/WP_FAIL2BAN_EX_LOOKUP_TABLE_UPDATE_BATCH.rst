@@ -7,10 +7,15 @@ WP_FAIL2BAN_EX_LOOKUP_TABLE_UPDATE_BATCH
 ----------------------------------------
 
 .. rubric:: Batch size for updating the lookup table.
-.. rubric:: Default: 1000
+.. rubric:: Default: 10,000
 .. rubric:: Minimum: 100
 
 ----
+
+Sets the maximum number of missing event classification/index rows that the
+hourly lookup-table job fills in one batch. Values below 100 are raised to the
+job's minimum of 100. This job does not back-fill country or PTR fields in
+stored event rows.
 
 .. code-block:: php
    :caption: Example: Update the lookup table in batches of 75000.

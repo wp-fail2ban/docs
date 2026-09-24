@@ -11,14 +11,18 @@ Premium listener: ``WPF2B_EVENT_WAF_WP_DELETE_USER``.
 +-----------+-----------+------------------------------------------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_EX_WAF_LOG`                                                                  |
 |           +-----------+------------------------------------------------------------------------------------------------+
-|           | Level     | WARNING if enabled, NOTICE if logging only                                                     |
+|           | Level     | WARNING                                                                                        |
 |           +-----------+------------------------------------------------------------------------------------------------+
-|           | Example   | ``WAF blocked attempt to delete user Arthur (42) on fqdn.example.com from 192.0.42.1``         |
+|           | Example   | ``WAF[blocked] wp_delete_user(42)="Arthur" on fqdn.example.com from 192.0.42.1``               |
 +-----------+-----------+------------------------------------------------------------------------------------------------+
 | fail2ban  | Filter    | :ref:`filters-wordpress-wpf2b-waf`                                                             |
 |           +-----------+------------------------------------------------------------------------------------------------+
 |           | Rule      | ``wp_delete_user\(<F-ALT_USER_ID>\d+</F-ALT_USER_ID>\)="<F-ALT_USER>.*</F-ALT_USER>"<_tail>``  |
 +-----------+-----------+------------------------------------------------------------------------------------------------+
+
+.. include:: waf-event-common.rst.inc
+
+EventData detail contains the user ID and username.
 
 .. seealso::
    | :ref:`fail2ban_filters_tags`

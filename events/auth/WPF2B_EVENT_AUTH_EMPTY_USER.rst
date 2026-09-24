@@ -19,7 +19,14 @@ Premium listener: ``WPF2B_EVENT_AUTH_EMPTY_USER``.
 |           | Rule      | ``Authentication attempt with empty (?:username|password)<_tail>``                  |
 +-----------+-----------+-------------------------------------------------------------------------------------+
 
+Premium EventData stores the submitted ``password``; ``username`` is ``null``.
+If an expired authentication cookie was observed earlier in the request, the
+syslog message includes ``(cookie expired)`` and uses Info rather than Notice.
+That variant does not match the shipped soft filter, although Premium still
+records the event.
+
 .. seealso::
+   | :ref:`operating_event_storage`
    | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
 
 .. rubric:: History

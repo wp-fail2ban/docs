@@ -7,18 +7,21 @@ WP_FAIL2BAN_EX_WAF_UPDATE_OPTION
 --------------------------------
 
 .. rubric:: Enable capability checking for option updates.
-.. include:: default-disabled.rst.inc
+.. rubric:: Default setting: ``all``
 .. include:: premium-only.rst.inc
 
 ----
 
 Checks updates to WordPress core options. Users need ``manage_options``, or ``manage_network_options`` on multisite, to change a protected option.
+The global WAF state is separately disabled by default; this individual default
+applies when WAF is enabled or set to logging.
 
 ``all``
    Protect all listed core options.
 
 ``theme``
-   Protect the same options, but allow recognised image-size changes during ``after_theme_setup``.
+   Protect the same options, but allow recognised image-size changes during
+   WordPress's ``after_setup_theme`` lifecycle action.
 
 ``disabled``
    Do not check option updates.

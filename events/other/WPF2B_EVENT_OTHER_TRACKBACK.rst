@@ -7,6 +7,10 @@ WPF2B_EVENT_OTHER_TRACKBACK
 
 Premium listener: ``WPF2B_EVENT_OTHER_TRACKBACK``.
 
+Recorded only when :ref:`WP_FAIL2BAN_LOG_PINGBACKS` is enabled. EventData
+``ref_id`` is the stored trackback comment ID; the target post ID remains in
+``waf_data.post_id``.
+
 +-----------+-----------+-------------------------------------------------------------------------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_PINGBACK_LOG`                                                                                               |
 |           +-----------+-------------------------------------------------------------------------------------------------------------------------------+
@@ -35,6 +39,7 @@ Premium listener: ``WPF2B_EVENT_OTHER_TRACKBACK``.
 
 .. seealso::
    | :ref:`fail2ban_filters_tags`
+   | :ref:`WP_FAIL2BAN_LOG_PINGBACKS`
 
 .. rubric:: History
 .. versionadded:: 6.0.0

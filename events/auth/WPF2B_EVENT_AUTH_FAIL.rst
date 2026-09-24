@@ -20,6 +20,8 @@ Premium listener: ``WPF2B_EVENT_AUTH_FAIL``.
 |            | Rule      | ``Authentication (?:failure(?: \(repeat\))? for|attempt(?: \(repeat\))? for unknown user) <F-ALT_USER>.*</F-ALT_USER><_tail>`` |
 +------------+-----------+-----------------------------------+--------------------------------------------------------------------------------------------+
 | EventData  | username  | .. include:: ../username-type.rst | .. include:: ../username-description.rst                                                   |
+|            +-----------+-----------------------------------+--------------------------------------------------------------------------------------------+
+|            | password  | .. include:: ../password-type.rst | .. include:: ../password-description.rst                                                   |
 +------------+-----------+-----------------------------------+--------------------------------------------------------------------------------------------+
 
 .. seealso::

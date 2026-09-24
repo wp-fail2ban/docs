@@ -12,7 +12,9 @@ WP_FAIL2BAN_EX_LOG_USER_AGENT
 
 ----
 
-Enables logging of the HTTP User-Agent header for blocked requests.
+When enabled, Premium stores the HTTP User-Agent for every event when the server
+supplies it. Success-class and WAF-class events select this field independently
+of the setting.
 
 .. code-block:: php
    :caption: Example: Enable User-Agent logging
@@ -23,6 +25,7 @@ Enables logging of the HTTP User-Agent header for blocked requests.
    define('WP_FAIL2BAN_EX_LOG_USER_AGENT', true);
 
 .. seealso::
+   * :ref:`operating_event_storage`
    * :ref:`WP_FAIL2BAN_EX_LOG_HEADERS`
    * :ref:`WP_FAIL2BAN_EX_LOG_REFERER`
 

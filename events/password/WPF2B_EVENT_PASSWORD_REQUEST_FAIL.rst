@@ -7,6 +7,12 @@ WPF2B_EVENT_PASSWORD_REQUEST_FAIL
 
 Premium listener: ``WPF2B_EVENT_PASSWORD_REQUEST_FAIL``.
 
+Recorded when :ref:`WP_FAIL2BAN_LOG_PASSWORD_REQUEST` is enabled and WordPress
+rejects the request at a covered validation or password-reset policy stage.
+This includes a submitted username that does not identify an account. The
+stored username is the submitted value and does not imply that an account
+exists.
+
 .. list-table::
    :stub-columns: 1
    :widths: 12 18 70
@@ -30,11 +36,10 @@ Premium listener: ``WPF2B_EVENT_PASSWORD_REQUEST_FAIL``.
      - username
      - .. include:: ../username-description.rst
 
-Logged from ``lostpassword_post`` when WordPress reports errors on the reset form.
-
 .. seealso::
    | :ref:`fail2ban_filters_tags`
    | :ref:`WPF2B_EVENT_PASSWORD_REQUEST`
+   | :ref:`WP_FAIL2BAN_LOG_PASSWORD_REQUEST`
    | :ref:`feature-password-reset`
 
 .. rubric:: History

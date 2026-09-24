@@ -11,11 +11,20 @@ WP_FAIL2BAN_PROXIES
 
 ----
 
-Specifies a list of trusted proxy servers. When defined:
+Specifies a list of trusted immediate proxy addresses or networks. When address
+resolution runs:
 
-* If the remote address appears in the list, WPf2b will use the IP address from the X-Forwarded-For header
-* If the remote address is not in the list and there is an X-Forwarded-For header, WPf2b will return a 403 error
-* If there's no X-Forwarded-For header, WPf2b will behave as if WP_FAIL2BAN_PROXIES isn't defined
+* a trusted immediate peer permits the first ``X-Forwarded-For`` value to
+  become the client address;
+* an untrusted immediate peer supplying that header produces unknown-proxy
+  evidence and HTTP 403; and
+* without the header, the validated immediate peer remains the client address.
+
+Premium resolves the address eagerly. Free normally resolves it only when a
+reached feature needs the address, so defining this list alone is not an
+every-request admission check in Free. Enable :ref:`WP_FAIL2BAN_CHECK_PROXIES`
+to make Free check eagerly. A malformed first forwarded value from a trusted
+peer follows the separate PHP-error and HTTP 500 path.
 
 .. code-block:: php
    :caption: Example: Define trusted proxies
@@ -32,6 +41,7 @@ Specifies a list of trusted proxy servers. When defined:
    In the Premium version, the list is processed and cached for performance. If you update the list via the UI, the cache is automatically cleared. If you update using define(), you must clear the cache manually.
 
 .. seealso::
+   * :ref:`WP_FAIL2BAN_CHECK_PROXIES`
    * :ref:`operating_scheduled`
 
 .. rubric:: History
