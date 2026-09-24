@@ -1,1 +1,0 @@
-``Spam <F-COMMENT_TYPE>.+</F-COMMENT_TYPE> <F-COMMENT_ID>\d+</F-COMMENT_ID><_tail>``

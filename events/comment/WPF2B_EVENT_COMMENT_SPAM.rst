@@ -11,19 +11,19 @@ The address is the comment author's stored IP. When a moderator marks an existin
 The message records the actual WordPress comment type in its
 ``F-COMMENT_TYPE`` capture; ``comment`` is one possible value.
 
-+------------+-----------+-----------------------------------------------------------+
-| syslog     | Facility  | .. include:: ../facility_spam_log.rst                     |
-|            +-----------+-----------------------------------------------------------+
-|            | Level     | .. include:: ../level_notice.rst                          |
-|            +-----------+-----------------------------------------------------------+
-|            | Example   | ``Spam comment 42 on fqdn.example.com from 192.0.42.1``   |
-+------------+-----------+-----------------------------------------------------------+
-| fail2ban   | Filter    | :ref:`filters-wordpress-hard`                             |
-|            +-----------+-----------------------------------------------------------+
-|            | Rule      | .. include:: comment-spam-rule.rst.inc                    |
-+------------+-----------+-----------------------------------+-----------------------+
-| EventData  | ref_id    | .. include:: ../ref_id-type.rst   | Comment ID            |
-+------------+-----------+-----------------------------------+-----------------------+
++------------+-----------+-----------------------------------------------------------------+
+| syslog     | Facility  | .. include:: ../facility_spam_log.rst                           |
+|            +-----------+-----------------------------------------------------------------+
+|            | Level     | .. include:: ../level_notice.rst                                |
+|            +-----------+-----------------------------------------------------------------+
+|            | Example   | ``Spam comment 42 on fqdn.example.com from 192.0.42.1``         |
++------------+-----------+-----------------------------------------------------------------+
+| fail2ban   | Filter    | :ref:`filters-wordpress-hard`                                   |
+|            +-----------+-----------------------------------------------------------------+
+|            | Rule      | .. include:: ../../autogen/filters.d/rules/comment-spam.rst.inc |
++------------+-----------+-----------------------------------+-----------------------------+
+| EventData  | ref_id    | .. include:: ../ref_id-type.rst   | Comment ID                  |
++------------+-----------+-----------------------------------+-----------------------------+
 
 .. seealso::
    | :ref:`fail2ban_filters_tags`
