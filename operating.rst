@@ -11,6 +11,7 @@ Use the host log and fail2ban jail to observe the protection path, and use the W
    operating/logging
    operating/syslog
    operating/event-storage
+   operating/privacy-and-stored-data
    operating/filters
    operating/scheduled
    operating/site-health
