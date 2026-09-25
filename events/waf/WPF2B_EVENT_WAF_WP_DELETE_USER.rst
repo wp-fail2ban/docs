@@ -17,7 +17,7 @@ Premium listener: ``WPF2B_EVENT_WAF_WP_DELETE_USER``.
 +-----------+-----------+------------------------------------------------------------------------------------------------+
 | fail2ban  | Filter    | :ref:`filters-wordpress-wpf2b-waf`                                                             |
 |           +-----------+------------------------------------------------------------------------------------------------+
-|           | Rule      | ``wp_delete_user\(<F-ALT_USER_ID>\d+</F-ALT_USER_ID>\)="<F-ALT_USER>.*</F-ALT_USER>"<_tail>``  |
+|           | Rule      | .. include:: ../../autogen/filters.d/rules/waf-delete-user.rst.inc                             |
 +-----------+-----------+------------------------------------------------------------------------------------------------+
 
 .. include:: waf-event-common.rst.inc

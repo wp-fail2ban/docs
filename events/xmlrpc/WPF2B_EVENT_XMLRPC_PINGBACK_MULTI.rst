@@ -31,6 +31,9 @@ regardless of whether ordinary pingback logging is enabled.
      - Filter
      - :ref:`filters-wordpress-soft` for the ``Blocked`` message only. The
        ``Skipped`` message has no shipped filter rule.
+   * -
+     - Rule
+     - .. include:: ../../autogen/filters.d/rules/pingback-multicall.rst.inc
 
 .. seealso::
    | :ref:`WP_FAIL2BAN_LOG_PINGBACKS`

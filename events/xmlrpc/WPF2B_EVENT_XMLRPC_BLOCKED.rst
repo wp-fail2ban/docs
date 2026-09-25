@@ -17,7 +17,7 @@ Premium listener: ``WPF2B_EVENT_XMLRPC_BLOCKED``.
 +-----------+-----------+------------------------------------------------------------------+
 | fail2ban  | Filter    | :ref:`filters-wordpress-hard`                                    |
 |           +-----------+------------------------------------------------------------------+
-|           | Rule      | ``XML-RPC request blocked<_tail>``                               |
+|           | Rule      | .. include:: ../../autogen/filters.d/rules/xmlrpc-blocked.rst.inc|
 +-----------+-----------+------------------------------------------------------------------+
 
 .. seealso::

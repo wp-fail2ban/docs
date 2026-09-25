@@ -17,7 +17,7 @@ Premium listener: ``WPF2B_EVENT_WAF_UPDATE_OPTION``.
 +-----------+-----------+-------------------------------------------------------------------------------------------------------+
 | fail2ban  | Filter    | :ref:`filters-wordpress-wpf2b-waf`                                                                    |
 |           +-----------+-------------------------------------------------------------------------------------------------------+
-|           | Rule      | ``update_option\(<F-OPTION_NAME>.*?</F-OPTION_NAME>\)="<F-OPTION_VALUE>.*</F-OPTION_VALUE>"<_tail>``  |
+|           | Rule      | .. include:: ../../autogen/filters.d/rules/waf-update-option.rst.inc                                  |
 |           |           |                                                                                                       |
 |           |           | <option_name>                                                                                         |
 |           |           |   Name of the core WordPress option being updated.                                                    |

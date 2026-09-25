@@ -31,7 +31,7 @@ exists.
      - :ref:`filters-wordpress-soft`
    * -
      - Rule
-     - ``Failed password reset(?: for(?: (?:unknown user )?<F-ALT_USER>.*</F-ALT_USER>))?<_tail>``
+     - .. include:: ../../autogen/filters.d/rules/password-reset-fail.rst.inc
    * - EventData
      - username
      - .. include:: ../username-description.rst

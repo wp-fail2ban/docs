@@ -28,8 +28,11 @@ failures are soft.
      - Filter
      - :ref:`filters-wordpress-hard` (unknown user) / :ref:`filters-wordpress-soft` (known user)
    * -
-     - Rule
-     - ``(?:REST|XML-RPC) authentication (?:attempt(?: \(repeat\))? for unknown user|failure(?: \(repeat\))? for) <F-ALT_USER>.*</F-ALT_USER>``
+     - Rule (unknown user)
+     - .. include:: ../../autogen/filters.d/rules/auth-api-unknown.rst.inc
+   * -
+     - Rule (known user)
+     - .. include:: ../../autogen/filters.d/rules/auth-api-failure.rst.inc
    * - EventData
      - username
      - .. include:: ../username-description.rst

@@ -17,7 +17,7 @@ Premium listener: ``WPF2B_EVENT_COMMENT_SPAM_AKISMET``.
 +-----------+-----------+-------------------------------------------------------------------------+
 | fail2ban  | Filter    | :ref:`filters-wordpress-hard`                                           |
 |           +-----------+-------------------------------------------------------------------------+
-|           | Rule      | ``Akismet discarded spam comment<_tail>``                               |
+|           | Rule      | .. include:: ../../autogen/filters.d/rules/comment-spam-akismet.rst.inc |
 +-----------+-----------+-------------------------------------------------------------------------+
 
 .. rubric:: History

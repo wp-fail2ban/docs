@@ -26,7 +26,7 @@ Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY_UNKNOWN``.
      - :ref:`filters-wordpress-hard`
    * -
      - Rule
-     - ``Blocked access <F-HTTP_STATUS>\d\d\d</F-HTTP_STATUS> from unknown country<_tail>``
+     - .. include:: ../../autogen/filters.d/rules/blocked-country-unknown.rst.inc
    * - EventData
      - country
      - unset (no ISO code was resolved)

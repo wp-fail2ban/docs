@@ -16,7 +16,7 @@ Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USER_ENUM``.
 +-----------+-----------+---------------------------------------------------------------------------+
 | fail2ban  | Filter    | :ref:`filters-wordpress-hard`                                             |
 |           +-----------+---------------------------------------------------------------------------+
-|           | Rule      | ``Blocked user enumeration attempt<_tail>``                               |
+|           | Rule      | .. include:: ../../autogen/filters.d/rules/user-enum.rst.inc              |
 +-----------+-----------+---------------------------------------------------------------------------+
 
 

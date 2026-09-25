@@ -16,7 +16,7 @@ Premium listener: ``WPF2B_EVENT_OTHER_UNKNOWN_PROXY``.
 +-----------+-----------+---------------------------------------------------------------------------+
 | fail2ban  | Filter    | :ref:`filters-wordpress-hard`                                             |
 |           +-----------+---------------------------------------------------------------------------+
-|           | Rule      | ``Untrusted X-Forwarded-For header<_tail>``                               |
+|           | Rule      | .. include:: ../../autogen/filters.d/rules/untrusted-proxy.rst.inc        |
 +-----------+-----------+---------------------------------------------------------------------------+
 
 .. seealso::

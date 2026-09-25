@@ -18,7 +18,7 @@ Recorded when the normal login form is submitted with a nonblank identifier and 
 +------------+-----------+-------------------------------------------------------------------------------------+
 | fail2ban   | Filter    | :ref:`filters-wordpress-soft`                                                       |
 |            +-----------+-------------------------------------------------------------------------------------+
-|            | Rule      | ``Authentication attempt with empty (?:username|password)<_tail>``                  |
+|            | Rule      | .. include:: ../../autogen/filters.d/rules/auth-empty.rst.inc                       |
 +------------+-----------+-----------------------------------+-------------------------------------------------+
 | EventData  | username  | .. include:: ../username-type.rst | .. include:: ../username-description.rst        |
 +------------+-----------+-----------------------------------+-------------------------------------------------+

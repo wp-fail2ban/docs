@@ -22,7 +22,7 @@ delivered, or the password was changed.
 +------------+-----------+----------------------------------------------------------------------------------+
 | fail2ban   | Filter    | :ref:`filters-wordpress-extra`                                                   |
 |            +-----------+----------------------------------------------------------------------------------+
-|            | Rule      | ``Password reset requested for <F-ALT_USER>.*</F-ALT_USER><_tail>``              |
+|            | Rule      | .. include:: ../../autogen/filters.d/rules/password-reset.rst.inc                |
 +------------+-----------+------------------------------------+---------------------------------------------+
 | EventData  | username  | .. include:: ../username-type.rst  | .. include:: ../username-description.rst    |
 +------------+-----------+------------------------------------+---------------------------------------------+

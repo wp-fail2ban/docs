@@ -26,7 +26,7 @@ Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY_451``.
      - :ref:`filters-wordpress-hard`
    * -
      - Rule
-     - ``Blocked access <F-HTTP_STATUS>\d\d\d</F-HTTP_STATUS> from country '<F-ISO_CODE>..</F-ISO_CODE>'<_tail>``
+     - .. include:: ../../autogen/filters.d/rules/blocked-country.rst.inc
    * - EventData
      - country
      - ISO 3166-1 alpha-2 code

@@ -18,7 +18,7 @@ Recorded when an XML-RPC request authenticates successfully and :ref:`WP_FAIL2BA
 +------------+-----------+----------------------------------------------------------------------------------------------------+
 | fail2ban   | Filter    | :ref:`filters-wordpress-good`                                                                      |
 |            +-----------+----------------------------------------------------------------------------------------------------+
-|            | Rule      | ``(?:REST|XML-RPC) authentication success(?: \(repeat\))? for <F-ALT_USER>.*</F-ALT_USER><_tail>`` |
+|            | Rule      | .. include:: ../../autogen/filters.d/rules/auth-api-success.rst.inc                                |
 +------------+-----------+-----------------------------------+----------------------------------------------------------------+
 | EventData  | username  | .. include:: ../username-type.rst | .. include:: ../username-description.rst                       |
 +------------+-----------+-----------------------------------+----------------------------------------------------------------+

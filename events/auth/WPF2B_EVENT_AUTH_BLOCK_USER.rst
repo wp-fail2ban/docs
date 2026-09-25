@@ -16,7 +16,7 @@ Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USER``.
 +------------+-----------+--------------------------------------------------------------------------------------+
 | fail2ban   | Filter    | :ref:`filters-wordpress-hard`                                                        |
 |            +-----------+--------------------------------------------------------------------------------------+
-|            | Rule      | ``Blocked authentication attempt for <F-ALT_USER>.*</F-ALT_USER><_tail>``            |
+|            | Rule      | .. include:: ../../autogen/filters.d/rules/blocked-user.rst.inc                      |
 +------------+-----------+-----------------------------------+--------------------------------------------------+
 | EventData  | username  | .. include:: ../username-type.rst | .. include:: ../username-description.rst         |
 |            +-----------+-----------------------------------+--------------------------------------------------+

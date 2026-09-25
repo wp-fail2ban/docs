@@ -16,7 +16,7 @@ Premium listener: ``WPF2B_EVENT_AUTH_EMPTY_USER``.
 +-----------+-----------+-------------------------------------------------------------------------------------+
 | fail2ban  | Filter    | :ref:`filters-wordpress-soft`                                                       |
 |           +-----------+-------------------------------------------------------------------------------------+
-|           | Rule      | ``Authentication attempt with empty (?:username|password)<_tail>``                  |
+|           | Rule      | .. include:: ../../autogen/filters.d/rules/auth-empty.rst.inc                       |
 +-----------+-----------+-------------------------------------------------------------------------------------+
 
 Premium EventData stores the submitted ``password``; ``username`` is ``null``.

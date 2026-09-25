@@ -25,7 +25,7 @@ Premium listener: ``WPF2B_EVENT_COMMENT_UNAPPROVED_COMMENT``.
      - :ref:`filters-wordpress-soft`
    * -
      - Rule
-     - ``Comment attempt on <F-POST_STATUS>unapproved comment</F-POST_STATUS> <F-COMMENT_ID>\d+</F-COMMENT_ID> on post <F-POST_ID>\d+</F-POST_ID>``
+     - .. include:: ../../autogen/filters.d/rules/comment-attempt.rst.inc
    * - EventData
      - ref_id
      - Post ID. The parent comment ID is in ``waf_data.comment_parent``.
