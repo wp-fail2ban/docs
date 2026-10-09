@@ -3,7 +3,11 @@
 User deletion protection
 ========================
 
-An unauthorised user deletion can remove access and disrupt ownership of the user's content. A plugin can invoke that operation outside the usual administration screens, where the expected capability check may otherwise be absent. User deletion protection detects an operation attempted without the ``delete_users`` capability; the global WAF mode determines whether it is logged or blocked. When it is blocked, the account remains present and any access or content ownership associated with it is unchanged.
+User deletion protection detects an attempt made without the ``delete_users`` capability. The global WAF mode determines whether the attempt is logged or blocked; when blocked, the account and its access and content ownership remain unchanged.
+
+Plugins, and sometimes themes, can delete a user as one step in a larger operation. If that operation is not properly secured—for example, if an AJAX action lets request parameters select the user—an attacker may be able to make it delete an account of their choosing. Checking ``delete_users`` at the point of deletion catches this class of flaw even when the earlier operation omitted the check.
+
+Remote code execution is a separate class of problem that |WPf2b|'s WAF does not currently attempt to handle. An attacker who can run arbitrary code inside WordPress can make a suitably privileged account the current user before requesting the deletion.
 
 WAF event storage can also capture the request body and headers independently of the general extra-field controls; see :ref:`feature-waf` and :ref:`operating_event_storage`. The individual control is on the WAF tab in Advanced settings.
 

@@ -3,11 +3,12 @@
 Overview
 --------
 
-The basic steps are: register the plugin, register one or more messages, then log them. See the pages in :ref:`developers`.
+The API lets a third-party plugin send its own messages to syslog and, on Premium, store corresponding events. Register the plugin, register one or more message definitions, then log each event as it happens. See the pages in :ref:`developers` for the complete interfaces.
 
 Design
 """"""
 
-To allow 3rd-party plugins to add support for |WPf2b| more easily, the API uses actions. This avoids the need to check if |WPf2b| is installed, then import a file, check for versions, and so on. Integration code can be written that will work if |WPf2b| is installed, and do nothing if not.
+The API uses WordPress actions, so integration code does not need to import |WPf2b| files or call its functions directly. If |WPf2b| is absent, WordPress accepts the action call and no |WPf2b| listener runs.
 
-.. note:: Because ``do_action`` has no return value |WPf2b| will throw an Exception if there is an error.
+.. note::
+   Because ``do_action`` has no return value, registration and logging errors are reported as exceptions.

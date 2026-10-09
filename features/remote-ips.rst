@@ -3,11 +3,11 @@
 Remote IPs and proxies
 ======================
 
-When a proxy sits in front of WordPress, the web server can see the intermediary's address instead of the visitor's. Accurate remote-IP configuration keeps evidence and address-based decisions attached to the visitor, so a later ban targets the source that produced the activity. If the resolved address identifies a shared proxy instead, the ban can affect unrelated traffic.
+Host firewalls normally block malicious traffic by IP address. |WPf2b| therefore associates activity seen inside WordPress with the address of the visitor that caused it. It writes this resolved client address into log messages and Premium events, and address-based features use it too. If the activity warrants a ban, fail2ban can then give the same address to the host firewall.
 
-|WPf2b| normally starts with the TCP peer. Trusted-proxy and Cloudflare settings can recover the visitor address from ``X-Forwarded-For`` when the immediate peer is trusted. The resolved address is written to syslog and is the address a fail2ban jail may use for a ban. See :ref:`feature-remote-addr` for the observable failure patterns and :ref:`feature-trusted-proxies` for the trust boundary.
+On a direct connection, the web server normally sees the visitor's address. When a reverse proxy or service such as Cloudflare sits in front of WordPress, it sees the intermediary instead. Unless |WPf2b| recovers the visitor's address, a later ban targets that shared intermediary: banning one stable proxy can disconnect the site, while banning addresses from a large pool can make access fail intermittently.
 
-The Premium Ignore List suppresses core WP fail2ban logging, blocking, WAF checks, and event storage for selected resolved addresses. Actions registered by third-party integrations through WP fail2ban can still run. Jetpack integration maintains a source list for XML-RPC requests. Country lookup and blocking are described under :ref:`feature-country-blocking`.
+The pages in this section explain how |WPf2b| chooses the resolved address, how trusted-proxy and Cloudflare configuration recover an address supplied through ``X-Forwarded-For``, how Jetpack sources are recognised, and how the Premium Ignore List exempts selected addresses. Country lookup and blocking are described separately under :ref:`feature-country-blocking`.
 
 .. toctree::
    :maxdepth: 1

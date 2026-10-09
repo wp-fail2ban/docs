@@ -21,7 +21,7 @@ Allowed values:
 * ``maxmind-cloudflare`` — MaxMind, falling back to Cloudflare
 * ``disabled`` — do not resolve country codes
 
-The Cloudflare methods require :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE`. The ``CF-IPCountry`` header is used only when the connecting address is in the Cloudflare IP list. Without that trust boundary, a client that can reach WordPress can supply its own country header and change both country blocking and the country stored with Premium events.
+The Cloudflare methods require :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE`. The ``CF-IPCountry`` header is used only when the connecting address is in the Cloudflare IP list. Without that connecting-address check, any client that can reach WordPress could supply its own country header and change both country blocking and the country stored with Premium events.
 
 .. code-block:: php
    :caption: Example: Use Cloudflare country headers only

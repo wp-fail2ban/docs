@@ -3,13 +3,13 @@
 Event store
 ===========
 
-Premium keeps structured event history so operators can investigate WordPress activity after the immediate syslog message has passed. Events can carry the time, event type, site, resolved address, available country, and event-specific identity or reference information. Some also retain request context or detail useful for understanding an authentication, comment, WAF, or other occurrence. This history supports Dashboard and report views; it is separate from local syslog attempts and from fail2ban's jail state.
+Premium keeps a database history of |WPf2b| events so operators can review earlier logins, comments, blocks, and WAF detections in the Dashboard and reports. This complements the immediate syslog message: fail2ban continues to read the host log or journal, not this history.
 
-Optional controls can add request targets, Referer, User-Agent, raw request body, headers, and PTR information. The controls are not an absolute privacy boundary: success events may retain method and request metadata when those individual controls are off, and WAF events may additionally retain body and headers. Available headers can include cookies or authorisation material; failed authentication and WAF detail can contain passwords, SQL, or option values. The event tables and backups therefore contain sensitive data; :ref:`operating_privacy_and_stored_data` brings the complete storage boundary together.
+Every stored event provides basic context for what happened, including its time, type, and resolved client address. Optional switches can add more request information to help investigate it, and some event types record further details of their own. This additional data can be sensitive; :ref:`operating_privacy_and_stored_data` describes what can be stored and how to protect it.
 
-Event history is best-effort. An occurrence may be absent if it could not be stored, and a visible event may lack some of its attempted detail. Missing history or detail therefore does not establish that the occurrence did not happen or that the information was unavailable when it occurred.
+Event history is best-effort by design: |WPf2b| preserves as much useful history as it can even when the site is under pressure. It writes the main event entry first and then any separate detail. The main entry should normally succeed; if it cannot be written, that generally points to database trouble, severe resource pressure, or another significant host problem likely to affect the site more broadly. A later write can fail independently, so an event may appear without all of its detail. The host log may therefore contain a message for which the history has no complete record.
 
-The store increases database space and write work as event volume rises, particularly when request bodies, headers, or WAF detail are recorded. It has no automatic event-row expiry in 6.3. Operators can manage retention and database copies using :ref:`operating_event_storage`. The stored sensitive data is unencrypted in the WordPress database in 6.3.
+Event history remains until it is deleted. :ref:`operating_event_storage` explains storage, retention, deletion, and database copies.
 
 .. include:: ../autogen/join/feature-event-store.rst
    :end-before: Source

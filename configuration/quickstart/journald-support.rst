@@ -9,7 +9,20 @@ Selecting the card enables inline-host syslog formatting: the site name moves in
 
 The card does not configure fail2ban or change syslog transport. It is disabled when systemd or journald is unavailable or journald support is disabled in configuration. :ref:`WP_FAIL2BAN_USING_JOURNALD` can override detection state.
 
-Selecting the card applies :ref:`WP_FAIL2BAN_SYSLOG_INLINE_HOST` as ``true``. The Syslog tab shows the individual control; use the constant for an individual change in Free.
+Bundle settings
+---------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 75 25
+
+   * - Setting
+     - Value applied
+   * - :ref:`WP_FAIL2BAN_SYSLOG_INLINE_HOST`
+     - ``true``
+
+The Syslog tab shows the individual control; use the constant for an individual
+change in Free.
 
 .. include:: card-settings.rst.inc
 

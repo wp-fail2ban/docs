@@ -11,16 +11,16 @@ WP_FAIL2BAN_LOG_PASSWORD_REQUEST
 
 ----
 
-Enables password-reset request evidence. When enabled, an accepted request for
-a recognised account produces :ref:`WPF2B_EVENT_PASSWORD_REQUEST`; a rejected
+Logs accepted and rejected password-reset requests. An accepted request for a
+recognised account produces :ref:`WPF2B_EVENT_PASSWORD_REQUEST`; a rejected
 request produces :ref:`WPF2B_EVENT_PASSWORD_REQUEST_FAIL`. Both use
 :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG`.
 
-The accepted event means WordPress recognised the account and accepted the
-request far enough to provide the security signal. It does not prove that a
-reset key was stored, mail was sent or delivered, or the password was changed.
+The accepted event means WordPress recognised the account and accepted a valid
+reset request. Reset-key storage, mail generation and delivery, and the eventual
+password change happen later and are not reported by this event.
 The rejected event can contain a submitted username that does not identify an
-account. Defining the setting as ``false`` suppresses both outcomes.
+account. Defining the setting as ``false`` suppresses both messages and events.
 
 .. code-block:: php
    :caption: Example: Enable password reset request logging

@@ -3,10 +3,8 @@
 Using Site Health
 =================
 
-During setup and troubleshooting, WordPress Site Health can point out some |WPf2b| configuration mistakes. Depending on what PHP can inspect, it may report on plugin activation, obsolete settings, selected installed filters, fail2ban service visibility, QuickStart conflicts, or Premium maintenance data. Use a reported issue to investigate the named component, then verify the host path with :ref:`installation_verifying`.
+|WPf2b| adds tests to WordPress's standard Site Health system. They provide a WordPress-side check of the parts of the installation and configuration that PHP can observe, and are most useful during setup and troubleshooting.
 
-Site Health only runs checks for which the WordPress/PHP environment has enough visibility. It cannot certify every shipped filter, the jail's log source and policy, or the firewall action. A clean result means the checks that ran found no issue; it does not establish end-to-end enforcement.
+The filter tests run unless they are explicitly disabled because PHP cannot reliably distinguish a missing fail2ban filter from one that the host deliberately keeps outside WordPress's view. On a hardened host, an inaccessible filter can therefore be reported as missing. If PHP is intentionally unable to read the fail2ban files, skip those comparisons with :ref:`WP_FAIL2BAN_SITE_HEALTH_SKIP_FILTERS`; :ref:`configuration__site-health-tool` describes the related settings.
 
-On a hardened host, PHP may deliberately be unable to read fail2ban configuration or inspect the host service. The corresponding checks can be absent, which is expected isolation rather than degraded |WPf2b| health. If PHP is known to be unable to read the fail2ban files, it is sensible to skip the filter comparisons with :ref:`WP_FAIL2BAN_SITE_HEALTH_SKIP_FILTERS`. They cannot provide a useful result there, so repeating them adds no value; leaving them enabled is harmless.
-
-Do not weaken chroot, container, or file permissions just to restore a check. Use ``fail2ban-client``, the host log or ``journalctl``, and firewall administration tools to check the external path after hardening. :ref:`configuration__site-health-tool` describes the settings for filter-check visibility.
+Do not weaken chroot, container, or file permissions merely to make a Site Health test pass. A clean result means only that the checks which ran found no reported issue; Site Health cannot establish that a message reached the intended log, that a jail counted it, or that the ban action changed the firewall. Use :ref:`installation_verifying` and host-side tools to verify that complete path.

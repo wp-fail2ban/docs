@@ -3,11 +3,15 @@
 WAF
 ===
 
-Premium, experimental. Some harmful requests become clear only when WordPress is about to execute SQL or perform a privileged change. The WAF checks selected operations at that point, giving an operator evidence of the attempt or preventing the operation before it takes effect. It covers SQL about to execute, changes to protected core options, and user deletion. :ref:`WP_FAIL2BAN_EX_WAF` governs those selected checks as a whole: ``disabled`` leaves them inactive, ``logging`` records detections without preventing the operation, and ``enabled`` records and blocks detections. The global mode is disabled by default, even though individual protection settings can have enabled defaults. Blocked messages can match ``wordpress-wpf2b-waf.conf``; a configured jail and ban action are separate from the direct WordPress decision.
+The Premium WAF adds a final check inside WordPress for selected sensitive operations immediately before they take effect. Its checks see the SQL query or privileged change after WordPress and its plugins have processed the request, then record a detection or stop the operation. This places protection at the point where the operation WordPress is about to perform is known.
 
-WAF evidence can retain the raw request body and most available HTTP headers even when the general extra-field controls are off. SQL injection events can retain full SQL, and option-protection events can retain the full proposed value. These fields may contain credentials or other sensitive values, and repeated events increase database storage. Premium event data is stored unencrypted in the WordPress database in 6.3; see :ref:`operating_privacy_and_stored_data` for the complete data boundary and :ref:`operating_event_storage` for retention operations.
+The WAF covers selected SQL queries, changes to protected core options, and user deletion. The pages below explain what each protection checks and where its coverage ends.
 
-The :ref:`quickstart_web_application_firewall` card enables a predefined combination of the checks. Individual controls are on the Premium WAF tab in Advanced settings.
+:ref:`WP_FAIL2BAN_EX_WAF` sets the overall mode. ``disabled`` leaves the selected checks inactive, ``logging`` records detections without preventing the operation, and ``enabled`` records and blocks them. The WAF is experimental in 6.3, and its global mode is disabled by default; individual protection settings do not become active until the global mode is set to ``logging`` or ``enabled``.
+
+In enabled mode, the WAF stops a detected operation directly inside WordPress. Its message can also match ``wordpress-wpf2b-waf.conf``, but any host ban still depends on a configured jail and ban action. These are separate responses to the same detection.
+
+WAF events can retain request content and details of the detected operation independently of the general extra-field controls. This data can be sensitive; see :ref:`operating_privacy_and_stored_data` for what can be stored and :ref:`operating_event_storage` for retention and deletion.
 
 .. toctree::
    :maxdepth: 1

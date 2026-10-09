@@ -16,12 +16,12 @@ resolution runs:
 
 * a trusted immediate peer permits the first ``X-Forwarded-For`` value to
   become the client address;
-* an untrusted immediate peer supplying that header produces unknown-proxy
-  evidence and HTTP 403; and
+* an untrusted immediate peer supplying that header produces an unknown-proxy
+  message and HTTP 403; and
 * without the header, the validated immediate peer remains the client address.
 
-Premium resolves the address eagerly. Free normally resolves it only when a
-reached feature needs the address, so defining this list alone is not an
+Premium resolves the address early on every request. Free normally resolves it
+only when a feature needs the address, so defining this list alone is not an
 every-request admission check in Free. Enable :ref:`WP_FAIL2BAN_CHECK_PROXIES`
 to make Free check eagerly. A malformed first forwarded value from a trusted
 peer follows the separate PHP-error and HTTP 500 path.

@@ -20,7 +20,7 @@ useful where |WPf2b| cannot maintain the list through outbound requests.
 
 Use the current ranges published at `Cloudflare IP Ranges
 <https://www.cloudflare.com/ips/>`_. Do not copy a dated list from the manual
-into this trust boundary.
+into the addresses that |WPf2b| trusts to supply visitor information.
 
 .. seealso::
    :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE`

@@ -3,11 +3,13 @@
 Ignore list
 ===========
 
-Premium. Known monitoring systems, internal services, or other trusted sources can generate expected traffic that would otherwise create evidence or be blocked. The Ignore List lets that traffic continue without core WP fail2ban intervention. Matching uses the resolved client address, so listing a shared NAT or egress address also exempts unrelated visitors who share it. Incorrect proxy resolution can broaden the exemption in the same way by making many visitors appear to use one listed address.
+The Premium Ignore List is |WPf2b|'s WordPress-side equivalent of fail2ban's ``ignoreip``. It lets you add selected addresses to an allowlist without changing the host's fail2ban configuration, which is particularly useful in managed hosting environments where that configuration is not available to you.
 
-If an address is in :ref:`WP_FAIL2BAN_EX_IGNORE_IPS`, core logging, blocking, WAF checks, and Premium event storage are suppressed for requests resolved to that address.
+When a request matches the Ignore List, |WPf2b| skips its core logging, blocking, WAF checks, and event storage. No core |WPf2b| message is written, so fail2ban has nothing from |WPf2b| to act on for that request. This can also keep expected requests from monitoring systems, internal services, or other trusted sources out of the logs and database.
 
-The list does not promise silence from third-party integrations registered through WP fail2ban's extension surfaces. Those integrations control their own actions. Because the list uses the resolved address, its effect depends on correct proxy trust and client-address resolution; see :ref:`feature-trusted-proxies`.
+Matching uses the resolved client address. Listing a shared NAT or egress address therefore also exempts unrelated visitors who share it, while incorrect proxy resolution can broaden the exemption by making many visitors appear to use one listed address. See :ref:`feature-trusted-proxies` for client-address resolution.
+
+Third-party plugins registered through the Developer API can still run their own actions and write their own messages. Select the ignored addresses with :ref:`WP_FAIL2BAN_EX_IGNORE_IPS`.
 
 .. include:: ../autogen/join/feature-ignore-list.rst
    :end-before: Source

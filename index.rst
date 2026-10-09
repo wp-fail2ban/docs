@@ -1,12 +1,12 @@
-==================
+===============
 WP fail2ban 6.3
-==================
+===============
 
-`WP fail2ban <https://wp-fail2ban.com/>`_ writes WordPress events to syslog so `fail2ban <https://www.fail2ban.org/>`_ can ban the addresses that produce them.
+`WP fail2ban <https://wp-fail2ban.com/>`_ connects activity inside WordPress to fail2ban and the host firewall, so attacks seen by WordPress can be acted on at the server. It also provides protections inside WordPress and, in Premium, structured event history for investigation and reporting.
 
-This manual covers WP fail2ban 6.3. Begin with :ref:`installation` to install the plugin and connect it to fail2ban.
+This is the manual for WP fail2ban 6.3. If you are new to WP fail2ban, :ref:`about` explains what it does and how the pieces fit together. To get a site running, start with :ref:`installation`.
 
-Use :ref:`configuration_quickstart` for common configurations, or :ref:`configuration_advanced` to control individual settings. :ref:`features` describes the resulting behaviour and links to the exact constants, events, and filters involved.
+For common security goals, :ref:`configuration_quickstart` applies groups of related settings together. :ref:`configuration_advanced` exposes the individual controls when you need more detail. :ref:`features` explains the protections and behaviour those settings provide, with links to the exact constants, events, and filters where appropriate.
 
 .. toctree::
    :caption: Manual

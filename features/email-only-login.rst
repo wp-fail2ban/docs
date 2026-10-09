@@ -3,7 +3,9 @@
 Email-only login
 ================
 
-Once an attacker knows that a WordPress username belongs to a real account, they can concentrate attempts on that account instead of guessing which identifiers exist. They can try passwords leaked for the same or similar usernames, increasing the chance that a reused password will work, and can focus other account-specific attacks on a known user. Email-only login makes the public username insufficient for authentication by requiring the account email address instead. It produces hard-filter evidence when a non-email username is rejected; users continue to supply the same password. Email addresses can also be public or appear in leaked credential sets, so the additional identifier hurdle is lost when the account email is already known to the attacker.
+Email-only login makes a public WordPress username insufficient for authentication by requiring the account email address instead. Users continue to supply the same password. When somebody submits a non-email identifier, |WPf2b| rejects the login and writes a message that can match the hard filter.
+
+Without this requirement, a confirmed username lets an attacker concentrate password attempts on a real account and makes passwords leaked for the same or similar username more useful. Email addresses can also be public or appear in leaked credential sets, so the additional identifier hurdle is lost when the account email is already known.
 
 The :ref:`quickstart_advanced_username_protection` card combines this with enumeration protection. The individual control appears on the Block tab in Advanced settings; Free displays it as read-only.
 

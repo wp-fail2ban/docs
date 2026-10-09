@@ -3,9 +3,9 @@
 Trackbacks
 ==========
 
-Remote trackback submissions can be legitimate, but repeated accepted or rejected submissions can become useful evidence when a jail evaluates the source's activity. :ref:`WP_FAIL2BAN_LOG_PINGBACKS` enables accepted and rejected trackback evidence together with ordinary pingback evidence; trackbacks have no separate switch. An accepted trackback produces soft evidence. Hard evidence covers a submission that begins trackback processing but does not reach successful storage; WordPress can reject other submissions before that coverage begins. Trackbacks use :ref:`WP_FAIL2BAN_PINGBACK_LOG` for their syslog facility.
+|WPf2b| logs accepted trackbacks and submissions that fail after WordPress begins processing them. This lets an operator or jail distinguish ordinary trackback activity from attempts that WordPress could not store. Accepted trackbacks can match the soft filter, while failures after processing begins can match the hard filter. The receiving jail decides whether those matches lead to a ban. Submissions rejected before trackback processing begins produce no trackback message. WordPress's trackback code is old and exposes very few hooks, so |WPf2b| cannot observe those earlier failures.
 
-A message can feed a fail2ban filter, but the receiving jail decides whether repeated matches lead to a ban. XML-RPC pingbacks have their own behaviour; see :ref:`feature-pingbacks`.
+:ref:`WP_FAIL2BAN_LOG_PINGBACKS` enables these messages; trackbacks share this switch with ordinary pingbacks. They use :ref:`WP_FAIL2BAN_PINGBACK_LOG` for their syslog facility. See :ref:`feature-pingbacks` for XML-RPC pingback messages and the one-call-per-request limit.
 
 .. include:: ../autogen/join/feature-trackbacks.rst
    :end-before: Source

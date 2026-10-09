@@ -3,7 +3,7 @@
 Operating WP fail2ban
 =====================
 
-Use the host log and fail2ban jail to observe the protection path, and use the WordPress views for the additional context they provide. These pages explain how to read activity, maintain host integration and Premium history, and check the system after a change.
+These pages explain how to observe WP fail2ban in operation, maintain its host integration and Premium history, and verify the system after a change.
 
 .. toctree::
    :maxdepth: 1

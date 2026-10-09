@@ -7,7 +7,7 @@ WPF2B_EVENT_AUTH_EMPTY_PASS
 
 Premium listener: ``WPF2B_EVENT_AUTH_EMPTY_PASS``.
 
-Recorded when the normal login form is submitted with a nonblank identifier and a blank password. WordPress rejects that submission without the ordinary failure signal.
+Recorded when the login form is submitted with a nonblank identifier and a blank password. WordPress rejects the submission before ordinary password authentication, so |WPf2b| writes this dedicated message instead of the usual credential-failure message.
 
 +------------+-----------+-------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_log_auth.rst                                               |

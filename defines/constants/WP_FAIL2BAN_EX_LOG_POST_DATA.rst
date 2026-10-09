@@ -33,7 +33,7 @@ limits actually enforced elsewhere in the request path.
 The remote requester controls both the content and size of any body made
 available. Individual event rows can therefore become much larger, and repeated
 bodies can drive substantial database growth and database I/O. See
-:ref:`feature-event-store` for the event store as a whole.
+:ref:`feature-event-store` for the other data Premium events can store.
 
 .. code-block:: php
    :caption: Example: Enable POST data logging

@@ -11,9 +11,9 @@ WP_FAIL2BAN_LOG_PINGBACKS
 
 ----
 
-Enables ordinary XML-RPC pingback and WordPress trackback evidence. Both use
-:ref:`WP_FAIL2BAN_PINGBACK_LOG`. Trackback success and failure listeners are
-disabled with this setting, as are ordinary pingback success/error records.
+Logs ordinary XML-RPC pingbacks and WordPress trackbacks. Both use
+:ref:`WP_FAIL2BAN_PINGBACK_LOG`. Setting the constant to ``false`` disables
+the ordinary accepted and rejected messages for both request types.
 
 The one-pingback-per-XML-RPC-request limit is independent of this setting. On a
 second ``pingback.ping`` call, |WPf2b| returns a per-call fault and records

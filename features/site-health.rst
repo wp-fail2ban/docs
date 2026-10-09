@@ -3,11 +3,15 @@
 Site Health
 ===========
 
-|WPf2b| ships fail2ban filters, but the copies used by fail2ban are installed and updated by a privileged host administrator. WordPress deliberately does not need permission to modify that host configuration. A plugin update can therefore leave the installed filters behind, or a WordPress setting can appear correct while the host is missing a filter or running an incompatible copy.
+|WPf2b| adds checks to WordPress's standard Site Health system, giving an operator a WordPress-side view of configuration and maintenance problems that PHP can observe. This provides a useful starting point during setup and troubleshooting before moving to host-side tools.
 
-WP fail2ban's Site Health checks expose the parts of that setup, QuickStart state, and scheduled data which WordPress and PHP can inspect, helping an operator find configuration drift before relying on the protection. Host configuration and external data may still be invisible to PHP. An omitted check was not run, provides no assessment of that component, and does not change runtime behaviour. A clean result means only that the checks which ran found no reported issue; it does not establish that a message reached fail2ban or changed the firewall.
+Some checks compare |WPf2b|'s shipped fail2ban filters with the copies installed
+on the host. Those copies are privileged host configuration; on a properly
+secured host, WordPress cannot change them, so a host administrator must install
+and update them. Where PHP can read the copies, Site Health can report one that
+is missing or outdated.
 
-Hardened hosts may deliberately prevent WordPress from reading fail2ban configuration. :ref:`operating_site_health` describes the available checks and host-side verification without weakening that boundary.
+Site Health cannot inspect host state that PHP cannot see or demonstrate that a message travelled through fail2ban and changed the firewall. A clean result means only that the checks which ran found no reported issue. :ref:`operating_site_health` explains how to interpret the filter checks and verify the complete path without granting PHP more access.
 
 .. include:: ../autogen/join/feature-site-health.rst
    :end-before: Source

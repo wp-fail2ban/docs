@@ -13,7 +13,9 @@ EventData Class
    Added :php:attr:`waf_data`, :php:meth:`getWafData()`.
 
 .. versionchanged:: 6.3.0
-   Documented the readable :php:attr:`ptr` field and the success/WAF field-selection rules.
+   Documented the readable :php:attr:`ptr` field and the events that supply :php:attr:`waf_data`.
+
+Premium passes an ``EventData`` object to event actions so integrations can read the address, username, request data, and other fields recorded for the event. The class is read-only; fields that do not apply or were not selected are ``null``.
 
 .. code-block:: php
 
@@ -134,16 +136,9 @@ EventData Class
 
    .. php:attr:: waf_data: ?array
 
-      Database field: ``waf_data``
-
-   Fields describe the data selected for this occurrence. Optional
-   controls are not global retention barriers: success-class events select the
-   request method, request target, Referer, and User-Agent when available, and
-   WAF-class events also select body and headers independently of the general
-   controls. ``content_type`` is selected whenever the server supplies it.
-   Conversely, enabling a control cannot create a value the server did not
-   provide. See :ref:`operating_event_storage` for the aggregate storage and
-   confidentiality consequences.
+      Database field: ``waf_data``. This is raw, event-specific data. Treat it
+      as untrusted: it may be sensitive or contain hostile input. See
+      :ref:`operating_privacy_and_stored_data` for capture and storage details.
 
    .. php:method:: public getBlogId(): int
 
@@ -183,7 +178,7 @@ EventData Class
 
    .. php:method:: public getPassword(): ?string
 
-      Get the password used to trigger the Event. Set by;
+      Get the password used to trigger the Event. Set by:
 
       * :ref:`WPF2B_EVENT_AUTH_BLOCK_USER`
       * :ref:`WPF2B_EVENT_AUTH_BLOCK_USERNAME_LOGIN`
@@ -270,7 +265,19 @@ EventData Class
 
    .. php:method:: public getWafData(): ?array
 
-      Get event-specific detail data. WAF and Honeypot events can supply it, as
-      can authentication, comment, pingback, and trackback events.
+      Get raw event-specific detail data. Set by:
+
+      * :ref:`WPF2B_EVENT_AUTH_EMPTY_PASS` when an expired authentication cookie was observed
+      * :ref:`WPF2B_EVENT_AUTH_EMPTY_USER` when an expired authentication cookie was observed
+      * :ref:`WPF2B_EVENT_COMMENT_UNAPPROVED_COMMENT`
+      * :ref:`WPF2B_EVENT_HONEYPOT_TRAP_ROBOTSTXT`
+      * :ref:`WPF2B_EVENT_OTHER_TRACKBACK`
+      * :ref:`WPF2B_EVENT_OTHER_TRACKBACK_ERROR`
+      * :ref:`WPF2B_EVENT_WAF_ERROR`
+      * :ref:`WPF2B_EVENT_WAF_SQLI`
+      * :ref:`WPF2B_EVENT_WAF_UPDATE_OPTION`
+      * :ref:`WPF2B_EVENT_WAF_WP_DELETE_USER`
+      * :ref:`WPF2B_EVENT_XMLRPC_PINGBACK`
+      * :ref:`WPF2B_EVENT_XMLRPC_PINGBACK_ERROR`
 
       :returns: Event-specific detail as an array, or ``null`` when the producer supplied none.

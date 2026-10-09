@@ -5,9 +5,13 @@
 Configuring fail2ban
 ====================
 
-On a properly secured server, WordPress should not be able to modify fail2ban's configuration. |WPf2b| therefore ships filter files inside the plugin, while a privileged host administrator installs the copies that fail2ban uses. Plugin updates replace the shipped source files, not those host copies. The administrator also configures jails and their firewall action.
+To turn |WPf2b| messages into host-side bans, install its filters in fail2ban and configure jails to read the logs that contain those messages. A jail combines a filter that recognises a message, the log file or journal it reads, a counting policy, and an action. For a simple installation, route the relevant |WPf2b| messages to one host log and point the jails at it. If you route facilities to different sources, each jail must read the source containing its message class. See :ref:`operating_logging` for the logging model and :ref:`facilities` for exact facilities.
 
-A jail combines a filter that recognises a message, the log file or journal it reads, a counting policy, and an action. For a simple installation, route the relevant |WPf2b| messages to one host log and point the jails at it. If you route facilities to different sources, each jail must read the source containing its message class. See :ref:`operating_logging` for the logging model and :ref:`facilities` for exact facilities.
+|WPf2b| ships its filter source files inside the plugin. The copies that
+fail2ban uses are privileged host configuration; on a properly secured host,
+WordPress cannot modify them. A host administrator must therefore install
+those copies. Plugin updates replace the shipped source files, not the
+installed host copies.
 
 Install the filters
 -------------------
@@ -15,16 +19,16 @@ Install the filters
 Copy the required ``.conf`` files from the plugin's ``filters.d`` directory to fail2ban's ``filter.d`` directory, commonly ``/etc/fail2ban/filter.d`` or ``/usr/local/etc/fail2ban/filter.d``. The supplied classes are:
 
 ``wordpress-hard.conf``
-   High-confidence hostile activity, normally suitable for an immediate ban.
+   Messages for high-confidence hostile requests, normally suitable for an immediate ban.
 
 ``wordpress-soft.conf``
-   Activity such as failed authentication, normally counted over repeated attempts.
+   Failed authentication and similar messages, normally counted over repeated requests.
 
 ``wordpress-extra.conf``
-   Optional or informational activity for a deliberately configured jail.
+   Optional or informational messages for a deliberately configured jail.
 
 ``wordpress-good.conf``
-   Successful authentication for analysis or custom rules, not a standard banning jail.
+   Successful-authentication messages for analysis or custom rules, not a standard banning jail.
 
 ``wordpress-wpf2b-waf.conf``
    Premium WAF blocks, for use with a WAF jail when that protection is enabled.

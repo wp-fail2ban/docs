@@ -9,9 +9,9 @@ WPF2B_EVENT_PASSWORD_REQUEST_OK
 Premium listener: ``WPF2B_EVENT_PASSWORD_REQUEST_OK``.
 
 Recorded when :ref:`WP_FAIL2BAN_LOG_PASSWORD_REQUEST` is enabled and WordPress
-accepts a password-reset request for a recognised account. It is evidence of a
-valid accepted request, not proof that a reset key was stored, mail was sent or
-delivered, or the password was changed.
+accepts a password-reset request for a recognised account. Reset-key storage,
+mail generation and delivery, and the eventual password change happen later
+and are not reported by this event.
 
 +------------+-----------+----------------------------------------------------------------------------------+
 | syslog     | Facility  | :ref:`WP_FAIL2BAN_PASSWORD_REQUEST_LOG`                                          |

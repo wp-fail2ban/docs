@@ -1,11 +1,25 @@
 .. _feature-misc:
 
-Miscellaneous
-=============
+Installation and administration
+===============================
 
-Different deployment and administration workflows need different installation signals and Dashboard presentation. These controls adapt that operator experience by identifying Composer installation, suppressing Premium prompts in the Free edition, selecting the settings interface, and hiding the Dashboard news widget. They do not add a security decision of their own.
+These settings adapt |WPf2b| to a Composer-managed installation and tailor what
+administrators see in the WordPress Dashboard. Unlike the security features
+elsewhere in this section, they do not change which requests are logged or
+blocked.
 
-The settings-interface control chooses whether QuickStart or Advanced settings is shown and can hide the UI toggle. Changing the displayed interface does not itself apply, reset, enable, or disable any feature. In Free, Advanced settings remains a read-only display; in Premium, behaviour changes when an eligible setting or a QuickStart card is applied. Constants take priority in either interface. See :ref:`configuration_quickstart` and :ref:`configuration_advanced`.
+Composer-managed sites are normally detected automatically. If
+``composer.json`` is elsewhere, :ref:`WP_FAIL2BAN_USING_COMPOSER` can identify
+it; the setting can also explicitly enable Composer mode.
+
+The other controls tailor WordPress administration: they can suppress Premium
+prompts in Free, hide the Dashboard news widget and prevent its news fetch, and
+choose whether the settings screen opens on QuickStart or Advanced. Choosing
+the displayed page changes only the interface and can hide the UI toggle; it
+does not apply, reset, enable, or disable any feature. Advanced remains
+read-only in Free. For how those pages change configuration and how constants
+take precedence, see :ref:`configuration_quickstart` and
+:ref:`configuration_advanced`.
 
 .. include:: ../autogen/join/feature-misc.rst
    :end-before: Source

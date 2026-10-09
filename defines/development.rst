@@ -3,8 +3,7 @@
 Development
 -----------
 
-.. toctree::
-   :caption: Logging
+Logging
+^^^^^^^
 
-   constants/WP_FAIL2BAN_XMLRPC_LOG
-
+* :ref:`WP_FAIL2BAN_XMLRPC_LOG`

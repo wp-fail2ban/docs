@@ -4,7 +4,7 @@
 Features
 ========
 
-WP fail2ban records WordPress activity so operators can recognise repeated abuse, directly rejects selected requests, and supplies fail2ban filters for the messages it emits. These are separate outcomes: a logged event does not itself mean that fail2ban has banned an address. The Feature pages explain each capability, its boundaries, and the controls that affect it.
+These pages explain what each WP fail2ban feature does, its important boundaries, and the settings that control it.
 
 .. toctree::
    :maxdepth: 2

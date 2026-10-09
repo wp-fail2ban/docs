@@ -3,11 +3,11 @@
 Authentication
 ==============
 
-Login outcomes do not all carry the same operational meaning. Repeated failures for a real account can show that a known user is being targeted, while unknown-account failures can show broader probing for valid names; a success record can establish that access was gained. Authentication evidence preserves those distinctions so operators and fail2ban jails can respond to the relevant pattern. A record alone does not impose a ban.
+|WPf2b| makes authentication inside WordPress visible to host security. It records login outcomes from the WordPress login form, XML-RPC, and the REST API with application context that the web server alone does not have. fail2ban can then decide whether the resulting pattern warrants a host ban.
 
-|WPf2b| records ordinary credential rejections from the normal login form and XML-RPC, failed REST Application Password authentication, and normal-form submissions with a blank username or password. Successful form logins are logged by default. REST and XML-RPC success logging is separate and off by default because API clients may authenticate on every request.
+Authentication protection also includes controls that refuse selected login attempts inside WordPress, such as attempts using a blocked identifier or a username where email-only login is required. They refuse the login directly, and their messages can also contribute to a host ban when a fail2ban jail is configured to act on them.
 
-Additional controls can reject blocked identifiers, require email-address login, reduce user enumeration, and record password-reset activity. :ref:`quickstart_advanced_username_protection` combines email-only login and enumeration protection.
+The pages in this section cover login logging, blocked identifiers, email-only login, and password-reset activity. :ref:`feature-user-enumeration` is documented separately because it limits public discovery of account names rather than authenticating them.
 
 .. toctree::
    :maxdepth: 1

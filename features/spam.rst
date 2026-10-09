@@ -3,9 +3,13 @@
 Spam
 ====
 
-Once WordPress, a moderator, or a spam-detection plugin classifies a submission as spam, that decision can provide useful source evidence for fail2ban. Spam logging exposes the classification so a configured jail can act on repeated results; |WPf2b| does not decide whether the submission is spam. :ref:`WP_FAIL2BAN_LOG_SPAM` enables the classification evidence as a whole. It covers comments stored as spam or later marked spam, including submissions through the classic form, REST, XML-RPC, pingbacks, and trackbacks. In Premium, the same control also covers comments discarded by Akismet.
+Spam logging gives fail2ban the spammer's IP address in a message that can match the hard filter. A jail can then count repeated spam and respond according to its configured policy. |WPf2b| writes the message after WordPress, a moderator, or a spam-detection plugin marks a comment as spam; it does not decide whether the comment is spam.
 
-The recorded address is the comment author's stored IP, not the address of the person who marked it spam. Spam messages can match the hard filter. If the stored address identifies a shared proxy rather than the original visitor, a later ban can affect unrelated traffic through the proxy; see :ref:`feature-remote-addr`. The :ref:`quickstart_spam_protection` card enables logging; the individual control appears on the Logging tab in Advanced settings and is read-only in Free.
+Comments are covered whether they are identified as spam when received or marked later. Premium also records comments discarded by Akismet.
+
+The message uses the IP address stored with the comment, not the address of the moderator who marked it. That address is only as accurate as the site's client-address handling: if WordPress stored a shared proxy address, a later ban can affect unrelated traffic through the proxy. See :ref:`feature-remote-addr`.
+
+The :ref:`quickstart_spam_protection` card enables logging. The individual control appears on the Logging tab in Advanced settings and is read-only in Free.
 
 .. include:: ../autogen/join/feature-spam.rst
    :end-before: Source

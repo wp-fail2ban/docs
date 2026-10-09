@@ -3,7 +3,9 @@
 Cloudflare integration
 ======================
 
-Premium. Cloudflare sits between visitors and WordPress, so logging its edge address instead of the visitor address can misdirect a later ban. Because requests use a large pool of edge addresses, banning some of those addresses can make the site fail intermittently as traffic moves between banned and unbanned edges. Cloudflare integration recognises Cloudflare's maintained address list as trusted immediate peers and uses the first ``X-Forwarded-For`` value as the client address. Cloudflare-specific headers are not the WP fail2ban client-IP source.
+The Premium Cloudflare integration keeps |WPf2b| log messages, events, and later bans associated with the visitor rather than the Cloudflare edge that delivered the request. It recognises Cloudflare's maintained address list as trusted immediate peers. Cloudflare provides its own client-IP headers, but |WPf2b| deliberately ignores them and uses the first ``X-Forwarded-For`` value, as described in :ref:`feature-trusted-proxies`.
+
+Without correct attribution, fail2ban can ban a Cloudflare edge rather than the visitor. The host firewall then rejects every request delivered through that edge. Because Cloudflare can deliver later requests through many edge addresses, requests through a banned edge fail while those through an unbanned edge succeed, making the site appear to fail intermittently.
 
 Automatic list refresh depends on scheduled work and outbound access to Cloudflare's published ranges. Defining :ref:`WP_FAIL2BAN_EX_PROXY_CLOUDFLARE_IPS` replaces that managed list with a static one. This supports locked-down installations where WordPress cannot retrieve the ranges itself, while moving update responsibility to the operator or the host's configuration-management process.
 
