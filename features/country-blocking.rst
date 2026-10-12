@@ -17,7 +17,7 @@ An unresolved country means that |WPf2b| has no usable country attribution for t
 Logs and statistics
 -------------------
 
-Each denial is written to syslog and stored as a Premium event. When statistics collection is enabled, the denial also updates the country statistics. These outputs are independent: the direct HTTP response does not depend on a fail2ban jail receiving the message, and the jail may apply its own ban policy. Repeated denied traffic can therefore continue to create log and database work.
+Each denial is written to syslog and creates a corresponding Premium event. When statistics collection is enabled, the denial also updates the country statistics. These outputs are independent: the direct HTTP response does not depend on a fail2ban jail receiving the message, and the jail may apply its own ban policy. Repeated denied traffic can therefore continue to create log and database work.
 
 Country statistics are lightweight, best-effort summaries rather than an audit count. They can undercount during concurrent traffic without changing the HTTP response or the messages processed by fail2ban. They group denials by reason rather than merely by status: the 403 category counts requests from countries on the 403 list, while a request blocked because its country could not be determined is counted under **Unknown country**, even though its response is also HTTP 403.
 

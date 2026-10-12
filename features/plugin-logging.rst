@@ -11,7 +11,5 @@ the fail2ban filter that recognises the result. Registered ``fail`` and
 variable-regex metadata neither generate that filter nor validate substitutions
 at log time.
 
-The old ``WP_FAIL2BAN_PLUGIN_LOG_*`` names were removed in 6.0; Site Health still warns if they are defined.
-
 .. include:: ../autogen/join/feature-plugin-logging.rst
    :end-before: Source
