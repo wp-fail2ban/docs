@@ -20,8 +20,10 @@ Example
            );
        } catch(\LengthException $e) {
            // slug or name too long
+           return;
        } catch(\RuntimeException $e) {
            // database error
+           return;
        }
 
        // Register a message
@@ -46,8 +48,10 @@ Example
            );
        } catch(\InvalidArgumentException $e) {
            // Missing entry or invalid type
+           return;
        } catch(\UnexpectedValueException $e) {
            // Invalid value
+           return;
        }
    }
    add_action(
@@ -67,10 +71,14 @@ Example
            'VAR1' => 12345,
            'VAR2' => 'xyz'
        ];
-       do_action(
-           'wp_fail2ban_log_message',
-           'my-plugin-slug',
-           'my-plugin-msg-slug-1',
-           $vars
-       );
+       try {
+           do_action(
+               'wp_fail2ban_log_message',
+               'my-plugin-slug',
+               'my-plugin-msg-slug-1',
+               $vars
+           );
+       } catch (\InvalidArgumentException $e) {
+           // Registration did not complete; report the integration error.
+       }
    }

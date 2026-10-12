@@ -3,7 +3,7 @@
 Overview
 --------
 
-The API lets a third-party plugin send its own messages to syslog and, on Premium, store corresponding events. Register the plugin, register one or more message definitions, then log each event as it happens. See the pages in :ref:`developers` for the complete interfaces.
+The API lets a third-party plugin send its own messages to syslog and, on Premium, create corresponding events. Register the plugin, register one or more message definitions, then log each event as it happens. See the pages in :ref:`developers` for the complete interfaces.
 
 Design
 """"""
