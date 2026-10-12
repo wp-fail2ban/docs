@@ -9,13 +9,15 @@ both the authentication and user facility families. :ref:`WP_FAIL2BAN_USE_LOG_AU
 select **LOG_AUTH** or a local facility for the authentication family;
 :ref:`WP_FAIL2BAN_USE_LOG_USER` can make the user family use **LOG_USER** or a
 local facility instead. Individual channel constants can also select a
-supported local facility.
+facility listed below.
 
 The syslog daemon's own rules determine whether a priority is retained for a
 facility. In particular, some ordinary configurations do not retain Info
 messages sent to **LOG_USER**.
 
-The syslog daemon determines which file receives each facility. Ensure the fail2ban jail reads the same destination; see :ref:`configuration__fail2ban`.
+The syslog daemon determines which file receives each facility. Ensure the
+fail2ban jail reads the same destination; see :ref:`operating_logging` for the
+logging model and :ref:`configuration__fail2ban` for jail setup.
 
 
 +---------------------+---------------------------------------------------------+
@@ -85,5 +87,5 @@ Premium
 
 .. include:: autogen/premium/default_facilities.rst
 
-The Premium table lists Premium additions. Premium also inherits every Free
-channel above.
+The Premium table shows the complete Premium defaults, including the Free
+channels that Premium inherits.
