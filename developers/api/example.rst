@@ -68,7 +68,7 @@ Example
    function myplugin_foobar()
    {
        $vars = [
-           'VAR1' => 12345,
+           'VAR1' => '12345',
            'VAR2' => 'xyz'
        ];
        try {

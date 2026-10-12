@@ -12,8 +12,9 @@ Register several messages with::
    do_action('wp_fail2ban_register_messages', $plugin_slug, $messages);
 
 ``$message`` is one message array. ``$messages`` is a list of message arrays;
-each element has the same shape as ``$message``. The plugin must already have
-been registered with :ref:`developers_api_register-plugin`.
+each element has the same shape as ``$message``. Call either action while
+handling ``wp_fail2ban_register``, after the plugin has been registered with
+:ref:`developers_api_register-plugin`.
 
 Message shape
 """""""""""""
@@ -43,28 +44,33 @@ Message shape
        case-insensitive.
    * - ``event_desc``
      - ``string``
-     - Optional description recorded with the registration.
+     - Optional description recorded with the registration. Defaults to
+       ``n/a``.
    * - ``event_id``
      - ``int``
-     - Integration-defined 16-bit event ID.
+     - Integration-defined unsigned 16-bit event ID (``0``–``65535``).
    * - ``message``
      - ``string``
-     - Message template. `` from <IP>`` is appended by |WPf2b|.
+     - Message template.
    * - ``vars``
      - ``array<string, string>``
      - Placeholder names mapped to regular-expression metadata.
 
-At log time, |WPf2b| literally replaces supplied ``___NAME___`` placeholders
-and logs the resulting message to the configured syslog facility. On Premium,
-it also records the corresponding plugin event. |WPf2b| does not validate
-supplied values against ``vars`` regular expressions, and the ``fail`` and
-``vars`` values do not generate an integration-specific fail2ban rule. The
-integration is responsible for supplying and maintaining that rule and for
-passing correct substitutions.
+At log time, |WPf2b| uses ``event_class`` to select the plugin facility and
+literally replaces supplied ``___NAME___`` placeholders. Normal syslog
+formatting adds the plugin slug and source address. See
+:ref:`developers_api_log-message` for exact substitution and Premium event
+behaviour.
 
-The actions can throw ``InvalidArgumentException`` for an unregistered plugin,
-a missing entry, or an invalid type, and ``UnexpectedValueException`` for an
-invalid accepted value.
+|WPf2b| does not validate supplied values against ``vars`` regular expressions,
+and the ``fail`` and ``vars`` values do not generate an integration-specific
+fail2ban rule. The integration is responsible for supplying and maintaining
+that rule and for passing correct substitutions.
+
+The actions throw ``InvalidArgumentException`` for an unregistered plugin, a
+missing required entry, or a non-string ``slug``. They throw
+``UnexpectedValueException`` when ``fail``, ``priority``, ``event_class``,
+``event_id``, ``message``, or ``vars`` is invalid.
 
 .. _developers_api_register-message_example:
 
