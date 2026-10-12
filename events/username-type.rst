@@ -1,1 +1,1 @@
-``\WP_User|null``
+``string|null``
