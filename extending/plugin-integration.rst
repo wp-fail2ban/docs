@@ -11,7 +11,7 @@ To log from a third-party plugin:
 
 Registration records the message template and its fields. When the integration
 logs the message, |WPf2b| substitutes the supplied values, writes the result to
-syslog, and stores the corresponding Premium event. It does not generate a
+syslog, and, on Premium, creates the corresponding event. It does not generate a
 fail2ban rule or validate the supplied values against the registered regular
 expressions. The integration must pass the correct substitutions and ship and
 maintain the filter that recognises its message.

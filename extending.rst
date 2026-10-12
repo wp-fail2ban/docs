@@ -4,7 +4,9 @@
 Extending
 =========
 
-Add-ons and third-party plugins can emit |WPf2b| events through the :ref:`developers`.
+Official add-ons provide ready-made integrations. Plugin authors can use the
+:ref:`developers` to send their own security messages to syslog and, on
+Premium, create corresponding events.
 
 .. toctree::
    :maxdepth: 1
