@@ -8,6 +8,14 @@ WPF2B_EVENT_BLOCK_COUNTRY_UNKNOWN
 
 Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY_UNKNOWN``.
 
+Premium emits this event when :ref:`WP_FAIL2BAN_EX_GEOLOCATION_FAIL` makes
+country blocking fail closed and the request's country cannot be resolved. The
+request is denied with HTTP 403.
+
+This event records an unresolved country, not a known country on the HTTP 403
+or 451 list. Those denials use :ref:`WPF2B_EVENT_BLOCK_COUNTRY` or
+:ref:`WPF2B_EVENT_BLOCK_COUNTRY_451`.
+
 .. list-table::
    :stub-columns: 1
    :widths: 12 18 70
@@ -31,12 +39,12 @@ Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY_UNKNOWN``.
      - country
      - unset (no ISO code was resolved)
 
-Emitted when :ref:`WP_FAIL2BAN_EX_GEOLOCATION_FAIL` is enabled, geolocation is not ``disabled``, at least one country block list is non-empty, and the request's country could not be resolved. The response is HTTP 403. Unlike :ref:`WPF2B_EVENT_BLOCK_COUNTRY`, this event does not represent a known blocked country code.
-
 .. seealso::
+   | :ref:`feature-country-blocking`
+   | :ref:`WPF2B_EVENT_BLOCK_COUNTRY`
+   | :ref:`WPF2B_EVENT_BLOCK_COUNTRY_451`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_EX_GEOLOCATION_FAIL`
-   | :ref:`feature-country-blocking`
 
 .. rubric:: History
 .. versionadded:: 6.3.0

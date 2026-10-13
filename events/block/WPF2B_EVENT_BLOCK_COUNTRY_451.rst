@@ -8,6 +8,14 @@ WPF2B_EVENT_BLOCK_COUNTRY_451
 
 Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY_451``.
 
+Premium emits this event when a request's resolved country appears in
+:ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES_451`. The request is denied with HTTP 451
+Unavailable For Legal Reasons and receives a ``Link`` header pointing at the
+site as ``rel="blocked-by"``.
+
+If the country also appears in the HTTP 403 list, that list takes precedence
+and Premium emits :ref:`WPF2B_EVENT_BLOCK_COUNTRY` instead.
+
 .. list-table::
    :stub-columns: 1
    :widths: 12 18 70
@@ -31,12 +39,12 @@ Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY_451``.
      - country
      - ISO 3166-1 alpha-2 code
 
-Unlike :ref:`WPF2B_EVENT_BLOCK_COUNTRY` (HTTP 403), this event returns **451 Unavailable For Legal Reasons** and sends a ``Link`` header pointing at the site as ``rel="blocked-by"``.
-
 .. seealso::
+   | :ref:`feature-country-blocking`
+   | :ref:`WPF2B_EVENT_BLOCK_COUNTRY`
+   | :ref:`WPF2B_EVENT_BLOCK_COUNTRY_UNKNOWN`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES_451`
-   | :ref:`feature-country-blocking`
 
 .. rubric:: History
 .. versionadded:: 6.0.0

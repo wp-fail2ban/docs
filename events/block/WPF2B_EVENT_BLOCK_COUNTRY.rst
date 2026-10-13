@@ -3,10 +3,17 @@
 WPF2B_EVENT_BLOCK_COUNTRY
 -------------------------
 
-.. rubric:: Attempted access from a blocked Country.
+.. rubric:: Attempted access from a blocked country.
 .. rubric:: *Premium only*
 
 Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY``.
+
+Premium emits this event when a request's resolved country appears in
+:ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES`. The request is denied with HTTP 403.
+
+Countries assigned to the HTTP 451 list use
+:ref:`WPF2B_EVENT_BLOCK_COUNTRY_451`. A fail-closed denial when the country
+cannot be resolved uses :ref:`WPF2B_EVENT_BLOCK_COUNTRY_UNKNOWN`.
 
 .. list-table::
    :stub-columns: 1
@@ -32,6 +39,9 @@ Premium listener: ``WPF2B_EVENT_BLOCK_COUNTRY``.
      - ISO 3166-1 alpha-2 code [#f1]_
 
 .. seealso::
+   | :ref:`feature-country-blocking`
+   | :ref:`WPF2B_EVENT_BLOCK_COUNTRY_451`
+   | :ref:`WPF2B_EVENT_BLOCK_COUNTRY_UNKNOWN`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_EX_BLOCK_COUNTRIES_LOG`
 
