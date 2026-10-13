@@ -3,10 +3,13 @@
 WPF2B_EVENT_WAF_WP_DELETE_USER
 ------------------------------
 
-.. rubric:: Attempt to delete a user.
+.. rubric:: Unauthorised attempt to delete a user.
 .. rubric:: *Premium only*
 
 Premium listener: ``WPF2B_EVENT_WAF_WP_DELETE_USER``.
+
+Premium emits this event when user-deletion protection detects an attempt that
+lacks the required capabilities and no caller exemption applies.
 
 +-----------+-----------+------------------------------------------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_EX_WAF_LOG`                                                                  |
@@ -22,11 +25,14 @@ Premium listener: ``WPF2B_EVENT_WAF_WP_DELETE_USER``.
 
 .. include:: waf-event-common.rst.inc
 
-EventData detail contains the user ID and username.
+EventData ``waf_data`` contains the affected user ID in ``id`` and login name
+in ``username``.
 
 .. seealso::
+   | :ref:`feature-waf-delete-user`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_EX_WAF`
+   | :ref:`WP_FAIL2BAN_EX_WAF_USERS_DELETE`
 
 .. rubric:: History
 .. versionchanged:: 6.0.0

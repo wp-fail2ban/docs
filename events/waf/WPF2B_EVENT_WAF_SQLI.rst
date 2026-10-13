@@ -8,6 +8,10 @@ WPF2B_EVENT_WAF_SQLI
 
 Premium listener: ``WPF2B_EVENT_WAF_SQLI``.
 
+Premium emits this event when SQL injection protection determines that request
+input changed the structure of a query sent through WordPress's database
+interface.
+
 +-----------+-----------+------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_EX_WAF_LOG`                              |
 |           +-----------+------------------------------------------------------------+
@@ -22,11 +26,16 @@ Premium listener: ``WPF2B_EVENT_WAF_SQLI``.
 
 .. include:: waf-event-common.rst.inc
 
-EventData detail contains the full SQL.
+EventData ``waf_data.sql`` contains the full query, which can include
+credentials or other sensitive information.
 
 .. seealso::
+   | :ref:`feature-waf-sqli`
+   | :ref:`WPF2B_EVENT_WAF_ERROR`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_EX_WAF`
+   | :ref:`WP_FAIL2BAN_EX_WAF_SQLI_PLUGINS`
+   | :ref:`WP_FAIL2BAN_EX_WAF_SQLI_WORDPRESS`
 
 .. rubric:: History
 .. versionchanged:: 6.0.0

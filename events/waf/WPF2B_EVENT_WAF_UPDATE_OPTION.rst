@@ -3,10 +3,13 @@
 WPF2B_EVENT_WAF_UPDATE_OPTION
 -----------------------------
 
-.. rubric:: Unauthorised call to ``update_option()`` detected.
+.. rubric:: Unauthorised protected-option update detected.
 .. rubric:: *Premium only*
 
 Premium listener: ``WPF2B_EVENT_WAF_UPDATE_OPTION``.
+
+Premium emits this event when option protection detects an update to a
+protected site or network option that is not authorised or exempt.
 
 +-----------+-----------+-------------------------------------------------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_EX_WAF_LOG`                                                                         |
@@ -32,12 +35,15 @@ Premium listener: ``WPF2B_EVENT_WAF_UPDATE_OPTION``.
 
 .. include:: waf-event-common.rst.inc
 
-EventData detail contains the option name and full new value. The value can
-contain credentials or other sensitive information.
+EventData ``waf_data`` contains the option name in ``option_name`` and the full
+new value in ``option_value``. The value can contain credentials or other
+sensitive information.
 
 .. seealso::
+   | :ref:`feature-waf-update-option`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_EX_WAF`
+   | :ref:`WP_FAIL2BAN_EX_WAF_UPDATE_OPTION`
 
 .. rubric:: History
 .. versionchanged:: 6.0.0

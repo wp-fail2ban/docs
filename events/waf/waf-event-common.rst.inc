@@ -4,4 +4,4 @@ errors. All use WARNING. The shipped WAF filter matches blocked messages only.
 
 Premium records the available raw request body and HTTP headers with every WAF
 event, independently of the general extra-field controls; see
-:ref:`operating_event_storage`.
+:ref:`operating_privacy_and_stored_data` and :ref:`operating_event_storage`.
