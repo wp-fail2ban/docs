@@ -8,9 +8,12 @@ WPF2B_EVENT_OTHER_TRACKBACK_ERROR
 
 Premium listener: ``WPF2B_EVENT_OTHER_TRACKBACK_ERROR``.
 
-Recorded when :ref:`WP_FAIL2BAN_LOG_PINGBACKS` is enabled and a trackback
-request reaches WordPress's pre-processing path but does not reach successful
-insertion before shutdown.
+Premium emits this event when WordPress begins processing a trackback but does
+not store it before the request ends, while :ref:`WP_FAIL2BAN_LOG_PINGBACKS` is
+enabled.
+
+A stored trackback uses :ref:`WPF2B_EVENT_OTHER_TRACKBACK` instead. Submissions
+rejected before WordPress begins trackback processing produce neither event.
 
 +-----------+-----------+---------------------------------------------------------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_PINGBACK_LOG`                                                                               |
@@ -34,11 +37,11 @@ insertion before shutdown.
 |           |           | excerpt       | ``string``                        | Excerpt.                                                  |
 |           |           +---------------+-----------------------------------+-----------------------------------------------------------+
 |           |           | blog_name     | ``string``                        | Blog name.                                                |
-|           |           +---------------+-----------------------------------+-----------------------------------------------------------+
-|           |           | blog_url      | ``string``                        | Blog URL.                                                 |
 +-----------+-----------+---------------+-----------------------------------+-----------------------------------------------------------+
 
 .. seealso::
+   | :ref:`feature-trackbacks`
+   | :ref:`WPF2B_EVENT_OTHER_TRACKBACK`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_LOG_PINGBACKS`
 

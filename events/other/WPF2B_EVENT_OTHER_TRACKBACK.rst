@@ -7,9 +7,12 @@ WPF2B_EVENT_OTHER_TRACKBACK
 
 Premium listener: ``WPF2B_EVENT_OTHER_TRACKBACK``.
 
-Recorded only when :ref:`WP_FAIL2BAN_LOG_PINGBACKS` is enabled. EventData
-``ref_id`` is the stored trackback comment ID; the target post ID remains in
-``waf_data.post_id``.
+Premium emits this event when WordPress stores a trackback while
+:ref:`WP_FAIL2BAN_LOG_PINGBACKS` is enabled. EventData ``ref_id`` is the stored
+trackback comment ID; the target post ID is in ``waf_data.post_id``.
+
+A submission that reaches trackback processing but is not stored uses
+:ref:`WPF2B_EVENT_OTHER_TRACKBACK_ERROR` instead.
 
 +-----------+-----------+-------------------------------------------------------------------------------------------------------------------------------+
 | syslog    | Facility  | :ref:`WP_FAIL2BAN_PINGBACK_LOG`                                                                                               |
@@ -33,11 +36,11 @@ Recorded only when :ref:`WP_FAIL2BAN_LOG_PINGBACKS` is enabled. EventData
 |           |           | excerpt       | ``string``  | Excerpt.                                                                                        |
 |           |           +---------------+-------------+-------------------------------------------------------------------------------------------------+
 |           |           | blog_name     | ``string``  | Blog name.                                                                                      |
-|           |           +---------------+-------------+-------------------------------------------------------------------------------------------------+
-|           |           | blog_url      | ``string``  | Blog URL.                                                                                       |
 +-----------+-----------+---------------+-------------+-------------------------------------------------------------------------------------------------+
 
 .. seealso::
+   | :ref:`feature-trackbacks`
+   | :ref:`WPF2B_EVENT_OTHER_TRACKBACK_ERROR`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_LOG_PINGBACKS`
 

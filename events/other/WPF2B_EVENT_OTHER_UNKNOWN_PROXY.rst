@@ -7,6 +7,11 @@ WPF2B_EVENT_OTHER_UNKNOWN_PROXY
 
 Premium listener: ``WPF2B_EVENT_OTHER_UNKNOWN_PROXY``.
 
+Premium emits this event when trusted-proxy checking is configured and a
+connection outside the :ref:`WP_FAIL2BAN_PROXIES` list supplies an
+``X-Forwarded-For`` header. The event records the connection's source address,
+and |WPf2b| rejects the request with HTTP 403.
+
 +-----------+-----------+---------------------------------------------------------------------------+
 | syslog    | Facility  | .. include:: ../facility_log_auth.rst                                     |
 |           +-----------+---------------------------------------------------------------------------+
@@ -20,7 +25,9 @@ Premium listener: ``WPF2B_EVENT_OTHER_UNKNOWN_PROXY``.
 +-----------+-----------+---------------------------------------------------------------------------+
 
 .. seealso::
-   :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
+   | :ref:`feature-trusted-proxies`
+   | :ref:`fail2ban_filters_tags`
+   | :ref:`WP_FAIL2BAN_PROXIES`
 
 .. rubric:: History
 .. versionadded:: 5.0.0
