@@ -7,6 +7,9 @@ WPF2B_EVENT_XMLRPC_MULTI_AUTH_FAIL
 
 Premium listener: ``WPF2B_EVENT_XMLRPC_MULTI_AUTH_FAIL``.
 
+Premium emits this event on the second authentication failure in a single
+XML-RPC request. |WPf2b| then terminates the request.
+
 +------------+-----------+-------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_log_auth.rst                                   |
 |            +-----------+-------------------------------------------------------------------------+
@@ -20,11 +23,10 @@ Premium listener: ``WPF2B_EVENT_XMLRPC_MULTI_AUTH_FAIL``.
 |            | Rule      | .. include:: ../../autogen/filters.d/rules/xmlrpc-multicall-auth.rst.inc|
 +------------+-----------+-------------------------------------------------------------------------+
 
-Logged when more than one authentication failure occurs in a single XML-RPC multicall. |WPf2b| then bails the request.
-
 .. seealso::
-   | :ref:`fail2ban_filters_tags`
    | :ref:`feature-xmlrpc`
+   | :ref:`fail2ban_filters_tags`
+   | :ref:`WPF2B_EVENT_XMLRPC_AUTH_FAIL`
 
 .. rubric:: History
 .. versionadded:: 3.0.0

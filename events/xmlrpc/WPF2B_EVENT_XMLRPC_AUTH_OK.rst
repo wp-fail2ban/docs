@@ -7,7 +7,9 @@ WPF2B_EVENT_XMLRPC_AUTH_OK
 
 Premium listener: ``WPF2B_EVENT_XMLRPC_AUTH_OK``.
 
-Recorded when an XML-RPC request authenticates successfully and :ref:`WP_FAIL2BAN_LOG_AUTH_XMLRPC_SUCCESS` is enabled. Application Password authentications over XML-RPC are included.
+Premium emits this event when WordPress accepts XML-RPC authentication and
+:ref:`WP_FAIL2BAN_LOG_AUTH_XMLRPC_SUCCESS` is enabled. Application Password
+authentication over XML-RPC is included.
 
 +------------+-----------+----------------------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_log_auth.rst                                                              |
@@ -24,11 +26,13 @@ Recorded when an XML-RPC request authenticates successfully and :ref:`WP_FAIL2BA
 +------------+-----------+-----------------------------------+----------------------------------------------------------------+
 
 .. seealso::
+   | :ref:`feature-login-logging`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_LOG_AUTH_XMLRPC_SUCCESS`
    | :ref:`WPF2B_EVENT_AUTH_OK`
 
 .. rubric:: History
 .. versionchanged:: 6.3.0
-   Distinct ``XML-RPC authentication success`` message; recorded when XML-RPC success logging is enabled.
+   Distinct ``XML-RPC authentication success`` message; recorded when XML-RPC
+   success logging is enabled.
 .. versionadded:: 4.1.0
