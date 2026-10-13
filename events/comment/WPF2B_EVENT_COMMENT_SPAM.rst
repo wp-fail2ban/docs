@@ -7,7 +7,21 @@ WPF2B_EVENT_COMMENT_SPAM
 
 Premium listener: ``WPF2B_EVENT_COMMENT_SPAM``.
 
-The address is the comment author's stored IP. When a moderator marks an existing comment as spam, that stored address is used rather than the moderator's request address.
+Premium emits this event when a stored comment is classified as spam while
+:ref:`WP_FAIL2BAN_LOG_SPAM` is enabled. It applies both when WordPress stores
+the comment as spam and when the comment is marked as spam later.
+
+If ordinary comment logging is also enabled, storing the same comment can
+separately emit :ref:`WPF2B_EVENT_COMMENT`.
+
+The address is the comment author's stored IP. When a moderator marks an
+existing comment as spam, that stored address is used rather than the
+moderator's request address.
+
+Comments discarded by Akismet instead use
+:ref:`WPF2B_EVENT_COMMENT_SPAM_AKISMET` because they are not retained in
+WordPress.
+
 The message records the actual WordPress comment type in its
 ``F-COMMENT_TYPE`` capture; ``comment`` is one possible value.
 
@@ -26,7 +40,11 @@ The message records the actual WordPress comment type in its
 +------------+-----------+-----------------------------------+-----------------------------+
 
 .. seealso::
+   | :ref:`feature-spam`
+   | :ref:`WPF2B_EVENT_COMMENT`
+   | :ref:`WPF2B_EVENT_COMMENT_SPAM_AKISMET`
    | :ref:`fail2ban_filters_tags`
+   | :ref:`WP_FAIL2BAN_LOG_SPAM`
 
 .. rubric:: History
 .. versionchanged:: 6.0.0

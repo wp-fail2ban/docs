@@ -7,7 +7,14 @@ WPF2B_EVENT_COMMENT
 
 Premium listener: ``WPF2B_EVENT_COMMENT``.
 
-Ordinary comments only (not pingbacks or trackbacks). Logged once when WordPress stores the comment, for any approval status. Later approval does not emit a second event.
+Premium emits this event when WordPress stores an ordinary comment while
+:ref:`WP_FAIL2BAN_LOG_COMMENTS` is enabled. It applies whether the comment is
+approved, held for moderation, or marked as spam. Later approval changes do
+not emit this event again.
+
+:ref:`Pingbacks <feature-pingbacks>` and :ref:`trackbacks <feature-trackbacks>`
+do not use this event. A stored comment classified as spam can separately emit
+:ref:`WPF2B_EVENT_COMMENT_SPAM` when spam logging is enabled.
 
 +------------+-----------+------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_comment_log.rst                         |
@@ -24,7 +31,10 @@ Ordinary comments only (not pingbacks or trackbacks). Logged once when WordPress
 +------------+-----------+----------------------------------+-------------------------------+
 
 .. seealso::
+   | :ref:`feature-comments`
+   | :ref:`WPF2B_EVENT_COMMENT_SPAM`
    | :ref:`fail2ban_filters_tags`
+   | :ref:`WP_FAIL2BAN_LOG_COMMENTS`
 
 .. rubric:: History
 .. versionchanged:: 6.0.0
