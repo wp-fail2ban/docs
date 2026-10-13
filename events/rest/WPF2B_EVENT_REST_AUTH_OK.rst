@@ -7,7 +7,9 @@ WPF2B_EVENT_REST_AUTH_OK
 
 Premium listener: ``WPF2B_EVENT_REST_AUTH_OK``.
 
-Recorded when a REST request authenticates successfully and :ref:`WP_FAIL2BAN_LOG_AUTH_REST_SUCCESS` is enabled. Application Password authentications over REST are included.
+Premium emits this event when WordPress accepts REST authentication and
+:ref:`WP_FAIL2BAN_LOG_AUTH_REST_SUCCESS` is enabled. Application Password
+authentication over REST is included.
 
 +------------+-----------+----------------------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_log_auth.rst                                                              |
@@ -24,6 +26,7 @@ Recorded when a REST request authenticates successfully and :ref:`WP_FAIL2BAN_LO
 +------------+-----------+-----------------------------------+----------------------------------------------------------------+
 
 .. seealso::
+   | :ref:`feature-login-logging`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_LOG_AUTH_REST_SUCCESS`
    | :ref:`WPF2B_EVENT_AUTH_OK`
