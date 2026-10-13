@@ -7,11 +7,11 @@ WPF2B_EVENT_PASSWORD_REQUEST_FAIL
 
 Premium listener: ``WPF2B_EVENT_PASSWORD_REQUEST_FAIL``.
 
-Recorded when :ref:`WP_FAIL2BAN_LOG_PASSWORD_REQUEST` is enabled and WordPress
-rejects the request at a covered validation or password-reset policy stage.
-This includes a submitted username that does not identify an account. The
-stored username is the submitted value and does not imply that an account
-exists.
+Premium emits this event when :ref:`WP_FAIL2BAN_LOG_PASSWORD_REQUEST` is
+enabled and WordPress rejects a password-reset request. This includes an
+unknown username; in that case, the stored username is the submitted value and
+does not imply that the account exists. It also includes a recognised account
+for which password recovery is not allowed.
 
 .. list-table::
    :stub-columns: 1
@@ -37,10 +37,12 @@ exists.
      - .. include:: ../username-description.rst
 
 .. seealso::
-   | :ref:`fail2ban_filters_tags`
-   | :ref:`WPF2B_EVENT_PASSWORD_REQUEST`
-   | :ref:`WP_FAIL2BAN_LOG_PASSWORD_REQUEST`
    | :ref:`feature-password-reset`
+   | :ref:`WPF2B_EVENT_PASSWORD_REQUEST_OK`
+   | :ref:`fail2ban_filters_tags`
+   | :ref:`WP_FAIL2BAN_LOG_PASSWORD_REQUEST`
 
 .. rubric:: History
+.. versionchanged:: 6.3.0
+   Also recorded when password recovery is denied for a recognised account.
 .. versionadded:: 6.0.0
