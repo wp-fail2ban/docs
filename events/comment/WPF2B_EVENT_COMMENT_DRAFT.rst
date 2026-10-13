@@ -3,9 +3,13 @@
 WPF2B_EVENT_COMMENT_DRAFT
 -------------------------
 
-.. rubric:: Attempted comment on draft Post.
+.. rubric:: Attempted comment on a draft post.
 
 Premium listener: ``WPF2B_EVENT_COMMENT_DRAFT``.
+
+Premium emits this event when WordPress rejects a comment submission because
+the target post is a draft. :ref:`WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS` enables
+this event.
 
 +------------+-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_comment_extra_log.rst                                                                                                         |
@@ -22,7 +26,9 @@ Premium listener: ``WPF2B_EVENT_COMMENT_DRAFT``.
 +------------+-----------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 .. seealso::
+   | :ref:`feature-comment-attempts`
    | :ref:`fail2ban_filters_tags`
+   | :ref:`WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS`
 
 .. rubric:: History
 .. versionchanged:: 6.0.0

@@ -3,9 +3,13 @@
 WPF2B_EVENT_COMMENT_CLOSED
 --------------------------
 
-.. rubric:: Attempted comment on closed Post.
+.. rubric:: Attempted comment on a closed post.
 
 Premium listener: ``WPF2B_EVENT_COMMENT_CLOSED``.
+
+Premium emits this event when WordPress rejects a comment submission because
+comments are closed on the target post.
+:ref:`WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS` enables this event.
 
 +------------+-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_comment_extra_log.rst                                                                                                         |
@@ -22,7 +26,9 @@ Premium listener: ``WPF2B_EVENT_COMMENT_CLOSED``.
 +------------+-----------+-----------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 .. seealso::
+   | :ref:`feature-comment-attempts`
    | :ref:`fail2ban_filters_tags`
+   | :ref:`WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS`
 
 .. rubric:: History
 .. versionchanged:: 6.0.0

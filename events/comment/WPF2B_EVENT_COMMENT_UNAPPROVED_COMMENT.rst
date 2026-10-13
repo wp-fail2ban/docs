@@ -3,9 +3,13 @@
 WPF2B_EVENT_COMMENT_UNAPPROVED_COMMENT
 --------------------------------------
 
-.. rubric:: Attempted comment on an unapproved comment (reply).
+.. rubric:: Attempted reply to an unapproved comment.
 
 Premium listener: ``WPF2B_EVENT_COMMENT_UNAPPROVED_COMMENT``.
+
+Premium emits this event when the classic comment form rejects a reply because
+its parent comment has not been approved.
+:ref:`WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS` enables this event.
 
 .. list-table::
    :stub-columns: 1
@@ -31,8 +35,9 @@ Premium listener: ``WPF2B_EVENT_COMMENT_UNAPPROVED_COMMENT``.
      - Post ID. The parent comment ID is in ``waf_data.comment_parent``.
 
 .. seealso::
-   | :ref:`fail2ban_filters_tags`
    | :ref:`feature-comment-attempts`
+   | :ref:`fail2ban_filters_tags`
+   | :ref:`WP_FAIL2BAN_LOG_COMMENT_ATTEMPTS`
 
 .. rubric:: History
 .. versionadded:: 6.0.0

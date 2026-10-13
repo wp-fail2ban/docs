@@ -24,6 +24,8 @@ Enables logging of failed comment attempts. When enabled, the following events w
 +------------------------+---------------------------------------------------+
 | **Password-protected** | Attempted comment on a password-protected post.   |
 +------------------------+---------------------------------------------------+
+| **Unapproved comment** | Attempted reply to an unapproved parent comment.  |
++------------------------+---------------------------------------------------+
 
 .. code-block:: php
    :caption: Example: Enable logging of comment attempts
@@ -37,4 +39,6 @@ Enables logging of failed comment attempts. When enabled, the following events w
    * :ref:`WP_FAIL2BAN_COMMENT_ATTEMPT_LOG`
 
 .. rubric:: History
+.. versionchanged:: 6.0.0
+   Added replies to unapproved parent comments.
 .. versionadded:: 5.0.0
