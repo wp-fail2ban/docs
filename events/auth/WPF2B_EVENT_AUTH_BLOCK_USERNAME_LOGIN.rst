@@ -7,6 +7,10 @@ WPF2B_EVENT_AUTH_BLOCK_USERNAME_LOGIN
 
 Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USERNAME_LOGIN``.
 
+Premium emits this event when :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN` is
+enabled and a nonblank login identifier is not syntactically an email address.
+The request is rejected before ordinary password authentication.
+
 +------------+-----------+----------------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_log_auth.rst                                                        |
 |            +-----------+----------------------------------------------------------------------------------------------+
@@ -24,8 +28,8 @@ Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USERNAME_LOGIN``.
 +------------+-----------+-----------------------------------+----------------------------------------------------------+
 
 .. seealso::
+   | :ref:`feature-email-only-login`
    | :ref:`fail2ban_filters_tags`
-   | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
    | :ref:`WP_FAIL2BAN_BLOCK_USERNAME_LOGIN`
 
 .. rubric:: History

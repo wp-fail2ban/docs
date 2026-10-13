@@ -7,7 +7,7 @@ WPF2B_EVENT_AUTH_EMPTY_PASS
 
 Premium listener: ``WPF2B_EVENT_AUTH_EMPTY_PASS``.
 
-Recorded when the login form is submitted with a nonblank identifier and a blank password. WordPress rejects the submission before ordinary password authentication, so |WPf2b| writes this dedicated message instead of the usual credential-failure message.
+Premium emits this event when the login form is submitted with a nonblank identifier and a blank password. WordPress rejects the submission before ordinary password authentication, so |WPf2b| writes this dedicated message instead of the usual credential-failure message.
 
 +------------+-----------+-------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_log_auth.rst                                               |
@@ -29,9 +29,9 @@ cookie was observed earlier in the request, the syslog message includes
 match the shipped soft filter, although Premium still records the event.
 
 .. seealso::
+   | :ref:`feature-login-logging`
    | :ref:`WPF2B_EVENT_AUTH_EMPTY_USER`
    | :ref:`operating_event_storage`
-   | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
 
 .. rubric:: History
 .. versionadded:: 6.3.0

@@ -7,6 +7,11 @@ WPF2B_EVENT_AUTH_BLOCK_USER_ENUM
 
 Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USER_ENUM``.
 
+Premium emits this event when :ref:`WP_FAIL2BAN_BLOCK_USER_ENUMERATION` blocks
+a covered enumeration request through the common blocked-enumeration path. A
+logged-in REST authors preload is blocked with a separate Debug message and
+does not emit this event.
+
 +-----------+-----------+---------------------------------------------------------------------------+
 | syslog    | Facility  | .. include:: ../facility_log_auth.rst                                     |
 |           +-----------+---------------------------------------------------------------------------+
@@ -21,8 +26,8 @@ Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USER_ENUM``.
 
 
 .. seealso::
+   | :ref:`feature-user-enumeration`
    | :ref:`fail2ban_filters_tags`
-   | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
    | :ref:`WP_FAIL2BAN_BLOCK_USER_ENUMERATION`
 
 .. rubric:: History

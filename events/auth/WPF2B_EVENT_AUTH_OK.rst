@@ -7,7 +7,11 @@ WPF2B_EVENT_AUTH_OK
 
 Premium listener: ``WPF2B_EVENT_AUTH_OK``.
 
-Recorded for a successful form login when :ref:`WP_FAIL2BAN_LOG_AUTH_SUCCESS` is enabled. REST and XML-RPC successes use :ref:`WPF2B_EVENT_REST_AUTH_OK` and :ref:`WPF2B_EVENT_XMLRPC_AUTH_OK`.
+Premium emits this event for a successful form login when
+:ref:`WP_FAIL2BAN_LOG_AUTH_SUCCESS` is enabled.
+
+REST and XML-RPC successes use
+:ref:`WPF2B_EVENT_REST_AUTH_OK` and :ref:`WPF2B_EVENT_XMLRPC_AUTH_OK`.
 
 +------------+-----------+-------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_log_auth.rst                                         |
@@ -24,9 +28,11 @@ Recorded for a successful form login when :ref:`WP_FAIL2BAN_LOG_AUTH_SUCCESS` is
 +------------+-----------+-----------------------------------+-------------------------------------------+
 
 .. seealso::
+   | :ref:`feature-login-logging`
+   | :ref:`WPF2B_EVENT_REST_AUTH_OK`
+   | :ref:`WPF2B_EVENT_XMLRPC_AUTH_OK`
    | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_LOG_AUTH_SUCCESS`
-   | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
 
 .. rubric:: History
 .. versionchanged:: 6.3.0

@@ -7,6 +7,10 @@ WPF2B_EVENT_AUTH_BLOCK_USER
 
 Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USER``.
 
+Premium emits this event when a nonblank login identifier matches
+:ref:`WP_FAIL2BAN_BLOCKED_USERS`. The request is rejected before ordinary
+password authentication.
+
 +------------+-----------+--------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_log_auth.rst                                                |
 |            +-----------+--------------------------------------------------------------------------------------+
@@ -24,8 +28,8 @@ Premium listener: ``WPF2B_EVENT_AUTH_BLOCK_USER``.
 +------------+-----------+-----------------------------------+--------------------------------------------------+
 
 .. seealso::
+   | :ref:`feature-blocked-users`
    | :ref:`fail2ban_filters_tags`
-   | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
    | :ref:`WP_FAIL2BAN_BLOCKED_USERS`
 
 .. rubric:: History

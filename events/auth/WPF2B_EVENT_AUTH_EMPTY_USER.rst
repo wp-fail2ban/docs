@@ -7,6 +7,10 @@ WPF2B_EVENT_AUTH_EMPTY_USER
 
 Premium listener: ``WPF2B_EVENT_AUTH_EMPTY_USER``.
 
+Premium emits this event when the login form is submitted with a blank
+identifier. If both credentials are blank, this event is used rather than
+:ref:`WPF2B_EVENT_AUTH_EMPTY_PASS`.
+
 +-----------+-----------+-------------------------------------------------------------------------------------+
 | syslog    | Facility  | .. include:: ../facility_log_auth.rst                                               |
 |           +-----------+-------------------------------------------------------------------------------------+
@@ -19,15 +23,15 @@ Premium listener: ``WPF2B_EVENT_AUTH_EMPTY_USER``.
 |           | Rule      | .. include:: ../../autogen/filters.d/rules/auth-empty.rst.inc                       |
 +-----------+-----------+-------------------------------------------------------------------------------------+
 
-Premium EventData stores the submitted ``password``; ``username`` is ``null``.
+The Premium event carries the submitted ``password``; ``username`` is ``null``.
 If an expired authentication cookie was observed earlier in the request, the
 syslog message includes ``(cookie expired)`` and uses Info rather than Notice.
 That variant does not match the shipped soft filter, although Premium still
 records the event.
 
 .. seealso::
+   | :ref:`feature-login-logging`
    | :ref:`operating_event_storage`
-   | :ref:`WP_FAIL2BAN_USE_AUTHPRIV`
 
 .. rubric:: History
 .. versionadded:: 4.3.0
