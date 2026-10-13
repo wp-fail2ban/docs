@@ -8,10 +8,10 @@ WPF2B_EVENT_XMLRPC_PINGBACK_MULTI
 
 Premium listener: ``WPF2B_EVENT_XMLRPC_PINGBACK_MULTI``.
 
-|WPf2b| permits the first ``pingback.ping`` call in a request. Each later
-pingback receives a per-call XML-RPC fault, while a multicall can continue with
-its other entries. This event is emitted once, on the second pingback,
-regardless of whether ordinary pingback logging is enabled.
+Premium emits this event on the second ``pingback.ping`` call in a single
+XML-RPC request, regardless of whether :ref:`WP_FAIL2BAN_LOG_PINGBACKS` is
+enabled. |WPf2b| permits the first call; each later pingback receives a
+per-call XML-RPC fault, while a multicall can continue with its other entries.
 
 .. list-table::
    :stub-columns: 1
@@ -36,8 +36,9 @@ regardless of whether ordinary pingback logging is enabled.
      - .. include:: ../../autogen/filters.d/rules/pingback-multicall.rst.inc
 
 .. seealso::
-   | :ref:`WP_FAIL2BAN_LOG_PINGBACKS`
    | :ref:`feature-pingbacks`
+   | :ref:`fail2ban_filters_tags`
+   | :ref:`WP_FAIL2BAN_LOG_PINGBACKS`
 
 .. rubric:: History
 .. versionadded:: 6.3.0
