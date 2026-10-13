@@ -8,6 +8,11 @@ WPF2B_EVENT_HONEYPOT_TRAP_ROBOTSTXT
 
 Premium listener: ``WPF2B_EVENT_HONEYPOT_TRAP_ROBOTSTXT``.
 
+Premium emits this event when a WordPress request that would otherwise return
+404 matches a configured ``robots.txt`` honeypot path. Both
+:ref:`WP_FAIL2BAN_EX_HONEYPOT` and :ref:`WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT`
+must be enabled.
+
 +------------+-----------+----------------------------------------------------------------------------------------------------+
 | syslog     | Facility  | .. include:: ../facility_honeypot_log.rst                                                          |
 |            +-----------+----------------------------------------------------------------------------------------------------+
@@ -23,6 +28,8 @@ Premium listener: ``WPF2B_EVENT_HONEYPOT_TRAP_ROBOTSTXT``.
 +------------+-----------+---------------+-------------+----------------------------------------------------------------------+
 
 .. seealso::
+   | :ref:`feature-honeypot`
+   | :ref:`fail2ban_filters_tags`
    | :ref:`WP_FAIL2BAN_EX_HONEYPOT`
    | :ref:`WP_FAIL2BAN_EX_HONEYPOT_ROBOTSTXT`
 
