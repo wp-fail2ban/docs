@@ -1,1 +1,0 @@
-.. rubric:: *Premium flavour only*

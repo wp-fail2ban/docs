@@ -7,4 +7,3 @@ Developers
 .. toctree::
 
    developers/api
-   developers/events

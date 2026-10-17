@@ -14,7 +14,6 @@
    defines/remote-ips
    defines/plugin
    defines/site-health
-   defines/waf
    defines/misc
    defines/development
    defines/reserved

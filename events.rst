@@ -37,13 +37,9 @@ Things that have been actively prevented.
 
 .. toctree::
 
-   events/block/WPF2B_EVENT_BLOCK_COUNTRY
-
    events/auth/WPF2B_EVENT_AUTH_BLOCK_USER
    events/auth/WPF2B_EVENT_AUTH_BLOCK_USER_ENUM
    events/auth/WPF2B_EVENT_AUTH_BLOCK_USERNAME_LOGIN
-
-   events/xmlrpc/WPF2B_EVENT_XMLRPC_BLOCKED
 
 .. _events_COMMENT:
 
@@ -119,20 +115,5 @@ XML-RPC events, including Pingbacks.
 
 .. toctree::
 
-   events/xmlrpc/WPF2B_EVENT_XMLRPC_BLOCKED
    events/xmlrpc/WPF2B_EVENT_XMLRPC_PINGBACK
-   events/xmlrpc/WPF2B_EVENT_XMLRPC_PINGBACK_BOGUS
    events/xmlrpc/WPF2B_EVENT_XMLRPC_PINGBACK_ERROR
-
-.. _events_WAF:
-
-WAF Events
-----------
-
-Web Application Firewall (WAF) events.
-
-.. toctree::
-
-   events/waf/WPF2B_EVENT_WAF_SQLI
-   events/waf/WPF2B_EVENT_WAF_UPDATE_OPTION
-   events/waf/WPF2B_EVENT_WAF_WP_DELETE_USER
