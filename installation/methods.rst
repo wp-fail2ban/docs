@@ -7,6 +7,8 @@ For the 6.3 Canonical release, upload its signed archive from `GitHub releases <
 
 Premium is available through Freemius or the Premium Composer channel described in the Members area. Activate it in WordPress so its four InnoDB tables and reporting view are created. The event history remains in the database after deactivation; see :ref:`operating_event_storage`.
 
+When a Freemius trial ends without a Premium entitlement, a later Canonical release is installed as the ``wp-fail2ban`` plugin and the trial copy remains installed but inactive. If ``wp-fail2ban`` is already present, that path is left untouched and WordPress reports the conflict; see :ref:`operating_upgrading`.
+
 The WordPress Plugin Directory installs the LTS distribution described in :ref:`about_editions`. Check its version before using this 6.3 manual for the installed plugin.
 
 Every distribution includes fail2ban filter source files in the plugin's ``filters.d`` directory. A privileged host administrator copies the required files into fail2ban's ``filter.d`` directory and configures jails for the host log or journal that receives |WPf2b| messages. See :ref:`configuration__fail2ban`.
