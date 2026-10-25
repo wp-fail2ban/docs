@@ -29,7 +29,7 @@ author = u'Charles Lecklider'
 import json
 import os
 
-_pkg = json.load(open(os.path.join(os.path.dirname(__file__), '..', 'package.json')))
+_pkg = json.load(open(os.path.join(os.path.dirname(__file__), 'version.json')))
 version = _pkg.get('version', '')
 release = _pkg.get('version', '')
 if _pkg.get('version_label'):
