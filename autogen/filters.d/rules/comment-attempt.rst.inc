@@ -1,0 +1,1 @@
+``Comment attempt on <F-POST_STATUS>(?:non-existent|closed|trashed|draft|password-protected|unapproved comment)</F-POST_STATUS>(?:(?<=unapproved comment) <F-COMMENT_ID>\d+</F-COMMENT_ID> on post|(?<!unapproved comment) post) <F-POST_ID>\d+</F-POST_ID><_tail>``

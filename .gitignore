@@ -1,6 +1,4 @@
-*.v*
+.venv/
 _build/
-autogen/
-venv/
-docs.mk
-sphinx.code-workspace
+autogen/**/*.json
+autogen/**/*.mk
