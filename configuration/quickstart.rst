@@ -3,7 +3,7 @@
 QuickStart
 ==========
 
-QuickStart provides cards for common security goals. Each card applies several compatible settings together; its page says which settings change, what the resulting protection or logging does, and which important cases remain outside it. QuickStart can remain the main settings interface, or you can move between it and Advanced settings. Merely switching interfaces does not apply or reset any setting.
+QuickStart provides cards for common security goals. Each card applies several compatible settings together; its page says which settings change, what the resulting protection or logging does, and which important cases remain outside it. Some cards only report status and do not apply settings. QuickStart can remain the main settings interface, or you can move between it and Advanced settings. Merely switching interfaces does not apply or reset any setting.
 
 In Premium, the most recently applied UI change wins. Changing an individual setting in Advanced settings takes effect even if a selected card previously set it, so the card can remain selected while its bundle no longer describes all the effective settings. Changing a card's state then becomes the latest UI change: selecting it applies the bundle, while deselecting it restores the prior values that card owns. Explicitly saving QuickStart reasserts selected cards. QuickStart owns only settings it changed; compatible values that were already present remain independent, and a complete bundle configured independently can appear as started and locked.
 
