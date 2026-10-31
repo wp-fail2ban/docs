@@ -7,7 +7,7 @@ Honeypot
 
 Selecting the card enables a trap-path matcher and publication of those paths as ``Disallow`` entries in WordPress's ``robots.txt`` on a public site. Requests to a trap path are treated as hard failures. On a site marked non-public, the matcher can still act even though WordPress does not publish the bait lines.
 
-Its trap paths must not serve real content.
+Its trap paths must not serve real content. Site Health warns when a trap path is occupied, and flushing permalinks fills the generated set again; see :ref:`feature-honeypot`.
 
 Bundle settings
 ---------------
