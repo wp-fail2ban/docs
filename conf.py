@@ -15,9 +15,11 @@ from pygments.lexers.web import PhpLexer
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import json
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath('_ext'))
 
 
 # -- Project information -----------------------------------------------------
@@ -25,9 +27,6 @@ from pygments.lexers.web import PhpLexer
 project = u'WP fail2ban'
 copyright = u'2018-2026, Charles Lecklider'
 author = u'Charles Lecklider'
-
-import json
-import os
 
 _pkg = json.load(open(os.path.join(os.path.dirname(__file__), 'version.json')))
 version = _pkg.get('version', '')
@@ -211,5 +210,6 @@ rst_prolog = open(os.path.join(os.path.dirname(__file__), 'global.rst')).read()
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_copybutton',
-    'sphinxcontrib.phpdomain'
+    'sphinxcontrib.phpdomain',
+    'wpf2b_nav_ellipsis',
 ]
