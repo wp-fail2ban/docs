@@ -1,0 +1,6 @@
+/* Keep shortened constant/event nav labels on a single sidebar line. */
+.wy-menu-vertical a.wpf2b-nav-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
