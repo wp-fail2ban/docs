@@ -1,4 +1,5 @@
 .venv/
 _build/
+__pycache__/
 autogen/**/*.json
 autogen/**/*.mk

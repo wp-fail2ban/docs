@@ -15,4 +15,5 @@ These pages explain how to observe WP fail2ban in operation, maintain its host i
    operating/filters
    operating/scheduled
    operating/site-health
+   operating/wp-cli
    operating/upgrading

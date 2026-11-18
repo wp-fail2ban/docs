@@ -11,5 +11,6 @@ Choose the :ref:`about_editions` distribution that matches the release you inten
 
    installation/requirements
    installation/methods
+   installation/wp-cli
    configuration/mu-plugins
    installation/verifying
