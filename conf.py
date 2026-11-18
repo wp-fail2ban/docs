@@ -101,6 +101,11 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# Keep WP-CLI command columns on one line; see _static/wpf2b-command-tables.css.
+html_css_files = [
+    'wpf2b-command-tables.css',
+]
+
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #

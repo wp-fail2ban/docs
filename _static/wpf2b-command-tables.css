@@ -1,0 +1,18 @@
+/*
+ * Keep command literals on one line in overview tables.
+ *
+ * sphinx_rtd_theme sets white-space:normal on code, and docutils splits
+ * multi-word literals into span.pre tokens, so commands wrap at spaces even
+ * when :widths: allocate a wide first column. Override that for the command
+ * column only; purpose and availability may wrap.
+ */
+.wy-table-responsive table.wpf2b-command-groups td,
+.wy-table-responsive table.wpf2b-command-groups th {
+    white-space: normal;
+}
+
+table.wpf2b-command-groups td:first-child,
+table.wpf2b-command-groups th:first-child,
+table.wpf2b-command-groups td:first-child code {
+    white-space: nowrap;
+}

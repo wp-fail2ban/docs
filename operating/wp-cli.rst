@@ -24,8 +24,9 @@ WP-CLI global options; ``--path`` and ``--url`` can select the WordPress
 installation or site in the usual way.
 
 .. list-table:: Command groups
+   :class: wpf2b-command-groups
    :header-rows: 1
-   :widths: 28 50 22
+   :widths: 30 50 20
 
    * - Command
      - Purpose
